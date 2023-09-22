@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as a}from"./chunks/framework.40863650.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"back-end/spring.md","filePath":"back-end/spring.md","lastUpdated":1695289309000}'),n={name:"back-end/spring.md"};function r(s,c,o,p,d,i){return t(),a("div")}const f=e(n,[["render",r]]);export{m as __pageData,f as default};
