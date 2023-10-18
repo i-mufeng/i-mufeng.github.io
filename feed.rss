@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Fri, 13 Oct 2023 11:18:07 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 18 Oct 2023 09:25:12 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -18,7 +18,7 @@
             <title><![CDATA[关于本站]]></title>
             <link>https://www.imufeng.cn/about/</link>
             <guid>https://www.imufeng.cn/about/</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="关于本站" tabindex="-1">关于本站 <a class="header-anchor" href="#关于本站" aria-label="Permalink to &quot;关于本站&quot;">&ZeroWidthSpace;</a></h1>
 <div class="tip custom-block"><p class="custom-block-title">版权声明</p>
 <p>除特殊说明，本站文章皆为原创，著作权归作者所有。依据 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noreferrer">CC BY-NC-SA 4.0 </a> 许可证进行授权。</p>
@@ -89,7 +89,7 @@
         <item>
             <link>https://www.imufeng.cn/friend-link-list/</link>
             <guid>https://www.imufeng.cn/friend-link-list/</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
             <content:encoded><![CDATA[<details class="details custom-block"><summary>友链申请格式</summary>
 <ul>
 <li>
@@ -116,7 +116,7 @@
         <item>
             <link>https://www.imufeng.cn/full-stack/</link>
             <guid>https://www.imufeng.cn/full-stack/</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
             <content:encoded><![CDATA[<h2 id="一、后端技术分享" tabindex="-1">一、后端技术分享 <a class="header-anchor" href="#一、后端技术分享" aria-label="Permalink to &quot;一、后端技术分享&quot;">&ZeroWidthSpace;</a></h2>
 <h2 id="二、前端技术分享" tabindex="-1">二、前端技术分享 <a class="header-anchor" href="#二、前端技术分享" aria-label="Permalink to &quot;二、前端技术分享&quot;">&ZeroWidthSpace;</a></h2>
 <h2 id="三、系统运维交流" tabindex="-1">三、系统运维交流 <a class="header-anchor" href="#三、系统运维交流" aria-label="Permalink to &quot;三、系统运维交流&quot;">&ZeroWidthSpace;</a></h2>
@@ -126,7 +126,7 @@
             <title><![CDATA[每日一题]]></title>
             <link>https://www.imufeng.cn/question-by-day/</link>
             <guid>https://www.imufeng.cn/question-by-day/</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
             <description><![CDATA[每天至少一道全栈题目分享，范围不限。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
@@ -141,21 +141,85 @@
             <title><![CDATA[我的分享]]></title>
             <link>https://www.imufeng.cn/share/</link>
             <guid>https://www.imufeng.cn/share/</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="我的分享" tabindex="-1">我的分享 <a class="header-anchor" href="#我的分享" aria-label="Permalink to &quot;我的分享&quot;">&ZeroWidthSpace;</a></h1>
 ]]></content:encoded>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/10.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/10.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
             <description><![CDATA[
+
+## 10-18
+
+### 抽象类和接口的区别？
+
+1. 一个类可以实现多个接口，但只能继承一个抽象类。接口本身可以通过 extends 关键字扩展多个接口。
+
+2. 抽象类可以有构造方法，接口中不能有构造方法。
+
+3. 抽象类中不一定都是抽象方法，也可以全是具体方法（非抽象方法）。在 Java8 之前，接口中的所有方法必须是抽象的。但Java8的时候，接口可以有默认方法和静态方法。
+
+4. 接口中只能有 static、final 变量，不能有其他变量，而抽象类中不一定。
+
+5. 接口中的方法和变量默认修饰符为 public（写不写都是public），而抽象类中的方法可以是 public，protected 和默认类型（抽象方法就是为了被重写所以不能是 private 修饰）
+
+## 10-17
+
+### 构造器是否可被重写？
+
+
+重写是子类覆盖父类的方法，而构造器名称与类名相同，不可能存在重写的概念。
+
+但是在一个类中，是可以存在多个参数不同的构造器的，这是构造器的重载。
+
+
+## 10-16
+
+### 请描述 & 和 && 的区别。
+
+**相同点：**`&` 和 `&&` 都可以用作逻辑与的运算符，表示逻辑与（and）。
+
+**不同点：**
+
+1、`&&` 具有短路的功能，而 `&` 不具备短路功能。
+
+2、当 `&` 运算符两边的表达式的结果都为 true 时，整个运算结果才为 true。而&&运算符第一个表达式为 false 时，则结果为 false，不再计算第二个表达式。 
+
+3、`&` 还可以用作位运算符，当 `&` 操作符两边的表达式不是boolean类型时，`&` 表示按位与操作，我们通常使用 0x0f 来与一个整数进行&运算，来获取该整数的最低4个 bit 位，例如：0x31 & 0x0f 的结果为 0x01。
+
+## 10-15
+
+### 请描述面向对象的特征。
+
+面向对象有三大特征：`继承`、`封装`、`多态`
+
+如果是四大特征：`继承`、`封装`、`多态`、`抽象`
+
+**继承：**
+在定义和实现一个类的时候，可以在一个已经存在的类的基础之上来进行，把这个已经存在的类所定义的内容作为自己的内容，并可以加入若干新的内容，或修改原来的方法使之更适合特殊的需要，这就是继承。比如，遗产的继承。
+**封装：**
+面向对象的封装性指的是将对象封装成一个高度自治和相对封闭的个体，对象状态（属性）由这个对象自己的行为（方法）来读取和改变
+**多态：**
+多态指的是程序中定义的引用变量所指向的具体类型和通过该引用变量发出的方法调用在编程时并不确定，而是在程序运行期间才确定，即一个引用变量到底会指向哪个类的实例对象，该引用变量发出的方法调用到底在哪个类中实现的方法，必须在由程序运营期间才能决定。
+**抽象：**
+抽象就是找出一些事物的相似和共性之处，然后将这些事物归为一个类，这个类只考虑这些事物的相似和共性之处，并且会忽略与当前主题和目标无关的那些方面，将注意力集中在与当前目标有关的方面。就是把现实生活的对象，抽象为类。
+
+## 10-14
+
+### Java 中 throw 和 throws 区别？
+
+- `throw` 是语句抛出的一个异常。
+- `throws` 是方法可能抛出异常的声明。
+
+两者都是“消极处理异常”的方式（指抛出或可能抛出异常）。
 
 ## 10-13
 
 ### 运行时异常与受检异常有何异同？
 
-所有异常都继承自java.lang.Throwable，它有两个直接的子类Error与Exception。
+所有异常都继承自 `java.lang.Throwable`，它有两个直接的子类 Error 与 Exception。
 
 Java Compiler 要求所有的 Exception 要么被 catch ，要么被 throw，除非这是一个 RuntimeExeption。
 
@@ -292,9 +356,58 @@ System.out.println(NumberFormat.format(0.1));
 
   | Name      | Description     |
   |]]></description>
-            <content:encoded><![CDATA[<h2 id="_10-13" tabindex="-1">10-13 <a class="header-anchor" href="#_10-13" aria-label="Permalink to &quot;10-13&quot;">&ZeroWidthSpace;</a></h2>
+            <content:encoded><![CDATA[<h2 id="_10-18" tabindex="-1">10-18 <a class="header-anchor" href="#_10-18" aria-label="Permalink to &quot;10-18&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="抽象类和接口的区别" tabindex="-1">抽象类和接口的区别？ <a class="header-anchor" href="#抽象类和接口的区别" aria-label="Permalink to &quot;抽象类和接口的区别？&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>
+<p>一个类可以实现多个接口，但只能继承一个抽象类。接口本身可以通过 extends 关键字扩展多个接口。</p>
+</li>
+<li>
+<p>抽象类可以有构造方法，接口中不能有构造方法。</p>
+</li>
+<li>
+<p>抽象类中不一定都是抽象方法，也可以全是具体方法（非抽象方法）。在 Java8 之前，接口中的所有方法必须是抽象的。但Java8的时候，接口可以有默认方法和静态方法。</p>
+</li>
+<li>
+<p>接口中只能有 static、final 变量，不能有其他变量，而抽象类中不一定。</p>
+</li>
+<li>
+<p>接口中的方法和变量默认修饰符为 public（写不写都是public），而抽象类中的方法可以是 public，protected 和默认类型（抽象方法就是为了被重写所以不能是 private 修饰）</p>
+</li>
+</ol>
+<h2 id="_10-17" tabindex="-1">10-17 <a class="header-anchor" href="#_10-17" aria-label="Permalink to &quot;10-17&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="构造器是否可被重写" tabindex="-1">构造器是否可被重写？ <a class="header-anchor" href="#构造器是否可被重写" aria-label="Permalink to &quot;构造器是否可被重写？&quot;">&ZeroWidthSpace;</a></h3>
+<p>重写是子类覆盖父类的方法，而构造器名称与类名相同，不可能存在重写的概念。</p>
+<p>但是在一个类中，是可以存在多个参数不同的构造器的，这是构造器的重载。</p>
+<h2 id="_10-16" tabindex="-1">10-16 <a class="header-anchor" href="#_10-16" aria-label="Permalink to &quot;10-16&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="请描述-和-的区别。" tabindex="-1">请描述 &amp; 和 &amp;&amp; 的区别。 <a class="header-anchor" href="#请描述-和-的区别。" aria-label="Permalink to &quot;请描述 &amp; 和 &amp;&amp; 的区别。&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>相同点：</strong><code>&amp;</code> 和 <code>&amp;&amp;</code> 都可以用作逻辑与的运算符，表示逻辑与（and）。</p>
+<p><strong>不同点：</strong></p>
+<p>1、<code>&amp;&amp;</code> 具有短路的功能，而 <code>&amp;</code> 不具备短路功能。</p>
+<p>2、当 <code>&amp;</code> 运算符两边的表达式的结果都为 true 时，整个运算结果才为 true。而&amp;&amp;运算符第一个表达式为 false 时，则结果为 false，不再计算第二个表达式。</p>
+<p>3、<code>&amp;</code> 还可以用作位运算符，当 <code>&amp;</code> 操作符两边的表达式不是boolean类型时，<code>&amp;</code> 表示按位与操作，我们通常使用 0x0f 来与一个整数进行&amp;运算，来获取该整数的最低4个 bit 位，例如：0x31 &amp; 0x0f 的结果为 0x01。</p>
+<h2 id="_10-15" tabindex="-1">10-15 <a class="header-anchor" href="#_10-15" aria-label="Permalink to &quot;10-15&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="请描述面向对象的特征。" tabindex="-1">请描述面向对象的特征。 <a class="header-anchor" href="#请描述面向对象的特征。" aria-label="Permalink to &quot;请描述面向对象的特征。&quot;">&ZeroWidthSpace;</a></h3>
+<p>面向对象有三大特征：<code>继承</code>、<code>封装</code>、<code>多态</code></p>
+<p>如果是四大特征：<code>继承</code>、<code>封装</code>、<code>多态</code>、<code>抽象</code></p>
+<p><strong>继承：</strong>
+在定义和实现一个类的时候，可以在一个已经存在的类的基础之上来进行，把这个已经存在的类所定义的内容作为自己的内容，并可以加入若干新的内容，或修改原来的方法使之更适合特殊的需要，这就是继承。比如，遗产的继承。
+<strong>封装：</strong>
+面向对象的封装性指的是将对象封装成一个高度自治和相对封闭的个体，对象状态（属性）由这个对象自己的行为（方法）来读取和改变
+<strong>多态：</strong>
+多态指的是程序中定义的引用变量所指向的具体类型和通过该引用变量发出的方法调用在编程时并不确定，而是在程序运行期间才确定，即一个引用变量到底会指向哪个类的实例对象，该引用变量发出的方法调用到底在哪个类中实现的方法，必须在由程序运营期间才能决定。
+<strong>抽象：</strong>
+抽象就是找出一些事物的相似和共性之处，然后将这些事物归为一个类，这个类只考虑这些事物的相似和共性之处，并且会忽略与当前主题和目标无关的那些方面，将注意力集中在与当前目标有关的方面。就是把现实生活的对象，抽象为类。</p>
+<h2 id="_10-14" tabindex="-1">10-14 <a class="header-anchor" href="#_10-14" aria-label="Permalink to &quot;10-14&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="java-中-throw-和-throws-区别" tabindex="-1">Java 中 throw 和 throws 区别？ <a class="header-anchor" href="#java-中-throw-和-throws-区别" aria-label="Permalink to &quot;Java 中 throw 和 throws 区别？&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li><code>throw</code> 是语句抛出的一个异常。</li>
+<li><code>throws</code> 是方法可能抛出异常的声明。</li>
+</ul>
+<p>两者都是“消极处理异常”的方式（指抛出或可能抛出异常）。</p>
+<h2 id="_10-13" tabindex="-1">10-13 <a class="header-anchor" href="#_10-13" aria-label="Permalink to &quot;10-13&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="运行时异常与受检异常有何异同" tabindex="-1">运行时异常与受检异常有何异同？ <a class="header-anchor" href="#运行时异常与受检异常有何异同" aria-label="Permalink to &quot;运行时异常与受检异常有何异同？&quot;">&ZeroWidthSpace;</a></h3>
-<p>所有异常都继承自java.lang.Throwable，它有两个直接的子类Error与Exception。</p>
+<p>所有异常都继承自 <code>java.lang.Throwable</code>，它有两个直接的子类 Error 与 Exception。</p>
 <p>Java Compiler 要求所有的 Exception 要么被 catch ，要么被 throw，除非这是一个 RuntimeExeption。</p>
 <p>**受检异常（Checked Exception）**是在编译时期有编译器检测的异常，该异常必须要被处理。受检异常继承于Exception。</p>
 <p>**非受检异常（Unchecked Exception）**是在运行时期的异常，即编译器不会检测异常，需要时也可以捕获异常。非受检异常继承于RuntimeException。</p>
@@ -605,17 +718,17 @@ System.out.println(NumberFormat.format(0.1));
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/11.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/11.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/12.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/12.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/9.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/9.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
             <content:encoded><![CDATA[<h2 id="_9-30" tabindex="-1">9-30 <a class="header-anchor" href="#_9-30" aria-label="Permalink to &quot;9-30&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="java中的重载和重写有什么区别" tabindex="-1">Java中的重载和重写有什么区别？ <a class="header-anchor" href="#java中的重载和重写有什么区别" aria-label="Permalink to &quot;Java中的重载和重写有什么区别？&quot;">&ZeroWidthSpace;</a></h3>
 <ul>
@@ -734,7 +847,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[每日一题 - 2023]]></title>
             <link>https://www.imufeng.cn/question-by-day/2023/</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
@@ -749,7 +862,27 @@ System.out.println(NumberFormat.format(0.1));
 </thead>
 <tbody>
 <tr>
-<td>2023/10/12</td>
+<td>2023/10/18</td>
+<td><a href="./10.html#_10-18">抽象类和接口的区别？</a></td>
+</tr>
+<tr>
+<td>2023/10/17</td>
+<td><a href="./10.html#_10-17">构造器是否可被重写？</a></td>
+</tr>
+<tr>
+<td>2023/10/16</td>
+<td><a href="./10.html#_10-16">请描述 &amp; 和 &amp;&amp; 的区别。</a></td>
+</tr>
+<tr>
+<td>2023/10/15</td>
+<td><a href="./10.html#_10-15">请描述面向对象的特征。</a></td>
+</tr>
+<tr>
+<td>2023/10/14</td>
+<td><a href="./10.html#_10-14">Java 中 throw 和 throws 区别？</a></td>
+</tr>
+<tr>
+<td>2023/10/13</td>
 <td><a href="./10.html#_10-13">运行时异常与受检异常有何异同？</a></td>
 </tr>
 <tr>
@@ -823,68 +956,68 @@ System.out.println(NumberFormat.format(0.1));
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/1.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/1.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/10.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/10.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/11.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/11.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/12.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/12.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/2.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/2.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/3.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/3.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/4.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/4.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/5.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/5.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/6.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/6.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/7.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/7.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/8.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/8.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/9.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/9.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
             <content:encoded><![CDATA[<p>还没有。。。</p>
 ]]></content:encoded>
         </item>
@@ -892,8 +1025,8 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[泛域名证书申请以及部署]]></title>
             <link>https://www.imufeng.cn/technology/web/acme-sh.html</link>
             <guid>https://www.imufeng.cn/technology/web/acme-sh.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
-            <description><![CDATA[使用 `acme.sh` 部署 Let's Encrypt 泛域名证书。]]></description>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
+            <description><![CDATA[使用 acme.sh 部署 Let's Encrypt 泛域名证书。]]></description>
             <content:encoded><![CDATA[<h1 id="泛域名证书申请以及部署" tabindex="-1">泛域名证书申请以及部署 <a class="header-anchor" href="#泛域名证书申请以及部署" aria-label="Permalink to &quot;泛域名证书申请以及部署&quot;">&ZeroWidthSpace;</a></h1>
 <blockquote>
 <p>由于目前所有的域名服务商对于免费CA证书仅提供由<code>digicert</code>机构颁发的，只允许有20个子域名且不支持泛子域名。故使用 <code>Let's Encrypt</code> 的SSL证书</p>
@@ -1070,7 +1203,7 @@ System.out.println(NumberFormat.format(0.1));
         <item>
             <link>https://www.imufeng.cn/technology/web/</link>
             <guid>https://www.imufeng.cn/technology/web/</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
             <content:encoded><![CDATA[<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 <ol>
 <li><a href="./acme-sh.html">使用 <code>acme.sh</code> 部署泛域名证书</a></li>
@@ -1083,7 +1216,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[基于DockerCompose的WordPress环境部署（附配置优化）]]></title>
             <link>https://www.imufeng.cn/technology/web/wordpress-by-docker-compose.html</link>
             <guid>https://www.imufeng.cn/technology/web/wordpress-by-docker-compose.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
             <description><![CDATA[本文将带你快速了解 docker compose 安装部署 WordPress。]]></description>
             <content:encoded><![CDATA[<h1 id="基于dockercompose的wordpress环境部署-附配置优化" tabindex="-1">基于DockerCompose的WordPress环境部署（附配置优化） <a class="header-anchor" href="#基于dockercompose的wordpress环境部署-附配置优化" aria-label="Permalink to &quot;基于DockerCompose的WordPress环境部署（附配置优化）&quot;">&ZeroWidthSpace;</a></h1>
 <blockquote>
@@ -1294,7 +1427,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[第一步编译安装httpd服务器]]></title>
             <link>https://www.imufeng.cn/technology/web/linux-lamp/first.html</link>
             <guid>https://www.imufeng.cn/technology/web/linux-lamp/first.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="第一步-编译安装httpd服务器" tabindex="-1">第一步 编译安装httpd服务器 <a class="header-anchor" href="#第一步-编译安装httpd服务器" aria-label="Permalink to &quot;第一步 编译安装httpd服务器&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_1、安装前准备" tabindex="-1">1、安装前准备 <a class="header-anchor" href="#_1、安装前准备" aria-label="Permalink to &quot;1、安装前准备&quot;">&ZeroWidthSpace;</a></h2>
 <p>解压apr apr-util pcre httpd expat包</p>
@@ -1678,7 +1811,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[LAMP编译安装三部曲]]></title>
             <link>https://www.imufeng.cn/technology/web/linux-lamp/</link>
             <guid>https://www.imufeng.cn/technology/web/linux-lamp/</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="lamp-编译安装三部曲" tabindex="-1">LAMP 编译安装三部曲 <a class="header-anchor" href="#lamp-编译安装三部曲" aria-label="Permalink to &quot;LAMP 编译安装三部曲&quot;">&ZeroWidthSpace;</a></h1>
 <p>LAMP 是一种常用于搭建网站和应用程序的服务器架构，它由 Linux、Apache、MySQL（或MariaDB）、PHP 四个开源软件组成，也分别代表了操作系统、Web 服务器、数据库以及服务器端脚本语言。 与 LNMP 架构类似，区别在于使用的 Web 服务器组件。</p>
 <p>本教程将用三步带你完成 LAMP 架构的编译安装。</p>
@@ -1693,7 +1826,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[第二步编译安装mariadb数据库环境]]></title>
             <link>https://www.imufeng.cn/technology/web/linux-lamp/second.html</link>
             <guid>https://www.imufeng.cn/technology/web/linux-lamp/second.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="第二步-编译安装mariadb数据库环境" tabindex="-1">第二步 编译安装mariadb数据库环境 <a class="header-anchor" href="#第二步-编译安装mariadb数据库环境" aria-label="Permalink to &quot;第二步 编译安装mariadb数据库环境&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_1、mariadb数据库概述" tabindex="-1">1、Mariadb数据库概述 <a class="header-anchor" href="#_1、mariadb数据库概述" aria-label="Permalink to &quot;1、Mariadb数据库概述&quot;">&ZeroWidthSpace;</a></h2>
 <p>Mariadb是开源的关系型数据库服务器软件</p>
@@ -1887,7 +2020,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[第三步编译安装PHP]]></title>
             <link>https://www.imufeng.cn/technology/web/linux-lamp/third.html</link>
             <guid>https://www.imufeng.cn/technology/web/linux-lamp/third.html</guid>
-            <pubDate>Fri, 13 Oct 2023 11:10:14 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="第三步-编译安装php" tabindex="-1">第三步 编译安装PHP <a class="header-anchor" href="#第三步-编译安装php" aria-label="Permalink to &quot;第三步 编译安装PHP&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_1、安装前准备" tabindex="-1">1、安装前准备 <a class="header-anchor" href="#_1、安装前准备" aria-label="Permalink to &quot;1、安装前准备&quot;">&ZeroWidthSpace;</a></h2>
 <div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre v-pre class="shiki github-dark vp-code-dark" ><code><span class="line"><span style="color: #e1e4e8">#编译安装libmcrypt</span></span>
