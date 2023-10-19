@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Thu, 19 Oct 2023 09:23:15 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 19 Oct 2023 09:41:04 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -18,7 +18,7 @@
             <title><![CDATA[关于本站]]></title>
             <link>https://www.imufeng.cn/about/</link>
             <guid>https://www.imufeng.cn/about/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="关于本站" tabindex="-1">关于本站 <a class="header-anchor" href="#关于本站" aria-label="Permalink to &quot;关于本站&quot;">&ZeroWidthSpace;</a></h1>
 <div class="tip custom-block"><p class="custom-block-title">版权声明</p>
 <p>除特殊说明，本站文章皆为原创，著作权归作者所有。依据 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noreferrer">CC BY-NC-SA 4.0 </a> 许可证进行授权。</p>
@@ -89,7 +89,7 @@
         <item>
             <link>https://www.imufeng.cn/friend-link-list/</link>
             <guid>https://www.imufeng.cn/friend-link-list/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <content:encoded><![CDATA[<details class="details custom-block"><summary>友链申请格式</summary>
 <ul>
 <li>
@@ -116,7 +116,7 @@
         <item>
             <link>https://www.imufeng.cn/full-stack/</link>
             <guid>https://www.imufeng.cn/full-stack/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <content:encoded><![CDATA[<h2 id="一、后端技术分享" tabindex="-1">一、后端技术分享 <a class="header-anchor" href="#一、后端技术分享" aria-label="Permalink to &quot;一、后端技术分享&quot;">&ZeroWidthSpace;</a></h2>
 <h2 id="二、前端技术分享" tabindex="-1">二、前端技术分享 <a class="header-anchor" href="#二、前端技术分享" aria-label="Permalink to &quot;二、前端技术分享&quot;">&ZeroWidthSpace;</a></h2>
 <h2 id="三、系统运维交流" tabindex="-1">三、系统运维交流 <a class="header-anchor" href="#三、系统运维交流" aria-label="Permalink to &quot;三、系统运维交流&quot;">&ZeroWidthSpace;</a></h2>
@@ -126,7 +126,7 @@
             <title><![CDATA[每日一题]]></title>
             <link>https://www.imufeng.cn/question-by-day/</link>
             <guid>https://www.imufeng.cn/question-by-day/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <description><![CDATA[每天至少一道全栈题目分享，范围不限。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
@@ -141,7 +141,7 @@
             <title><![CDATA[我的分享]]></title>
             <link>https://www.imufeng.cn/share/</link>
             <guid>https://www.imufeng.cn/share/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="我的分享" tabindex="-1">我的分享 <a class="header-anchor" href="#我的分享" aria-label="Permalink to &quot;我的分享&quot;">&ZeroWidthSpace;</a></h1>
 ]]></content:encoded>
         </item>
@@ -149,7 +149,7 @@
             <title><![CDATA[目录]]></title>
             <link>https://www.imufeng.cn/full-stack/java/</link>
             <guid>https://www.imufeng.cn/full-stack/java/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h1>
 <h3 id="面向对象" tabindex="-1">面向对象 <a class="header-anchor" href="#面向对象" aria-label="Permalink to &quot;面向对象&quot;">&ZeroWidthSpace;</a></h3>
 <ul>
@@ -161,12 +161,20 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/10.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/10.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <description><![CDATA[
 
 ## 10-19
 
-### 
+ ### Integer和int的区别？
+
+java虽然宣称一切都是对象，但原始数据类型是例外。int是整形数字，是java的8个原始数据类型（Primitive Types）（char、boolean、byte、short、int、long、float、double）之一。在java API中有对应的包装类，分别是Character、Boolean、Byte、Short、Integer、Long、Float、Double。
+
+Integer是int对应的包装类，它有一个int类型的字段存储数据，并且提供了基本操作，比如数学运算、int和字符串之间转换等。在java 5中引入了自动装箱和自动拆箱功能（boxing/unboxing），java可以根据上下文，自动进行转换，极大地简化了相关编程。javac自动把装箱转换为Integer.valueOf(),把拆箱替换为Integer.intValue()。
+
+自动装箱实际上算是一种语法糖。什么是语法糖？可以简单理解为java平台为我们自动进行了一些转换，保证不同的写法在运行时等价，他们发生在编译阶段，也就是生产的字节码是一致的。
+
+原始数据类型和java泛型并不能配合使用。因为java的泛型某种程度上可以算作伪泛型，它完全是一种编译期的技巧，java编译期会自动将类型转换为对应的特定类型。这就决定了使用泛型，必须保证相应类型可以转换为Object。
 
 ## 10-18
 
@@ -374,7 +382,11 @@ System.out.println(NumberFormat.format(0.1));
   | Name      | Description     |
   |]]></description>
             <content:encoded><![CDATA[<h2 id="_10-19" tabindex="-1">10-19 <a class="header-anchor" href="#_10-19" aria-label="Permalink to &quot;10-19&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="" tabindex="-1"> <a class="header-anchor" href="#" aria-label="Permalink to &quot;&quot;">&ZeroWidthSpace;</a></h3>
+<h3 id="integer和int的区别" tabindex="-1">Integer和int的区别？ <a class="header-anchor" href="#integer和int的区别" aria-label="Permalink to &quot;Integer和int的区别？&quot;">&ZeroWidthSpace;</a></h3>
+<p>java虽然宣称一切都是对象，但原始数据类型是例外。int是整形数字，是java的8个原始数据类型（Primitive Types）（char、boolean、byte、short、int、long、float、double）之一。在java API中有对应的包装类，分别是Character、Boolean、Byte、Short、Integer、Long、Float、Double。</p>
+<p>Integer是int对应的包装类，它有一个int类型的字段存储数据，并且提供了基本操作，比如数学运算、int和字符串之间转换等。在java 5中引入了自动装箱和自动拆箱功能（boxing/unboxing），java可以根据上下文，自动进行转换，极大地简化了相关编程。javac自动把装箱转换为Integer.valueOf(),把拆箱替换为Integer.intValue()。</p>
+<p>自动装箱实际上算是一种语法糖。什么是语法糖？可以简单理解为java平台为我们自动进行了一些转换，保证不同的写法在运行时等价，他们发生在编译阶段，也就是生产的字节码是一致的。</p>
+<p>原始数据类型和java泛型并不能配合使用。因为java的泛型某种程度上可以算作伪泛型，它完全是一种编译期的技巧，java编译期会自动将类型转换为对应的特定类型。这就决定了使用泛型，必须保证相应类型可以转换为Object。</p>
 <h2 id="_10-18" tabindex="-1">10-18 <a class="header-anchor" href="#_10-18" aria-label="Permalink to &quot;10-18&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="抽象类和接口的区别" tabindex="-1">抽象类和接口的区别？ <a class="header-anchor" href="#抽象类和接口的区别" aria-label="Permalink to &quot;抽象类和接口的区别？&quot;">&ZeroWidthSpace;</a></h3>
 <ol>
@@ -737,17 +749,17 @@ System.out.println(NumberFormat.format(0.1));
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/11.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/11.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/12.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/12.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/9.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/9.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <content:encoded><![CDATA[<h2 id="_9-30" tabindex="-1">9-30 <a class="header-anchor" href="#_9-30" aria-label="Permalink to &quot;9-30&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="java中的重载和重写有什么区别" tabindex="-1">Java中的重载和重写有什么区别？ <a class="header-anchor" href="#java中的重载和重写有什么区别" aria-label="Permalink to &quot;Java中的重载和重写有什么区别？&quot;">&ZeroWidthSpace;</a></h3>
 <ul>
@@ -866,7 +878,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[每日一题 - 2023]]></title>
             <link>https://www.imufeng.cn/question-by-day/2023/</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
@@ -880,6 +892,10 @@ System.out.println(NumberFormat.format(0.1));
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2023/10/19</td>
+<td><a href="./10.html#_10-19">Integer和int的区别？</a></td>
+</tr>
 <tr>
 <td>2023/10/18</td>
 <td><a href="./10.html#_10-18">抽象类和接口的区别？</a></td>
@@ -975,68 +991,68 @@ System.out.println(NumberFormat.format(0.1));
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/1.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/1.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/10.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/10.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/11.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/11.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/12.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/12.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/2.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/2.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/3.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/3.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/4.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/4.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/5.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/5.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/6.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/6.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/7.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/7.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/8.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/8.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/9.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/9.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <content:encoded><![CDATA[<p>还没有。。。</p>
 ]]></content:encoded>
         </item>
@@ -1044,7 +1060,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[泛域名证书申请以及部署]]></title>
             <link>https://www.imufeng.cn/technology/web/acme-sh.html</link>
             <guid>https://www.imufeng.cn/technology/web/acme-sh.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <description><![CDATA[使用 acme.sh 部署 Let's Encrypt 泛域名证书。]]></description>
             <content:encoded><![CDATA[<h1 id="泛域名证书申请以及部署" tabindex="-1">泛域名证书申请以及部署 <a class="header-anchor" href="#泛域名证书申请以及部署" aria-label="Permalink to &quot;泛域名证书申请以及部署&quot;">&ZeroWidthSpace;</a></h1>
 <blockquote>
@@ -1222,7 +1238,7 @@ System.out.println(NumberFormat.format(0.1));
         <item>
             <link>https://www.imufeng.cn/technology/web/</link>
             <guid>https://www.imufeng.cn/technology/web/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <content:encoded><![CDATA[<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 <ol>
 <li><a href="./acme-sh.html">使用 <code>acme.sh</code> 部署泛域名证书</a></li>
@@ -1235,7 +1251,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[基于DockerCompose的WordPress环境部署（附配置优化）]]></title>
             <link>https://www.imufeng.cn/technology/web/wordpress-by-docker-compose.html</link>
             <guid>https://www.imufeng.cn/technology/web/wordpress-by-docker-compose.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <description><![CDATA[本文将带你快速了解 docker compose 安装部署 WordPress。]]></description>
             <content:encoded><![CDATA[<h1 id="基于dockercompose的wordpress环境部署-附配置优化" tabindex="-1">基于DockerCompose的WordPress环境部署（附配置优化） <a class="header-anchor" href="#基于dockercompose的wordpress环境部署-附配置优化" aria-label="Permalink to &quot;基于DockerCompose的WordPress环境部署（附配置优化）&quot;">&ZeroWidthSpace;</a></h1>
 <blockquote>
@@ -1446,7 +1462,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[抽象类和抽象方法]]></title>
             <link>https://www.imufeng.cn/full-stack/java/oop/abstract.html</link>
             <guid>https://www.imufeng.cn/full-stack/java/oop/abstract.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <description><![CDATA[在一个较为复杂的继承链中，祖先类更具有一般性，作为派生其他类的基类而不糊将其作为用来构造实例。]]></description>
             <content:encoded><![CDATA[<h1 id="抽象类和抽象方法" tabindex="-1">抽象类和抽象方法 <a class="header-anchor" href="#抽象类和抽象方法" aria-label="Permalink to &quot;抽象类和抽象方法&quot;">&ZeroWidthSpace;</a></h1>
 <p>在一个较为复杂的继承链中，父类有可能只知道子类应当具备某个方法，但是不能够明确方法实现。祖先类更具有一般性。通常祖先类只会作为派生其他类的基类而不糊将其作为用来构造实例。如员工之于公司，每个员工都应该得到工资，但是每个员工的工资可能都不一样。所以员工类就会有一个没有方法主体的<strong>抽象方法</strong>。而包含抽象方法的类就是<strong>抽象类</strong>。</p>
@@ -1544,7 +1560,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[第一步编译安装httpd服务器]]></title>
             <link>https://www.imufeng.cn/technology/web/linux-lamp/first.html</link>
             <guid>https://www.imufeng.cn/technology/web/linux-lamp/first.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="第一步-编译安装httpd服务器" tabindex="-1">第一步 编译安装httpd服务器 <a class="header-anchor" href="#第一步-编译安装httpd服务器" aria-label="Permalink to &quot;第一步 编译安装httpd服务器&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_1、安装前准备" tabindex="-1">1、安装前准备 <a class="header-anchor" href="#_1、安装前准备" aria-label="Permalink to &quot;1、安装前准备&quot;">&ZeroWidthSpace;</a></h2>
 <p>解压apr apr-util pcre httpd expat包</p>
@@ -1928,7 +1944,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[LAMP编译安装三部曲]]></title>
             <link>https://www.imufeng.cn/technology/web/linux-lamp/</link>
             <guid>https://www.imufeng.cn/technology/web/linux-lamp/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="lamp-编译安装三部曲" tabindex="-1">LAMP 编译安装三部曲 <a class="header-anchor" href="#lamp-编译安装三部曲" aria-label="Permalink to &quot;LAMP 编译安装三部曲&quot;">&ZeroWidthSpace;</a></h1>
 <p>LAMP 是一种常用于搭建网站和应用程序的服务器架构，它由 Linux、Apache、MySQL（或MariaDB）、PHP 四个开源软件组成，也分别代表了操作系统、Web 服务器、数据库以及服务器端脚本语言。 与 LNMP 架构类似，区别在于使用的 Web 服务器组件。</p>
 <p>本教程将用三步带你完成 LAMP 架构的编译安装。</p>
@@ -1943,7 +1959,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[第二步编译安装mariadb数据库环境]]></title>
             <link>https://www.imufeng.cn/technology/web/linux-lamp/second.html</link>
             <guid>https://www.imufeng.cn/technology/web/linux-lamp/second.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="第二步-编译安装mariadb数据库环境" tabindex="-1">第二步 编译安装mariadb数据库环境 <a class="header-anchor" href="#第二步-编译安装mariadb数据库环境" aria-label="Permalink to &quot;第二步 编译安装mariadb数据库环境&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_1、mariadb数据库概述" tabindex="-1">1、Mariadb数据库概述 <a class="header-anchor" href="#_1、mariadb数据库概述" aria-label="Permalink to &quot;1、Mariadb数据库概述&quot;">&ZeroWidthSpace;</a></h2>
 <p>Mariadb是开源的关系型数据库服务器软件</p>
@@ -2137,7 +2153,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[第三步编译安装PHP]]></title>
             <link>https://www.imufeng.cn/technology/web/linux-lamp/third.html</link>
             <guid>https://www.imufeng.cn/technology/web/linux-lamp/third.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:21:13 GMT</pubDate>
+            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="第三步-编译安装php" tabindex="-1">第三步 编译安装PHP <a class="header-anchor" href="#第三步-编译安装php" aria-label="Permalink to &quot;第三步 编译安装PHP&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_1、安装前准备" tabindex="-1">1、安装前准备 <a class="header-anchor" href="#_1、安装前准备" aria-label="Permalink to &quot;1、安装前准备&quot;">&ZeroWidthSpace;</a></h2>
 <div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre v-pre class="shiki github-dark vp-code-dark" ><code><span class="line"><span style="color: #e1e4e8">#编译安装libmcrypt</span></span>
