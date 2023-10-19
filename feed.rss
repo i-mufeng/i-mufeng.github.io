@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Thu, 19 Oct 2023 09:41:04 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 19 Oct 2023 09:44:40 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -14,150 +14,6 @@
             <link>https://www.imufeng.cn</link>
         </image>
         <copyright>Mblog © 2021-2023 Created by 沐风</copyright>
-        <item>
-            <title><![CDATA[关于本站]]></title>
-            <link>https://www.imufeng.cn/about/</link>
-            <guid>https://www.imufeng.cn/about/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="关于本站" tabindex="-1">关于本站 <a class="header-anchor" href="#关于本站" aria-label="Permalink to &quot;关于本站&quot;">&ZeroWidthSpace;</a></h1>
-<div class="tip custom-block"><p class="custom-block-title">版权声明</p>
-<p>除特殊说明，本站文章皆为原创，著作权归作者所有。依据 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noreferrer">CC BY-NC-SA 4.0 </a> 许可证进行授权。</p>
-<p>本站源码开源于 <a href="https://github.com/i-mufeng/mblog" target="_blank" rel="noreferrer">Github</a> ，采用 <a href="https://www.gnu.org/licenses/gpl-3.0.md" target="_blank" rel="noreferrer">GPLv3</a> 开源协议。</p>
-</div>
-<details class="details custom-block"><summary>站点信息</summary>
-<ul>
-<li>
-<p><strong>博主：</strong> Mufeng</p>
-</li>
-<li>
-<p><strong>头像：</strong> <a href="https://cn.gravatar.com/avatar/f1dcdc8fa782b81824df5d67022e4d4a" target="_blank" rel="noreferrer">Gavatar-CN</a></p>
-</li>
-<li>
-<p><strong>站点名称：</strong> 沐风的小站</p>
-</li>
-<li>
-<p><strong>站点域名：</strong> <code>imufeng.cn</code></p>
-</li>
-<li>
-<p><strong>E-mail：</strong> <a href="mailto:admin@imufeng.cn" target="_blank" rel="noreferrer">admin@imufeng.cn</a></p>
-</li>
-</ul>
-</details>
-<h3 id="关于-mufeng" tabindex="-1">关于 MUFENG <a class="header-anchor" href="#关于-mufeng" aria-label="Permalink to &quot;关于 MUFENG&quot;">&ZeroWidthSpace;</a></h3>
-<p>博主是一名萌新程序猿，学计算机纯属热爱，毕业也顺利的踏进了开发这条不归路。目前工作一年，状态良好。喜欢音乐，喜静不喜动。</p>
-<p><code>沐风</code>，取如沐春风之意，指不断的熏陶，静静的成长。是我比较追求的一个状态，更贴合我佛系、随遇而安的性格。也希望自己能够达到那种终生学习、不断完善自己的境界。</p>
-<h3 id="关于-imufeng-cn" tabindex="-1">关于 IMUFENG.CN <a class="header-anchor" href="#关于-imufeng-cn" aria-label="Permalink to &quot;关于 IMUFENG.CN&quot;">&ZeroWidthSpace;</a></h3>
-<p>搭建本站是为了整理自己最近的所得，并写写自己的所思。我之前的一些博文会发布到 <code>CSDN</code>、<code>博客园</code> 等平台，但是自由度会受到很大限制，且某些平台吃相难看，认真做内容的平台不断被打压。所以我认为自己搭建一个站点还是有必要的。</p>
-<p>之前也尝试过一些开源博客，以及 <code>Wordpress</code> ，虽然但是，总还是觉得用着不舒服，所以最终还是选择了 <code>VitePress</code>。</p>
-<h3 id="建站历程" tabindex="-1">建站历程 <a class="header-anchor" href="#建站历程" aria-label="Permalink to &quot;建站历程&quot;">&ZeroWidthSpace;</a></h3>
-<br>
-<div class='timeline-dot'><span class='timeline-dot-title'>2019年</span>
-<ul>
-<li>在自学过程中，了解到基本的建站知识。</li>
-<li>购买了一台云主机以及 mangoling.top 的域名。</li>
-<li>尝试为自己的域名备案。</li>
-</ul>
-</div>
-<div class='timeline-dot'><span class='timeline-dot-title'>2020年</span>
-<ul>
-<li>由于疫情被封，一直自学 Linux 及开发相关知识。</li>
-</ul>
-</div>
-<div class='timeline-dot'><span class='timeline-dot-title'>2021 年</span>
-<ul>
-<li>学习 HTTPS 相关知识，为域名绑定https证书。</li>
-<li>通过 Typora 将 markdown 笔记导出为 HTML 并发布，向同学分享。</li>
-<li>入手 imufeng.cn 域名，购买了第一台云服务器。</li>
-</ul>
-</div>
-<div class='timeline-dot'><span class='timeline-dot-title'>2022年</span>
-<ul>
-<li>找到一款基于SpringBoot + Vue 的个人博客系统，学习并完善。</li>
-<li>学习 Docker 等知识，使用其搭建了 LNMP 架构的服务器并部署了自己的博客。</li>
-</ul>
-</div>
-<div class='timeline-dot'><span class='timeline-dot-title'>2023年</span>
-<ul>
-<li>为博客的后续寻找方向，尝试过 WordPress 以及自己开发，最终选择了 Vitepress。</li>
-<li>逐步完善 Vitepress，接入百度统计站，学习 SEO 优化等相关知识，</li>
-</ul>
-</div>
-<div class='timeline-dot'><span class='timeline-dot-title'>将继续完善</span>
-</div>
-]]></content:encoded>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/friend-link-list/</link>
-            <guid>https://www.imufeng.cn/friend-link-list/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-            <content:encoded><![CDATA[<details class="details custom-block"><summary>友链申请格式</summary>
-<ul>
-<li>
-<p><strong>站点名称：</strong> <code>沐风的小站</code></p>
-</li>
-<li>
-<p><strong>站点地址：</strong> <code>https://imufeng.cn</code></p>
-</li>
-<li>
-<p><strong>一句话：</strong> <code>但愿岁月如客，来去皆从容。</code></p>
-</li>
-<li>
-<p><strong>头像链接：</strong> <code>https://cravatar.cn/avatar/f1dcdc8fa782b81824df5d67022e4d4a</code></p>
-</li>
-<li>
-<p><strong>其他平台：</strong> <code>[Github/Twitter...](link)</code></p>
-</li>
-</ul>
-</details>
-<h3 id="膜拜大佬" tabindex="-1">膜拜大佬 <a class="header-anchor" href="#膜拜大佬" aria-label="Permalink to &quot;膜拜大佬&quot;">&ZeroWidthSpace;</a></h3>
-<VPTeamMembers size="medium" :members="authoritys" /><h3 id="友链" tabindex="-1">友链 <a class="header-anchor" href="#友链" aria-label="Permalink to &quot;友链&quot;">&ZeroWidthSpace;</a></h3>
-<VPTeamMembers size="small" :members="friends" />]]></content:encoded>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/full-stack/</link>
-            <guid>https://www.imufeng.cn/full-stack/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-            <content:encoded><![CDATA[<h2 id="一、后端技术分享" tabindex="-1">一、后端技术分享 <a class="header-anchor" href="#一、后端技术分享" aria-label="Permalink to &quot;一、后端技术分享&quot;">&ZeroWidthSpace;</a></h2>
-<h2 id="二、前端技术分享" tabindex="-1">二、前端技术分享 <a class="header-anchor" href="#二、前端技术分享" aria-label="Permalink to &quot;二、前端技术分享&quot;">&ZeroWidthSpace;</a></h2>
-<h2 id="三、系统运维交流" tabindex="-1">三、系统运维交流 <a class="header-anchor" href="#三、系统运维交流" aria-label="Permalink to &quot;三、系统运维交流&quot;">&ZeroWidthSpace;</a></h2>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[每日一题]]></title>
-            <link>https://www.imufeng.cn/question-by-day/</link>
-            <guid>https://www.imufeng.cn/question-by-day/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-            <description><![CDATA[每天至少一道全栈题目分享，范围不限。]]></description>
-            <content:encoded><![CDATA[<blockquote>
-<p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
-</blockquote>
-<ul>
-<li><a href="./2023/">2023</a></li>
-<li><a href="./2024/">2024</a></li>
-</ul>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[我的分享]]></title>
-            <link>https://www.imufeng.cn/share/</link>
-            <guid>https://www.imufeng.cn/share/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="我的分享" tabindex="-1">我的分享 <a class="header-anchor" href="#我的分享" aria-label="Permalink to &quot;我的分享&quot;">&ZeroWidthSpace;</a></h1>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[目录]]></title>
-            <link>https://www.imufeng.cn/full-stack/java/</link>
-            <guid>https://www.imufeng.cn/full-stack/java/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h1>
-<h3 id="面向对象" tabindex="-1">面向对象 <a class="header-anchor" href="#面向对象" aria-label="Permalink to &quot;面向对象&quot;">&ZeroWidthSpace;</a></h3>
-<ul>
-<li><a href="./oop/abstract.html">抽象类和抽象方法</a></li>
-</ul>
-<h3 id="其他" tabindex="-1">其他 <a class="header-anchor" href="#其他" aria-label="Permalink to &quot;其他&quot;">&ZeroWidthSpace;</a></h3>
-]]></content:encoded>
-        </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/10.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/10.html</guid>
@@ -747,134 +603,6 @@ System.out.println(NumberFormat.format(0.1));
 ]]></content:encoded>
         </item>
         <item>
-            <link>https://www.imufeng.cn/question-by-day/2023/11.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2023/11.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/question-by-day/2023/12.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2023/12.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/question-by-day/2023/9.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2023/9.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-            <content:encoded><![CDATA[<h2 id="_9-30" tabindex="-1">9-30 <a class="header-anchor" href="#_9-30" aria-label="Permalink to &quot;9-30&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="java中的重载和重写有什么区别" tabindex="-1">Java中的重载和重写有什么区别？ <a class="header-anchor" href="#java中的重载和重写有什么区别" aria-label="Permalink to &quot;Java中的重载和重写有什么区别？&quot;">&ZeroWidthSpace;</a></h3>
-<ul>
-<li>重载（Overloading）：在同一个类中，方法名相同但参数列表不同，可以有不同的返回类型。编译器根据方法参数的类型、个数、顺序来选择调用相应的方法。</li>
-<li>重写（Overriding）：在子类中重新实现父类的方法，方法名、参数列表和返回类型必须相同。重写用于改变父类方法的实现，以适应子类的特定需求。</li>
-</ul>
-<h2 id="_9-29" tabindex="-1">9-29 <a class="header-anchor" href="#_9-29" aria-label="Permalink to &quot;9-29&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="java中的四种访问修饰符是什么" tabindex="-1">Java中的四种访问修饰符是什么？ <a class="header-anchor" href="#java中的四种访问修饰符是什么" aria-label="Permalink to &quot;Java中的四种访问修饰符是什么？&quot;">&ZeroWidthSpace;</a></h3>
-<ul>
-<li><code>public</code>：对所有类可见。</li>
-<li><code>private</code>：仅对类本身可见。</li>
-<li><code>protected</code>：对同一包内的类和所有子类可见。</li>
-<li><code>default</code>（不使用修饰符）：对同一包内的类可见。</li>
-</ul>
-<h2 id="_9-28" tabindex="-1">9-28 <a class="header-anchor" href="#_9-28" aria-label="Permalink to &quot;9-28&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="请用-java-写一个冒泡排序" tabindex="-1">请用 JAVA 写一个冒泡排序？ <a class="header-anchor" href="#请用-java-写一个冒泡排序" aria-label="Permalink to &quot;请用 JAVA 写一个冒泡排序？&quot;">&ZeroWidthSpace;</a></h3>
-<p>冒泡排序原理是逐一比较相邻元素，通过交换位置逐步将较大的数移动到末尾。</p>
-<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre v-pre class="shiki github-dark vp-code-dark" ><code><span class="line"><span style="color: #F97583">public</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">class</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">BubbleSort</span><span style="color: #E1E4E8"> {</span></span>
-<span class="line"><span style="color: #E1E4E8">    </span></span>
-<span class="line"><span style="color: #6A737D">    /**</span></span>
-<span class="line"><span style="color: #6A737D">     * 对整数数组进行冒泡排序，将数组按升序排列</span></span>
-<span class="line"><span style="color: #6A737D">     * </span></span>
-<span class="line"><span style="color: #6A737D">     * </span><span style="color: #F97583">@param</span><span style="color: #6A737D"> </span><span style="color: #FFAB70">array</span><span style="color: #6A737D"> 待排序的整数数组</span></span>
-<span class="line"><span style="color: #6A737D">     */</span></span>
-<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">public</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">static</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">void</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">bubbleSort</span><span style="color: #E1E4E8">(</span><span style="color: #F97583">int</span><span style="color: #E1E4E8">[] </span><span style="color: #FFAB70">array</span><span style="color: #E1E4E8">) {</span></span>
-<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">int</span><span style="color: #E1E4E8"> n </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> array.length;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #6A737D">// 外层循环控制每轮比较的次数</span></span>
-<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">for</span><span style="color: #E1E4E8"> (</span><span style="color: #F97583">int</span><span style="color: #E1E4E8"> i </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">0</span><span style="color: #E1E4E8">; i </span><span style="color: #F97583">&lt;</span><span style="color: #E1E4E8"> n </span><span style="color: #F97583">-</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8">; i</span><span style="color: #F97583">++</span><span style="color: #E1E4E8">) {</span></span>
-<span class="line"><span style="color: #E1E4E8">            </span><span style="color: #6A737D">// 内层循环比较相邻元素，将较大的元素移到后面</span></span>
-<span class="line"><span style="color: #E1E4E8">            </span><span style="color: #F97583">for</span><span style="color: #E1E4E8"> (</span><span style="color: #F97583">int</span><span style="color: #E1E4E8"> j </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">0</span><span style="color: #E1E4E8">; j </span><span style="color: #F97583">&lt;</span><span style="color: #E1E4E8"> n </span><span style="color: #F97583">-</span><span style="color: #E1E4E8"> i </span><span style="color: #F97583">-</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8">; j</span><span style="color: #F97583">++</span><span style="color: #E1E4E8">) {</span></span>
-<span class="line"><span style="color: #E1E4E8">                </span><span style="color: #6A737D">// 如果前一个元素大于后一个元素，则交换它们的位置</span></span>
-<span class="line"><span style="color: #E1E4E8">                </span><span style="color: #F97583">if</span><span style="color: #E1E4E8"> (array[j] </span><span style="color: #F97583">&gt;</span><span style="color: #E1E4E8"> array[j </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8">]) {</span></span>
-<span class="line"><span style="color: #E1E4E8">                    </span><span style="color: #F97583">int</span><span style="color: #E1E4E8"> temp </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> array[j];</span></span>
-<span class="line"><span style="color: #E1E4E8">                    array[j] </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> array[j </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8">];</span></span>
-<span class="line"><span style="color: #E1E4E8">                    array[j </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8">] </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> temp;</span></span>
-<span class="line"><span style="color: #E1E4E8">                }</span></span>
-<span class="line"><span style="color: #E1E4E8">            }</span></span>
-<span class="line"><span style="color: #E1E4E8">        }</span></span>
-<span class="line"><span style="color: #E1E4E8">    }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">public</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">static</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">void</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">main</span><span style="color: #E1E4E8">(</span><span style="color: #F97583">String</span><span style="color: #E1E4E8">[] </span><span style="color: #FFAB70">args</span><span style="color: #E1E4E8">) {</span></span>
-<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">int</span><span style="color: #E1E4E8">[] nums </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> {</span><span style="color: #79B8FF">64</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">34</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">25</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">12</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">22</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">11</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">90</span><span style="color: #E1E4E8">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #E1E4E8">        System.out.</span><span style="color: #B392F0">println</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;原始数组:&quot;</span><span style="color: #E1E4E8">);</span></span>
-<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">for</span><span style="color: #E1E4E8"> (</span><span style="color: #F97583">int</span><span style="color: #E1E4E8"> num </span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> nums) {</span></span>
-<span class="line"><span style="color: #E1E4E8">            System.out.</span><span style="color: #B392F0">print</span><span style="color: #E1E4E8">(num </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot; &quot;</span><span style="color: #E1E4E8">);</span></span>
-<span class="line"><span style="color: #E1E4E8">        }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #B392F0">bubbleSort</span><span style="color: #E1E4E8">(nums);</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #E1E4E8">        System.out.</span><span style="color: #B392F0">println</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;</span><span style="color: #79B8FF">\n</span><span style="color: #9ECBFF">排序后的数组:&quot;</span><span style="color: #E1E4E8">);</span></span>
-<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">for</span><span style="color: #E1E4E8"> (</span><span style="color: #F97583">int</span><span style="color: #E1E4E8"> num </span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> nums) {</span></span>
-<span class="line"><span style="color: #E1E4E8">            System.out.</span><span style="color: #B392F0">print</span><span style="color: #E1E4E8">(num </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot; &quot;</span><span style="color: #E1E4E8">);</span></span>
-<span class="line"><span style="color: #E1E4E8">        }</span></span>
-<span class="line"><span style="color: #E1E4E8">    }</span></span>
-<span class="line"><span style="color: #E1E4E8">}</span></span></code></pre><pre v-pre class="shiki github-light vp-code-light" ><code><span class="line"><span style="color: #D73A49">public</span><span style="color: #24292E"> </span><span style="color: #D73A49">class</span><span style="color: #24292E"> </span><span style="color: #6F42C1">BubbleSort</span><span style="color: #24292E"> {</span></span>
-<span class="line"><span style="color: #24292E">    </span></span>
-<span class="line"><span style="color: #6A737D">    /**</span></span>
-<span class="line"><span style="color: #6A737D">     * 对整数数组进行冒泡排序，将数组按升序排列</span></span>
-<span class="line"><span style="color: #6A737D">     * </span></span>
-<span class="line"><span style="color: #6A737D">     * </span><span style="color: #D73A49">@param</span><span style="color: #6A737D"> </span><span style="color: #E36209">array</span><span style="color: #6A737D"> 待排序的整数数组</span></span>
-<span class="line"><span style="color: #6A737D">     */</span></span>
-<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">public</span><span style="color: #24292E"> </span><span style="color: #D73A49">static</span><span style="color: #24292E"> </span><span style="color: #D73A49">void</span><span style="color: #24292E"> </span><span style="color: #6F42C1">bubbleSort</span><span style="color: #24292E">(</span><span style="color: #D73A49">int</span><span style="color: #24292E">[] </span><span style="color: #E36209">array</span><span style="color: #24292E">) {</span></span>
-<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">int</span><span style="color: #24292E"> n </span><span style="color: #D73A49">=</span><span style="color: #24292E"> array.length;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #24292E">        </span><span style="color: #6A737D">// 外层循环控制每轮比较的次数</span></span>
-<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">for</span><span style="color: #24292E"> (</span><span style="color: #D73A49">int</span><span style="color: #24292E"> i </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #005CC5">0</span><span style="color: #24292E">; i </span><span style="color: #D73A49">&lt;</span><span style="color: #24292E"> n </span><span style="color: #D73A49">-</span><span style="color: #24292E"> </span><span style="color: #005CC5">1</span><span style="color: #24292E">; i</span><span style="color: #D73A49">++</span><span style="color: #24292E">) {</span></span>
-<span class="line"><span style="color: #24292E">            </span><span style="color: #6A737D">// 内层循环比较相邻元素，将较大的元素移到后面</span></span>
-<span class="line"><span style="color: #24292E">            </span><span style="color: #D73A49">for</span><span style="color: #24292E"> (</span><span style="color: #D73A49">int</span><span style="color: #24292E"> j </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #005CC5">0</span><span style="color: #24292E">; j </span><span style="color: #D73A49">&lt;</span><span style="color: #24292E"> n </span><span style="color: #D73A49">-</span><span style="color: #24292E"> i </span><span style="color: #D73A49">-</span><span style="color: #24292E"> </span><span style="color: #005CC5">1</span><span style="color: #24292E">; j</span><span style="color: #D73A49">++</span><span style="color: #24292E">) {</span></span>
-<span class="line"><span style="color: #24292E">                </span><span style="color: #6A737D">// 如果前一个元素大于后一个元素，则交换它们的位置</span></span>
-<span class="line"><span style="color: #24292E">                </span><span style="color: #D73A49">if</span><span style="color: #24292E"> (array[j] </span><span style="color: #D73A49">&gt;</span><span style="color: #24292E"> array[j </span><span style="color: #D73A49">+</span><span style="color: #24292E"> </span><span style="color: #005CC5">1</span><span style="color: #24292E">]) {</span></span>
-<span class="line"><span style="color: #24292E">                    </span><span style="color: #D73A49">int</span><span style="color: #24292E"> temp </span><span style="color: #D73A49">=</span><span style="color: #24292E"> array[j];</span></span>
-<span class="line"><span style="color: #24292E">                    array[j] </span><span style="color: #D73A49">=</span><span style="color: #24292E"> array[j </span><span style="color: #D73A49">+</span><span style="color: #24292E"> </span><span style="color: #005CC5">1</span><span style="color: #24292E">];</span></span>
-<span class="line"><span style="color: #24292E">                    array[j </span><span style="color: #D73A49">+</span><span style="color: #24292E"> </span><span style="color: #005CC5">1</span><span style="color: #24292E">] </span><span style="color: #D73A49">=</span><span style="color: #24292E"> temp;</span></span>
-<span class="line"><span style="color: #24292E">                }</span></span>
-<span class="line"><span style="color: #24292E">            }</span></span>
-<span class="line"><span style="color: #24292E">        }</span></span>
-<span class="line"><span style="color: #24292E">    }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">public</span><span style="color: #24292E"> </span><span style="color: #D73A49">static</span><span style="color: #24292E"> </span><span style="color: #D73A49">void</span><span style="color: #24292E"> </span><span style="color: #6F42C1">main</span><span style="color: #24292E">(</span><span style="color: #D73A49">String</span><span style="color: #24292E">[] </span><span style="color: #E36209">args</span><span style="color: #24292E">) {</span></span>
-<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">int</span><span style="color: #24292E">[] nums </span><span style="color: #D73A49">=</span><span style="color: #24292E"> {</span><span style="color: #005CC5">64</span><span style="color: #24292E">, </span><span style="color: #005CC5">34</span><span style="color: #24292E">, </span><span style="color: #005CC5">25</span><span style="color: #24292E">, </span><span style="color: #005CC5">12</span><span style="color: #24292E">, </span><span style="color: #005CC5">22</span><span style="color: #24292E">, </span><span style="color: #005CC5">11</span><span style="color: #24292E">, </span><span style="color: #005CC5">90</span><span style="color: #24292E">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #24292E">        System.out.</span><span style="color: #6F42C1">println</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;原始数组:&quot;</span><span style="color: #24292E">);</span></span>
-<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">for</span><span style="color: #24292E"> (</span><span style="color: #D73A49">int</span><span style="color: #24292E"> num </span><span style="color: #D73A49">:</span><span style="color: #24292E"> nums) {</span></span>
-<span class="line"><span style="color: #24292E">            System.out.</span><span style="color: #6F42C1">print</span><span style="color: #24292E">(num </span><span style="color: #D73A49">+</span><span style="color: #24292E"> </span><span style="color: #032F62">&quot; &quot;</span><span style="color: #24292E">);</span></span>
-<span class="line"><span style="color: #24292E">        }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #24292E">        </span><span style="color: #6F42C1">bubbleSort</span><span style="color: #24292E">(nums);</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #24292E">        System.out.</span><span style="color: #6F42C1">println</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;</span><span style="color: #005CC5">\n</span><span style="color: #032F62">排序后的数组:&quot;</span><span style="color: #24292E">);</span></span>
-<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">for</span><span style="color: #24292E"> (</span><span style="color: #D73A49">int</span><span style="color: #24292E"> num </span><span style="color: #D73A49">:</span><span style="color: #24292E"> nums) {</span></span>
-<span class="line"><span style="color: #24292E">            System.out.</span><span style="color: #6F42C1">print</span><span style="color: #24292E">(num </span><span style="color: #D73A49">+</span><span style="color: #24292E"> </span><span style="color: #032F62">&quot; &quot;</span><span style="color: #24292E">);</span></span>
-<span class="line"><span style="color: #24292E">        }</span></span>
-<span class="line"><span style="color: #24292E">    }</span></span>
-<span class="line"><span style="color: #24292E">}</span></span></code></pre>
-</div><h2 id="_9-27" tabindex="-1">9-27 <a class="header-anchor" href="#_9-27" aria-label="Permalink to &quot;9-27&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="什么是前后端分离" tabindex="-1">什么是前后端分离？ <a class="header-anchor" href="#什么是前后端分离" aria-label="Permalink to &quot;什么是前后端分离？&quot;">&ZeroWidthSpace;</a></h3>
-<blockquote>
-<p>前后端分离技术目前已经成为互联网项目研发的基础，JAVA 中一般使用 <code>Nginx</code> + <code>Tomcat</code> 的架构实现。将数据处理与页面展示有效的进行解耦。为多客户端、大型分布式架构、微服务架构等都打下了坚实的基础。</p>
-</blockquote>
-<p>这里以 <code>VUE</code> + <code>SpringBoot</code> 的系统举例，通常来讲，前端部署在 <code>Nginx</code>、<code>Apache</code> 等 Web 服务器，后端通常部署在 <code>Tomcat</code> 等应用服务器，使用 <code>JSON</code> 交互数据。后端根据 <code>Rustful Api</code>  规范开发数据接口，并通过 <code>Token</code>、<code>Session</code> 等安全机制进行认证，使用 <code>Mybatis</code> 等持久层框架与数据库进行通信。这些接口必须通过接口的相关规定进行调用。前端使用 <code>Ajax</code> 技术通过 <code>HTTP</code> 等协议实现对后端接口的调用，在后端主导的项目开发中，后端可以通过 <code>SpringDoc</code> 等方式提供接口文档，说明接口调用规范，供前端开发人员阅读。</p>
-<p><strong>优点：</strong></p>
-<p>前后端分离架构的主要优点是实现了数据与页面显示的解耦，开发人员能够专注于自己的方向，提升系统的开发效率、代码的可重用性及用户的体验感，并且由于后端所在的应用服务器一般都部署在内网，通过 web 服务器反向代理实现，能够增强后端数据的安全性。同时，能够同时利用 Web 服务器速度更快的优点以及应用服务器的动态资源处理，更便于开发及部署。</p>
-<p><strong>缺点：</strong></p>
-<ul>
-<li>系统开发对于人员数量及团队的配合度要求变大。</li>
-<li>由于系统调整需要同时对前后端都进行调整，这将增大系统迭代的周期。</li>
-<li>前端开发通常都要基于后端接口，这增大了对前端开发的技术水平要求及上手难度。</li>
-<li>前端开发需要编写更多的代码来处理数据交互和逻辑，这增加了前端开发的工作量。</li>
-<li>前后端分离由于浏览器的同源策略限制，会导致前后端之间的访问出现跨域问题。</li>
-</ul>
-]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[每日一题 - 2023]]></title>
             <link>https://www.imufeng.cn/question-by-day/2023/</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/</guid>
@@ -989,78 +717,121 @@ System.out.println(NumberFormat.format(0.1));
 ]]></content:encoded>
         </item>
         <item>
-            <link>https://www.imufeng.cn/question-by-day/2024/1.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2024/1.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
+            <title><![CDATA[目录]]></title>
+            <link>https://www.imufeng.cn/full-stack/java/</link>
+            <guid>https://www.imufeng.cn/full-stack/java/</guid>
+            <pubDate>Thu, 19 Oct 2023 09:02:42 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h1>
+<h3 id="面向对象" tabindex="-1">面向对象 <a class="header-anchor" href="#面向对象" aria-label="Permalink to &quot;面向对象&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li><a href="./oop/abstract.html">抽象类和抽象方法</a></li>
+</ul>
+<h3 id="其他" tabindex="-1">其他 <a class="header-anchor" href="#其他" aria-label="Permalink to &quot;其他&quot;">&ZeroWidthSpace;</a></h3>
+]]></content:encoded>
         </item>
         <item>
-            <link>https://www.imufeng.cn/question-by-day/2024/10.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2024/10.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/question-by-day/2024/11.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2024/11.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/question-by-day/2024/12.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2024/12.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/question-by-day/2024/2.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2024/2.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/question-by-day/2024/3.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2024/3.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/question-by-day/2024/4.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2024/4.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/question-by-day/2024/5.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2024/5.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/question-by-day/2024/6.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2024/6.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/question-by-day/2024/7.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2024/7.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/question-by-day/2024/8.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2024/8.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/question-by-day/2024/9.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2024/9.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[每日一题 - 2024]]></title>
-            <link>https://www.imufeng.cn/question-by-day/2024/</link>
-            <guid>https://www.imufeng.cn/question-by-day/2024/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-            <content:encoded><![CDATA[<p>还没有。。。</p>
+            <title><![CDATA[抽象类和抽象方法]]></title>
+            <link>https://www.imufeng.cn/full-stack/java/oop/abstract.html</link>
+            <guid>https://www.imufeng.cn/full-stack/java/oop/abstract.html</guid>
+            <pubDate>Thu, 19 Oct 2023 09:02:42 GMT</pubDate>
+            <description><![CDATA[在一个较为复杂的继承链中，祖先类更具有一般性，作为派生其他类的基类而不糊将其作为用来构造实例。]]></description>
+            <content:encoded><![CDATA[<h1 id="抽象类和抽象方法" tabindex="-1">抽象类和抽象方法 <a class="header-anchor" href="#抽象类和抽象方法" aria-label="Permalink to &quot;抽象类和抽象方法&quot;">&ZeroWidthSpace;</a></h1>
+<p>在一个较为复杂的继承链中，父类有可能只知道子类应当具备某个方法，但是不能够明确方法实现。祖先类更具有一般性。通常祖先类只会作为派生其他类的基类而不糊将其作为用来构造实例。如员工之于公司，每个员工都应该得到工资，但是每个员工的工资可能都不一样。所以员工类就会有一个没有方法主体的<strong>抽象方法</strong>。而包含抽象方法的类就是<strong>抽象类</strong>。</p>
+<p>抽象类与抽象方法都用 <code>abstract</code> 关键字修饰。上述例子的实现可以如下：</p>
+<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre v-pre class="shiki github-dark vp-code-dark" ><code><span class="line"><span style="color: #F97583">class</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Scratch</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">public</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">static</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">void</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">main</span><span style="color: #E1E4E8">(</span><span style="color: #F97583">String</span><span style="color: #E1E4E8">[] </span><span style="color: #FFAB70">args</span><span style="color: #E1E4E8">) {</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">var</span><span style="color: #E1E4E8"> leader </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">new</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Leader</span><span style="color: #E1E4E8">();</span></span>
+<span class="line"><span style="color: #E1E4E8">        leader.</span><span style="color: #B392F0">setName</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;马云&quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">        leader.</span><span style="color: #B392F0">payoff</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">1000000000.00</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">var</span><span style="color: #E1E4E8"> mufeng </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">new</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Staff</span><span style="color: #E1E4E8">();</span></span>
+<span class="line"><span style="color: #E1E4E8">        mufeng.</span><span style="color: #B392F0">setName</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;沐风&quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">        mufeng.</span><span style="color: #B392F0">payoff</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">1000.00</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span>
+<span class="line"><span style="color: #F97583">abstract</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">class</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Employee</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">private</span><span style="color: #E1E4E8"> String name;</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">abstract</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">void</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">payoff</span><span style="color: #E1E4E8">(Double </span><span style="color: #FFAB70">salary</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">public</span><span style="color: #E1E4E8"> String </span><span style="color: #B392F0">getName</span><span style="color: #E1E4E8">() {</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">return</span><span style="color: #E1E4E8"> name;</span></span>
+<span class="line"><span style="color: #E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">public</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">void</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">setName</span><span style="color: #E1E4E8">(String </span><span style="color: #FFAB70">name</span><span style="color: #E1E4E8">) {</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #79B8FF">this</span><span style="color: #E1E4E8">.name </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> name;</span></span>
+<span class="line"><span style="color: #E1E4E8">    }</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F97583">class</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Leader</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">extends</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Employee</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    @</span><span style="color: #F97583">Override</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">void</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">payoff</span><span style="color: #E1E4E8">(Double </span><span style="color: #FFAB70">salary</span><span style="color: #E1E4E8">) {</span></span>
+<span class="line"><span style="color: #E1E4E8">        System.out.</span><span style="color: #B392F0">printf</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;%s领导不发工资，本月收入%s</span><span style="color: #79B8FF">\n</span><span style="color: #9ECBFF">&quot;</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">this</span><span style="color: #E1E4E8">.</span><span style="color: #B392F0">getName</span><span style="color: #E1E4E8">(), salary);</span></span>
+<span class="line"><span style="color: #E1E4E8">    }</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span>
+<span class="line"><span style="color: #F97583">class</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Staff</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">extends</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Employee</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    @</span><span style="color: #F97583">Override</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">void</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">payoff</span><span style="color: #E1E4E8">(Double </span><span style="color: #FFAB70">salary</span><span style="color: #E1E4E8">) {</span></span>
+<span class="line"><span style="color: #E1E4E8">        System.out.</span><span style="color: #B392F0">printf</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;%s本月发工资%s</span><span style="color: #79B8FF">\n</span><span style="color: #9ECBFF">&quot;</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">this</span><span style="color: #E1E4E8">.</span><span style="color: #B392F0">getName</span><span style="color: #E1E4E8">(), salary);</span></span>
+<span class="line"><span style="color: #E1E4E8">    }</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span></code></pre><pre v-pre class="shiki github-light vp-code-light" ><code><span class="line"><span style="color: #D73A49">class</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Scratch</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">public</span><span style="color: #24292E"> </span><span style="color: #D73A49">static</span><span style="color: #24292E"> </span><span style="color: #D73A49">void</span><span style="color: #24292E"> </span><span style="color: #6F42C1">main</span><span style="color: #24292E">(</span><span style="color: #D73A49">String</span><span style="color: #24292E">[] </span><span style="color: #E36209">args</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">var</span><span style="color: #24292E"> leader </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #D73A49">new</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Leader</span><span style="color: #24292E">();</span></span>
+<span class="line"><span style="color: #24292E">        leader.</span><span style="color: #6F42C1">setName</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;马云&quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">        leader.</span><span style="color: #6F42C1">payoff</span><span style="color: #24292E">(</span><span style="color: #005CC5">1000000000.00</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">        </span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">var</span><span style="color: #24292E"> mufeng </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #D73A49">new</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Staff</span><span style="color: #24292E">();</span></span>
+<span class="line"><span style="color: #24292E">        mufeng.</span><span style="color: #6F42C1">setName</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;沐风&quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">        mufeng.</span><span style="color: #6F42C1">payoff</span><span style="color: #24292E">(</span><span style="color: #005CC5">1000.00</span><span style="color: #24292E">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292E">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292E">}</span></span>
+<span class="line"><span style="color: #D73A49">abstract</span><span style="color: #24292E"> </span><span style="color: #D73A49">class</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Employee</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">private</span><span style="color: #24292E"> String name;</span></span>
+<span class="line"><span style="color: #24292E">    </span></span>
+<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">abstract</span><span style="color: #24292E"> </span><span style="color: #D73A49">void</span><span style="color: #24292E"> </span><span style="color: #6F42C1">payoff</span><span style="color: #24292E">(Double </span><span style="color: #E36209">salary</span><span style="color: #24292E">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">public</span><span style="color: #24292E"> String </span><span style="color: #6F42C1">getName</span><span style="color: #24292E">() {</span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">return</span><span style="color: #24292E"> name;</span></span>
+<span class="line"><span style="color: #24292E">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">public</span><span style="color: #24292E"> </span><span style="color: #D73A49">void</span><span style="color: #24292E"> </span><span style="color: #6F42C1">setName</span><span style="color: #24292E">(String </span><span style="color: #E36209">name</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #005CC5">this</span><span style="color: #24292E">.name </span><span style="color: #D73A49">=</span><span style="color: #24292E"> name;</span></span>
+<span class="line"><span style="color: #24292E">    }</span></span>
+<span class="line"><span style="color: #24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D73A49">class</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Leader</span><span style="color: #24292E"> </span><span style="color: #D73A49">extends</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Employee</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">    @</span><span style="color: #D73A49">Override</span></span>
+<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">void</span><span style="color: #24292E"> </span><span style="color: #6F42C1">payoff</span><span style="color: #24292E">(Double </span><span style="color: #E36209">salary</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">        System.out.</span><span style="color: #6F42C1">printf</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;%s领导不发工资，本月收入%s</span><span style="color: #005CC5">\n</span><span style="color: #032F62">&quot;</span><span style="color: #24292E">, </span><span style="color: #005CC5">this</span><span style="color: #24292E">.</span><span style="color: #6F42C1">getName</span><span style="color: #24292E">(), salary);</span></span>
+<span class="line"><span style="color: #24292E">    }</span></span>
+<span class="line"><span style="color: #24292E">}</span></span>
+<span class="line"><span style="color: #D73A49">class</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Staff</span><span style="color: #24292E"> </span><span style="color: #D73A49">extends</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Employee</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">    @</span><span style="color: #D73A49">Override</span></span>
+<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">void</span><span style="color: #24292E"> </span><span style="color: #6F42C1">payoff</span><span style="color: #24292E">(Double </span><span style="color: #E36209">salary</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">        System.out.</span><span style="color: #6F42C1">printf</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;%s本月发工资%s</span><span style="color: #005CC5">\n</span><span style="color: #032F62">&quot;</span><span style="color: #24292E">, </span><span style="color: #005CC5">this</span><span style="color: #24292E">.</span><span style="color: #6F42C1">getName</span><span style="color: #24292E">(), salary);</span></span>
+<span class="line"><span style="color: #24292E">    }</span></span>
+<span class="line"><span style="color: #24292E">}</span></span></code></pre>
+</div><p>在上述的例子中，Employee 类中 <code>payoff(Double salary)</code> 方法就是抽象方法，相应的，Employee 类也必须是抽象类。抽象类也可以有具体的属性和方法。</p>
+<div class="warning custom-block"><p class="custom-block-title">说明：</p>
+<ul>
+<li>抽象类不能实例化对象。</li>
+<li>抽象类可以有构造方法，供子类创建时初始化。</li>
+<li>成员变量可以定义在抽象类中。</li>
+<li>抽象类的子类如果不重写抽象方法，则必须用 abstract 关键字修饰。</li>
+<li>抽象方法不能被限制为 private 或 final。</li>
+</ul>
+</div>
 ]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[泛域名证书申请以及部署]]></title>
             <link>https://www.imufeng.cn/technology/web/acme-sh.html</link>
             <guid>https://www.imufeng.cn/technology/web/acme-sh.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
+            <pubDate>Wed, 18 Oct 2023 09:23:11 GMT</pubDate>
             <description><![CDATA[使用 acme.sh 部署 Let's Encrypt 泛域名证书。]]></description>
             <content:encoded><![CDATA[<h1 id="泛域名证书申请以及部署" tabindex="-1">泛域名证书申请以及部署 <a class="header-anchor" href="#泛域名证书申请以及部署" aria-label="Permalink to &quot;泛域名证书申请以及部署&quot;">&ZeroWidthSpace;</a></h1>
 <blockquote>
@@ -1236,9 +1007,60 @@ System.out.println(NumberFormat.format(0.1));
 ]]></content:encoded>
         </item>
         <item>
+            <link>https://www.imufeng.cn/friend-link-list/</link>
+            <guid>https://www.imufeng.cn/friend-link-list/</guid>
+            <pubDate>Wed, 11 Oct 2023 10:42:02 GMT</pubDate>
+            <content:encoded><![CDATA[<details class="details custom-block"><summary>友链申请格式</summary>
+<ul>
+<li>
+<p><strong>站点名称：</strong> <code>沐风的小站</code></p>
+</li>
+<li>
+<p><strong>站点地址：</strong> <code>https://imufeng.cn</code></p>
+</li>
+<li>
+<p><strong>一句话：</strong> <code>但愿岁月如客，来去皆从容。</code></p>
+</li>
+<li>
+<p><strong>头像链接：</strong> <code>https://cravatar.cn/avatar/f1dcdc8fa782b81824df5d67022e4d4a</code></p>
+</li>
+<li>
+<p><strong>其他平台：</strong> <code>[Github/Twitter...](link)</code></p>
+</li>
+</ul>
+</details>
+<h3 id="膜拜大佬" tabindex="-1">膜拜大佬 <a class="header-anchor" href="#膜拜大佬" aria-label="Permalink to &quot;膜拜大佬&quot;">&ZeroWidthSpace;</a></h3>
+<VPTeamMembers size="medium" :members="authoritys" /><h3 id="友链" tabindex="-1">友链 <a class="header-anchor" href="#友链" aria-label="Permalink to &quot;友链&quot;">&ZeroWidthSpace;</a></h3>
+<VPTeamMembers size="small" :members="friends" />]]></content:encoded>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/full-stack/</link>
+            <guid>https://www.imufeng.cn/full-stack/</guid>
+            <pubDate>Wed, 11 Oct 2023 10:42:02 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="一、后端技术分享" tabindex="-1">一、后端技术分享 <a class="header-anchor" href="#一、后端技术分享" aria-label="Permalink to &quot;一、后端技术分享&quot;">&ZeroWidthSpace;</a></h2>
+<h2 id="二、前端技术分享" tabindex="-1">二、前端技术分享 <a class="header-anchor" href="#二、前端技术分享" aria-label="Permalink to &quot;二、前端技术分享&quot;">&ZeroWidthSpace;</a></h2>
+<h2 id="三、系统运维交流" tabindex="-1">三、系统运维交流 <a class="header-anchor" href="#三、系统运维交流" aria-label="Permalink to &quot;三、系统运维交流&quot;">&ZeroWidthSpace;</a></h2>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[每日一题]]></title>
+            <link>https://www.imufeng.cn/question-by-day/</link>
+            <guid>https://www.imufeng.cn/question-by-day/</guid>
+            <pubDate>Wed, 11 Oct 2023 10:42:02 GMT</pubDate>
+            <description><![CDATA[每天至少一道全栈题目分享，范围不限。]]></description>
+            <content:encoded><![CDATA[<blockquote>
+<p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
+</blockquote>
+<ul>
+<li><a href="./2023/">2023</a></li>
+<li><a href="./2024/">2024</a></li>
+</ul>
+]]></content:encoded>
+        </item>
+        <item>
             <link>https://www.imufeng.cn/technology/web/</link>
             <guid>https://www.imufeng.cn/technology/web/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
+            <pubDate>Wed, 11 Oct 2023 10:42:02 GMT</pubDate>
             <content:encoded><![CDATA[<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 <ol>
 <li><a href="./acme-sh.html">使用 <code>acme.sh</code> 部署泛域名证书</a></li>
@@ -1251,7 +1073,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[基于DockerCompose的WordPress环境部署（附配置优化）]]></title>
             <link>https://www.imufeng.cn/technology/web/wordpress-by-docker-compose.html</link>
             <guid>https://www.imufeng.cn/technology/web/wordpress-by-docker-compose.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
+            <pubDate>Wed, 11 Oct 2023 10:42:02 GMT</pubDate>
             <description><![CDATA[本文将带你快速了解 docker compose 安装部署 WordPress。]]></description>
             <content:encoded><![CDATA[<h1 id="基于dockercompose的wordpress环境部署-附配置优化" tabindex="-1">基于DockerCompose的WordPress环境部署（附配置优化） <a class="header-anchor" href="#基于dockercompose的wordpress环境部署-附配置优化" aria-label="Permalink to &quot;基于DockerCompose的WordPress环境部署（附配置优化）&quot;">&ZeroWidthSpace;</a></h1>
 <blockquote>
@@ -1459,108 +1281,10 @@ System.out.println(NumberFormat.format(0.1));
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[抽象类和抽象方法]]></title>
-            <link>https://www.imufeng.cn/full-stack/java/oop/abstract.html</link>
-            <guid>https://www.imufeng.cn/full-stack/java/oop/abstract.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
-            <description><![CDATA[在一个较为复杂的继承链中，祖先类更具有一般性，作为派生其他类的基类而不糊将其作为用来构造实例。]]></description>
-            <content:encoded><![CDATA[<h1 id="抽象类和抽象方法" tabindex="-1">抽象类和抽象方法 <a class="header-anchor" href="#抽象类和抽象方法" aria-label="Permalink to &quot;抽象类和抽象方法&quot;">&ZeroWidthSpace;</a></h1>
-<p>在一个较为复杂的继承链中，父类有可能只知道子类应当具备某个方法，但是不能够明确方法实现。祖先类更具有一般性。通常祖先类只会作为派生其他类的基类而不糊将其作为用来构造实例。如员工之于公司，每个员工都应该得到工资，但是每个员工的工资可能都不一样。所以员工类就会有一个没有方法主体的<strong>抽象方法</strong>。而包含抽象方法的类就是<strong>抽象类</strong>。</p>
-<p>抽象类与抽象方法都用 <code>abstract</code> 关键字修饰。上述例子的实现可以如下：</p>
-<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre v-pre class="shiki github-dark vp-code-dark" ><code><span class="line"><span style="color: #F97583">class</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Scratch</span><span style="color: #E1E4E8"> {</span></span>
-<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">public</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">static</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">void</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">main</span><span style="color: #E1E4E8">(</span><span style="color: #F97583">String</span><span style="color: #E1E4E8">[] </span><span style="color: #FFAB70">args</span><span style="color: #E1E4E8">) {</span></span>
-<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">var</span><span style="color: #E1E4E8"> leader </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">new</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Leader</span><span style="color: #E1E4E8">();</span></span>
-<span class="line"><span style="color: #E1E4E8">        leader.</span><span style="color: #B392F0">setName</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;马云&quot;</span><span style="color: #E1E4E8">);</span></span>
-<span class="line"><span style="color: #E1E4E8">        leader.</span><span style="color: #B392F0">payoff</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">1000000000.00</span><span style="color: #E1E4E8">);</span></span>
-<span class="line"><span style="color: #E1E4E8">        </span></span>
-<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">var</span><span style="color: #E1E4E8"> mufeng </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">new</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Staff</span><span style="color: #E1E4E8">();</span></span>
-<span class="line"><span style="color: #E1E4E8">        mufeng.</span><span style="color: #B392F0">setName</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;沐风&quot;</span><span style="color: #E1E4E8">);</span></span>
-<span class="line"><span style="color: #E1E4E8">        mufeng.</span><span style="color: #B392F0">payoff</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">1000.00</span><span style="color: #E1E4E8">);</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #E1E4E8">    }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #E1E4E8">}</span></span>
-<span class="line"><span style="color: #F97583">abstract</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">class</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Employee</span><span style="color: #E1E4E8"> {</span></span>
-<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">private</span><span style="color: #E1E4E8"> String name;</span></span>
-<span class="line"><span style="color: #E1E4E8">    </span></span>
-<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">abstract</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">void</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">payoff</span><span style="color: #E1E4E8">(Double </span><span style="color: #FFAB70">salary</span><span style="color: #E1E4E8">);</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">public</span><span style="color: #E1E4E8"> String </span><span style="color: #B392F0">getName</span><span style="color: #E1E4E8">() {</span></span>
-<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">return</span><span style="color: #E1E4E8"> name;</span></span>
-<span class="line"><span style="color: #E1E4E8">    }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">public</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">void</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">setName</span><span style="color: #E1E4E8">(String </span><span style="color: #FFAB70">name</span><span style="color: #E1E4E8">) {</span></span>
-<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #79B8FF">this</span><span style="color: #E1E4E8">.name </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> name;</span></span>
-<span class="line"><span style="color: #E1E4E8">    }</span></span>
-<span class="line"><span style="color: #E1E4E8">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #F97583">class</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Leader</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">extends</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Employee</span><span style="color: #E1E4E8"> {</span></span>
-<span class="line"><span style="color: #E1E4E8">    @</span><span style="color: #F97583">Override</span></span>
-<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">void</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">payoff</span><span style="color: #E1E4E8">(Double </span><span style="color: #FFAB70">salary</span><span style="color: #E1E4E8">) {</span></span>
-<span class="line"><span style="color: #E1E4E8">        System.out.</span><span style="color: #B392F0">printf</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;%s领导不发工资，本月收入%s</span><span style="color: #79B8FF">\n</span><span style="color: #9ECBFF">&quot;</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">this</span><span style="color: #E1E4E8">.</span><span style="color: #B392F0">getName</span><span style="color: #E1E4E8">(), salary);</span></span>
-<span class="line"><span style="color: #E1E4E8">    }</span></span>
-<span class="line"><span style="color: #E1E4E8">}</span></span>
-<span class="line"><span style="color: #F97583">class</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Staff</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">extends</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Employee</span><span style="color: #E1E4E8"> {</span></span>
-<span class="line"><span style="color: #E1E4E8">    @</span><span style="color: #F97583">Override</span></span>
-<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">void</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">payoff</span><span style="color: #E1E4E8">(Double </span><span style="color: #FFAB70">salary</span><span style="color: #E1E4E8">) {</span></span>
-<span class="line"><span style="color: #E1E4E8">        System.out.</span><span style="color: #B392F0">printf</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;%s本月发工资%s</span><span style="color: #79B8FF">\n</span><span style="color: #9ECBFF">&quot;</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">this</span><span style="color: #E1E4E8">.</span><span style="color: #B392F0">getName</span><span style="color: #E1E4E8">(), salary);</span></span>
-<span class="line"><span style="color: #E1E4E8">    }</span></span>
-<span class="line"><span style="color: #E1E4E8">}</span></span></code></pre><pre v-pre class="shiki github-light vp-code-light" ><code><span class="line"><span style="color: #D73A49">class</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Scratch</span><span style="color: #24292E"> {</span></span>
-<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">public</span><span style="color: #24292E"> </span><span style="color: #D73A49">static</span><span style="color: #24292E"> </span><span style="color: #D73A49">void</span><span style="color: #24292E"> </span><span style="color: #6F42C1">main</span><span style="color: #24292E">(</span><span style="color: #D73A49">String</span><span style="color: #24292E">[] </span><span style="color: #E36209">args</span><span style="color: #24292E">) {</span></span>
-<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">var</span><span style="color: #24292E"> leader </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #D73A49">new</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Leader</span><span style="color: #24292E">();</span></span>
-<span class="line"><span style="color: #24292E">        leader.</span><span style="color: #6F42C1">setName</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;马云&quot;</span><span style="color: #24292E">);</span></span>
-<span class="line"><span style="color: #24292E">        leader.</span><span style="color: #6F42C1">payoff</span><span style="color: #24292E">(</span><span style="color: #005CC5">1000000000.00</span><span style="color: #24292E">);</span></span>
-<span class="line"><span style="color: #24292E">        </span></span>
-<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">var</span><span style="color: #24292E"> mufeng </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #D73A49">new</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Staff</span><span style="color: #24292E">();</span></span>
-<span class="line"><span style="color: #24292E">        mufeng.</span><span style="color: #6F42C1">setName</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;沐风&quot;</span><span style="color: #24292E">);</span></span>
-<span class="line"><span style="color: #24292E">        mufeng.</span><span style="color: #6F42C1">payoff</span><span style="color: #24292E">(</span><span style="color: #005CC5">1000.00</span><span style="color: #24292E">);</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #24292E">    }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #24292E">}</span></span>
-<span class="line"><span style="color: #D73A49">abstract</span><span style="color: #24292E"> </span><span style="color: #D73A49">class</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Employee</span><span style="color: #24292E"> {</span></span>
-<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">private</span><span style="color: #24292E"> String name;</span></span>
-<span class="line"><span style="color: #24292E">    </span></span>
-<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">abstract</span><span style="color: #24292E"> </span><span style="color: #D73A49">void</span><span style="color: #24292E"> </span><span style="color: #6F42C1">payoff</span><span style="color: #24292E">(Double </span><span style="color: #E36209">salary</span><span style="color: #24292E">);</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">public</span><span style="color: #24292E"> String </span><span style="color: #6F42C1">getName</span><span style="color: #24292E">() {</span></span>
-<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">return</span><span style="color: #24292E"> name;</span></span>
-<span class="line"><span style="color: #24292E">    }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">public</span><span style="color: #24292E"> </span><span style="color: #D73A49">void</span><span style="color: #24292E"> </span><span style="color: #6F42C1">setName</span><span style="color: #24292E">(String </span><span style="color: #E36209">name</span><span style="color: #24292E">) {</span></span>
-<span class="line"><span style="color: #24292E">        </span><span style="color: #005CC5">this</span><span style="color: #24292E">.name </span><span style="color: #D73A49">=</span><span style="color: #24292E"> name;</span></span>
-<span class="line"><span style="color: #24292E">    }</span></span>
-<span class="line"><span style="color: #24292E">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #D73A49">class</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Leader</span><span style="color: #24292E"> </span><span style="color: #D73A49">extends</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Employee</span><span style="color: #24292E"> {</span></span>
-<span class="line"><span style="color: #24292E">    @</span><span style="color: #D73A49">Override</span></span>
-<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">void</span><span style="color: #24292E"> </span><span style="color: #6F42C1">payoff</span><span style="color: #24292E">(Double </span><span style="color: #E36209">salary</span><span style="color: #24292E">) {</span></span>
-<span class="line"><span style="color: #24292E">        System.out.</span><span style="color: #6F42C1">printf</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;%s领导不发工资，本月收入%s</span><span style="color: #005CC5">\n</span><span style="color: #032F62">&quot;</span><span style="color: #24292E">, </span><span style="color: #005CC5">this</span><span style="color: #24292E">.</span><span style="color: #6F42C1">getName</span><span style="color: #24292E">(), salary);</span></span>
-<span class="line"><span style="color: #24292E">    }</span></span>
-<span class="line"><span style="color: #24292E">}</span></span>
-<span class="line"><span style="color: #D73A49">class</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Staff</span><span style="color: #24292E"> </span><span style="color: #D73A49">extends</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Employee</span><span style="color: #24292E"> {</span></span>
-<span class="line"><span style="color: #24292E">    @</span><span style="color: #D73A49">Override</span></span>
-<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">void</span><span style="color: #24292E"> </span><span style="color: #6F42C1">payoff</span><span style="color: #24292E">(Double </span><span style="color: #E36209">salary</span><span style="color: #24292E">) {</span></span>
-<span class="line"><span style="color: #24292E">        System.out.</span><span style="color: #6F42C1">printf</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;%s本月发工资%s</span><span style="color: #005CC5">\n</span><span style="color: #032F62">&quot;</span><span style="color: #24292E">, </span><span style="color: #005CC5">this</span><span style="color: #24292E">.</span><span style="color: #6F42C1">getName</span><span style="color: #24292E">(), salary);</span></span>
-<span class="line"><span style="color: #24292E">    }</span></span>
-<span class="line"><span style="color: #24292E">}</span></span></code></pre>
-</div><p>在上述的例子中，Employee 类中 <code>payoff(Double salary)</code> 方法就是抽象方法，相应的，Employee 类也必须是抽象类。抽象类也可以有具体的属性和方法。</p>
-<div class="warning custom-block"><p class="custom-block-title">说明：</p>
-<ul>
-<li>抽象类不能实例化对象。</li>
-<li>抽象类可以有构造方法，供子类创建时初始化。</li>
-<li>成员变量可以定义在抽象类中。</li>
-<li>抽象类的子类如果不重写抽象方法，则必须用 abstract 关键字修饰。</li>
-<li>抽象方法不能被限制为 private 或 final。</li>
-</ul>
-</div>
-]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[第一步编译安装httpd服务器]]></title>
             <link>https://www.imufeng.cn/technology/web/linux-lamp/first.html</link>
             <guid>https://www.imufeng.cn/technology/web/linux-lamp/first.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
+            <pubDate>Wed, 11 Oct 2023 10:42:02 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="第一步-编译安装httpd服务器" tabindex="-1">第一步 编译安装httpd服务器 <a class="header-anchor" href="#第一步-编译安装httpd服务器" aria-label="Permalink to &quot;第一步 编译安装httpd服务器&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_1、安装前准备" tabindex="-1">1、安装前准备 <a class="header-anchor" href="#_1、安装前准备" aria-label="Permalink to &quot;1、安装前准备&quot;">&ZeroWidthSpace;</a></h2>
 <p>解压apr apr-util pcre httpd expat包</p>
@@ -1944,7 +1668,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[LAMP编译安装三部曲]]></title>
             <link>https://www.imufeng.cn/technology/web/linux-lamp/</link>
             <guid>https://www.imufeng.cn/technology/web/linux-lamp/</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
+            <pubDate>Wed, 11 Oct 2023 10:42:02 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="lamp-编译安装三部曲" tabindex="-1">LAMP 编译安装三部曲 <a class="header-anchor" href="#lamp-编译安装三部曲" aria-label="Permalink to &quot;LAMP 编译安装三部曲&quot;">&ZeroWidthSpace;</a></h1>
 <p>LAMP 是一种常用于搭建网站和应用程序的服务器架构，它由 Linux、Apache、MySQL（或MariaDB）、PHP 四个开源软件组成，也分别代表了操作系统、Web 服务器、数据库以及服务器端脚本语言。 与 LNMP 架构类似，区别在于使用的 Web 服务器组件。</p>
 <p>本教程将用三步带你完成 LAMP 架构的编译安装。</p>
@@ -1959,7 +1683,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[第二步编译安装mariadb数据库环境]]></title>
             <link>https://www.imufeng.cn/technology/web/linux-lamp/second.html</link>
             <guid>https://www.imufeng.cn/technology/web/linux-lamp/second.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
+            <pubDate>Wed, 11 Oct 2023 10:42:02 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="第二步-编译安装mariadb数据库环境" tabindex="-1">第二步 编译安装mariadb数据库环境 <a class="header-anchor" href="#第二步-编译安装mariadb数据库环境" aria-label="Permalink to &quot;第二步 编译安装mariadb数据库环境&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_1、mariadb数据库概述" tabindex="-1">1、Mariadb数据库概述 <a class="header-anchor" href="#_1、mariadb数据库概述" aria-label="Permalink to &quot;1、Mariadb数据库概述&quot;">&ZeroWidthSpace;</a></h2>
 <p>Mariadb是开源的关系型数据库服务器软件</p>
@@ -2153,7 +1877,7 @@ System.out.println(NumberFormat.format(0.1));
             <title><![CDATA[第三步编译安装PHP]]></title>
             <link>https://www.imufeng.cn/technology/web/linux-lamp/third.html</link>
             <guid>https://www.imufeng.cn/technology/web/linux-lamp/third.html</guid>
-            <pubDate>Thu, 19 Oct 2023 09:39:21 GMT</pubDate>
+            <pubDate>Wed, 11 Oct 2023 10:42:02 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="第三步-编译安装php" tabindex="-1">第三步 编译安装PHP <a class="header-anchor" href="#第三步-编译安装php" aria-label="Permalink to &quot;第三步 编译安装PHP&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_1、安装前准备" tabindex="-1">1、安装前准备 <a class="header-anchor" href="#_1、安装前准备" aria-label="Permalink to &quot;1、安装前准备&quot;">&ZeroWidthSpace;</a></h2>
 <div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre v-pre class="shiki github-dark vp-code-dark" ><code><span class="line"><span style="color: #e1e4e8">#编译安装libmcrypt</span></span>
@@ -2322,6 +2046,282 @@ System.out.println(NumberFormat.format(0.1));
 <p>注：构建服务所需的包可在<a href="https://download.csdn.net/download/qq_45417634/13208956" target="_blank" rel="noreferrer">server_source_2020.iso </a>请自行下载，您也可以在所需安装包官网下载
 本地源配置、防火墙、selinux等是linux较为基础的内容，不再赘述。
 本文均为原创，如需与博主交流可email至mufeng.yu@qq.com</p>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[关于本站]]></title>
+            <link>https://www.imufeng.cn/about/</link>
+            <guid>https://www.imufeng.cn/about/</guid>
+            <pubDate>Mon, 09 Oct 2023 09:31:50 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="关于本站" tabindex="-1">关于本站 <a class="header-anchor" href="#关于本站" aria-label="Permalink to &quot;关于本站&quot;">&ZeroWidthSpace;</a></h1>
+<div class="tip custom-block"><p class="custom-block-title">版权声明</p>
+<p>除特殊说明，本站文章皆为原创，著作权归作者所有。依据 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noreferrer">CC BY-NC-SA 4.0 </a> 许可证进行授权。</p>
+<p>本站源码开源于 <a href="https://github.com/i-mufeng/mblog" target="_blank" rel="noreferrer">Github</a> ，采用 <a href="https://www.gnu.org/licenses/gpl-3.0.md" target="_blank" rel="noreferrer">GPLv3</a> 开源协议。</p>
+</div>
+<details class="details custom-block"><summary>站点信息</summary>
+<ul>
+<li>
+<p><strong>博主：</strong> Mufeng</p>
+</li>
+<li>
+<p><strong>头像：</strong> <a href="https://cn.gravatar.com/avatar/f1dcdc8fa782b81824df5d67022e4d4a" target="_blank" rel="noreferrer">Gavatar-CN</a></p>
+</li>
+<li>
+<p><strong>站点名称：</strong> 沐风的小站</p>
+</li>
+<li>
+<p><strong>站点域名：</strong> <code>imufeng.cn</code></p>
+</li>
+<li>
+<p><strong>E-mail：</strong> <a href="mailto:admin@imufeng.cn" target="_blank" rel="noreferrer">admin@imufeng.cn</a></p>
+</li>
+</ul>
+</details>
+<h3 id="关于-mufeng" tabindex="-1">关于 MUFENG <a class="header-anchor" href="#关于-mufeng" aria-label="Permalink to &quot;关于 MUFENG&quot;">&ZeroWidthSpace;</a></h3>
+<p>博主是一名萌新程序猿，学计算机纯属热爱，毕业也顺利的踏进了开发这条不归路。目前工作一年，状态良好。喜欢音乐，喜静不喜动。</p>
+<p><code>沐风</code>，取如沐春风之意，指不断的熏陶，静静的成长。是我比较追求的一个状态，更贴合我佛系、随遇而安的性格。也希望自己能够达到那种终生学习、不断完善自己的境界。</p>
+<h3 id="关于-imufeng-cn" tabindex="-1">关于 IMUFENG.CN <a class="header-anchor" href="#关于-imufeng-cn" aria-label="Permalink to &quot;关于 IMUFENG.CN&quot;">&ZeroWidthSpace;</a></h3>
+<p>搭建本站是为了整理自己最近的所得，并写写自己的所思。我之前的一些博文会发布到 <code>CSDN</code>、<code>博客园</code> 等平台，但是自由度会受到很大限制，且某些平台吃相难看，认真做内容的平台不断被打压。所以我认为自己搭建一个站点还是有必要的。</p>
+<p>之前也尝试过一些开源博客，以及 <code>Wordpress</code> ，虽然但是，总还是觉得用着不舒服，所以最终还是选择了 <code>VitePress</code>。</p>
+<h3 id="建站历程" tabindex="-1">建站历程 <a class="header-anchor" href="#建站历程" aria-label="Permalink to &quot;建站历程&quot;">&ZeroWidthSpace;</a></h3>
+<br>
+<div class='timeline-dot'><span class='timeline-dot-title'>2019年</span>
+<ul>
+<li>在自学过程中，了解到基本的建站知识。</li>
+<li>购买了一台云主机以及 mangoling.top 的域名。</li>
+<li>尝试为自己的域名备案。</li>
+</ul>
+</div>
+<div class='timeline-dot'><span class='timeline-dot-title'>2020年</span>
+<ul>
+<li>由于疫情被封，一直自学 Linux 及开发相关知识。</li>
+</ul>
+</div>
+<div class='timeline-dot'><span class='timeline-dot-title'>2021 年</span>
+<ul>
+<li>学习 HTTPS 相关知识，为域名绑定https证书。</li>
+<li>通过 Typora 将 markdown 笔记导出为 HTML 并发布，向同学分享。</li>
+<li>入手 imufeng.cn 域名，购买了第一台云服务器。</li>
+</ul>
+</div>
+<div class='timeline-dot'><span class='timeline-dot-title'>2022年</span>
+<ul>
+<li>找到一款基于SpringBoot + Vue 的个人博客系统，学习并完善。</li>
+<li>学习 Docker 等知识，使用其搭建了 LNMP 架构的服务器并部署了自己的博客。</li>
+</ul>
+</div>
+<div class='timeline-dot'><span class='timeline-dot-title'>2023年</span>
+<ul>
+<li>为博客的后续寻找方向，尝试过 WordPress 以及自己开发，最终选择了 Vitepress。</li>
+<li>逐步完善 Vitepress，接入百度统计站，学习 SEO 优化等相关知识，</li>
+</ul>
+</div>
+<div class='timeline-dot'><span class='timeline-dot-title'>将继续完善</span>
+</div>
+]]></content:encoded>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/question-by-day/2024/1.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2024/1.html</guid>
+            <pubDate>Sat, 07 Oct 2023 09:47:18 GMT</pubDate>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/question-by-day/2024/10.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2024/10.html</guid>
+            <pubDate>Sat, 07 Oct 2023 09:47:18 GMT</pubDate>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/question-by-day/2024/11.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2024/11.html</guid>
+            <pubDate>Sat, 07 Oct 2023 09:47:18 GMT</pubDate>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/question-by-day/2024/12.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2024/12.html</guid>
+            <pubDate>Sat, 07 Oct 2023 09:47:18 GMT</pubDate>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/question-by-day/2024/2.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2024/2.html</guid>
+            <pubDate>Sat, 07 Oct 2023 09:47:18 GMT</pubDate>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/question-by-day/2024/3.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2024/3.html</guid>
+            <pubDate>Sat, 07 Oct 2023 09:47:18 GMT</pubDate>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/question-by-day/2024/4.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2024/4.html</guid>
+            <pubDate>Sat, 07 Oct 2023 09:47:18 GMT</pubDate>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/question-by-day/2024/5.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2024/5.html</guid>
+            <pubDate>Sat, 07 Oct 2023 09:47:18 GMT</pubDate>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/question-by-day/2024/6.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2024/6.html</guid>
+            <pubDate>Sat, 07 Oct 2023 09:47:18 GMT</pubDate>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/question-by-day/2024/7.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2024/7.html</guid>
+            <pubDate>Sat, 07 Oct 2023 09:47:18 GMT</pubDate>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/question-by-day/2024/8.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2024/8.html</guid>
+            <pubDate>Sat, 07 Oct 2023 09:47:18 GMT</pubDate>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/question-by-day/2024/9.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2024/9.html</guid>
+            <pubDate>Sat, 07 Oct 2023 09:47:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[我的分享]]></title>
+            <link>https://www.imufeng.cn/share/</link>
+            <guid>https://www.imufeng.cn/share/</guid>
+            <pubDate>Sat, 07 Oct 2023 09:41:07 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="我的分享" tabindex="-1">我的分享 <a class="header-anchor" href="#我的分享" aria-label="Permalink to &quot;我的分享&quot;">&ZeroWidthSpace;</a></h1>
+]]></content:encoded>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/question-by-day/2023/11.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2023/11.html</guid>
+            <pubDate>Sat, 07 Oct 2023 09:41:07 GMT</pubDate>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/question-by-day/2023/12.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2023/12.html</guid>
+            <pubDate>Sat, 07 Oct 2023 09:41:07 GMT</pubDate>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/question-by-day/2023/9.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2023/9.html</guid>
+            <pubDate>Sat, 07 Oct 2023 09:41:07 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="_9-30" tabindex="-1">9-30 <a class="header-anchor" href="#_9-30" aria-label="Permalink to &quot;9-30&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="java中的重载和重写有什么区别" tabindex="-1">Java中的重载和重写有什么区别？ <a class="header-anchor" href="#java中的重载和重写有什么区别" aria-label="Permalink to &quot;Java中的重载和重写有什么区别？&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>重载（Overloading）：在同一个类中，方法名相同但参数列表不同，可以有不同的返回类型。编译器根据方法参数的类型、个数、顺序来选择调用相应的方法。</li>
+<li>重写（Overriding）：在子类中重新实现父类的方法，方法名、参数列表和返回类型必须相同。重写用于改变父类方法的实现，以适应子类的特定需求。</li>
+</ul>
+<h2 id="_9-29" tabindex="-1">9-29 <a class="header-anchor" href="#_9-29" aria-label="Permalink to &quot;9-29&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="java中的四种访问修饰符是什么" tabindex="-1">Java中的四种访问修饰符是什么？ <a class="header-anchor" href="#java中的四种访问修饰符是什么" aria-label="Permalink to &quot;Java中的四种访问修饰符是什么？&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li><code>public</code>：对所有类可见。</li>
+<li><code>private</code>：仅对类本身可见。</li>
+<li><code>protected</code>：对同一包内的类和所有子类可见。</li>
+<li><code>default</code>（不使用修饰符）：对同一包内的类可见。</li>
+</ul>
+<h2 id="_9-28" tabindex="-1">9-28 <a class="header-anchor" href="#_9-28" aria-label="Permalink to &quot;9-28&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="请用-java-写一个冒泡排序" tabindex="-1">请用 JAVA 写一个冒泡排序？ <a class="header-anchor" href="#请用-java-写一个冒泡排序" aria-label="Permalink to &quot;请用 JAVA 写一个冒泡排序？&quot;">&ZeroWidthSpace;</a></h3>
+<p>冒泡排序原理是逐一比较相邻元素，通过交换位置逐步将较大的数移动到末尾。</p>
+<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre v-pre class="shiki github-dark vp-code-dark" ><code><span class="line"><span style="color: #F97583">public</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">class</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">BubbleSort</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span></span>
+<span class="line"><span style="color: #6A737D">    /**</span></span>
+<span class="line"><span style="color: #6A737D">     * 对整数数组进行冒泡排序，将数组按升序排列</span></span>
+<span class="line"><span style="color: #6A737D">     * </span></span>
+<span class="line"><span style="color: #6A737D">     * </span><span style="color: #F97583">@param</span><span style="color: #6A737D"> </span><span style="color: #FFAB70">array</span><span style="color: #6A737D"> 待排序的整数数组</span></span>
+<span class="line"><span style="color: #6A737D">     */</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">public</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">static</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">void</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">bubbleSort</span><span style="color: #E1E4E8">(</span><span style="color: #F97583">int</span><span style="color: #E1E4E8">[] </span><span style="color: #FFAB70">array</span><span style="color: #E1E4E8">) {</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">int</span><span style="color: #E1E4E8"> n </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> array.length;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #6A737D">// 外层循环控制每轮比较的次数</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">for</span><span style="color: #E1E4E8"> (</span><span style="color: #F97583">int</span><span style="color: #E1E4E8"> i </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">0</span><span style="color: #E1E4E8">; i </span><span style="color: #F97583">&lt;</span><span style="color: #E1E4E8"> n </span><span style="color: #F97583">-</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8">; i</span><span style="color: #F97583">++</span><span style="color: #E1E4E8">) {</span></span>
+<span class="line"><span style="color: #E1E4E8">            </span><span style="color: #6A737D">// 内层循环比较相邻元素，将较大的元素移到后面</span></span>
+<span class="line"><span style="color: #E1E4E8">            </span><span style="color: #F97583">for</span><span style="color: #E1E4E8"> (</span><span style="color: #F97583">int</span><span style="color: #E1E4E8"> j </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">0</span><span style="color: #E1E4E8">; j </span><span style="color: #F97583">&lt;</span><span style="color: #E1E4E8"> n </span><span style="color: #F97583">-</span><span style="color: #E1E4E8"> i </span><span style="color: #F97583">-</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8">; j</span><span style="color: #F97583">++</span><span style="color: #E1E4E8">) {</span></span>
+<span class="line"><span style="color: #E1E4E8">                </span><span style="color: #6A737D">// 如果前一个元素大于后一个元素，则交换它们的位置</span></span>
+<span class="line"><span style="color: #E1E4E8">                </span><span style="color: #F97583">if</span><span style="color: #E1E4E8"> (array[j] </span><span style="color: #F97583">&gt;</span><span style="color: #E1E4E8"> array[j </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8">]) {</span></span>
+<span class="line"><span style="color: #E1E4E8">                    </span><span style="color: #F97583">int</span><span style="color: #E1E4E8"> temp </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> array[j];</span></span>
+<span class="line"><span style="color: #E1E4E8">                    array[j] </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> array[j </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8">];</span></span>
+<span class="line"><span style="color: #E1E4E8">                    array[j </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">1</span><span style="color: #E1E4E8">] </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> temp;</span></span>
+<span class="line"><span style="color: #E1E4E8">                }</span></span>
+<span class="line"><span style="color: #E1E4E8">            }</span></span>
+<span class="line"><span style="color: #E1E4E8">        }</span></span>
+<span class="line"><span style="color: #E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">public</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">static</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">void</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">main</span><span style="color: #E1E4E8">(</span><span style="color: #F97583">String</span><span style="color: #E1E4E8">[] </span><span style="color: #FFAB70">args</span><span style="color: #E1E4E8">) {</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">int</span><span style="color: #E1E4E8">[] nums </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> {</span><span style="color: #79B8FF">64</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">34</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">25</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">12</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">22</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">11</span><span style="color: #E1E4E8">, </span><span style="color: #79B8FF">90</span><span style="color: #E1E4E8">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">        System.out.</span><span style="color: #B392F0">println</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;原始数组:&quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">for</span><span style="color: #E1E4E8"> (</span><span style="color: #F97583">int</span><span style="color: #E1E4E8"> num </span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> nums) {</span></span>
+<span class="line"><span style="color: #E1E4E8">            System.out.</span><span style="color: #B392F0">print</span><span style="color: #E1E4E8">(num </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot; &quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">        }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #B392F0">bubbleSort</span><span style="color: #E1E4E8">(nums);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E1E4E8">        System.out.</span><span style="color: #B392F0">println</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;</span><span style="color: #79B8FF">\n</span><span style="color: #9ECBFF">排序后的数组:&quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">for</span><span style="color: #E1E4E8"> (</span><span style="color: #F97583">int</span><span style="color: #E1E4E8"> num </span><span style="color: #F97583">:</span><span style="color: #E1E4E8"> nums) {</span></span>
+<span class="line"><span style="color: #E1E4E8">            System.out.</span><span style="color: #B392F0">print</span><span style="color: #E1E4E8">(num </span><span style="color: #F97583">+</span><span style="color: #E1E4E8"> </span><span style="color: #9ECBFF">&quot; &quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">        }</span></span>
+<span class="line"><span style="color: #E1E4E8">    }</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span></code></pre><pre v-pre class="shiki github-light vp-code-light" ><code><span class="line"><span style="color: #D73A49">public</span><span style="color: #24292E"> </span><span style="color: #D73A49">class</span><span style="color: #24292E"> </span><span style="color: #6F42C1">BubbleSort</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">    </span></span>
+<span class="line"><span style="color: #6A737D">    /**</span></span>
+<span class="line"><span style="color: #6A737D">     * 对整数数组进行冒泡排序，将数组按升序排列</span></span>
+<span class="line"><span style="color: #6A737D">     * </span></span>
+<span class="line"><span style="color: #6A737D">     * </span><span style="color: #D73A49">@param</span><span style="color: #6A737D"> </span><span style="color: #E36209">array</span><span style="color: #6A737D"> 待排序的整数数组</span></span>
+<span class="line"><span style="color: #6A737D">     */</span></span>
+<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">public</span><span style="color: #24292E"> </span><span style="color: #D73A49">static</span><span style="color: #24292E"> </span><span style="color: #D73A49">void</span><span style="color: #24292E"> </span><span style="color: #6F42C1">bubbleSort</span><span style="color: #24292E">(</span><span style="color: #D73A49">int</span><span style="color: #24292E">[] </span><span style="color: #E36209">array</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">int</span><span style="color: #24292E"> n </span><span style="color: #D73A49">=</span><span style="color: #24292E"> array.length;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #6A737D">// 外层循环控制每轮比较的次数</span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">for</span><span style="color: #24292E"> (</span><span style="color: #D73A49">int</span><span style="color: #24292E"> i </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #005CC5">0</span><span style="color: #24292E">; i </span><span style="color: #D73A49">&lt;</span><span style="color: #24292E"> n </span><span style="color: #D73A49">-</span><span style="color: #24292E"> </span><span style="color: #005CC5">1</span><span style="color: #24292E">; i</span><span style="color: #D73A49">++</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">            </span><span style="color: #6A737D">// 内层循环比较相邻元素，将较大的元素移到后面</span></span>
+<span class="line"><span style="color: #24292E">            </span><span style="color: #D73A49">for</span><span style="color: #24292E"> (</span><span style="color: #D73A49">int</span><span style="color: #24292E"> j </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #005CC5">0</span><span style="color: #24292E">; j </span><span style="color: #D73A49">&lt;</span><span style="color: #24292E"> n </span><span style="color: #D73A49">-</span><span style="color: #24292E"> i </span><span style="color: #D73A49">-</span><span style="color: #24292E"> </span><span style="color: #005CC5">1</span><span style="color: #24292E">; j</span><span style="color: #D73A49">++</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">                </span><span style="color: #6A737D">// 如果前一个元素大于后一个元素，则交换它们的位置</span></span>
+<span class="line"><span style="color: #24292E">                </span><span style="color: #D73A49">if</span><span style="color: #24292E"> (array[j] </span><span style="color: #D73A49">&gt;</span><span style="color: #24292E"> array[j </span><span style="color: #D73A49">+</span><span style="color: #24292E"> </span><span style="color: #005CC5">1</span><span style="color: #24292E">]) {</span></span>
+<span class="line"><span style="color: #24292E">                    </span><span style="color: #D73A49">int</span><span style="color: #24292E"> temp </span><span style="color: #D73A49">=</span><span style="color: #24292E"> array[j];</span></span>
+<span class="line"><span style="color: #24292E">                    array[j] </span><span style="color: #D73A49">=</span><span style="color: #24292E"> array[j </span><span style="color: #D73A49">+</span><span style="color: #24292E"> </span><span style="color: #005CC5">1</span><span style="color: #24292E">];</span></span>
+<span class="line"><span style="color: #24292E">                    array[j </span><span style="color: #D73A49">+</span><span style="color: #24292E"> </span><span style="color: #005CC5">1</span><span style="color: #24292E">] </span><span style="color: #D73A49">=</span><span style="color: #24292E"> temp;</span></span>
+<span class="line"><span style="color: #24292E">                }</span></span>
+<span class="line"><span style="color: #24292E">            }</span></span>
+<span class="line"><span style="color: #24292E">        }</span></span>
+<span class="line"><span style="color: #24292E">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">public</span><span style="color: #24292E"> </span><span style="color: #D73A49">static</span><span style="color: #24292E"> </span><span style="color: #D73A49">void</span><span style="color: #24292E"> </span><span style="color: #6F42C1">main</span><span style="color: #24292E">(</span><span style="color: #D73A49">String</span><span style="color: #24292E">[] </span><span style="color: #E36209">args</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">int</span><span style="color: #24292E">[] nums </span><span style="color: #D73A49">=</span><span style="color: #24292E"> {</span><span style="color: #005CC5">64</span><span style="color: #24292E">, </span><span style="color: #005CC5">34</span><span style="color: #24292E">, </span><span style="color: #005CC5">25</span><span style="color: #24292E">, </span><span style="color: #005CC5">12</span><span style="color: #24292E">, </span><span style="color: #005CC5">22</span><span style="color: #24292E">, </span><span style="color: #005CC5">11</span><span style="color: #24292E">, </span><span style="color: #005CC5">90</span><span style="color: #24292E">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292E">        System.out.</span><span style="color: #6F42C1">println</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;原始数组:&quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">for</span><span style="color: #24292E"> (</span><span style="color: #D73A49">int</span><span style="color: #24292E"> num </span><span style="color: #D73A49">:</span><span style="color: #24292E"> nums) {</span></span>
+<span class="line"><span style="color: #24292E">            System.out.</span><span style="color: #6F42C1">print</span><span style="color: #24292E">(num </span><span style="color: #D73A49">+</span><span style="color: #24292E"> </span><span style="color: #032F62">&quot; &quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">        }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #6F42C1">bubbleSort</span><span style="color: #24292E">(nums);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292E">        System.out.</span><span style="color: #6F42C1">println</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;</span><span style="color: #005CC5">\n</span><span style="color: #032F62">排序后的数组:&quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">for</span><span style="color: #24292E"> (</span><span style="color: #D73A49">int</span><span style="color: #24292E"> num </span><span style="color: #D73A49">:</span><span style="color: #24292E"> nums) {</span></span>
+<span class="line"><span style="color: #24292E">            System.out.</span><span style="color: #6F42C1">print</span><span style="color: #24292E">(num </span><span style="color: #D73A49">+</span><span style="color: #24292E"> </span><span style="color: #032F62">&quot; &quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">        }</span></span>
+<span class="line"><span style="color: #24292E">    }</span></span>
+<span class="line"><span style="color: #24292E">}</span></span></code></pre>
+</div><h2 id="_9-27" tabindex="-1">9-27 <a class="header-anchor" href="#_9-27" aria-label="Permalink to &quot;9-27&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是前后端分离" tabindex="-1">什么是前后端分离？ <a class="header-anchor" href="#什么是前后端分离" aria-label="Permalink to &quot;什么是前后端分离？&quot;">&ZeroWidthSpace;</a></h3>
+<blockquote>
+<p>前后端分离技术目前已经成为互联网项目研发的基础，JAVA 中一般使用 <code>Nginx</code> + <code>Tomcat</code> 的架构实现。将数据处理与页面展示有效的进行解耦。为多客户端、大型分布式架构、微服务架构等都打下了坚实的基础。</p>
+</blockquote>
+<p>这里以 <code>VUE</code> + <code>SpringBoot</code> 的系统举例，通常来讲，前端部署在 <code>Nginx</code>、<code>Apache</code> 等 Web 服务器，后端通常部署在 <code>Tomcat</code> 等应用服务器，使用 <code>JSON</code> 交互数据。后端根据 <code>Rustful Api</code>  规范开发数据接口，并通过 <code>Token</code>、<code>Session</code> 等安全机制进行认证，使用 <code>Mybatis</code> 等持久层框架与数据库进行通信。这些接口必须通过接口的相关规定进行调用。前端使用 <code>Ajax</code> 技术通过 <code>HTTP</code> 等协议实现对后端接口的调用，在后端主导的项目开发中，后端可以通过 <code>SpringDoc</code> 等方式提供接口文档，说明接口调用规范，供前端开发人员阅读。</p>
+<p><strong>优点：</strong></p>
+<p>前后端分离架构的主要优点是实现了数据与页面显示的解耦，开发人员能够专注于自己的方向，提升系统的开发效率、代码的可重用性及用户的体验感，并且由于后端所在的应用服务器一般都部署在内网，通过 web 服务器反向代理实现，能够增强后端数据的安全性。同时，能够同时利用 Web 服务器速度更快的优点以及应用服务器的动态资源处理，更便于开发及部署。</p>
+<p><strong>缺点：</strong></p>
+<ul>
+<li>系统开发对于人员数量及团队的配合度要求变大。</li>
+<li>由于系统调整需要同时对前后端都进行调整，这将增大系统迭代的周期。</li>
+<li>前端开发通常都要基于后端接口，这增大了对前端开发的技术水平要求及上手难度。</li>
+<li>前端开发需要编写更多的代码来处理数据交互和逻辑，这增加了前端开发的工作量。</li>
+<li>前后端分离由于浏览器的同源策略限制，会导致前后端之间的访问出现跨域问题。</li>
+</ul>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[每日一题 - 2024]]></title>
+            <link>https://www.imufeng.cn/question-by-day/2024/</link>
+            <guid>https://www.imufeng.cn/question-by-day/2024/</guid>
+            <pubDate>Sat, 07 Oct 2023 09:41:07 GMT</pubDate>
+            <content:encoded><![CDATA[<p>还没有。。。</p>
 ]]></content:encoded>
         </item>
     </channel>
