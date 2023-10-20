@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Fri, 20 Oct 2023 08:00:45 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 20 Oct 2023 08:20:26 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -18,23 +18,21 @@
             <title><![CDATA[Java8新特性详解]]></title>
             <link>https://www.imufeng.cn/full-stack/java/characteristic/functional.html</link>
             <guid>https://www.imufeng.cn/full-stack/java/characteristic/functional.html</guid>
-            <pubDate>Fri, 20 Oct 2023 07:58:54 GMT</pubDate>
+            <pubDate>Fri, 20 Oct 2023 08:13:59 GMT</pubDate>
             <description><![CDATA[Lambda 表达式、Stream 流、Optional 类操作分享。]]></description>
-            <content:encoded><![CDATA[<h1 id="java8新特性详解" tabindex="-1">Java8新特性详解 <a class="header-anchor" href="#java8新特性详解" aria-label="Permalink to &quot;Java8新特性详解&quot;">&ZeroWidthSpace;</a></h1>
+            <content:encoded><![CDATA[<h1 id="java8-新特性详解" tabindex="-1">Java8 新特性详解 <a class="header-anchor" href="#java8-新特性详解" aria-label="Permalink to &quot;Java8 新特性详解&quot;">&ZeroWidthSpace;</a></h1>
 <blockquote>
 <p>Lambda 表达式、Stream 流、Optional 类操作分享。</p>
 </blockquote>
 <h2 id="一、lambda表达式" tabindex="-1">一、Lambda表达式 <a class="header-anchor" href="#一、lambda表达式" aria-label="Permalink to &quot;一、Lambda表达式&quot;">&ZeroWidthSpace;</a></h2>
-<blockquote>
 <p>Lambda表达式可以让你简洁的表示一个行为或传递代码。Lambda表达式可以理解为简洁的表示可传递匿名函数的一种方式：它没有名称，但是有参数列表、函数主体、返回类型</p>
 <ul>
-<li>**匿名：**没有名称</li>
-<li>**函数：**Lambda函数不像方法那样属于特定的类。但是和方法一样，有参数列表、函数体以及返回类型 。也可以抛出异常。</li>
-<li>**传递：**Lambda表达式可以作为参数传递给方法或存储在变量中。</li>
-<li>**简介：**无需像匿名类那样写很多模板代码。</li>
+<li><strong>匿名：</strong> 没有名称</li>
+<li><strong>函数：</strong> Lambda函数不像方法那样属于特定的类。但是和方法一样，有参数列表、函数体以及返回类型 。也可以抛出异常。</li>
+<li><strong>传递：</strong> Lambda表达式可以作为参数传递给方法或存储在变量中。</li>
+<li><strong>简介：</strong> 无需像匿名类那样写很多模板代码。</li>
 </ul>
-</blockquote>
-<p>示例：</p>
+<p><strong>示例：</strong></p>
 <div class="language-Java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">Java</span><pre v-pre class="shiki github-dark vp-code-dark" ><code><span class="line"><span style="color: #6A737D">// 不使用Lambda</span></span>
 <span class="line"><span style="color: #E1E4E8">Comparator&lt;</span><span style="color: #F97583">Apple</span><span style="color: #E1E4E8">&gt; byWeight </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">new</span><span style="color: #E1E4E8"> Comparator&lt;</span><span style="color: #F97583">Apple</span><span style="color: #E1E4E8">&gt;(){</span></span>
 <span class="line"><span style="color: #E1E4E8">	</span><span style="color: #F97583">public</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">int</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">compare</span><span style="color: #E1E4E8">(Apple </span><span style="color: #FFAB70">a1</span><span style="color: #E1E4E8">, Apple </span><span style="color: #FFAB70">a2</span><span style="color: #E1E4E8">){</span></span>
@@ -55,53 +53,51 @@
 <span class="line"><span style="color: #24292E">Comparator&lt;Apple&gt; byWeight </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span></span>
 <span class="line"><span style="color: #24292E">    (Apple a1, Apple a2) </span><span style="color: #D73A49">-&gt;</span><span style="color: #24292E"> a1.</span><span style="color: #6F42C1">getWeight</span><span style="color: #24292E">().</span><span style="color: #6F42C1">compareTo</span><span style="color: #24292E">(a2.</span><span style="color: #6F42C1">getWeight</span><span style="color: #24292E">());</span></span></code></pre>
 </div><p><img src="https://cdn.imufeng.cn/imufeng/epub_26211813_42" alt="img"></p>
-<h2 id="stream流" tabindex="-1">Stream流 <a class="header-anchor" href="#stream流" aria-label="Permalink to &quot;Stream流&quot;">&ZeroWidthSpace;</a></h2>
+<h2 id="二、stream流" tabindex="-1">二、Stream流 <a class="header-anchor" href="#二、stream流" aria-label="Permalink to &quot;二、Stream流&quot;">&ZeroWidthSpace;</a></h2>
 <blockquote>
-<p>Stream流是Java8提供 对集合或数组进行链状流式操作的函数式编程模式。</p>
+<p><code>Stream流</code> 是 Java8 提供对集合或数组进行链状流式操作的函数式编程模式。</p>
 </blockquote>
-<h3 id="中间操作" tabindex="-1">中间操作 <a class="header-anchor" href="#中间操作" aria-label="Permalink to &quot;中间操作&quot;">&ZeroWidthSpace;</a></h3>
+<h3 id="_2-1-中间操作" tabindex="-1">2.1 中间操作 <a class="header-anchor" href="#_2-1-中间操作" aria-label="Permalink to &quot;2.1 中间操作&quot;">&ZeroWidthSpace;</a></h3>
 <ul>
 <li>
-<p>**filter：**过滤</p>
+<p><strong>filter：</strong> 过滤</p>
 </li>
 <li>
-<p>**map：**计算或转换</p>
+<p><strong>map：</strong> 计算或转换</p>
 </li>
 <li>
-<p>**distinct：**去除重复对象（equals方法）</p>
+<p><strong>distinct：</strong> 去除重复对象（equals 方法）</p>
 </li>
 <li>
-<p>**sorted：**排序</p>
-<p>可以实现Comparator接口重写compareTo方法进行排序</p>
+<p><strong>sorted：</strong> 排序，可以实现 Comparator 接口重写 compareTo 方法进行排序</p>
 </li>
 <li>
-<p>**limit：**设置流的最大长度</p>
+<p><strong>limit：</strong> 设置流的最大长度</p>
 </li>
 <li>
-<p>**skip：**跳过前n个元素</p>
+<p><strong>skip：</strong> 跳过前n个元素</p>
 </li>
 <li>
-<p>**flatMap：**将一个对象转换为多个对象作为流中的元素</p>
+<p><strong>flatMap：</strong> 将一个对象转换为多个对象作为流中的元素</p>
 </li>
 </ul>
-<h3 id="终结操作" tabindex="-1">终结操作 <a class="header-anchor" href="#终结操作" aria-label="Permalink to &quot;终结操作&quot;">&ZeroWidthSpace;</a></h3>
-<blockquote>
+<h3 id="_2-2-终结操作" tabindex="-1">2.2 终结操作 <a class="header-anchor" href="#_2-2-终结操作" aria-label="Permalink to &quot;2.2 终结操作&quot;">&ZeroWidthSpace;</a></h3>
+<div class="danger custom-block"><p class="custom-block-title">注意</p>
 <p>如果没有终结操作，中间操作不会执行</p>
-</blockquote>
+</div>
 <h4 id="常规操作" tabindex="-1">常规操作 <a class="header-anchor" href="#常规操作" aria-label="Permalink to &quot;常规操作&quot;">&ZeroWidthSpace;</a></h4>
 <ul>
 <li>
-<p>**forEach：**遍历</p>
+<p><strong>forEach：</strong> 遍历</p>
 </li>
 <li>
-<p>**count：**计数</p>
+<p><strong>count：</strong> 计数</p>
 </li>
 <li>
-<p>**max&amp;min：**求最值</p>
-<p>需要指定比较最大值的规则 返回Optional</p>
+<p><strong>max&amp;min：</strong> 求最值 需要指定比较最大值的规则 返回 Optional</p>
 </li>
 <li>
-<p>**collect：**将流转换为集合</p>
+<p><strong>collect：</strong> 将流转换为集合</p>
 </li>
 </ul>
 <h4 id="查找与匹配" tabindex="-1">查找与匹配 <a class="header-anchor" href="#查找与匹配" aria-label="Permalink to &quot;查找与匹配&quot;">&ZeroWidthSpace;</a></h4>
@@ -113,13 +109,13 @@
 <p><strong>allMatch：</strong> 判断是否全部匹配条件</p>
 </li>
 <li>
-<p>**noneMatch：**是否都不符合条件</p>
+<p><strong>noneMatch：</strong> 是否都不符合条件</p>
 </li>
 <li>
-<p>**findAny：**获取任意一个符合条件元素（不一定是第一个）</p>
+<p><strong>findAny：</strong> 获取任意一个符合条件元素（不一定是第一个）</p>
 </li>
 <li>
-<p>**findFirst：**获取第一个符合条件的元素</p>
+<p><strong>findFirst：</strong> 获取第一个符合条件的元素</p>
 </li>
 </ul>
 <h4 id="reduce归并" tabindex="-1">reduce归并 <a class="header-anchor" href="#reduce归并" aria-label="Permalink to &quot;reduce归并&quot;">&ZeroWidthSpace;</a></h4>
@@ -154,13 +150,13 @@
 <span class="line"><span style="color: #24292E">        .</span><span style="color: #6F42C1">distinct</span><span style="color: #24292E">()</span></span>
 <span class="line"><span style="color: #24292E">        .</span><span style="color: #6F42C1">map</span><span style="color: #24292E">(People</span><span style="color: #D73A49">::</span><span style="color: #24292E">getAge)</span></span>
 <span class="line"><span style="color: #24292E">        .</span><span style="color: #6F42C1">reduce</span><span style="color: #24292E">(Integer.MAX_VALUE, Integer</span><span style="color: #D73A49">::</span><span style="color: #24292E">min));</span></span></code></pre>
-</div><h2 id="二、optional" tabindex="-1">二、Optional <a class="header-anchor" href="#二、optional" aria-label="Permalink to &quot;二、Optional&quot;">&ZeroWidthSpace;</a></h2>
+</div><h2 id="三、optional" tabindex="-1">三、Optional <a class="header-anchor" href="#三、optional" aria-label="Permalink to &quot;三、Optional&quot;">&ZeroWidthSpace;</a></h2>
 <blockquote>
-<p>使用Optional可以写出更优雅的代码来避免空指针异常</p>
-<p>Optional类似于包装类，将具体的数据封装到Optional对象内部。我们可以使用Optional中封装好的方法操作封装的数据。优雅的避免空指针异常</p>
+<p>使用 Optional 可以写出更优雅的代码来避免空指针异常</p>
+<p>Optional 类似于包装类，将具体的数据封装到Optional对象内部。我们可以使用Optional中封装好的方法操作封装的数据。优雅的避免空指针异常</p>
 </blockquote>
 <h3 id="创建对象" tabindex="-1">创建对象 <a class="header-anchor" href="#创建对象" aria-label="Permalink to &quot;创建对象&quot;">&ZeroWidthSpace;</a></h3>
-<p><code>ofNullAble()</code>方法会将其封装为一个Optional对象</p>
+<p><code>ofNullAble()</code> 方法会将其封装为一个Optional对象</p>
 <div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre v-pre class="shiki github-dark vp-code-dark" ><code><span class="line"><span style="color: #E1E4E8">People people </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">new</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">People</span><span style="color: #E1E4E8">();</span></span>
 <span class="line"><span style="color: #E1E4E8">Optional&lt;</span><span style="color: #F97583">People</span><span style="color: #E1E4E8">&gt; people1 </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> Optional.</span><span style="color: #B392F0">ofNullable</span><span style="color: #E1E4E8">(people);</span></span></code></pre><pre v-pre class="shiki github-light vp-code-light" ><code><span class="line"><span style="color: #24292E">People people </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #D73A49">new</span><span style="color: #24292E"> </span><span style="color: #6F42C1">People</span><span style="color: #24292E">();</span></span>
 <span class="line"><span style="color: #24292E">Optional&lt;</span><span style="color: #D73A49">People</span><span style="color: #24292E">&gt; people1 </span><span style="color: #D73A49">=</span><span style="color: #24292E"> Optional.</span><span style="color: #6F42C1">ofNullable</span><span style="color: #24292E">(people);</span></span></code></pre>
@@ -172,7 +168,7 @@
 <span class="line"><span style="color: #24292E">people.</span><span style="color: #6F42C1">setName</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;mufeng&quot;</span><span style="color: #24292E">);</span></span>
 <span class="line"><span style="color: #24292E">people.</span><span style="color: #6F42C1">setAge</span><span style="color: #24292E">(</span><span style="color: #005CC5">13</span><span style="color: #24292E">);</span></span>
 <span class="line"><span style="color: #24292E">Optional&lt;</span><span style="color: #D73A49">People</span><span style="color: #24292E">&gt; people1 </span><span style="color: #D73A49">=</span><span style="color: #24292E"> Optional.</span><span style="color: #6F42C1">of</span><span style="color: #24292E">(people);</span></span></code></pre>
-</div><p>如果需要一个空值，使用emepy()方法</p>
+</div><p>如果需要一个空值，使用 emepy() 方法</p>
 <h3 id="安全获取值" tabindex="-1">安全获取值 <a class="header-anchor" href="#安全获取值" aria-label="Permalink to &quot;安全获取值&quot;">&ZeroWidthSpace;</a></h3>
 <p><code>orElseGet()</code>	如果非空则返回，如果为空则给默认值</p>
 <p><code>orElseThrow()</code> 获取数据，为空则抛出异常</p>
@@ -180,7 +176,7 @@
 <p><code>filter()</code> 类似于Stream流中的filter方法</p>
 <p><code>isPeresent（）</code> 进行是否存在值的判断（更推荐使用<code>ifPeresent()</code>方法）</p>
 <p><code>map()</code> 数据转换。类似于Stream流中的map方法</p>
-<h2 id="三、函数式接口" tabindex="-1">三、函数式接口 <a class="header-anchor" href="#三、函数式接口" aria-label="Permalink to &quot;三、函数式接口&quot;">&ZeroWidthSpace;</a></h2>
+<h2 id="四、函数式接口" tabindex="-1">四、函数式接口 <a class="header-anchor" href="#四、函数式接口" aria-label="Permalink to &quot;四、函数式接口&quot;">&ZeroWidthSpace;</a></h2>
 <blockquote>
 <p><strong>只有一个抽象方法的接口称为函数式接口</strong></p>
 <p>JDK的函数式接口都加上了<code>@FunctionalInterface</code>进行标识。但是加不加都无所谓。</p>
