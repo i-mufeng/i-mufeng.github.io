@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Mon, 23 Oct 2023 08:49:13 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 24 Oct 2023 09:26:15 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,8 +17,19 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/10.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/10.html</guid>
-            <pubDate>Mon, 23 Oct 2023 08:47:26 GMT</pubDate>
+            <pubDate>Tue, 24 Oct 2023 09:24:44 GMT</pubDate>
             <description><![CDATA[
+
+## 10-24
+
+### 线程不安全的本质什么?
+
+由于各个硬件设备的数据处理速度有极大差异，为了处理 CPU、内存、I/O 设备之间的速度差异，计算机体系结构、操作系统以及程序编译过程都做出了相应的优化。
+
+- CPU 增加了缓存，以均衡与内存之间的速度差异，这导致了 `可见性问题`。
+- 操作系统增加了进程、线程，以分时复用 CPU，这导致了 `原子性问题`。
+- 编译器优化指令执行次序，使得缓存能够得到更加合理的利用，这导致了 `有序性问题`。
+
 
 ## 10-23
 
@@ -62,13 +73,19 @@ Optional 类似于包装类，将具体的数据封装到Optional对象内部。
 
  ### Integer和int的区别？
 
-Java 虽然宣称一切都是对象，但原始数据类型是例外。int 是整形数字，是 java 的8个原始数据类型（Primitive Types）（char、boolean、byte、short、int、long、float、double）之一。在 java API 中有对应的包装类，分别是Character、Boolean、Byte、Short、Integer、Long、Float、Double。
+Java 虽然宣称一切都是对象，但原始数据类型是例外。
+int 是整形数字，是 java 的8个原始数据类型（Primitive Types）（char、boolean、byte、short、int、long、float、double）之一。
+在 java API 中有对应的包装类，分别是Character、Boolean、Byte、Short、Integer、Long、Float、Double。
 
-Integer 是 int 对应的包装类，它有一个int类型的字段存储数据，并且提供了基本操作，比如数学运算、int和字符串之间转换等。在 java 5 中引入了自动装箱和自动拆箱功能（boxing/unboxing），java 可以根据上下文，自动进行转换，极大地简化了相关编程。javac自动把装箱转换为Integer.valueOf(),把拆箱替换为Integer.intValue()。
+Integer 是 int 对应的包装类，它有一个int类型的字段存储数据，并且提供了基本操作，比如数学运算、int和字符串之间转换等。
+在 java 5 中引入了自动装箱和自动拆箱功能（boxing/unboxing），java 可以根据上下文，自动进行转换，极大地简化了相关编程。
+javac自动把装箱转换为Integer.valueOf(),把拆箱替换为Integer.intValue()。
 
-自动装箱实际上算是一种语法糖。什么是语法糖？可以简单理解为java平台为我们自动进行了一些转换，保证不同的写法在运行时等价，他们发生在编译阶段，也就是生产的字节码是一致的。
+自动装箱实际上算是一种语法糖。什么是语法糖？可以简单理解为java平台为我们自动进行了一些转换，保证不同的写法在运行时等价，
+他们发生在编译阶段，也就是生产的字节码是一致的。
 
-原始数据类型和 java 泛型并不能配合使用。因为 java 的泛型某种程度上可以算作伪泛型，它完全是一种编译期的技巧，java 编译期会自动将类型转换为对应的特定类型。这就决定了使用泛型，必须保证相应类型可以转换为 Object。
+原始数据类型和 java 泛型并不能配合使用。因为 java 的泛型某种程度上可以算作伪泛型，它完全是一种编译期的技巧，
+java 编译期会自动将类型转换为对应的特定类型。这就决定了使用泛型，必须保证相应类型可以转换为 Object。
 
 ## 10-18
 
@@ -82,7 +99,8 @@ Integer 是 int 对应的包装类，它有一个int类型的字段存储数据�
 
 4. 接口中只能有 static、final 变量，不能有其他变量，而抽象类中不一定。
 
-5. 接口中的方法和变量默认修饰符为 public（写不写都是public），而抽象类中的方法可以是 public，protected 和默认类型（抽象方法就是为了被重写所以不能是 private 修饰）
+5. 接口中的方法和变量默认修饰符为 public（写不写都是public），
+而抽象类中的方法可以是 public，protected 和默认类型（抽象方法就是为了被重写所以不能是 private 修饰）
 
 ## 10-17
 
@@ -106,7 +124,8 @@ Integer 是 int 对应的包装类，它有一个int类型的字段存储数据�
 
 2、当 `&` 运算符两边的表达式的结果都为 true 时，整个运算结果才为 true。而&&运算符第一个表达式为 false 时，则结果为 false，不再计算第二个表达式。 
 
-3、`&` 还可以用作位运算符，当 `&` 操作符两边的表达式不是boolean类型时，`&` 表示按位与操作，我们通常使用 0x0f 来与一个整数进行&运算，来获取该整数的最低4个 bit 位，例如：0x31 & 0x0f 的结果为 0x01。
+3、`&` 还可以用作位运算符，当 `&` 操作符两边的表达式不是boolean类型时，`&` 表示按位与操作，
+我们通常使用 0x0f 来与一个整数进行&运算，来获取该整数的最低4个 bit 位，例如：0x31 & 0x0f 的结果为 0x01。
 
 ## 10-15
 
@@ -117,13 +136,16 @@ Integer 是 int 对应的包装类，它有一个int类型的字段存储数据�
 如果是四大特征：`继承`、`封装`、`多态`、`抽象`
 
 **继承：**
-在定义和实现一个类的时候，可以在一个已经存在的类的基础之上来进行，把这个已经存在的类所定义的内容作为自己的内容，并可以加入若干新的内容，或修改原来的方法使之更适合特殊的需要，这就是继承。比如，遗产的继承。
+在定义和实现一个类的时候，可以在一个已经存在的类的基础之上来进行，把这个已经存在的类所定义的内容作为自己的内容，
+并可以加入若干新的内容，或修改原来的方法使之更适合特殊的需要，这就是继承。比如，遗产的继承。
 **封装：**
 面向对象的封装性指的是将对象封装成一个高度自治和相对封闭的个体，对象状态（属性）由这个对象自己的行为（方法）来读取和改变
 **多态：**
-多态指的是程序中定义的引用变量所指向的具体类型和通过该引用变量发出的方法调用在编程时并不确定，而是在程序运行期间才确定，即一个引用变量到底会指向哪个类的实例对象，该引用变量发出的方法调用到底在哪个类中实现的方法，必须在由程序运营期间才能决定。
+多态指的是程序中定义的引用变量所指向的具体类型和通过该引用变量发出的方法调用在编程时并不确定，而是在程序运行期间才确定，
+即一个引用变量到底会指向哪个类的实例对象，该引用变量发出的方法调用到底在哪个类中实现的方法，必须在由程序运营期间才能决定。
 **抽象：**
-抽象就是找出一些事物的相似和共性之处，然后将这些事物归为一个类，这个类只考虑这些事物的相似和共性之处，并且会忽略与当前主题和目标无关的那些方面，将注意力集中在与当前目标有关的方面。就是把现实生活的对象，抽象为类。
+抽象就是找出一些事物的相似和共性之处，然后将这些事物归为一个类，这个类只考虑这些事物的相似和共性之处，
+并且会忽略与当前主题和目标无关的那些方面，将注意力集中在与当前目标有关的方面。就是把现实生活的对象，抽象为类。
 
 ## 10-14
 
@@ -275,7 +297,15 @@ System.out.println(NumberFormat.format(0.1));
 
   | Name      | Description     |
   |]]></description>
-            <content:encoded><![CDATA[<h2 id="_10-23" tabindex="-1">10-23 <a class="header-anchor" href="#_10-23" aria-label="Permalink to &quot;10-23&quot;">&ZeroWidthSpace;</a></h2>
+            <content:encoded><![CDATA[<h2 id="_10-24" tabindex="-1">10-24 <a class="header-anchor" href="#_10-24" aria-label="Permalink to &quot;10-24&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="线程不安全的本质什么" tabindex="-1">线程不安全的本质什么? <a class="header-anchor" href="#线程不安全的本质什么" aria-label="Permalink to &quot;线程不安全的本质什么?&quot;">&ZeroWidthSpace;</a></h3>
+<p>由于各个硬件设备的数据处理速度有极大差异，为了处理 CPU、内存、I/O 设备之间的速度差异，计算机体系结构、操作系统以及程序编译过程都做出了相应的优化。</p>
+<ul>
+<li>CPU 增加了缓存，以均衡与内存之间的速度差异，这导致了 <code>可见性问题</code>。</li>
+<li>操作系统增加了进程、线程，以分时复用 CPU，这导致了 <code>原子性问题</code>。</li>
+<li>编译器优化指令执行次序，使得缓存能够得到更加合理的利用，这导致了 <code>有序性问题</code>。</li>
+</ul>
+<h2 id="_10-23" tabindex="-1">10-23 <a class="header-anchor" href="#_10-23" aria-label="Permalink to &quot;10-23&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="aop-的实现方式" tabindex="-1">AOP 的实现方式？ <a class="header-anchor" href="#aop-的实现方式" aria-label="Permalink to &quot;AOP 的实现方式？&quot;">&ZeroWidthSpace;</a></h3>
 <ul>
 <li><strong>静态代理：</strong> 代理类在编译阶段生成，在编译阶段将通知织入Java字节码中，也称编译时增强。AspectJ使用的是静态代理。</li>
@@ -312,10 +342,16 @@ Optional 类似于包装类，将具体的数据封装到Optional对象内部。
 </ul>
 <h2 id="_10-19" tabindex="-1">10-19 <a class="header-anchor" href="#_10-19" aria-label="Permalink to &quot;10-19&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="integer和int的区别" tabindex="-1">Integer和int的区别？ <a class="header-anchor" href="#integer和int的区别" aria-label="Permalink to &quot;Integer和int的区别？&quot;">&ZeroWidthSpace;</a></h3>
-<p>Java 虽然宣称一切都是对象，但原始数据类型是例外。int 是整形数字，是 java 的8个原始数据类型（Primitive Types）（char、boolean、byte、short、int、long、float、double）之一。在 java API 中有对应的包装类，分别是Character、Boolean、Byte、Short、Integer、Long、Float、Double。</p>
-<p>Integer 是 int 对应的包装类，它有一个int类型的字段存储数据，并且提供了基本操作，比如数学运算、int和字符串之间转换等。在 java 5 中引入了自动装箱和自动拆箱功能（boxing/unboxing），java 可以根据上下文，自动进行转换，极大地简化了相关编程。javac自动把装箱转换为Integer.valueOf(),把拆箱替换为Integer.intValue()。</p>
-<p>自动装箱实际上算是一种语法糖。什么是语法糖？可以简单理解为java平台为我们自动进行了一些转换，保证不同的写法在运行时等价，他们发生在编译阶段，也就是生产的字节码是一致的。</p>
-<p>原始数据类型和 java 泛型并不能配合使用。因为 java 的泛型某种程度上可以算作伪泛型，它完全是一种编译期的技巧，java 编译期会自动将类型转换为对应的特定类型。这就决定了使用泛型，必须保证相应类型可以转换为 Object。</p>
+<p>Java 虽然宣称一切都是对象，但原始数据类型是例外。
+int 是整形数字，是 java 的8个原始数据类型（Primitive Types）（char、boolean、byte、short、int、long、float、double）之一。
+在 java API 中有对应的包装类，分别是Character、Boolean、Byte、Short、Integer、Long、Float、Double。</p>
+<p>Integer 是 int 对应的包装类，它有一个int类型的字段存储数据，并且提供了基本操作，比如数学运算、int和字符串之间转换等。
+在 java 5 中引入了自动装箱和自动拆箱功能（boxing/unboxing），java 可以根据上下文，自动进行转换，极大地简化了相关编程。
+javac自动把装箱转换为Integer.valueOf(),把拆箱替换为Integer.intValue()。</p>
+<p>自动装箱实际上算是一种语法糖。什么是语法糖？可以简单理解为java平台为我们自动进行了一些转换，保证不同的写法在运行时等价，
+他们发生在编译阶段，也就是生产的字节码是一致的。</p>
+<p>原始数据类型和 java 泛型并不能配合使用。因为 java 的泛型某种程度上可以算作伪泛型，它完全是一种编译期的技巧，
+java 编译期会自动将类型转换为对应的特定类型。这就决定了使用泛型，必须保证相应类型可以转换为 Object。</p>
 <h2 id="_10-18" tabindex="-1">10-18 <a class="header-anchor" href="#_10-18" aria-label="Permalink to &quot;10-18&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="抽象类和接口的区别" tabindex="-1">抽象类和接口的区别？ <a class="header-anchor" href="#抽象类和接口的区别" aria-label="Permalink to &quot;抽象类和接口的区别？&quot;">&ZeroWidthSpace;</a></h3>
 <ol>
@@ -332,7 +368,8 @@ Optional 类似于包装类，将具体的数据封装到Optional对象内部。
 <p>接口中只能有 static、final 变量，不能有其他变量，而抽象类中不一定。</p>
 </li>
 <li>
-<p>接口中的方法和变量默认修饰符为 public（写不写都是public），而抽象类中的方法可以是 public，protected 和默认类型（抽象方法就是为了被重写所以不能是 private 修饰）</p>
+<p>接口中的方法和变量默认修饰符为 public（写不写都是public），
+而抽象类中的方法可以是 public，protected 和默认类型（抽象方法就是为了被重写所以不能是 private 修饰）</p>
 </li>
 </ol>
 <h2 id="_10-17" tabindex="-1">10-17 <a class="header-anchor" href="#_10-17" aria-label="Permalink to &quot;10-17&quot;">&ZeroWidthSpace;</a></h2>
@@ -345,19 +382,23 @@ Optional 类似于包装类，将具体的数据封装到Optional对象内部。
 <p><strong>不同点：</strong></p>
 <p>1、<code>&amp;&amp;</code> 具有短路的功能，而 <code>&amp;</code> 不具备短路功能。</p>
 <p>2、当 <code>&amp;</code> 运算符两边的表达式的结果都为 true 时，整个运算结果才为 true。而&amp;&amp;运算符第一个表达式为 false 时，则结果为 false，不再计算第二个表达式。</p>
-<p>3、<code>&amp;</code> 还可以用作位运算符，当 <code>&amp;</code> 操作符两边的表达式不是boolean类型时，<code>&amp;</code> 表示按位与操作，我们通常使用 0x0f 来与一个整数进行&amp;运算，来获取该整数的最低4个 bit 位，例如：0x31 &amp; 0x0f 的结果为 0x01。</p>
+<p>3、<code>&amp;</code> 还可以用作位运算符，当 <code>&amp;</code> 操作符两边的表达式不是boolean类型时，<code>&amp;</code> 表示按位与操作，
+我们通常使用 0x0f 来与一个整数进行&amp;运算，来获取该整数的最低4个 bit 位，例如：0x31 &amp; 0x0f 的结果为 0x01。</p>
 <h2 id="_10-15" tabindex="-1">10-15 <a class="header-anchor" href="#_10-15" aria-label="Permalink to &quot;10-15&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="请描述面向对象的特征。" tabindex="-1">请描述面向对象的特征。 <a class="header-anchor" href="#请描述面向对象的特征。" aria-label="Permalink to &quot;请描述面向对象的特征。&quot;">&ZeroWidthSpace;</a></h3>
 <p>面向对象有三大特征：<code>继承</code>、<code>封装</code>、<code>多态</code></p>
 <p>如果是四大特征：<code>继承</code>、<code>封装</code>、<code>多态</code>、<code>抽象</code></p>
 <p><strong>继承：</strong>
-在定义和实现一个类的时候，可以在一个已经存在的类的基础之上来进行，把这个已经存在的类所定义的内容作为自己的内容，并可以加入若干新的内容，或修改原来的方法使之更适合特殊的需要，这就是继承。比如，遗产的继承。
+在定义和实现一个类的时候，可以在一个已经存在的类的基础之上来进行，把这个已经存在的类所定义的内容作为自己的内容，
+并可以加入若干新的内容，或修改原来的方法使之更适合特殊的需要，这就是继承。比如，遗产的继承。
 <strong>封装：</strong>
 面向对象的封装性指的是将对象封装成一个高度自治和相对封闭的个体，对象状态（属性）由这个对象自己的行为（方法）来读取和改变
 <strong>多态：</strong>
-多态指的是程序中定义的引用变量所指向的具体类型和通过该引用变量发出的方法调用在编程时并不确定，而是在程序运行期间才确定，即一个引用变量到底会指向哪个类的实例对象，该引用变量发出的方法调用到底在哪个类中实现的方法，必须在由程序运营期间才能决定。
+多态指的是程序中定义的引用变量所指向的具体类型和通过该引用变量发出的方法调用在编程时并不确定，而是在程序运行期间才确定，
+即一个引用变量到底会指向哪个类的实例对象，该引用变量发出的方法调用到底在哪个类中实现的方法，必须在由程序运营期间才能决定。
 <strong>抽象：</strong>
-抽象就是找出一些事物的相似和共性之处，然后将这些事物归为一个类，这个类只考虑这些事物的相似和共性之处，并且会忽略与当前主题和目标无关的那些方面，将注意力集中在与当前目标有关的方面。就是把现实生活的对象，抽象为类。</p>
+抽象就是找出一些事物的相似和共性之处，然后将这些事物归为一个类，这个类只考虑这些事物的相似和共性之处，
+并且会忽略与当前主题和目标无关的那些方面，将注意力集中在与当前目标有关的方面。就是把现实生活的对象，抽象为类。</p>
 <h2 id="_10-14" tabindex="-1">10-14 <a class="header-anchor" href="#_10-14" aria-label="Permalink to &quot;10-14&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="java-中-throw-和-throws-区别" tabindex="-1">Java 中 throw 和 throws 区别？ <a class="header-anchor" href="#java-中-throw-和-throws-区别" aria-label="Permalink to &quot;Java 中 throw 和 throws 区别？&quot;">&ZeroWidthSpace;</a></h3>
 <ul>
@@ -590,7 +631,8 @@ Optional 类似于包装类，将具体的数据封装到Optional对象内部。
 <h2 id="_10-6" tabindex="-1">10-6 <a class="header-anchor" href="#_10-6" aria-label="Permalink to &quot;10-6&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="重载和重写是什么意思-有什么区别" tabindex="-1">重载和重写是什么意思？有什么区别？ <a class="header-anchor" href="#重载和重写是什么意思-有什么区别" aria-label="Permalink to &quot;重载和重写是什么意思？有什么区别？&quot;">&ZeroWidthSpace;</a></h3>
 <p><code>重载</code>（Overloading）指在同一个类中可以定义多个参数列表不同的同名方法，其互相的关系是重载。它是编译时多态（静态绑定），根据参数列表选择调用对应的方法。</p>
-<p><code>重写</code>（Overriding）指子类可以重新定义父类中非私有的方法，方法签名必须相同。子类可以通过重写父类的方法来实现自己的特定行为。它是运行时多态（动态绑定），在运行时根据对象的实际类型选择调用对应的方法。</p>
+<p><code>重写</code>（Overriding）指子类可以重新定义父类中非私有的方法，方法签名必须相同。子类可以通过重写父类的方法来实现自己的特定行为。
+它是运行时多态（动态绑定），在运行时根据对象的实际类型选择调用对应的方法。</p>
 <h2 id="_10-5" tabindex="-1">10-5 <a class="header-anchor" href="#_10-5" aria-label="Permalink to &quot;10-5&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="string、stringbuilder、stringbuffer-的区别及使用场景" tabindex="-1">String、StringBuilder、StringBuffer 的区别及使用场景 <a class="header-anchor" href="#string、stringbuilder、stringbuffer-的区别及使用场景" aria-label="Permalink to &quot;String、StringBuilder、StringBuffer 的区别及使用场景&quot;">&ZeroWidthSpace;</a></h3>
 <p><code>String</code> 由 final 关键字修饰，一旦定义就不可改变。可以在操作少量数据时使用。</p>
@@ -598,12 +640,14 @@ Optional 类似于包装类，将具体的数据封装到Optional对象内部。
 <p><code>StringBuffer</code> 可变，线程安全。操作多线程大数据时使用。</p>
 <h2 id="_10-4" tabindex="-1">10-4 <a class="header-anchor" href="#_10-4" aria-label="Permalink to &quot;10-4&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="请描述-instanceof-关键字" tabindex="-1">请描述 instanceof 关键字 <a class="header-anchor" href="#请描述-instanceof-关键字" aria-label="Permalink to &quot;请描述 instanceof 关键字&quot;">&ZeroWidthSpace;</a></h3>
-<p><code>instanceof</code> 是 JAVA  的一个二元操作符，类似于大于小于号，用于测试其左边的对象是否是它右边对象的实例，返回 Boolean 类型。在下方的 <a href="#_10-3">10-3</a> 的示例中，String 类的 equals 方法中使用了 <code>instanceof</code> 关键字对比较的对象进行实例检查，并转换为 String 类型。</p>
+<p><code>instanceof</code> 是 JAVA  的一个二元操作符，类似于大于小于号，用于测试其左边的对象是否是它右边对象的实例，
+返回 Boolean 类型。在下方的 <a href="#_10-3">10-3</a> 的示例中，String 类的 equals 方法中使用了 <code>instanceof</code> 关键字对比较的对象进行实例检查，并转换为 String 类型。</p>
 <h2 id="_10-3" tabindex="-1">10-3 <a class="header-anchor" href="#_10-3" aria-label="Permalink to &quot;10-3&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="与-equals-的区别" tabindex="-1"><code>==</code> 与 <code>equals</code> 的区别 <a class="header-anchor" href="#与-equals-的区别" aria-label="Permalink to &quot;`==` 与 `equals` 的区别&quot;">&ZeroWidthSpace;</a></h3>
 <p>两者的作用都是判断是否相等。但是 <code>==</code> 是运算符，<code>equals</code> 是继承于 Object 类的一个方法。</p>
 <p>对于 <code>==</code> 来讲，如果比较<strong>基本数据类型</strong>，则比较其存储的值。如果比较<strong>引用数据类型</strong>，则比较其对象的地址值是否相等。</p>
-<p>对于 <code>equals</code> 方法来讲，其本身并不提供<strong>基本数据类型</strong>的比较，但是可以使用 Objects 类提供的静态 equals 进行比较，如果是基本数据类型，其实现也是使用 <code>==</code>：</p>
+<p>对于 <code>equals</code> 方法来讲，其本身并不提供<strong>基本数据类型</strong>的比较，
+但是可以使用 Objects 类提供的静态 equals 进行比较，如果是基本数据类型，其实现也是使用 <code>==</code>：</p>
 <div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre v-pre class="shiki github-dark vp-code-dark" ><code><span class="line"><span style="color: #F97583">public</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">static</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">boolean</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">equals</span><span style="color: #E1E4E8">(Object a, Object b) {</span></span>
 <span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">return</span><span style="color: #E1E4E8"> (a </span><span style="color: #F97583">==</span><span style="color: #E1E4E8"> b) </span><span style="color: #F97583">||</span><span style="color: #E1E4E8"> (a </span><span style="color: #F97583">!=</span><span style="color: #E1E4E8"> </span><span style="color: #79B8FF">null</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">&amp;&amp;</span><span style="color: #E1E4E8"> a.</span><span style="color: #B392F0">equals</span><span style="color: #E1E4E8">(b));</span></span>
 <span class="line"><span style="color: #E1E4E8">}</span></span></code></pre><pre v-pre class="shiki github-light vp-code-light" ><code><span class="line"><span style="color: #D73A49">public</span><span style="color: #24292E"> </span><span style="color: #D73A49">static</span><span style="color: #24292E"> </span><span style="color: #D73A49">boolean</span><span style="color: #24292E"> </span><span style="color: #6F42C1">equals</span><span style="color: #24292E">(Object a, Object b) {</span></span>
@@ -644,7 +688,9 @@ Optional 类似于包装类，将具体的数据封装到Optional对象内部。
 </div><h2 id="_10-2" tabindex="-1">10-2 <a class="header-anchor" href="#_10-2" aria-label="Permalink to &quot;10-2&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="_3-0-1-0-3-将会返回什么-true-还是-false" tabindex="-1"><code>3 * 0.1 == 0.3</code> 将会返回什么? true 还是 false? <a class="header-anchor" href="#_3-0-1-0-3-将会返回什么-true-还是-false" aria-label="Permalink to &quot;`3 * 0.1 == 0.3` 将会返回什么? true 还是 false?&quot;">&ZeroWidthSpace;</a></h3>
 <p><strong>答案：</strong><code>FALSE</code></p>
-<p>这道题跟 <code>01+0.2 != 0.3</code> 是一样的，由于在计算机系统中使用二进制浮点数无法精确的表示诸如 <code>10/3</code> 等无限循环的十进制分数的值，Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来表示浮点数，这种表示方式会导致一些十进制分数无法精确地表示。因此，当你尝试在Java中表示0.3时，可能会得到一个非常接近 0.3 的值，但不会是精确的 0.3。</p>
+<p>这道题跟 <code>01+0.2 != 0.3</code> 是一样的，由于在计算机系统中使用二进制浮点数无法精确的表示诸如 <code>10/3</code> 等无限循环的十进制分数的值，
+Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来表示浮点数，这种表示方式会导致一些十进制分数无法精确地表示。
+因此，当你尝试在Java中表示0.3时，可能会得到一个非常接近 0.3 的值，但不会是精确的 0.3。</p>
 <p>要想精确的表示十进制小数，可以使用 <code>BigDecimal</code> 类进行精确的十进制数学运算，但是会更为复杂并造成额外的开销。</p>
 <h2 id="_10-1" tabindex="-1">10-1 <a class="header-anchor" href="#_10-1" aria-label="Permalink to &quot;10-1&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="请详述-jdk-jre-jvm-等的关系" tabindex="-1">请详述 <code>JDK</code> <code>JRE</code> <code>JVM</code> 等的关系 <a class="header-anchor" href="#请详述-jdk-jre-jvm-等的关系" aria-label="Permalink to &quot;请详述 `JDK` `JRE` `JVM` 等的关系&quot;">&ZeroWidthSpace;</a></h3>
@@ -654,15 +700,20 @@ Optional 类似于包装类，将具体的数据封装到Optional对象内部。
 <ol>
 <li>
 <p><strong><code>JDK</code>（Java Development Kit）</strong>：</p>
-<p><code>JDK</code> 是Java开发工具包，它是Java开发人员用来编写、编译、调试和运行Java程序的核心工具。JDK包括了Java编译器（javac）、Java解释器（java）、Java文档生成器（javadoc）等工具，以及Java开发所需的库和资源文件。</p>
+<p><code>JDK</code> 是Java开发工具包，它是Java开发人员用来编写、编译、调试和运行Java程序的核心工具。</p>
+</li>
+<li>
+<p>JDK包括了Java编译器（javac）、Java解释器（java）、Java文档生成器（javadoc）等工具，以及Java开发所需的库和资源文件。</p>
 </li>
 <li>
 <p><strong><code>JRE</code>（Java Runtime Environment）</strong>：</p>
-<p>JRE是Java运行时环境，是Java程序的运行环境，用于执行已经编译好的Java字节码。<code>JRE</code>包括了Java虚拟机（<code>JVM</code>）、Java类库（Java API）和运行时所需的其他组件。JRE提供了在特定平台上运行Java程序所需的基本功能。</p>
+<p>JRE是Java运行时环境，是Java程序的运行环境，用于执行已经编译好的Java字节码。
+<code>JRE</code>包括了Java虚拟机（<code>JVM</code>）、Java类库（Java API）和运行时所需的其他组件。JRE提供了在特定平台上运行Java程序所需的基本功能。</p>
 </li>
 <li>
 <p><strong><code>JVM</code>（Java Virtual Machine）</strong>：</p>
-<p><code>JVM</code> 是Java虚拟机，是Java程序的运行引擎，负责将Java字节码解释或编译成特定平台的本地机器代码，并执行程序。<code>JVM</code> 是 <code>JRE</code> 的一部分，它是一个虚拟的计算机，可以在不同的硬件和操作系统上运行Java程序。</p>
+<p><code>JVM</code> 是Java虚拟机，是Java程序的运行引擎，负责将Java字节码解释或编译成特定平台的本地机器代码，并执行程序。
+<code>JVM</code> 是 <code>JRE</code> 的一部分，它是一个虚拟的计算机，可以在不同的硬件和操作系统上运行Java程序。</p>
 </li>
 </ol>
 <p><strong>关系总结</strong>：</p>
@@ -679,7 +730,7 @@ Optional 类似于包装类，将具体的数据封装到Optional对象内部。
             <title><![CDATA[每日一题 - 2023]]></title>
             <link>https://www.imufeng.cn/question-by-day/2023/</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/</guid>
-            <pubDate>Mon, 23 Oct 2023 08:47:26 GMT</pubDate>
+            <pubDate>Tue, 24 Oct 2023 09:24:44 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
@@ -693,6 +744,10 @@ Optional 类似于包装类，将具体的数据封装到Optional对象内部。
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2023/10/20</td>
+<td><a href="./10.html#_10-24">出现线程不安全的本质什么？</a></td>
+</tr>
 <tr>
 <td>2023/10/20</td>
 <td><a href="./10.html#_10-23">AOP 的实现方式？</a></td>
