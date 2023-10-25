@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Tue, 24 Oct 2023 09:26:15 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 25 Oct 2023 14:17:45 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,8 +17,14 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/10.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/10.html</guid>
-            <pubDate>Tue, 24 Oct 2023 09:24:44 GMT</pubDate>
+            <pubDate>Wed, 25 Oct 2023 14:16:10 GMT</pubDate>
             <description><![CDATA[
+
+## 10-25
+
+### 如何停止一个正在运行的线程？
+
+要停止一个正在运行的线程，可以使用 `Thread.interrupt()` 方法来中断线程，或者使用 `Thread.stop()` 方法来停止线程。
 
 ## 10-24
 
@@ -297,7 +303,10 @@ System.out.println(NumberFormat.format(0.1));
 
   | Name      | Description     |
   |]]></description>
-            <content:encoded><![CDATA[<h2 id="_10-24" tabindex="-1">10-24 <a class="header-anchor" href="#_10-24" aria-label="Permalink to &quot;10-24&quot;">&ZeroWidthSpace;</a></h2>
+            <content:encoded><![CDATA[<h2 id="_10-25" tabindex="-1">10-25 <a class="header-anchor" href="#_10-25" aria-label="Permalink to &quot;10-25&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="如何停止一个正在运行的线程" tabindex="-1">如何停止一个正在运行的线程？ <a class="header-anchor" href="#如何停止一个正在运行的线程" aria-label="Permalink to &quot;如何停止一个正在运行的线程？&quot;">&ZeroWidthSpace;</a></h3>
+<p>要停止一个正在运行的线程，可以使用 <code>Thread.interrupt()</code> 方法来中断线程，或者使用 <code>Thread.stop()</code> 方法来停止线程。</p>
+<h2 id="_10-24" tabindex="-1">10-24 <a class="header-anchor" href="#_10-24" aria-label="Permalink to &quot;10-24&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="线程不安全的本质什么" tabindex="-1">线程不安全的本质什么? <a class="header-anchor" href="#线程不安全的本质什么" aria-label="Permalink to &quot;线程不安全的本质什么?&quot;">&ZeroWidthSpace;</a></h3>
 <p>由于各个硬件设备的数据处理速度有极大差异，为了处理 CPU、内存、I/O 设备之间的速度差异，计算机体系结构、操作系统以及程序编译过程都做出了相应的优化。</p>
 <ul>
@@ -730,7 +739,7 @@ Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来�
             <title><![CDATA[每日一题 - 2023]]></title>
             <link>https://www.imufeng.cn/question-by-day/2023/</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/</guid>
-            <pubDate>Tue, 24 Oct 2023 09:24:44 GMT</pubDate>
+            <pubDate>Wed, 25 Oct 2023 14:16:10 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
@@ -745,19 +754,23 @@ Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来�
 </thead>
 <tbody>
 <tr>
-<td>2023/10/20</td>
+<td>2023/10/25</td>
+<td><a href="./10.html#_10-25">如何停止一个正在运行的线程？</a></td>
+</tr>
+<tr>
+<td>2023/10/24</td>
 <td><a href="./10.html#_10-24">出现线程不安全的本质什么？</a></td>
 </tr>
 <tr>
-<td>2023/10/20</td>
+<td>2023/10/23</td>
 <td><a href="./10.html#_10-23">AOP 的实现方式？</a></td>
 </tr>
 <tr>
-<td>2023/10/20</td>
+<td>2023/10/22</td>
 <td><a href="./10.html#_10-22">什么是 AOP？</a></td>
 </tr>
 <tr>
-<td>2023/10/20</td>
+<td>2023/10/21</td>
 <td><a href="./10.html#_10-21">什么是 IOC？</a></td>
 </tr>
 <tr>
