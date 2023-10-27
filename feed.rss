@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Thu, 26 Oct 2023 09:16:42 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 27 Oct 2023 09:33:16 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,8 +17,17 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/10.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/10.html</guid>
-            <pubDate>Thu, 26 Oct 2023 09:15:12 GMT</pubDate>
+            <pubDate>Fri, 27 Oct 2023 09:31:21 GMT</pubDate>
             <description><![CDATA[
+
+## 10-27
+
+### 产生死锁的必要条件。
+
+- 互斥条件：共享资源被一个线程占用
+- 请求与保持条件（占有且等待）：一个进程因请求资源而阻塞时，对已获得的资源保持不释放
+- 不剥夺条件：进程已获得资源，在未使用完之前，不能强行剥夺
+- 循环等待条件：多个线程之前循环等待资源，必须是循环的互相等待
 
 ## 10-26
 
@@ -312,7 +321,15 @@ System.out.println(NumberFormat.format(0.1));
 
   | Name      | Description     |
   |]]></description>
-            <content:encoded><![CDATA[<h2 id="_10-26" tabindex="-1">10-26 <a class="header-anchor" href="#_10-26" aria-label="Permalink to &quot;10-26&quot;">&ZeroWidthSpace;</a></h2>
+            <content:encoded><![CDATA[<h2 id="_10-27" tabindex="-1">10-27 <a class="header-anchor" href="#_10-27" aria-label="Permalink to &quot;10-27&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="产生死锁的必要条件。" tabindex="-1">产生死锁的必要条件。 <a class="header-anchor" href="#产生死锁的必要条件。" aria-label="Permalink to &quot;产生死锁的必要条件。&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>互斥条件：共享资源被一个线程占用</li>
+<li>请求与保持条件（占有且等待）：一个进程因请求资源而阻塞时，对已获得的资源保持不释放</li>
+<li>不剥夺条件：进程已获得资源，在未使用完之前，不能强行剥夺</li>
+<li>循环等待条件：多个线程之前循环等待资源，必须是循环的互相等待</li>
+</ul>
+<h2 id="_10-26" tabindex="-1">10-26 <a class="header-anchor" href="#_10-26" aria-label="Permalink to &quot;10-26&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="什么是上下文切换" tabindex="-1">什么是上下文切换？ <a class="header-anchor" href="#什么是上下文切换" aria-label="Permalink to &quot;什么是上下文切换？&quot;">&ZeroWidthSpace;</a></h3>
 <p>由于时分复用的存在，CPU 为每个线程分配时间片并轮转，从一个线程切换到另一个线程，这个过程需要先保存当前线程的状态，
 然后加载新线程的状态，这就是上下文切换。</p>
@@ -753,7 +770,7 @@ Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来�
             <title><![CDATA[每日一题 - 2023]]></title>
             <link>https://www.imufeng.cn/question-by-day/2023/</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/</guid>
-            <pubDate>Thu, 26 Oct 2023 09:15:12 GMT</pubDate>
+            <pubDate>Fri, 27 Oct 2023 09:31:21 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
@@ -768,7 +785,11 @@ Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来�
 </thead>
 <tbody>
 <tr>
-<td>2023/10/25</td>
+<td>2023/10/27</td>
+<td><a href="./10.html#_10-27">产生死锁的必要条件。</a></td>
+</tr>
+<tr>
+<td>2023/10/26</td>
 <td><a href="./10.html#_10-26">什么是上下文切换？</a></td>
 </tr>
 <tr>
