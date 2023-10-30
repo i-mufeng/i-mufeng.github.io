@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Fri, 27 Oct 2023 09:33:16 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 30 Oct 2023 08:23:43 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,8 +17,53 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/10.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/10.html</guid>
-            <pubDate>Fri, 27 Oct 2023 09:31:21 GMT</pubDate>
+            <pubDate>Mon, 30 Oct 2023 08:21:37 GMT</pubDate>
             <description><![CDATA[
+
+## 10-30
+
+### 为什么使用Executor框架？
+
+1. 能复用已存在并空闲的线程从而减少线程对象的创建从而减少了消亡线程的开销。
+2. 可有效控制最大并发线程数，提高系统资源使用率，同时避免过多资源竞争。
+3. 框架中已经有定时、定期、单线程、并发数控制等功能。
+
+
+> 综上所述使用线程池框架 Executor 能更好的管理线程、提供系统资源使用率。
+
+
+
+## 10-29
+
+### 什么是Executor框架？
+
+线程池就是线程的集合，线程池集中管理线程，以实现线程的重用，降低资源消耗，提高响应速度等。线程用于执行异步任务，
+单个的线程既是工作单元也是执行机制，从JDK1.5开始，为了把工作单元与执行机制分离开，Executor框架诞生了，他是一个用于统一创建与运行的接口。
+Executor框架实现的就是线程池的功能。
+
+Executor框架包括3大部分：
+
+- 任务。也就是工作单元，包括被执行任务需要实现的接口：Runnable接口或者Callable接口；
+- 任务的执行。也就是把任务分派给多个线程的执行机制，包括Executor接口及继承自Executor接口的ExecutorService接口。
+- 异步计算的结果。包括Future接口及实现了Future接口的FutureTask类。
+
+## 10-28
+
+### 什么是线程组？
+
+线程组，顾名思义，就是线程的组，逻辑类似项目组，用于管理项目成员，线程组就是用来管理线程的。线程组中可以有线程对象，
+也可以有线程组，组中还可以有线程，这样的组织结构有点类似于树的形式。 每个线程都会有一个线程组，如果没有设置将会有些默认的初始化设置。
+
+虽然线程组看上去很有用处，实际上现在的程序开发中已经不推荐使用它了，主要有两个原因：
+
+1. 线程组ThreadGroup对象中比较有用的方法是stop、resume、suspend等方法，由于这几个方法会导致线程的安全问题（主要是死锁问题），
+已经被官方废弃掉了，所以线程组本身的应用价值就大打折扣了。
+
+2. 线程组ThreadGroup不是线程安全的，这在使用过程中获取的信息并不全是及时有效的，这就降低了它的统计使用价值。
+
+> 虽然线程组现在已经不被推荐使用了（推荐使用线程池），但是它在线程的异常处理方面还是做出了一定的贡献。当线程运行过程中出现异常情况时，
+在某些情况下JVM会把线程的控制权交到线程关联的线程组对象上来进行处理。所以对线程组的了解还是有一定必要的。
+
 
 ## 10-27
 
@@ -321,7 +366,46 @@ System.out.println(NumberFormat.format(0.1));
 
   | Name      | Description     |
   |]]></description>
-            <content:encoded><![CDATA[<h2 id="_10-27" tabindex="-1">10-27 <a class="header-anchor" href="#_10-27" aria-label="Permalink to &quot;10-27&quot;">&ZeroWidthSpace;</a></h2>
+            <content:encoded><![CDATA[<h2 id="_10-30" tabindex="-1">10-30 <a class="header-anchor" href="#_10-30" aria-label="Permalink to &quot;10-30&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="为什么使用executor框架" tabindex="-1">为什么使用Executor框架？ <a class="header-anchor" href="#为什么使用executor框架" aria-label="Permalink to &quot;为什么使用Executor框架？&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>能复用已存在并空闲的线程从而减少线程对象的创建从而减少了消亡线程的开销。</li>
+<li>可有效控制最大并发线程数，提高系统资源使用率，同时避免过多资源竞争。</li>
+<li>框架中已经有定时、定期、单线程、并发数控制等功能。</li>
+</ol>
+<blockquote>
+<p>综上所述使用线程池框架 Executor 能更好的管理线程、提供系统资源使用率。</p>
+</blockquote>
+<h2 id="_10-29" tabindex="-1">10-29 <a class="header-anchor" href="#_10-29" aria-label="Permalink to &quot;10-29&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是executor框架" tabindex="-1">什么是Executor框架？ <a class="header-anchor" href="#什么是executor框架" aria-label="Permalink to &quot;什么是Executor框架？&quot;">&ZeroWidthSpace;</a></h3>
+<p>线程池就是线程的集合，线程池集中管理线程，以实现线程的重用，降低资源消耗，提高响应速度等。线程用于执行异步任务，
+单个的线程既是工作单元也是执行机制，从JDK1.5开始，为了把工作单元与执行机制分离开，Executor框架诞生了，他是一个用于统一创建与运行的接口。
+Executor框架实现的就是线程池的功能。</p>
+<p>Executor框架包括3大部分：</p>
+<ul>
+<li>任务。也就是工作单元，包括被执行任务需要实现的接口：Runnable接口或者Callable接口；</li>
+<li>任务的执行。也就是把任务分派给多个线程的执行机制，包括Executor接口及继承自Executor接口的ExecutorService接口。</li>
+<li>异步计算的结果。包括Future接口及实现了Future接口的FutureTask类。</li>
+</ul>
+<h2 id="_10-28" tabindex="-1">10-28 <a class="header-anchor" href="#_10-28" aria-label="Permalink to &quot;10-28&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是线程组" tabindex="-1">什么是线程组？ <a class="header-anchor" href="#什么是线程组" aria-label="Permalink to &quot;什么是线程组？&quot;">&ZeroWidthSpace;</a></h3>
+<p>线程组，顾名思义，就是线程的组，逻辑类似项目组，用于管理项目成员，线程组就是用来管理线程的。线程组中可以有线程对象，
+也可以有线程组，组中还可以有线程，这样的组织结构有点类似于树的形式。 每个线程都会有一个线程组，如果没有设置将会有些默认的初始化设置。</p>
+<p>虽然线程组看上去很有用处，实际上现在的程序开发中已经不推荐使用它了，主要有两个原因：</p>
+<ol>
+<li>
+<p>线程组ThreadGroup对象中比较有用的方法是stop、resume、suspend等方法，由于这几个方法会导致线程的安全问题（主要是死锁问题），
+已经被官方废弃掉了，所以线程组本身的应用价值就大打折扣了。</p>
+</li>
+<li>
+<p>线程组ThreadGroup不是线程安全的，这在使用过程中获取的信息并不全是及时有效的，这就降低了它的统计使用价值。</p>
+</li>
+</ol>
+<blockquote>
+<p>虽然线程组现在已经不被推荐使用了（推荐使用线程池），但是它在线程的异常处理方面还是做出了一定的贡献。当线程运行过程中出现异常情况时，
+在某些情况下JVM会把线程的控制权交到线程关联的线程组对象上来进行处理。所以对线程组的了解还是有一定必要的。</p>
+</blockquote>
+<h2 id="_10-27" tabindex="-1">10-27 <a class="header-anchor" href="#_10-27" aria-label="Permalink to &quot;10-27&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="产生死锁的必要条件。" tabindex="-1">产生死锁的必要条件。 <a class="header-anchor" href="#产生死锁的必要条件。" aria-label="Permalink to &quot;产生死锁的必要条件。&quot;">&ZeroWidthSpace;</a></h3>
 <ul>
 <li>互斥条件：共享资源被一个线程占用</li>
@@ -770,7 +854,7 @@ Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来�
             <title><![CDATA[每日一题 - 2023]]></title>
             <link>https://www.imufeng.cn/question-by-day/2023/</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/</guid>
-            <pubDate>Fri, 27 Oct 2023 09:31:21 GMT</pubDate>
+            <pubDate>Mon, 30 Oct 2023 08:21:37 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
@@ -784,6 +868,18 @@ Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来�
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2023/10/30</td>
+<td><a href="./10.html#_10-30">为什么使用Executor框架？</a></td>
+</tr>
+<tr>
+<td>2023/10/29</td>
+<td><a href="./10.html#_10-29">什么是Executor框架？</a></td>
+</tr>
+<tr>
+<td>2023/10/28</td>
+<td><a href="./10.html#_10-28">什么是线程组？</a></td>
+</tr>
 <tr>
 <td>2023/10/27</td>
 <td><a href="./10.html#_10-27">产生死锁的必要条件。</a></td>
