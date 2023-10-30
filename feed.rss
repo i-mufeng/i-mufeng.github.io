@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Mon, 30 Oct 2023 08:23:43 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 30 Oct 2023 09:02:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,7 +17,7 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/10.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/10.html</guid>
-            <pubDate>Mon, 30 Oct 2023 08:21:37 GMT</pubDate>
+            <pubDate>Mon, 30 Oct 2023 09:00:11 GMT</pubDate>
             <description><![CDATA[
 
 ## 10-30
@@ -64,7 +64,7 @@ Executor框架包括3大部分：
 > 虽然线程组现在已经不被推荐使用了（推荐使用线程池），但是它在线程的异常处理方面还是做出了一定的贡献。当线程运行过程中出现异常情况时，
 在某些情况下JVM会把线程的控制权交到线程关联的线程组对象上来进行处理。所以对线程组的了解还是有一定必要的。
 
-
+ 
 ## 10-27
 
 ### 产生死锁的必要条件。
