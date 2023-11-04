@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Mon, 30 Oct 2023 09:02:05 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 04 Nov 2023 10:10:32 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,8 +17,22 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/10.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/10.html</guid>
-            <pubDate>Mon, 30 Oct 2023 09:00:11 GMT</pubDate>
+            <pubDate>Sat, 04 Nov 2023 10:08:58 GMT</pubDate>
             <description><![CDATA[
+
+## 10-31
+
+### 什么是原子操作？
+
+原子操作（atomic operation）意为”不可被中断的一个或一系列操作” 。处理器使用基于对缓存加锁或总线加锁的方式来实现多处理器之间的原子操作。
+在Java中可以通过锁和循环CAS的方式来实现原子操作。CAS操作—— `Compare & Set`，或是 `Compare & Swap`，现在几乎所有的CPU指令都支持CAS的原子操作。
+
+原子操作是指一个不受其他操作影响的操作任务单元。原子操作是在多线程环境下避免数据不一致必须的手段。
+int++并不是一个原子操作，所以当一个线程读取它的值并加1时，另外一个线程有可能会读到之前的值，这就会引发错误。
+
+为了解决这个问题，必须保证增加操作是原子的，在JDK1.5之前我们可以使用同步技术来做到这一点。
+到JDK1.5，`java.util.concurrent.atomic` 包提供了 int 和 long 类型的原子包装类，它们可以自动的保证对于他们的操作是原子的并且不需要使用同步。
+
 
 ## 10-30
 
@@ -366,7 +380,15 @@ System.out.println(NumberFormat.format(0.1));
 
   | Name      | Description     |
   |]]></description>
-            <content:encoded><![CDATA[<h2 id="_10-30" tabindex="-1">10-30 <a class="header-anchor" href="#_10-30" aria-label="Permalink to &quot;10-30&quot;">&ZeroWidthSpace;</a></h2>
+            <content:encoded><![CDATA[<h2 id="_10-31" tabindex="-1">10-31 <a class="header-anchor" href="#_10-31" aria-label="Permalink to &quot;10-31&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是原子操作" tabindex="-1">什么是原子操作？ <a class="header-anchor" href="#什么是原子操作" aria-label="Permalink to &quot;什么是原子操作？&quot;">&ZeroWidthSpace;</a></h3>
+<p>原子操作（atomic operation）意为”不可被中断的一个或一系列操作” 。处理器使用基于对缓存加锁或总线加锁的方式来实现多处理器之间的原子操作。
+在Java中可以通过锁和循环CAS的方式来实现原子操作。CAS操作—— <code>Compare &amp; Set</code>，或是 <code>Compare &amp; Swap</code>，现在几乎所有的CPU指令都支持CAS的原子操作。</p>
+<p>原子操作是指一个不受其他操作影响的操作任务单元。原子操作是在多线程环境下避免数据不一致必须的手段。
+int++并不是一个原子操作，所以当一个线程读取它的值并加1时，另外一个线程有可能会读到之前的值，这就会引发错误。</p>
+<p>为了解决这个问题，必须保证增加操作是原子的，在JDK1.5之前我们可以使用同步技术来做到这一点。
+到JDK1.5，<code>java.util.concurrent.atomic</code> 包提供了 int 和 long 类型的原子包装类，它们可以自动的保证对于他们的操作是原子的并且不需要使用同步。</p>
+<h2 id="_10-30" tabindex="-1">10-30 <a class="header-anchor" href="#_10-30" aria-label="Permalink to &quot;10-30&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="为什么使用executor框架" tabindex="-1">为什么使用Executor框架？ <a class="header-anchor" href="#为什么使用executor框架" aria-label="Permalink to &quot;为什么使用Executor框架？&quot;">&ZeroWidthSpace;</a></h3>
 <ol>
 <li>能复用已存在并空闲的线程从而减少线程对象的创建从而减少了消亡线程的开销。</li>
@@ -851,10 +873,84 @@ Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来�
 ]]></content:encoded>
         </item>
         <item>
+            <link>https://www.imufeng.cn/question-by-day/2023/11.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2023/11.html</guid>
+            <pubDate>Sat, 04 Nov 2023 10:08:58 GMT</pubDate>
+            <description><![CDATA[
+## 11-4
+
+### execute 与 submit 的用法与区别。
+
+execute 执行后**没有返回结果**，只有1种用法
+
+| 方法                               | 描述                                          |
+|]]></description>
+            <content:encoded><![CDATA[<h2 id="_11-4" tabindex="-1">11-4 <a class="header-anchor" href="#_11-4" aria-label="Permalink to &quot;11-4&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="execute-与-submit-的用法与区别。" tabindex="-1">execute 与 submit 的用法与区别。 <a class="header-anchor" href="#execute-与-submit-的用法与区别。" aria-label="Permalink to &quot;execute 与 submit 的用法与区别。&quot;">&ZeroWidthSpace;</a></h3>
+<p>execute 执行后<strong>没有返回结果</strong>，只有1种用法</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>void execute(Runnable command)</code></td>
+<td>常规使用方法，用没有返回值的 execute 执行没有返回值的 Runnable 任务</td>
+</tr>
+</tbody>
+</table>
+<p>submit 执行后<strong>有返回结果</strong>，有3种用法</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Future submit(Callable task)</code></td>
+<td>常规使用方法，传入有返回值的 callable 任务，最终返回 task 的返回值</td>
+</tr>
+<tr>
+<td><code>Future submit(Runnable task, T result)</code></td>
+<td>由于 Runnable 没有返回值，但是可以自定义一个返回值用于返回</td>
+</tr>
+<tr>
+<td><code>Future submit(Runnable task)</code></td>
+<td>强行使用 submit 执行 Runnable 方法，忽略返回值</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_11-3" tabindex="-1">11-3 <a class="header-anchor" href="#_11-3" aria-label="Permalink to &quot;11-3&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="runnable-与-callable-的区别。" tabindex="-1">Runnable 与 Callable 的区别。 <a class="header-anchor" href="#runnable-与-callable-的区别。" aria-label="Permalink to &quot;Runnable 与 Callable 的区别。&quot;">&ZeroWidthSpace;</a></h3>
+<p>Runnable 没有返回结果，即没有 return 语句；Callable 有返回结果。</p>
+<p>可以通过 Executors 工厂类将 Runnable 封装为一个 Callable 对象。</p>
+<h2 id="_11-2" tabindex="-1">11-2 <a class="header-anchor" href="#_11-2" aria-label="Permalink to &quot;11-2&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="请描述-executor-框架的执行过程。" tabindex="-1">请描述 Executor 框架的执行过程。 <a class="header-anchor" href="#请描述-executor-框架的执行过程。" aria-label="Permalink to &quot;请描述 Executor 框架的执行过程。&quot;">&ZeroWidthSpace;</a></h3>
+<p>1、通过实现 Runnable 接口或 Callable 接口创建任务。</p>
+<p>2、通过Executors的工厂方法创建线程池。</p>
+<p>3、通过 <code>ExecutorService.submit()</code>
+提交一个有返回结果的任务，返回类型为一个实现Future接口的对象；或通过ExecutorService.execute()方法执行一个没有返回结果的任务。</p>
+<p>4、通过 <code>FutureTask.get()</code> 获取返回结果（如果有）。</p>
+<h2 id="_11-1" tabindex="-1">11-1 <a class="header-anchor" href="#_11-1" aria-label="Permalink to &quot;11-1&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="说一说你理解的-executor-框架。" tabindex="-1">说一说你理解的 Executor 框架。 <a class="header-anchor" href="#说一说你理解的-executor-框架。" aria-label="Permalink to &quot;说一说你理解的 Executor 框架。&quot;">&ZeroWidthSpace;</a></h3>
+<p>Executor 是线程池的调度工具，线程池是 Executor 的一部分。</p>
+<p>Executor 框架由三大部分组成</p>
+<p>1、<strong>任务</strong>：即被执行任务需要实现的接口：<strong>Runnable</strong> 接口或 <strong>Callable</strong> 接口。</p>
+<p>2、<strong>线程池</strong>：主要通过 <strong>ExecutorService</strong> 接口调用线程池，有2个关键实现类 <strong>ThreadPoolExecutor</strong> 和 *
+<em>ScheduledThreadPoolExecutor</em>*。</p>
+<p>3、<strong>异步计算的结果</strong>：<strong>Future</strong> 接口及其实现类 <strong>FutureTask</strong>。</p>
+]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[每日一题 - 2023]]></title>
             <link>https://www.imufeng.cn/question-by-day/2023/</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/</guid>
-            <pubDate>Mon, 30 Oct 2023 08:21:37 GMT</pubDate>
+            <pubDate>Sat, 04 Nov 2023 10:08:58 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
@@ -868,6 +964,26 @@ Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来�
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2023/11/4</td>
+<td><a href="./11.html#_11-4">execute 与 submit 的用法与区别。</a></td>
+</tr>
+<tr>
+<td>2023/11/3</td>
+<td><a href="./11.html#_11-3">Runnable 与 Callable 的区别。</a></td>
+</tr>
+<tr>
+<td>2023/11/2</td>
+<td><a href="./11.html#_11-2">请描述 Executor 框架的执行过程。</a></td>
+</tr>
+<tr>
+<td>2023/11/1</td>
+<td><a href="./11.html#_11-1">说一说你理解的 Executor 框架。</a></td>
+</tr>
+<tr>
+<td>2023/10/31</td>
+<td><a href="./10.html#_10-31">什么是原子操作？</a></td>
+</tr>
 <tr>
 <td>2023/10/30</td>
 <td><a href="./10.html#_10-30">为什么使用Executor框架？</a></td>
@@ -2663,11 +2779,6 @@ Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来�
             <pubDate>Sat, 07 Oct 2023 09:41:07 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="我的分享" tabindex="-1">我的分享 <a class="header-anchor" href="#我的分享" aria-label="Permalink to &quot;我的分享&quot;">&ZeroWidthSpace;</a></h1>
 ]]></content:encoded>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/question-by-day/2023/11.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2023/11.html</guid>
-            <pubDate>Sat, 07 Oct 2023 09:41:07 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/12.html</link>
