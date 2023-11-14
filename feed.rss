@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Sun, 12 Nov 2023 05:53:44 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 14 Nov 2023 09:34:26 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,8 +17,30 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/11.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/11.html</guid>
-            <pubDate>Sun, 12 Nov 2023 05:52:09 GMT</pubDate>
+            <pubDate>Tue, 14 Nov 2023 09:33:11 GMT</pubDate>
             <description><![CDATA[
+## 11-14
+
+### synchronized 关键字的作用？
+
+synchronized 关键字可以用于修饰一段代码或一个方法，用于实现现成的同步，表示该段代码不能被多个线程同时执行。
+
+当一个线程进入被 synchronized 关键字修饰的代码块或方法时，其他试图访问的线程将被阻塞。
+
+synchronized 关键字的作用体现在两个方面：
+
+1. 确保方法或代码块的互斥访问。（加锁与解锁）
+2. 确保内存可见性。（强制从缓存加载数据）
+
+## 11-13
+
+### 线程池有几种创建方式？
+
+1. newCachedThreadPool 创建一个可缓存线程池
+2. newFixedThreadPool 创建一个定长线程池，可控制线程最大并发数 
+3. newScheduledThreadPool 创建一个定长线程池，支持定时及周期性任务执行。 
+4. newSingleThreadExecutor 创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务
+
 ## 11-12
 
 ### 线程的 run()和 start()有什么区别？
@@ -113,7 +135,24 @@ execute 执行后**没有返回结果**，只有1种用法
 
 | 方法                               | 描述                                          |
 |]]></description>
-            <content:encoded><![CDATA[<h2 id="_11-12" tabindex="-1">11-12 <a class="header-anchor" href="#_11-12" aria-label="Permalink to &quot;11-12&quot;">&ZeroWidthSpace;</a></h2>
+            <content:encoded><![CDATA[<h2 id="_11-14" tabindex="-1">11-14 <a class="header-anchor" href="#_11-14" aria-label="Permalink to &quot;11-14&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="synchronized-关键字的作用" tabindex="-1">synchronized 关键字的作用？ <a class="header-anchor" href="#synchronized-关键字的作用" aria-label="Permalink to &quot;synchronized 关键字的作用？&quot;">&ZeroWidthSpace;</a></h3>
+<p>synchronized 关键字可以用于修饰一段代码或一个方法，用于实现现成的同步，表示该段代码不能被多个线程同时执行。</p>
+<p>当一个线程进入被 synchronized 关键字修饰的代码块或方法时，其他试图访问的线程将被阻塞。</p>
+<p>synchronized 关键字的作用体现在两个方面：</p>
+<ol>
+<li>确保方法或代码块的互斥访问。（加锁与解锁）</li>
+<li>确保内存可见性。（强制从缓存加载数据）</li>
+</ol>
+<h2 id="_11-13" tabindex="-1">11-13 <a class="header-anchor" href="#_11-13" aria-label="Permalink to &quot;11-13&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="线程池有几种创建方式" tabindex="-1">线程池有几种创建方式？ <a class="header-anchor" href="#线程池有几种创建方式" aria-label="Permalink to &quot;线程池有几种创建方式？&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>newCachedThreadPool 创建一个可缓存线程池</li>
+<li>newFixedThreadPool 创建一个定长线程池，可控制线程最大并发数</li>
+<li>newScheduledThreadPool 创建一个定长线程池，支持定时及周期性任务执行。</li>
+<li>newSingleThreadExecutor 创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务</li>
+</ol>
+<h2 id="_11-12" tabindex="-1">11-12 <a class="header-anchor" href="#_11-12" aria-label="Permalink to &quot;11-12&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="线程的-run-和-start-有什么区别" tabindex="-1">线程的 run()和 start()有什么区别？ <a class="header-anchor" href="#线程的-run-和-start-有什么区别" aria-label="Permalink to &quot;线程的 run()和 start()有什么区别？&quot;">&ZeroWidthSpace;</a></h3>
 <p>每个线程都是通过某个特定 Thread 对象所对应的方法 run()来完成其操作的，run()方法称为线程体。通过调用 Thread 类的 start()方法来启动一个线程。</p>
 <p>start() 方法用于启动线程，run() 方法用于执行线程的运行时代码。run() 可以重复调用，而 start()只能调用一次。</p>
@@ -241,7 +280,7 @@ execute 执行后**没有返回结果**，只有1种用法
             <title><![CDATA[每日一题 - 2023]]></title>
             <link>https://www.imufeng.cn/question-by-day/2023/</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/</guid>
-            <pubDate>Sun, 12 Nov 2023 05:52:09 GMT</pubDate>
+            <pubDate>Tue, 14 Nov 2023 09:33:11 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
@@ -255,6 +294,14 @@ execute 执行后**没有返回结果**，只有1种用法
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2023/11/14</td>
+<td><a href="./11.html#_11-14">synchronized 关键字的作用？</a></td>
+</tr>
+<tr>
+<td>2023/11/13</td>
+<td><a href="./11.html#_11-13">线程池有几种创建方式？</a></td>
+</tr>
 <tr>
 <td>2023/11/12</td>
 <td><a href="./11.html#_11-12">线程的 run()和 start()有什么区别？</a></td>
