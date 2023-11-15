@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Tue, 14 Nov 2023 09:34:26 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 15 Nov 2023 09:38:19 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,8 +17,23 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/11.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/11.html</guid>
-            <pubDate>Tue, 14 Nov 2023 09:33:11 GMT</pubDate>
+            <pubDate>Wed, 15 Nov 2023 09:36:31 GMT</pubDate>
             <description><![CDATA[
+## 11-15
+
+### HTML 中如何确保 Body 与设备等宽？
+
+```html
+<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+```
+
+- name="viewport"： 这表明这个 <meta> 元素是关于 viewport 的设置。
+- content="width=device-width： 设置视口的宽度等于设备的宽度。这通常是响应式网页设计中的一个关键设置，确保网页能够适应不同设备的宽度。
+- user-scalable=no： 禁止用户缩放网页。这个设置可以防止用户通过手势在移动设备上放大或缩小网页。
+- initial-scale=1.0： 设置初始缩放级别为1.0。这确保网页在加载时不会被缩放，保持原始大小。
+- maximum-scale=1.0 和 minimum-scale=1.0： 这些属性指定了用户能够缩放的最大和最小比例。在这里，它们都被设置为 1.0，表示用户不能进行缩放。
+
 ## 11-14
 
 ### synchronized 关键字的作用？
@@ -135,7 +150,19 @@ execute 执行后**没有返回结果**，只有1种用法
 
 | 方法                               | 描述                                          |
 |]]></description>
-            <content:encoded><![CDATA[<h2 id="_11-14" tabindex="-1">11-14 <a class="header-anchor" href="#_11-14" aria-label="Permalink to &quot;11-14&quot;">&ZeroWidthSpace;</a></h2>
+            <content:encoded><![CDATA[<h2 id="_11-15" tabindex="-1">11-15 <a class="header-anchor" href="#_11-15" aria-label="Permalink to &quot;11-15&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="html-中如何确保-body-与设备等宽" tabindex="-1">HTML 中如何确保 Body 与设备等宽？ <a class="header-anchor" href="#html-中如何确保-body-与设备等宽" aria-label="Permalink to &quot;HTML 中如何确保 Body 与设备等宽？&quot;">&ZeroWidthSpace;</a></h3>
+<div class="language-html vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">html</span><pre v-pre class="shiki github-dark vp-code-dark" ><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">meta</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">name</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;viewport&quot;</span></span>
+<span class="line"><span style="color: #E1E4E8">          </span><span style="color: #B392F0">content</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot;</span><span style="color: #E1E4E8">&gt;</span></span></code></pre><pre v-pre class="shiki github-light vp-code-light" ><code><span class="line"><span style="color: #24292E">&lt;</span><span style="color: #22863A">meta</span><span style="color: #24292E"> </span><span style="color: #6F42C1">name</span><span style="color: #24292E">=</span><span style="color: #032F62">&quot;viewport&quot;</span></span>
+<span class="line"><span style="color: #24292E">          </span><span style="color: #6F42C1">content</span><span style="color: #24292E">=</span><span style="color: #032F62">&quot;width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot;</span><span style="color: #24292E">&gt;</span></span></code></pre>
+</div><ul>
+<li>name=&quot;viewport&quot;： 这表明这个 <meta> 元素是关于 viewport 的设置。</li>
+<li>content=&quot;width=device-width： 设置视口的宽度等于设备的宽度。这通常是响应式网页设计中的一个关键设置，确保网页能够适应不同设备的宽度。</li>
+<li>user-scalable=no： 禁止用户缩放网页。这个设置可以防止用户通过手势在移动设备上放大或缩小网页。</li>
+<li>initial-scale=1.0： 设置初始缩放级别为1.0。这确保网页在加载时不会被缩放，保持原始大小。</li>
+<li>maximum-scale=1.0 和 minimum-scale=1.0： 这些属性指定了用户能够缩放的最大和最小比例。在这里，它们都被设置为 1.0，表示用户不能进行缩放。</li>
+</ul>
+<h2 id="_11-14" tabindex="-1">11-14 <a class="header-anchor" href="#_11-14" aria-label="Permalink to &quot;11-14&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="synchronized-关键字的作用" tabindex="-1">synchronized 关键字的作用？ <a class="header-anchor" href="#synchronized-关键字的作用" aria-label="Permalink to &quot;synchronized 关键字的作用？&quot;">&ZeroWidthSpace;</a></h3>
 <p>synchronized 关键字可以用于修饰一段代码或一个方法，用于实现现成的同步，表示该段代码不能被多个线程同时执行。</p>
 <p>当一个线程进入被 synchronized 关键字修饰的代码块或方法时，其他试图访问的线程将被阻塞。</p>
@@ -280,7 +307,7 @@ execute 执行后**没有返回结果**，只有1种用法
             <title><![CDATA[每日一题 - 2023]]></title>
             <link>https://www.imufeng.cn/question-by-day/2023/</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/</guid>
-            <pubDate>Tue, 14 Nov 2023 09:33:11 GMT</pubDate>
+            <pubDate>Wed, 15 Nov 2023 09:36:31 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
@@ -294,6 +321,10 @@ execute 执行后**没有返回结果**，只有1种用法
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2023/11/15</td>
+<td><a href="./11.html#_11-15">HTML 中如何确保 Body 与设备等宽？</a></td>
+</tr>
 <tr>
 <td>2023/11/14</td>
 <td><a href="./11.html#_11-14">synchronized 关键字的作用？</a></td>
