@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Fri, 17 Nov 2023 10:26:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 20 Nov 2023 09:18:34 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,20 +17,47 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/11.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/11.html</guid>
-            <pubDate>Fri, 17 Nov 2023 10:24:46 GMT</pubDate>
+            <pubDate>Mon, 20 Nov 2023 09:17:11 GMT</pubDate>
             <description><![CDATA[
+## 11-20
+
+### 线程池都有哪些状态？
+
+1. RUNNING：接受新任务并且处理阻塞队列中的任务
+2. SHUTDOWN：不接受新任务，但是处理阻塞队列中的任务
+3. STOP：不接受新任务，不处理阻塞队列中的任务，并且中断正在处理的任务
+4. TIDYING：所有任务都终止了，`workerCount` 为 0，线程池的状态在转换为 TIDYING 状态时会执行钩子函数 `terminated()`
+5. TERMINATED：terminated() 执行完成
+
+可以通过 `Thread.State` 枚举类来表示线程的状态。
+这个枚举包括 NEW（新建）、RUNNABLE（可运行）、BLOCKED（被阻塞）、WAITING（等待）、TIMED_WAITING（定时等待）和 TERMINATED（终止）等状态。
+通过 `Thread.getState()` 方法可以获取线程的状态。
+
+## 11-19
+
+### notify() 和 notifyAll() 有什么区别？
+
+`notify()` 方法会随机唤醒等待队列中的一个线程，而 `notifyAll()` 方法会唤醒等待队列中的所有线程。
+
+## 11-18
+
+### sleep() 和 wait() 有什么区别？
+
+- `sleep()` 方法是 Thread 类的静态方法，调用该方法会让当前线程进入休眠状态，不会释放锁，休眠时间到了之后会自动恢复运行状态。
+- `wait()` 方法是 Object 类的方法，调用该方法会让当前线程进入等待状态，会释放锁，直到其他线程调用 notify() 或 notifyAll() 方法之后才会重新进入运行状态。
+
 ## 11-17
 
 ### ThreadLocal 内存泄漏原因，如何避免？
 
-如果在线程池中使用 ThreadLocal会造成内存泄漏，因为当 ThreadLocal对象使用完之后，应该要把设置的key，value也就是Entry对象进行回收，
+如果在线程池中使用 ThreadLocal 会造成内存泄漏，因为当 ThreadLocal 对象使用完之后，应该要把设置的key，value 也就是 Entry 对象进行回收，
 但线程池中的线程不会回收，而线程对象是通过强引用指向 ThreadLocalMap，
-ThreadLocalMap也是通过强引用指向Entry对象，线程不被回收，Entry对象也就不会被回收，从而出现内存泄漏。
+ThreadLocalMap 也是通过强引用指向 Entry 对象，线程不被回收，Entry 对象也就不会被回收，从而出现内存泄漏。
 
-**解决方法：**
+#### 解决方法：
 
-- 在使用了 ThreadLocal对象之后，手动调用ThreadLocal的 remove方法，手动清除Entry对象。
-- 将ThreadLocal变量定义成private static，这样就一直存在ThreadLocal的强引用，也就能保证任何时候都能将通过ThreadLocal的弱引用访问到Entry的value值，进而清除掉。
+- 在使用了 ThreadLocal 对象之后，手动调用 ThreadLocal 的 remove 方法，手动清除 Entry 对象。
+- 将 ThreadLocal 变量定义成 private static，这样就一直存在ThreadLocal的强引用，也就能保证任何时候都能将通过 ThreadLocal 的弱引用访问到 Entry 的 value 值，进而清除掉。
 
 ## 11-16
 
@@ -90,9 +117,8 @@ run()方法是在本线程里的，只是线程里的一个函数，而不是多
 
 ### 守护线程与用户线程有什么区别？
 
-**守护线程：** 运行在后台，为其他前台线程服务。也可以说守护线程是 JVM 中非守护线程的 “佣人”。一旦所有用户线程都结束运行，守护线程会随 JVM 一起结束工作。
-
-**用户线程：** 运行在前台，执行具体的任务，如程序的主线程、连接网络的子线程等都是用户线程。
+- 守护线程：运行在后台，为其他前台线程服务。一旦所有用户线程都结束运行，守护线程会随 JVM 一起结束工作。
+- 用户线程：运行在前台，执行具体的任务，如程序的主线程、连接网络的子线程等都是用户线程。
 
 ## 11-10
 
@@ -165,15 +191,36 @@ execute 执行后**没有返回结果**，只有1种用法
 
 | 方法                               | 描述                                          |
 |]]></description>
-            <content:encoded><![CDATA[<h2 id="_11-17" tabindex="-1">11-17 <a class="header-anchor" href="#_11-17" aria-label="Permalink to &quot;11-17&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="threadlocal-内存泄漏原因-如何避免" tabindex="-1">ThreadLocal 内存泄漏原因，如何避免？ <a class="header-anchor" href="#threadlocal-内存泄漏原因-如何避免" aria-label="Permalink to &quot;ThreadLocal 内存泄漏原因，如何避免？&quot;">&ZeroWidthSpace;</a></h3>
-<p>如果在线程池中使用 ThreadLocal会造成内存泄漏，因为当 ThreadLocal对象使用完之后，应该要把设置的key，value也就是Entry对象进行回收，
-但线程池中的线程不会回收，而线程对象是通过强引用指向 ThreadLocalMap，
-ThreadLocalMap也是通过强引用指向Entry对象，线程不被回收，Entry对象也就不会被回收，从而出现内存泄漏。</p>
-<p><strong>解决方法：</strong></p>
+            <content:encoded><![CDATA[<h2 id="_11-20" tabindex="-1">11-20 <a class="header-anchor" href="#_11-20" aria-label="Permalink to &quot;11-20&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="线程池都有哪些状态" tabindex="-1">线程池都有哪些状态？ <a class="header-anchor" href="#线程池都有哪些状态" aria-label="Permalink to &quot;线程池都有哪些状态？&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>RUNNING：接受新任务并且处理阻塞队列中的任务</li>
+<li>SHUTDOWN：不接受新任务，但是处理阻塞队列中的任务</li>
+<li>STOP：不接受新任务，不处理阻塞队列中的任务，并且中断正在处理的任务</li>
+<li>TIDYING：所有任务都终止了，<code>workerCount</code> 为 0，线程池的状态在转换为 TIDYING 状态时会执行钩子函数 <code>terminated()</code></li>
+<li>TERMINATED：terminated() 执行完成</li>
+</ol>
+<p>可以通过 <code>Thread.State</code> 枚举类来表示线程的状态。
+这个枚举包括 NEW（新建）、RUNNABLE（可运行）、BLOCKED（被阻塞）、WAITING（等待）、TIMED_WAITING（定时等待）和 TERMINATED（终止）等状态。
+通过 <code>Thread.getState()</code> 方法可以获取线程的状态。</p>
+<h2 id="_11-19" tabindex="-1">11-19 <a class="header-anchor" href="#_11-19" aria-label="Permalink to &quot;11-19&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="notify-和-notifyall-有什么区别" tabindex="-1">notify() 和 notifyAll() 有什么区别？ <a class="header-anchor" href="#notify-和-notifyall-有什么区别" aria-label="Permalink to &quot;notify() 和 notifyAll() 有什么区别？&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>notify()</code> 方法会随机唤醒等待队列中的一个线程，而 <code>notifyAll()</code> 方法会唤醒等待队列中的所有线程。</p>
+<h2 id="_11-18" tabindex="-1">11-18 <a class="header-anchor" href="#_11-18" aria-label="Permalink to &quot;11-18&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="sleep-和-wait-有什么区别" tabindex="-1">sleep() 和 wait() 有什么区别？ <a class="header-anchor" href="#sleep-和-wait-有什么区别" aria-label="Permalink to &quot;sleep() 和 wait() 有什么区别？&quot;">&ZeroWidthSpace;</a></h3>
 <ul>
-<li>在使用了 ThreadLocal对象之后，手动调用ThreadLocal的 remove方法，手动清除Entry对象。</li>
-<li>将ThreadLocal变量定义成private static，这样就一直存在ThreadLocal的强引用，也就能保证任何时候都能将通过ThreadLocal的弱引用访问到Entry的value值，进而清除掉。</li>
+<li><code>sleep()</code> 方法是 Thread 类的静态方法，调用该方法会让当前线程进入休眠状态，不会释放锁，休眠时间到了之后会自动恢复运行状态。</li>
+<li><code>wait()</code> 方法是 Object 类的方法，调用该方法会让当前线程进入等待状态，会释放锁，直到其他线程调用 notify() 或 notifyAll() 方法之后才会重新进入运行状态。</li>
+</ul>
+<h2 id="_11-17" tabindex="-1">11-17 <a class="header-anchor" href="#_11-17" aria-label="Permalink to &quot;11-17&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="threadlocal-内存泄漏原因-如何避免" tabindex="-1">ThreadLocal 内存泄漏原因，如何避免？ <a class="header-anchor" href="#threadlocal-内存泄漏原因-如何避免" aria-label="Permalink to &quot;ThreadLocal 内存泄漏原因，如何避免？&quot;">&ZeroWidthSpace;</a></h3>
+<p>如果在线程池中使用 ThreadLocal 会造成内存泄漏，因为当 ThreadLocal 对象使用完之后，应该要把设置的key，value 也就是 Entry 对象进行回收，
+但线程池中的线程不会回收，而线程对象是通过强引用指向 ThreadLocalMap，
+ThreadLocalMap 也是通过强引用指向 Entry 对象，线程不被回收，Entry 对象也就不会被回收，从而出现内存泄漏。</p>
+<h4 id="解决方法" tabindex="-1">解决方法： <a class="header-anchor" href="#解决方法" aria-label="Permalink to &quot;解决方法：&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>在使用了 ThreadLocal 对象之后，手动调用 ThreadLocal 的 remove 方法，手动清除 Entry 对象。</li>
+<li>将 ThreadLocal 变量定义成 private static，这样就一直存在ThreadLocal的强引用，也就能保证任何时候都能将通过 ThreadLocal 的弱引用访问到 Entry 的 value 值，进而清除掉。</li>
 </ul>
 <h2 id="_11-16" tabindex="-1">11-16 <a class="header-anchor" href="#_11-16" aria-label="Permalink to &quot;11-16&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="线程之间如何进行通信" tabindex="-1">线程之间如何进行通信？ <a class="header-anchor" href="#线程之间如何进行通信" aria-label="Permalink to &quot;线程之间如何进行通信？&quot;">&ZeroWidthSpace;</a></h3>
@@ -214,8 +261,10 @@ ThreadLocalMap也是通过强引用指向Entry对象，线程不被回收，Entr
 所以执行路径还是只有一条，根本就没有线程的特征，所以在多线程执行时要使用 start()方法而不是 run()方法。</p>
 <h2 id="_11-11" tabindex="-1">11-11 <a class="header-anchor" href="#_11-11" aria-label="Permalink to &quot;11-11&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="守护线程与用户线程有什么区别" tabindex="-1">守护线程与用户线程有什么区别？ <a class="header-anchor" href="#守护线程与用户线程有什么区别" aria-label="Permalink to &quot;守护线程与用户线程有什么区别？&quot;">&ZeroWidthSpace;</a></h3>
-<p><strong>守护线程：</strong> 运行在后台，为其他前台线程服务。也可以说守护线程是 JVM 中非守护线程的 “佣人”。一旦所有用户线程都结束运行，守护线程会随 JVM 一起结束工作。</p>
-<p><strong>用户线程：</strong> 运行在前台，执行具体的任务，如程序的主线程、连接网络的子线程等都是用户线程。</p>
+<ul>
+<li>守护线程：运行在后台，为其他前台线程服务。一旦所有用户线程都结束运行，守护线程会随 JVM 一起结束工作。</li>
+<li>用户线程：运行在前台，执行具体的任务，如程序的主线程、连接网络的子线程等都是用户线程。</li>
+</ul>
 <h2 id="_11-10" tabindex="-1">11-10 <a class="header-anchor" href="#_11-10" aria-label="Permalink to &quot;11-10&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="主线程是不是守护线程" tabindex="-1">主线程是不是守护线程？ <a class="header-anchor" href="#主线程是不是守护线程" aria-label="Permalink to &quot;主线程是不是守护线程？&quot;">&ZeroWidthSpace;</a></h3>
 <p>主线程不是守护线程，它是一个用户线程，它的优先级是普通优先级，当所有的用户线程都结束了，主线程才会结束，如果主线程结束了，其他用户线程还在运行，那么程序也会继续运行。</p>
@@ -322,17 +371,17 @@ ThreadLocalMap也是通过强引用指向Entry对象，线程不被回收，Entr
 <h3 id="说一说你理解的-executor-框架。" tabindex="-1">说一说你理解的 Executor 框架。 <a class="header-anchor" href="#说一说你理解的-executor-框架。" aria-label="Permalink to &quot;说一说你理解的 Executor 框架。&quot;">&ZeroWidthSpace;</a></h3>
 <p>Executor 是线程池的调度工具，线程池是 Executor 的一部分。</p>
 <p>Executor 框架由三大部分组成</p>
-<p>1、<strong>任务</strong>：即被执行任务需要实现的接口：<strong>Runnable</strong> 接口或 <strong>Callable</strong> 接口。</p>
-<p>2、<strong>线程池</strong>：主要通过 <strong>ExecutorService</strong> 接口调用线程池，有2个关键实现类 <strong>ThreadPoolExecutor</strong> 和 *
-<em>ScheduledThreadPoolExecutor</em>*。</p>
-<p>3、<strong>异步计算的结果</strong>：<strong>Future</strong> 接口及其实现类 <strong>FutureTask</strong>。</p>
+<p>1、<strong>任务：</strong> 即被执行任务需要实现的接口：Runnable 接口或 Callable 接口。</p>
+<p>2、<strong>线程池：</strong> 主要通过 ExecutorService 接口调用线程池，有2个关键实现类 ThreadPoolExecutor 和
+ScheduledThreadPoolExecutor。</p>
+<p>3、<strong>异步计算的结果：</strong> Future 接口及其实现类 FutureTask。</p>
 ]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[每日一题 - 2023]]></title>
             <link>https://www.imufeng.cn/question-by-day/2023/</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/</guid>
-            <pubDate>Fri, 17 Nov 2023 10:24:46 GMT</pubDate>
+            <pubDate>Mon, 20 Nov 2023 09:17:11 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
@@ -346,6 +395,18 @@ ThreadLocalMap也是通过强引用指向Entry对象，线程不被回收，Entr
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2023/11/20</td>
+<td><a href="./11.html#_11-20">线程池都有哪些状态？</a></td>
+</tr>
+<tr>
+<td>2023/11/19</td>
+<td><a href="./11.html#_11-19">notify() 和 notifyAll() 有什么区别？</a></td>
+</tr>
+<tr>
+<td>2023/11/18</td>
+<td><a href="./11.html#_11-18">sleep() 和 wait() 有什么区别？</a></td>
+</tr>
 <tr>
 <td>2023/11/17</td>
 <td><a href="./11.html#_11-17">ThreadLocal 内存泄漏原因，如何避免？</a></td>
