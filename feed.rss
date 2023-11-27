@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Mon, 20 Nov 2023 09:18:34 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 27 Nov 2023 09:35:33 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,21 +17,166 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/11.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/11.html</guid>
-            <pubDate>Mon, 20 Nov 2023 09:17:11 GMT</pubDate>
+            <pubDate>Mon, 27 Nov 2023 09:34:14 GMT</pubDate>
             <description><![CDATA[
+## 11-27
+
+### 什么是 BeanDefinition？
+
+`BeanDefinition` 用于管理 Spring 应用的对象和对象之间的依赖关系，是对象依赖关系的数据抽象。
+
+## 11-26
+
+### 描述 Spring 的两种 IOC 容器。
+
+Spring 有两种 IOC 容器：`BeanFactory` 和 `ApplicationContext`。
+
+- `BeanFactory` ：延迟注入(使用到某个 bean 的时候才会注入)，相比于BeanFactory 来说会占用更少的内存，程序启动速度更快。
+BeanFactory 提供了最基本的 ioc 容器的功能（最基本的依赖注入支持）。
+
+- `ApplicationContext` ：容器启动的时候，一次性创建所有 bean。ApplicationContext 扩展了 BeanFactory ， 
+除了有BeanFactory的功能还有额外更多功能，所以一般开发人员使用 ApplicationContext 会更多。
+
+## 11-25
+
+### 请描述 Spring AOP 的动态代理。
+
+Spring AOP中的动态代理主要有两种方式：JDK动态代理和CGLIB动态代理。
+
+#### JDK动态代理
+
+如果目标类实现了接口，Spring AOP 会选择使用 JDK 动态代理目标类。代理类根据目标类实现的接口动态生成，不需要自己编写，
+生成的动态代理类和目标类都实现相同的接口。JDK动态代理的核心是InvocationHandler接口和Proxy类。
+
+> 缺点：目标类必须有实现的接口。如果某个类没有实现接口，那么这个类就不能用JDK动态代理。
+
+#### CGLIB动态代理
+
+如果目标类没有实现接口，那么Spring AOP会选择使用CGLIB来动态代理目标类。CGLIB（Code Generation Library）可以在运行时动态生成类的字节码，
+动态创建目标类的子类对象，在子类对象中增强目标类。
+
+CGLIB是通过继承的方式做的动态代理，因此如果某个类被标记为final，那么它是无法使用CGLIB做动态代理的。
+
+> 优点：目标类不需要实现特定的接口，更加灵活。
+
+## 11-24
+
+### 描述AOP的两种实现方式。
+
+AOP 有两种实现方式：**静态代理** 和 **动态代理**。
+
+#### 静态代理
+
+代理类在编译阶段生成，在编译阶段将通知织入Java字节码中，也称编译时增强。AspectJ使用的是静态代理。
+
+> 缺点： 代理对象需要与目标对象实现一样的接口，并且实现接口的方法，会有冗余代码。同时，一旦接口增加方法，目标对象与代理对象都要维护。
+
+#### 动态代理
+
+代理类在程序运行时创建，AOP框架不会去修改字节码，而是在内存中临时生成一个代理对象，在运行期间对业务方法进行增强，不会生成新类。
+
+1.2 动态代理
+
+## 11-23
+
+### CountDownLatch 和 CyclicBarrier 的区别。
+
+- CountDownLatch 的计数器只能使用一次。而 CyclicBarrier 的计数器可以使用 `reset()` 方法重置。
+- CyclicBarrier 能处理更为复杂的业务场景，比如计算发生错误，可以结束阻塞，重置计数器，重新执行程序
+- CyclicBarrier 提供 `getNumberWaiting()` 方法，可以获得 CyclicBarrier 阻塞的线程数量，还提供 `isBroken()` 方法，可以判断阻塞的线程是否被中断，等等。
+- CountDownLatch 会阻塞主线程，CyclicBarrier 不会阻塞主线程，只会阻塞子线程。
+
+## 11-22
+
+### 什么是 CyclicBarrier？
+
+`CyclicBarrier` 是一个同步工具类，它允许一组线程互相等待，直到到达某个公共屏障点（common barrier point）。因为该 barrier 在释放等待线程后可以重用，
+
+```java
+import java.util.concurrent.CyclicBarrier;
+
+class Scratch {
+    public static void main(String[] args) {
+        // CyclicBarrier 示例程序
+        CyclicBarrier cyclicBarrier = new CyclicBarrier(2, () -> {
+            System.out.println("所有线程执行完毕");
+        });
+        // 测试运行
+        new Thread(() -> {
+            try {
+                System.out.println("线程1开始执行");
+                Thread.sleep(1000);
+                System.out.println("线程1执行完毕");
+                cyclicBarrier.await();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).start();
+        new Thread(() -> {
+            try {
+                System.out.println("线程2开始执行");
+                Thread.sleep(2000);
+                System.out.println("线程2执行完毕");
+                cyclicBarrier.await();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).start();
+        System.out.println("主线程执行完毕");
+    }
+}
+```
+
+## 11-21
+
+### 什么是 CountdownLatch？
+
+`CountDownLatch` 是一个同步工具类，用来协调多个线程之间的同步。这个工具通常用来控制线程等待，它可以让某一个线程等待直到倒计时结束，再开始执行。
+
+```java
+import java.util.concurrent.CyclicBarrier;
+
+class Scratch {
+    public static void main(String[] args) {
+        // CountDownLatch 示例程序
+        CyclicBarrier barrier = new CyclicBarrier(2, () -> {
+            System.out.println("barrier end");
+        });
+        new Thread(() -> {
+            try {
+                System.out.println("thread 1");
+                barrier.await();
+                System.out.println("thread 1 end");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).start();
+        new Thread(() -> {
+            try {
+                System.out.println("thread 2");
+                barrier.await();
+                System.out.println("thread 2 end");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).start();
+    }
+}
+```
+
 ## 11-20
 
 ### 线程池都有哪些状态？
 
-1. RUNNING：接受新任务并且处理阻塞队列中的任务
-2. SHUTDOWN：不接受新任务，但是处理阻塞队列中的任务
-3. STOP：不接受新任务，不处理阻塞队列中的任务，并且中断正在处理的任务
-4. TIDYING：所有任务都终止了，`workerCount` 为 0，线程池的状态在转换为 TIDYING 状态时会执行钩子函数 `terminated()`
-5. TERMINATED：terminated() 执行完成
-
-可以通过 `Thread.State` 枚举类来表示线程的状态。
+> 可以通过 `Thread.State` 枚举类来表示线程的状态。
 这个枚举包括 NEW（新建）、RUNNABLE（可运行）、BLOCKED（被阻塞）、WAITING（等待）、TIMED_WAITING（定时等待）和 TERMINATED（终止）等状态。
 通过 `Thread.getState()` 方法可以获取线程的状态。
+
+1. **RUNNING**：接受新任务并且处理阻塞队列中的任务
+2. **SHUTDOWN**：不接受新任务，但是处理阻塞队列中的任务
+3. **STOP**：不接受新任务，不处理阻塞队列中的任务，并且中断正在处理的任务
+4. **TIDYING**：所有任务都终止了，`workerCount` 为 0，线程池的状态在转换为 TIDYING 状态时会执行钩子函数 `terminated()`
+5. **TERMINATED**：`terminated()` 执行完成
 
 ## 11-19
 
@@ -191,18 +336,195 @@ execute 执行后**没有返回结果**，只有1种用法
 
 | 方法                               | 描述                                          |
 |]]></description>
-            <content:encoded><![CDATA[<h2 id="_11-20" tabindex="-1">11-20 <a class="header-anchor" href="#_11-20" aria-label="Permalink to &quot;11-20&quot;">&ZeroWidthSpace;</a></h2>
+            <content:encoded><![CDATA[<h2 id="_11-27" tabindex="-1">11-27 <a class="header-anchor" href="#_11-27" aria-label="Permalink to &quot;11-27&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是-beandefinition" tabindex="-1">什么是 BeanDefinition？ <a class="header-anchor" href="#什么是-beandefinition" aria-label="Permalink to &quot;什么是 BeanDefinition？&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>BeanDefinition</code> 用于管理 Spring 应用的对象和对象之间的依赖关系，是对象依赖关系的数据抽象。</p>
+<h2 id="_11-26" tabindex="-1">11-26 <a class="header-anchor" href="#_11-26" aria-label="Permalink to &quot;11-26&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="描述-spring-的两种-ioc-容器。" tabindex="-1">描述 Spring 的两种 IOC 容器。 <a class="header-anchor" href="#描述-spring-的两种-ioc-容器。" aria-label="Permalink to &quot;描述 Spring 的两种 IOC 容器。&quot;">&ZeroWidthSpace;</a></h3>
+<p>Spring 有两种 IOC 容器：<code>BeanFactory</code> 和 <code>ApplicationContext</code>。</p>
+<ul>
+<li>
+<p><code>BeanFactory</code> ：延迟注入(使用到某个 bean 的时候才会注入)，相比于BeanFactory 来说会占用更少的内存，程序启动速度更快。
+BeanFactory 提供了最基本的 ioc 容器的功能（最基本的依赖注入支持）。</p>
+</li>
+<li>
+<p><code>ApplicationContext</code> ：容器启动的时候，一次性创建所有 bean。ApplicationContext 扩展了 BeanFactory ，
+除了有BeanFactory的功能还有额外更多功能，所以一般开发人员使用 ApplicationContext 会更多。</p>
+</li>
+</ul>
+<h2 id="_11-25" tabindex="-1">11-25 <a class="header-anchor" href="#_11-25" aria-label="Permalink to &quot;11-25&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="请描述-spring-aop-的动态代理。" tabindex="-1">请描述 Spring AOP 的动态代理。 <a class="header-anchor" href="#请描述-spring-aop-的动态代理。" aria-label="Permalink to &quot;请描述 Spring AOP 的动态代理。&quot;">&ZeroWidthSpace;</a></h3>
+<p>Spring AOP中的动态代理主要有两种方式：JDK动态代理和CGLIB动态代理。</p>
+<h4 id="jdk动态代理" tabindex="-1">JDK动态代理 <a class="header-anchor" href="#jdk动态代理" aria-label="Permalink to &quot;JDK动态代理&quot;">&ZeroWidthSpace;</a></h4>
+<p>如果目标类实现了接口，Spring AOP 会选择使用 JDK 动态代理目标类。代理类根据目标类实现的接口动态生成，不需要自己编写，
+生成的动态代理类和目标类都实现相同的接口。JDK动态代理的核心是InvocationHandler接口和Proxy类。</p>
+<blockquote>
+<p>缺点：目标类必须有实现的接口。如果某个类没有实现接口，那么这个类就不能用JDK动态代理。</p>
+</blockquote>
+<h4 id="cglib动态代理" tabindex="-1">CGLIB动态代理 <a class="header-anchor" href="#cglib动态代理" aria-label="Permalink to &quot;CGLIB动态代理&quot;">&ZeroWidthSpace;</a></h4>
+<p>如果目标类没有实现接口，那么Spring AOP会选择使用CGLIB来动态代理目标类。CGLIB（Code Generation Library）可以在运行时动态生成类的字节码，
+动态创建目标类的子类对象，在子类对象中增强目标类。</p>
+<p>CGLIB是通过继承的方式做的动态代理，因此如果某个类被标记为final，那么它是无法使用CGLIB做动态代理的。</p>
+<blockquote>
+<p>优点：目标类不需要实现特定的接口，更加灵活。</p>
+</blockquote>
+<h2 id="_11-24" tabindex="-1">11-24 <a class="header-anchor" href="#_11-24" aria-label="Permalink to &quot;11-24&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="描述aop的两种实现方式。" tabindex="-1">描述AOP的两种实现方式。 <a class="header-anchor" href="#描述aop的两种实现方式。" aria-label="Permalink to &quot;描述AOP的两种实现方式。&quot;">&ZeroWidthSpace;</a></h3>
+<p>AOP 有两种实现方式：<strong>静态代理</strong> 和 <strong>动态代理</strong>。</p>
+<h4 id="静态代理" tabindex="-1">静态代理 <a class="header-anchor" href="#静态代理" aria-label="Permalink to &quot;静态代理&quot;">&ZeroWidthSpace;</a></h4>
+<p>代理类在编译阶段生成，在编译阶段将通知织入Java字节码中，也称编译时增强。AspectJ使用的是静态代理。</p>
+<blockquote>
+<p>缺点： 代理对象需要与目标对象实现一样的接口，并且实现接口的方法，会有冗余代码。同时，一旦接口增加方法，目标对象与代理对象都要维护。</p>
+</blockquote>
+<h4 id="动态代理" tabindex="-1">动态代理 <a class="header-anchor" href="#动态代理" aria-label="Permalink to &quot;动态代理&quot;">&ZeroWidthSpace;</a></h4>
+<p>代理类在程序运行时创建，AOP框架不会去修改字节码，而是在内存中临时生成一个代理对象，在运行期间对业务方法进行增强，不会生成新类。</p>
+<p>1.2 动态代理</p>
+<h2 id="_11-23" tabindex="-1">11-23 <a class="header-anchor" href="#_11-23" aria-label="Permalink to &quot;11-23&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="countdownlatch-和-cyclicbarrier-的区别。" tabindex="-1">CountDownLatch 和 CyclicBarrier 的区别。 <a class="header-anchor" href="#countdownlatch-和-cyclicbarrier-的区别。" aria-label="Permalink to &quot;CountDownLatch 和 CyclicBarrier 的区别。&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>CountDownLatch 的计数器只能使用一次。而 CyclicBarrier 的计数器可以使用 <code>reset()</code> 方法重置。</li>
+<li>CyclicBarrier 能处理更为复杂的业务场景，比如计算发生错误，可以结束阻塞，重置计数器，重新执行程序</li>
+<li>CyclicBarrier 提供 <code>getNumberWaiting()</code> 方法，可以获得 CyclicBarrier 阻塞的线程数量，还提供 <code>isBroken()</code> 方法，可以判断阻塞的线程是否被中断，等等。</li>
+<li>CountDownLatch 会阻塞主线程，CyclicBarrier 不会阻塞主线程，只会阻塞子线程。</li>
+</ul>
+<h2 id="_11-22" tabindex="-1">11-22 <a class="header-anchor" href="#_11-22" aria-label="Permalink to &quot;11-22&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是-cyclicbarrier" tabindex="-1">什么是 CyclicBarrier？ <a class="header-anchor" href="#什么是-cyclicbarrier" aria-label="Permalink to &quot;什么是 CyclicBarrier？&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>CyclicBarrier</code> 是一个同步工具类，它允许一组线程互相等待，直到到达某个公共屏障点（common barrier point）。因为该 barrier 在释放等待线程后可以重用，</p>
+<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre v-pre class="shiki github-dark vp-code-dark" ><code><span class="line"><span style="color: #F97583">import</span><span style="color: #E1E4E8"> java.util.concurrent.CyclicBarrier;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F97583">class</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Scratch</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">public</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">static</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">void</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">main</span><span style="color: #E1E4E8">(</span><span style="color: #F97583">String</span><span style="color: #E1E4E8">[] </span><span style="color: #FFAB70">args</span><span style="color: #E1E4E8">) {</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #6A737D">// CyclicBarrier 示例程序</span></span>
+<span class="line"><span style="color: #E1E4E8">        CyclicBarrier cyclicBarrier </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">new</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">CyclicBarrier</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">2</span><span style="color: #E1E4E8">, () </span><span style="color: #F97583">-&gt;</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">            System.out.</span><span style="color: #B392F0">println</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;所有线程执行完毕&quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">        });</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #6A737D">// 测试运行</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">new</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Thread</span><span style="color: #E1E4E8">(() </span><span style="color: #F97583">-&gt;</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">            </span><span style="color: #F97583">try</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">                System.out.</span><span style="color: #B392F0">println</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;线程1开始执行&quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">                Thread.</span><span style="color: #B392F0">sleep</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">1000</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">                System.out.</span><span style="color: #B392F0">println</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;线程1执行完毕&quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">                cyclicBarrier.</span><span style="color: #B392F0">await</span><span style="color: #E1E4E8">();</span></span>
+<span class="line"><span style="color: #E1E4E8">            } </span><span style="color: #F97583">catch</span><span style="color: #E1E4E8"> (Exception </span><span style="color: #FFAB70">e</span><span style="color: #E1E4E8">) {</span></span>
+<span class="line"><span style="color: #E1E4E8">                e.</span><span style="color: #B392F0">printStackTrace</span><span style="color: #E1E4E8">();</span></span>
+<span class="line"><span style="color: #E1E4E8">            }</span></span>
+<span class="line"><span style="color: #E1E4E8">        }).</span><span style="color: #B392F0">start</span><span style="color: #E1E4E8">();</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">new</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Thread</span><span style="color: #E1E4E8">(() </span><span style="color: #F97583">-&gt;</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">            </span><span style="color: #F97583">try</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">                System.out.</span><span style="color: #B392F0">println</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;线程2开始执行&quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">                Thread.</span><span style="color: #B392F0">sleep</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">2000</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">                System.out.</span><span style="color: #B392F0">println</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;线程2执行完毕&quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">                cyclicBarrier.</span><span style="color: #B392F0">await</span><span style="color: #E1E4E8">();</span></span>
+<span class="line"><span style="color: #E1E4E8">            } </span><span style="color: #F97583">catch</span><span style="color: #E1E4E8"> (Exception </span><span style="color: #FFAB70">e</span><span style="color: #E1E4E8">) {</span></span>
+<span class="line"><span style="color: #E1E4E8">                e.</span><span style="color: #B392F0">printStackTrace</span><span style="color: #E1E4E8">();</span></span>
+<span class="line"><span style="color: #E1E4E8">            }</span></span>
+<span class="line"><span style="color: #E1E4E8">        }).</span><span style="color: #B392F0">start</span><span style="color: #E1E4E8">();</span></span>
+<span class="line"><span style="color: #E1E4E8">        System.out.</span><span style="color: #B392F0">println</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;主线程执行完毕&quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">    }</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span></code></pre><pre v-pre class="shiki github-light vp-code-light" ><code><span class="line"><span style="color: #D73A49">import</span><span style="color: #24292E"> java.util.concurrent.CyclicBarrier;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D73A49">class</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Scratch</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">public</span><span style="color: #24292E"> </span><span style="color: #D73A49">static</span><span style="color: #24292E"> </span><span style="color: #D73A49">void</span><span style="color: #24292E"> </span><span style="color: #6F42C1">main</span><span style="color: #24292E">(</span><span style="color: #D73A49">String</span><span style="color: #24292E">[] </span><span style="color: #E36209">args</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #6A737D">// CyclicBarrier 示例程序</span></span>
+<span class="line"><span style="color: #24292E">        CyclicBarrier cyclicBarrier </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #D73A49">new</span><span style="color: #24292E"> </span><span style="color: #6F42C1">CyclicBarrier</span><span style="color: #24292E">(</span><span style="color: #005CC5">2</span><span style="color: #24292E">, () </span><span style="color: #D73A49">-&gt;</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">            System.out.</span><span style="color: #6F42C1">println</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;所有线程执行完毕&quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">        });</span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #6A737D">// 测试运行</span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">new</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Thread</span><span style="color: #24292E">(() </span><span style="color: #D73A49">-&gt;</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">            </span><span style="color: #D73A49">try</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">                System.out.</span><span style="color: #6F42C1">println</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;线程1开始执行&quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">                Thread.</span><span style="color: #6F42C1">sleep</span><span style="color: #24292E">(</span><span style="color: #005CC5">1000</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">                System.out.</span><span style="color: #6F42C1">println</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;线程1执行完毕&quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">                cyclicBarrier.</span><span style="color: #6F42C1">await</span><span style="color: #24292E">();</span></span>
+<span class="line"><span style="color: #24292E">            } </span><span style="color: #D73A49">catch</span><span style="color: #24292E"> (Exception </span><span style="color: #E36209">e</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">                e.</span><span style="color: #6F42C1">printStackTrace</span><span style="color: #24292E">();</span></span>
+<span class="line"><span style="color: #24292E">            }</span></span>
+<span class="line"><span style="color: #24292E">        }).</span><span style="color: #6F42C1">start</span><span style="color: #24292E">();</span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">new</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Thread</span><span style="color: #24292E">(() </span><span style="color: #D73A49">-&gt;</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">            </span><span style="color: #D73A49">try</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">                System.out.</span><span style="color: #6F42C1">println</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;线程2开始执行&quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">                Thread.</span><span style="color: #6F42C1">sleep</span><span style="color: #24292E">(</span><span style="color: #005CC5">2000</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">                System.out.</span><span style="color: #6F42C1">println</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;线程2执行完毕&quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">                cyclicBarrier.</span><span style="color: #6F42C1">await</span><span style="color: #24292E">();</span></span>
+<span class="line"><span style="color: #24292E">            } </span><span style="color: #D73A49">catch</span><span style="color: #24292E"> (Exception </span><span style="color: #E36209">e</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">                e.</span><span style="color: #6F42C1">printStackTrace</span><span style="color: #24292E">();</span></span>
+<span class="line"><span style="color: #24292E">            }</span></span>
+<span class="line"><span style="color: #24292E">        }).</span><span style="color: #6F42C1">start</span><span style="color: #24292E">();</span></span>
+<span class="line"><span style="color: #24292E">        System.out.</span><span style="color: #6F42C1">println</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;主线程执行完毕&quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">    }</span></span>
+<span class="line"><span style="color: #24292E">}</span></span></code></pre>
+</div><h2 id="_11-21" tabindex="-1">11-21 <a class="header-anchor" href="#_11-21" aria-label="Permalink to &quot;11-21&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是-countdownlatch" tabindex="-1">什么是 CountdownLatch？ <a class="header-anchor" href="#什么是-countdownlatch" aria-label="Permalink to &quot;什么是 CountdownLatch？&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>CountDownLatch</code> 是一个同步工具类，用来协调多个线程之间的同步。这个工具通常用来控制线程等待，它可以让某一个线程等待直到倒计时结束，再开始执行。</p>
+<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre v-pre class="shiki github-dark vp-code-dark" ><code><span class="line"><span style="color: #F97583">import</span><span style="color: #E1E4E8"> java.util.concurrent.CyclicBarrier;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F97583">class</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Scratch</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">    </span><span style="color: #F97583">public</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">static</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">void</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">main</span><span style="color: #E1E4E8">(</span><span style="color: #F97583">String</span><span style="color: #E1E4E8">[] </span><span style="color: #FFAB70">args</span><span style="color: #E1E4E8">) {</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #6A737D">// CountDownLatch 示例程序</span></span>
+<span class="line"><span style="color: #E1E4E8">        CyclicBarrier barrier </span><span style="color: #F97583">=</span><span style="color: #E1E4E8"> </span><span style="color: #F97583">new</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">CyclicBarrier</span><span style="color: #E1E4E8">(</span><span style="color: #79B8FF">2</span><span style="color: #E1E4E8">, () </span><span style="color: #F97583">-&gt;</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">            System.out.</span><span style="color: #B392F0">println</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;barrier end&quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">        });</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">new</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Thread</span><span style="color: #E1E4E8">(() </span><span style="color: #F97583">-&gt;</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">            </span><span style="color: #F97583">try</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">                System.out.</span><span style="color: #B392F0">println</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;thread 1&quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">                barrier.</span><span style="color: #B392F0">await</span><span style="color: #E1E4E8">();</span></span>
+<span class="line"><span style="color: #E1E4E8">                System.out.</span><span style="color: #B392F0">println</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;thread 1 end&quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">            } </span><span style="color: #F97583">catch</span><span style="color: #E1E4E8"> (Exception </span><span style="color: #FFAB70">e</span><span style="color: #E1E4E8">) {</span></span>
+<span class="line"><span style="color: #E1E4E8">                e.</span><span style="color: #B392F0">printStackTrace</span><span style="color: #E1E4E8">();</span></span>
+<span class="line"><span style="color: #E1E4E8">            }</span></span>
+<span class="line"><span style="color: #E1E4E8">        }).</span><span style="color: #B392F0">start</span><span style="color: #E1E4E8">();</span></span>
+<span class="line"><span style="color: #E1E4E8">        </span><span style="color: #F97583">new</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">Thread</span><span style="color: #E1E4E8">(() </span><span style="color: #F97583">-&gt;</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">            </span><span style="color: #F97583">try</span><span style="color: #E1E4E8"> {</span></span>
+<span class="line"><span style="color: #E1E4E8">                System.out.</span><span style="color: #B392F0">println</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;thread 2&quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">                barrier.</span><span style="color: #B392F0">await</span><span style="color: #E1E4E8">();</span></span>
+<span class="line"><span style="color: #E1E4E8">                System.out.</span><span style="color: #B392F0">println</span><span style="color: #E1E4E8">(</span><span style="color: #9ECBFF">&quot;thread 2 end&quot;</span><span style="color: #E1E4E8">);</span></span>
+<span class="line"><span style="color: #E1E4E8">            } </span><span style="color: #F97583">catch</span><span style="color: #E1E4E8"> (Exception </span><span style="color: #FFAB70">e</span><span style="color: #E1E4E8">) {</span></span>
+<span class="line"><span style="color: #E1E4E8">                e.</span><span style="color: #B392F0">printStackTrace</span><span style="color: #E1E4E8">();</span></span>
+<span class="line"><span style="color: #E1E4E8">            }</span></span>
+<span class="line"><span style="color: #E1E4E8">        }).</span><span style="color: #B392F0">start</span><span style="color: #E1E4E8">();</span></span>
+<span class="line"><span style="color: #E1E4E8">    }</span></span>
+<span class="line"><span style="color: #E1E4E8">}</span></span></code></pre><pre v-pre class="shiki github-light vp-code-light" ><code><span class="line"><span style="color: #D73A49">import</span><span style="color: #24292E"> java.util.concurrent.CyclicBarrier;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D73A49">class</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Scratch</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">public</span><span style="color: #24292E"> </span><span style="color: #D73A49">static</span><span style="color: #24292E"> </span><span style="color: #D73A49">void</span><span style="color: #24292E"> </span><span style="color: #6F42C1">main</span><span style="color: #24292E">(</span><span style="color: #D73A49">String</span><span style="color: #24292E">[] </span><span style="color: #E36209">args</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #6A737D">// CountDownLatch 示例程序</span></span>
+<span class="line"><span style="color: #24292E">        CyclicBarrier barrier </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #D73A49">new</span><span style="color: #24292E"> </span><span style="color: #6F42C1">CyclicBarrier</span><span style="color: #24292E">(</span><span style="color: #005CC5">2</span><span style="color: #24292E">, () </span><span style="color: #D73A49">-&gt;</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">            System.out.</span><span style="color: #6F42C1">println</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;barrier end&quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">        });</span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">new</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Thread</span><span style="color: #24292E">(() </span><span style="color: #D73A49">-&gt;</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">            </span><span style="color: #D73A49">try</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">                System.out.</span><span style="color: #6F42C1">println</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;thread 1&quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">                barrier.</span><span style="color: #6F42C1">await</span><span style="color: #24292E">();</span></span>
+<span class="line"><span style="color: #24292E">                System.out.</span><span style="color: #6F42C1">println</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;thread 1 end&quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">            } </span><span style="color: #D73A49">catch</span><span style="color: #24292E"> (Exception </span><span style="color: #E36209">e</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">                e.</span><span style="color: #6F42C1">printStackTrace</span><span style="color: #24292E">();</span></span>
+<span class="line"><span style="color: #24292E">            }</span></span>
+<span class="line"><span style="color: #24292E">        }).</span><span style="color: #6F42C1">start</span><span style="color: #24292E">();</span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">new</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Thread</span><span style="color: #24292E">(() </span><span style="color: #D73A49">-&gt;</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">            </span><span style="color: #D73A49">try</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">                System.out.</span><span style="color: #6F42C1">println</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;thread 2&quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">                barrier.</span><span style="color: #6F42C1">await</span><span style="color: #24292E">();</span></span>
+<span class="line"><span style="color: #24292E">                System.out.</span><span style="color: #6F42C1">println</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;thread 2 end&quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">            } </span><span style="color: #D73A49">catch</span><span style="color: #24292E"> (Exception </span><span style="color: #E36209">e</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">                e.</span><span style="color: #6F42C1">printStackTrace</span><span style="color: #24292E">();</span></span>
+<span class="line"><span style="color: #24292E">            }</span></span>
+<span class="line"><span style="color: #24292E">        }).</span><span style="color: #6F42C1">start</span><span style="color: #24292E">();</span></span>
+<span class="line"><span style="color: #24292E">    }</span></span>
+<span class="line"><span style="color: #24292E">}</span></span></code></pre>
+</div><h2 id="_11-20" tabindex="-1">11-20 <a class="header-anchor" href="#_11-20" aria-label="Permalink to &quot;11-20&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="线程池都有哪些状态" tabindex="-1">线程池都有哪些状态？ <a class="header-anchor" href="#线程池都有哪些状态" aria-label="Permalink to &quot;线程池都有哪些状态？&quot;">&ZeroWidthSpace;</a></h3>
-<ol>
-<li>RUNNING：接受新任务并且处理阻塞队列中的任务</li>
-<li>SHUTDOWN：不接受新任务，但是处理阻塞队列中的任务</li>
-<li>STOP：不接受新任务，不处理阻塞队列中的任务，并且中断正在处理的任务</li>
-<li>TIDYING：所有任务都终止了，<code>workerCount</code> 为 0，线程池的状态在转换为 TIDYING 状态时会执行钩子函数 <code>terminated()</code></li>
-<li>TERMINATED：terminated() 执行完成</li>
-</ol>
+<blockquote>
 <p>可以通过 <code>Thread.State</code> 枚举类来表示线程的状态。
 这个枚举包括 NEW（新建）、RUNNABLE（可运行）、BLOCKED（被阻塞）、WAITING（等待）、TIMED_WAITING（定时等待）和 TERMINATED（终止）等状态。
 通过 <code>Thread.getState()</code> 方法可以获取线程的状态。</p>
+</blockquote>
+<ol>
+<li><strong>RUNNING</strong>：接受新任务并且处理阻塞队列中的任务</li>
+<li><strong>SHUTDOWN</strong>：不接受新任务，但是处理阻塞队列中的任务</li>
+<li><strong>STOP</strong>：不接受新任务，不处理阻塞队列中的任务，并且中断正在处理的任务</li>
+<li><strong>TIDYING</strong>：所有任务都终止了，<code>workerCount</code> 为 0，线程池的状态在转换为 TIDYING 状态时会执行钩子函数 <code>terminated()</code></li>
+<li><strong>TERMINATED</strong>：<code>terminated()</code> 执行完成</li>
+</ol>
 <h2 id="_11-19" tabindex="-1">11-19 <a class="header-anchor" href="#_11-19" aria-label="Permalink to &quot;11-19&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="notify-和-notifyall-有什么区别" tabindex="-1">notify() 和 notifyAll() 有什么区别？ <a class="header-anchor" href="#notify-和-notifyall-有什么区别" aria-label="Permalink to &quot;notify() 和 notifyAll() 有什么区别？&quot;">&ZeroWidthSpace;</a></h3>
 <p><code>notify()</code> 方法会随机唤醒等待队列中的一个线程，而 <code>notifyAll()</code> 方法会唤醒等待队列中的所有线程。</p>
@@ -381,7 +703,7 @@ ScheduledThreadPoolExecutor。</p>
             <title><![CDATA[每日一题 - 2023]]></title>
             <link>https://www.imufeng.cn/question-by-day/2023/</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/</guid>
-            <pubDate>Mon, 20 Nov 2023 09:17:11 GMT</pubDate>
+            <pubDate>Mon, 27 Nov 2023 09:34:14 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
@@ -395,6 +717,34 @@ ScheduledThreadPoolExecutor。</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2023/11/27</td>
+<td><a href="./11.html#_11-27">什么是 BeanDefinition？</a></td>
+</tr>
+<tr>
+<td>2023/11/26</td>
+<td><a href="./11.html#_11-26">描述 Spring 的两种 IOC 容器。</a></td>
+</tr>
+<tr>
+<td>2023/11/25</td>
+<td><a href="./11.html#_11-25">请描述 Spring AOP 的动态代理。</a></td>
+</tr>
+<tr>
+<td>2023/11/24</td>
+<td><a href="./11.html#_11-24">描述AOP的两种实现方式。</a></td>
+</tr>
+<tr>
+<td>2023/11/23</td>
+<td><a href="./11.html#_11-23">CountDownLatch 和 CyclicBarrier 的区别。</a></td>
+</tr>
+<tr>
+<td>2023/11/22</td>
+<td><a href="./11.html#_11-22">什么是 CyclicBarrier？</a></td>
+</tr>
+<tr>
+<td>2023/11/21</td>
+<td><a href="./11.html#_11-21">什么是 CountdownLatch？</a></td>
+</tr>
 <tr>
 <td>2023/11/20</td>
 <td><a href="./11.html#_11-20">线程池都有哪些状态？</a></td>
