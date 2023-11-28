@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Mon, 27 Nov 2023 09:35:33 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 28 Nov 2023 15:18:41 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,8 +17,20 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/11.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/11.html</guid>
-            <pubDate>Mon, 27 Nov 2023 09:34:14 GMT</pubDate>
+            <pubDate>Tue, 28 Nov 2023 15:17:23 GMT</pubDate>
             <description><![CDATA[
+## 11-28
+
+### 描述 Bean 的生命周期。
+
+> 以下内容使用 `Github Copilot` 生成。
+
+1. 实例化 Bean：Spring 通过反射机制利用 `<bean>` 的 class 属性指定实现类实例化 Bean。
+2. 设置对象属性：Spring 利用 `<bean>` 的 `<property>` 子元素设置 Bean 的属性。
+3. 调用 Bean 的初始化方法：如果 `<bean>` 的 init-method 属性指定了初始化方法，则 Spring 通过反射机制调用初始化方法。
+4. Bean 可以使用了：Bean 对象已经可以使用了，它是一个可用的 Bean 实例。
+5. 当容器关闭时，调用 Bean 的销毁方法：如果 `<bean>` 的 destory-method 属性指定了销毁方法，则 Spring 会通过反射机制调用销毁方法。
+
 ## 11-27
 
 ### 什么是 BeanDefinition？
@@ -336,7 +348,19 @@ execute 执行后**没有返回结果**，只有1种用法
 
 | 方法                               | 描述                                          |
 |]]></description>
-            <content:encoded><![CDATA[<h2 id="_11-27" tabindex="-1">11-27 <a class="header-anchor" href="#_11-27" aria-label="Permalink to &quot;11-27&quot;">&ZeroWidthSpace;</a></h2>
+            <content:encoded><![CDATA[<h2 id="_11-28" tabindex="-1">11-28 <a class="header-anchor" href="#_11-28" aria-label="Permalink to &quot;11-28&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="描述-bean-的生命周期。" tabindex="-1">描述 Bean 的生命周期。 <a class="header-anchor" href="#描述-bean-的生命周期。" aria-label="Permalink to &quot;描述 Bean 的生命周期。&quot;">&ZeroWidthSpace;</a></h3>
+<blockquote>
+<p>以下内容使用 <code>Github Copilot</code> 生成。</p>
+</blockquote>
+<ol>
+<li>实例化 Bean：Spring 通过反射机制利用 <code>&lt;bean&gt;</code> 的 class 属性指定实现类实例化 Bean。</li>
+<li>设置对象属性：Spring 利用 <code>&lt;bean&gt;</code> 的 <code>&lt;property&gt;</code> 子元素设置 Bean 的属性。</li>
+<li>调用 Bean 的初始化方法：如果 <code>&lt;bean&gt;</code> 的 init-method 属性指定了初始化方法，则 Spring 通过反射机制调用初始化方法。</li>
+<li>Bean 可以使用了：Bean 对象已经可以使用了，它是一个可用的 Bean 实例。</li>
+<li>当容器关闭时，调用 Bean 的销毁方法：如果 <code>&lt;bean&gt;</code> 的 destory-method 属性指定了销毁方法，则 Spring 会通过反射机制调用销毁方法。</li>
+</ol>
+<h2 id="_11-27" tabindex="-1">11-27 <a class="header-anchor" href="#_11-27" aria-label="Permalink to &quot;11-27&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="什么是-beandefinition" tabindex="-1">什么是 BeanDefinition？ <a class="header-anchor" href="#什么是-beandefinition" aria-label="Permalink to &quot;什么是 BeanDefinition？&quot;">&ZeroWidthSpace;</a></h3>
 <p><code>BeanDefinition</code> 用于管理 Spring 应用的对象和对象之间的依赖关系，是对象依赖关系的数据抽象。</p>
 <h2 id="_11-26" tabindex="-1">11-26 <a class="header-anchor" href="#_11-26" aria-label="Permalink to &quot;11-26&quot;">&ZeroWidthSpace;</a></h2>
@@ -703,7 +727,7 @@ ScheduledThreadPoolExecutor。</p>
             <title><![CDATA[每日一题 - 2023]]></title>
             <link>https://www.imufeng.cn/question-by-day/2023/</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/</guid>
-            <pubDate>Mon, 27 Nov 2023 09:34:14 GMT</pubDate>
+            <pubDate>Tue, 28 Nov 2023 15:17:23 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
@@ -717,6 +741,10 @@ ScheduledThreadPoolExecutor。</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2023/11/27</td>
+<td><a href="./11.html#_11-28">描述 Bean 的生命周期.</a></td>
+</tr>
 <tr>
 <td>2023/11/27</td>
 <td><a href="./11.html#_11-27">什么是 BeanDefinition？</a></td>
