@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Wed, 29 Nov 2023 09:16:46 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 07 Dec 2023 09:08:34 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,8 +17,17 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/11.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/11.html</guid>
-            <pubDate>Wed, 29 Nov 2023 09:15:31 GMT</pubDate>
-            <description><![CDATA[
+            <pubDate>Thu, 07 Dec 2023 09:07:16 GMT</pubDate>
+            <description><![CDATA[## 11-30 
+
+### 依赖注入的方法有哪些？
+
+1. 构造器注入
+2. Setter 方法注入
+3. 接口注入
+4. 注解注入
+5. 工厂方法注入
+
 ## 11-29
 
 ### BeanFactory 和 FactoryBean 的区别？
@@ -356,7 +365,16 @@ execute 执行后**没有返回结果**，只有1种用法
 
 | 方法                               | 描述                                          |
 |]]></description>
-            <content:encoded><![CDATA[<h2 id="_11-29" tabindex="-1">11-29 <a class="header-anchor" href="#_11-29" aria-label="Permalink to &quot;11-29&quot;">&ZeroWidthSpace;</a></h2>
+            <content:encoded><![CDATA[<h2 id="_11-30" tabindex="-1">11-30 <a class="header-anchor" href="#_11-30" aria-label="Permalink to &quot;11-30&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="依赖注入的方法有哪些" tabindex="-1">依赖注入的方法有哪些？ <a class="header-anchor" href="#依赖注入的方法有哪些" aria-label="Permalink to &quot;依赖注入的方法有哪些？&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>构造器注入</li>
+<li>Setter 方法注入</li>
+<li>接口注入</li>
+<li>注解注入</li>
+<li>工厂方法注入</li>
+</ol>
+<h2 id="_11-29" tabindex="-1">11-29 <a class="header-anchor" href="#_11-29" aria-label="Permalink to &quot;11-29&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="beanfactory-和-factorybean-的区别" tabindex="-1">BeanFactory 和 FactoryBean 的区别？ <a class="header-anchor" href="#beanfactory-和-factorybean-的区别" aria-label="Permalink to &quot;BeanFactory 和 FactoryBean 的区别？&quot;">&ZeroWidthSpace;</a></h3>
 <ul>
 <li><strong>BeanFactory</strong>：管理 Bean 的容器，Spring 中生成的 Bean 都是由这个接口的实现来管理的。</li>
@@ -739,10 +757,61 @@ ScheduledThreadPoolExecutor。</p>
 ]]></content:encoded>
         </item>
         <item>
+            <link>https://www.imufeng.cn/question-by-day/2023/12.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2023/12.html</guid>
+            <pubDate>Thu, 07 Dec 2023 09:07:16 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="_12-08" tabindex="-1">12-08 <a class="header-anchor" href="#_12-08" aria-label="Permalink to &quot;12-08&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="为什么不推荐使用-autowired-注解注入-bean" tabindex="-1">为什么不推荐使用 <code>@Autowired</code> 注解注入 bean？ <a class="header-anchor" href="#为什么不推荐使用-autowired-注解注入-bean" aria-label="Permalink to &quot;为什么不推荐使用 `@Autowired` 注解注入 bean？&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>@Autowired</code> 注解是 Spring 提供的，如果使用了这个注解，那么就会和 Spring 框架产生了耦合，不利于代码的解耦。</p>
+<h2 id="_12-07" tabindex="-1">12-07 <a class="header-anchor" href="#_12-07" aria-label="Permalink to &quot;12-07&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="spring-自动装配有哪些方式" tabindex="-1">Spring 自动装配有哪些方式？ <a class="header-anchor" href="#spring-自动装配有哪些方式" aria-label="Permalink to &quot;Spring 自动装配有哪些方式？&quot;">&ZeroWidthSpace;</a></h3>
+<p>Spring 自动装配有三种方式，分别是 <code>byName</code>、<code>byType</code> 和 <code>constructor</code>。</p>
+<ul>
+<li><code>byName</code>：根据 bean 的名称进行装配，如果 bean 的名称和属性名称一致，那么就会进行装配。</li>
+<li><code>byType</code>：根据 bean 的类型进行装配，如果 bean 的类型和属性类型一致，那么就会进行装配。</li>
+<li><code>constructor</code>：根据构造器进行装配，如果 bean 的构造器参数类型和属性类型一致，那么就会进行装配。</li>
+</ul>
+<h2 id="_12-6" tabindex="-1">12-6 <a class="header-anchor" href="#_12-6" aria-label="Permalink to &quot;12-6&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="spring-装配是指什么" tabindex="-1">Spring 装配是指什么？ <a class="header-anchor" href="#spring-装配是指什么" aria-label="Permalink to &quot;Spring 装配是指什么？&quot;">&ZeroWidthSpace;</a></h3>
+<p>Spring 装配是指创建应用对象之间协作关系的行为，Spring 通过依赖注入（DI）来进行装配。</p>
+<h2 id="_12-5" tabindex="-1">12-5 <a class="header-anchor" href="#_12-5" aria-label="Permalink to &quot;12-5&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="spring-怎么注入-java-集合类型" tabindex="-1">Spring 怎么注入 Java 集合类型？ <a class="header-anchor" href="#spring-怎么注入-java-集合类型" aria-label="Permalink to &quot;Spring 怎么注入 Java 集合类型？&quot;">&ZeroWidthSpace;</a></h3>
+<p>Spring 可以通过 <code>util</code> 命名空间注入集合类型，比如 <code>List</code>、<code>Set</code>、<code>Map</code> 等。</p>
+<div class="language-xml vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">xml</span><pre v-pre class="shiki github-dark vp-code-dark" ><code><span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">util:list</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">id</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;list&quot;</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">value</span><span style="color: #E1E4E8">&gt;1&lt;/</span><span style="color: #85E89D">value</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">value</span><span style="color: #E1E4E8">&gt;2&lt;/</span><span style="color: #85E89D">value</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">    &lt;</span><span style="color: #85E89D">value</span><span style="color: #E1E4E8">&gt;3&lt;/</span><span style="color: #85E89D">value</span><span style="color: #E1E4E8">&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;/</span><span style="color: #85E89D">util:list</span><span style="color: #E1E4E8">&gt;</span></span></code></pre><pre v-pre class="shiki github-light vp-code-light" ><code><span class="line"><span style="color: #24292E">&lt;</span><span style="color: #22863A">util:list</span><span style="color: #24292E"> </span><span style="color: #6F42C1">id</span><span style="color: #24292E">=</span><span style="color: #032F62">&quot;list&quot;</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">    &lt;</span><span style="color: #22863A">value</span><span style="color: #24292E">&gt;1&lt;/</span><span style="color: #22863A">value</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">    &lt;</span><span style="color: #22863A">value</span><span style="color: #24292E">&gt;2&lt;/</span><span style="color: #22863A">value</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">    &lt;</span><span style="color: #22863A">value</span><span style="color: #24292E">&gt;3&lt;/</span><span style="color: #22863A">value</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">&lt;/</span><span style="color: #22863A">util:list</span><span style="color: #24292E">&gt;</span></span></code></pre>
+</div><h2 id="_12-4" tabindex="-1">12-4 <a class="header-anchor" href="#_12-4" aria-label="Permalink to &quot;12-4&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="spring-required-注解有什么用" tabindex="-1">Spring @Required 注解有什么用？ <a class="header-anchor" href="#spring-required-注解有什么用" aria-label="Permalink to &quot;Spring @Required 注解有什么用？&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>@Required</code> 注解可以用在字段、方法和构造器上，用来检查 bean 的必需属性是否已经被设置。</p>
+<p>如果设置了 required 属性为 true，那么当检查到 bean 的属性没有被设置时，会抛出 <code>BeanInitializationException</code> 异常。</p>
+<h2 id="_12-3" tabindex="-1">12-3 <a class="header-anchor" href="#_12-3" aria-label="Permalink to &quot;12-3&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="spring-autowired-注解有什么用" tabindex="-1">Spring @Autowired 注解有什么用？ <a class="header-anchor" href="#spring-autowired-注解有什么用" aria-label="Permalink to &quot;Spring @Autowired 注解有什么用？&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>@Autowired</code> 注解可以用在字段、构造器、方法和参数上，让 Spring 完成 bean 的自动装配工作。</p>
+<p>默认按照类匹配的方式进行装配，如果匹配到多个 bean，那么会按照字段名或者参数名进行匹配。
+使用 <code>@Qualifier</code> 注解可以指定 bean 的名称，从而避免歧义。</p>
+<h2 id="_12-2" tabindex="-1">12-2 <a class="header-anchor" href="#_12-2" aria-label="Permalink to &quot;12-2&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="spring-bean-为什么默认为单例" tabindex="-1">Spring bean 为什么默认为单例？ <a class="header-anchor" href="#spring-bean-为什么默认为单例" aria-label="Permalink to &quot;Spring bean 为什么默认为单例？&quot;">&ZeroWidthSpace;</a></h3>
+<p>Spring bean 默认为单例，这是因为 Spring 容器中的 bean 默认都是单例的，这样做的好处是减少了创建 bean 的开销，节省了内存资源。</p>
+<p>但是单例的 bean 也有一些缺点，比如线程安全问题，如果一个单例的 bean 中有一个成员变量，如果这个成员变量是可变的，那么就会出现线程安全问题。</p>
+<h2 id="_12-1" tabindex="-1">12-1 <a class="header-anchor" href="#_12-1" aria-label="Permalink to &quot;12-1&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="请描述-bean-的作用域。" tabindex="-1">请描述 bean 的作用域。 <a class="header-anchor" href="#请描述-bean-的作用域。" aria-label="Permalink to &quot;请描述 bean 的作用域。&quot;">&ZeroWidthSpace;</a></h3>
+<p>Spring 创建的 Bean 默认是单利的，每一个实例只会被创建一次，通过 <code>getBean()</code> 方法获取的是同一个实例。可以直接通过 scope 来制定一个 Bean 的作用域。</p>
+<div class="language-xml vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">xml</span><pre v-pre class="shiki github-dark vp-code-dark" ><code><span class="line"><span style="color: #6A737D">&lt;!-- 作用域：prototype --&gt;</span></span>
+<span class="line"><span style="color: #E1E4E8">&lt;</span><span style="color: #85E89D">bean</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">name</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;accountDao&quot;</span><span style="color: #E1E4E8"> </span><span style="color: #B392F0">scope</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;prototype&quot;</span><span style="color: #E1E4E8">     </span><span style="color: #B392F0">class</span><span style="color: #E1E4E8">=</span><span style="color: #9ECBFF">&quot;com.zejian.spring.springIoc.dao.impl.AccountDaoImpl&quot;</span><span style="color: #E1E4E8">/&gt;</span></span></code></pre><pre v-pre class="shiki github-light vp-code-light" ><code><span class="line"><span style="color: #6A737D">&lt;!-- 作用域：prototype --&gt;</span></span>
+<span class="line"><span style="color: #24292E">&lt;</span><span style="color: #22863A">bean</span><span style="color: #24292E"> </span><span style="color: #6F42C1">name</span><span style="color: #24292E">=</span><span style="color: #032F62">&quot;accountDao&quot;</span><span style="color: #24292E"> </span><span style="color: #6F42C1">scope</span><span style="color: #24292E">=</span><span style="color: #032F62">&quot;prototype&quot;</span><span style="color: #24292E">     </span><span style="color: #6F42C1">class</span><span style="color: #24292E">=</span><span style="color: #032F62">&quot;com.zejian.spring.springIoc.dao.impl.AccountDaoImpl&quot;</span><span style="color: #24292E">/&gt;</span></span></code></pre>
+</div>]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[每日一题 - 2023]]></title>
             <link>https://www.imufeng.cn/question-by-day/2023/</link>
             <guid>https://www.imufeng.cn/question-by-day/2023/</guid>
-            <pubDate>Wed, 29 Nov 2023 09:15:31 GMT</pubDate>
+            <pubDate>Thu, 07 Dec 2023 09:07:16 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
@@ -756,6 +825,42 @@ ScheduledThreadPoolExecutor。</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2023/12/8</td>
+<td><a href="./12.html#_12-8">为什么不推荐使用 <code>@Autowired</code> 注解注入 bean？</a></td>
+</tr>
+<tr>
+<td>2023/12/7</td>
+<td><a href="./12.html#_12-7">Spring 自动装配有哪些方式？</a></td>
+</tr>
+<tr>
+<td>2023/12/6</td>
+<td><a href="./12.html#_12-6">Spring 装配是指什么？</a></td>
+</tr>
+<tr>
+<td>2023/12/5</td>
+<td><a href="./12.html#_12-5">Spring 怎么注入 Java 集合类型？</a></td>
+</tr>
+<tr>
+<td>2023/12/4</td>
+<td><a href="./12.html#_12-4">Spring @Required 注解有什么用？</a></td>
+</tr>
+<tr>
+<td>2023/12/3</td>
+<td><a href="./12.html#_12-3">Spring @Autowired 注解有什么用？</a></td>
+</tr>
+<tr>
+<td>2023/12/2</td>
+<td><a href="./12.html#_12-2">Spring Bean 的生命周期有哪些？</a></td>
+</tr>
+<tr>
+<td>2023/12/1</td>
+<td><a href="./12.html#_12-1">请描述 bean 的作用域。</a></td>
+</tr>
+<tr>
+<td>2023/11/30</td>
+<td><a href="./11.html#_11-30">依赖注入的方法有哪些？</a></td>
+</tr>
 <tr>
 <td>2023/11/29</td>
 <td><a href="./11.html#_11-29">BeanFactory 和 FactoryBean 的区别？</a></td>
@@ -3529,11 +3634,6 @@ Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来�
             <pubDate>Sat, 07 Oct 2023 09:41:07 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="我的分享" tabindex="-1">我的分享 <a class="header-anchor" href="#我的分享" aria-label="Permalink to &quot;我的分享&quot;">&ZeroWidthSpace;</a></h1>
 ]]></content:encoded>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/question-by-day/2023/12.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2023/12.html</guid>
-            <pubDate>Sat, 07 Oct 2023 09:41:07 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2023/9.html</link>
