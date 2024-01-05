@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Thu, 04 Jan 2024 07:56:54 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 05 Jan 2024 08:30:41 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -15,31 +15,34 @@
         </image>
         <copyright>Mblog © 2021-2023 Created by 沐风</copyright>
         <item>
-            <title><![CDATA[我的分享]]></title>
-            <link>https://www.imufeng.cn/share/</link>
-            <guid>https://www.imufeng.cn/share/</guid>
-            <pubDate>Thu, 04 Jan 2024 07:56:03 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="我的分享" tabindex="-1">我的分享 <a class="header-anchor" href="#我的分享" aria-label="Permalink to &quot;我的分享&quot;">&ZeroWidthSpace;</a></h1>
-]]></content:encoded>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/technology/</link>
-            <guid>https://www.imufeng.cn/technology/</guid>
-            <pubDate>Thu, 04 Jan 2024 07:56:03 GMT</pubDate>
-            <content:encoded><![CDATA[<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
-<ol>
-<li><a href="./web/acme-sh.html">使用 <code>acme.sh</code> 部署泛域名证书</a></li>
-<li><a href="./web/linux-lamp/">LAMP 架构的编译安装</a></li>
-<li><a href="./web/wordpress-by-docker-compose.html">基于DockerCompose的WordPress环境部署（附配置优化）</a></li>
-<li><a href="./service/mysql-for-win-install.html">Mysql for Windows 安装及初始化</a></li>
-</ol>
-]]></content:encoded>
-        </item>
-        <item>
             <link>https://www.imufeng.cn/question-by-day/2024/1.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/1.html</guid>
-            <pubDate>Thu, 04 Jan 2024 07:56:03 GMT</pubDate>
-            <content:encoded><![CDATA[<h2 id="_1-4" tabindex="-1">1-4 <a class="header-anchor" href="#_1-4" aria-label="Permalink to &quot;1-4&quot;">&ZeroWidthSpace;</a></h2>
+            <pubDate>Fri, 05 Jan 2024 08:29:42 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="_1-5" tabindex="-1">1-5 <a class="header-anchor" href="#_1-5" aria-label="Permalink to &quot;1-5&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是监听器" tabindex="-1">什么是监听器？ <a class="header-anchor" href="#什么是监听器" aria-label="Permalink to &quot;什么是监听器？&quot;">&ZeroWidthSpace;</a></h3>
+<p>监听器是 Servlet 规范中的一种组件，可以监听 ServletContext、HttpSession、ServletRequest 等域对象的创建和销毁，以及域对象中属性的变化。</p>
+<p>配置示例：</p>
+<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> MyListener</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> implements</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> ServletContextListener</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    @</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Override</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> contextInitialized</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(ServletContextEvent </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">sce</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        // ServletContext 创建时执行</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    @</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Override</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> contextDestroyed</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(ServletContextEvent </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">sce</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        // ServletContext 销毁时执行</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><p>使用示例：</p>
+<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">@</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Configuration</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> MyConfig</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    @</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Bean</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    public</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ServletListenerRegistrationBean&#x3C;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">MyListener</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">> </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">myListener</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">() {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ServletListenerRegistrationBean&#x3C;>(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> MyListener</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">());</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><h2 id="_1-4" tabindex="-1">1-4 <a class="header-anchor" href="#_1-4" aria-label="Permalink to &quot;1-4&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="什么是拦截器" tabindex="-1">什么是拦截器？ <a class="header-anchor" href="#什么是拦截器" aria-label="Permalink to &quot;什么是拦截器？&quot;">&ZeroWidthSpace;</a></h3>
 <p>拦截器是 SpringMVC 的一种组件，可以在请求到达控制器之前或之后执行一些操作，比如记录日志、权限校验等。</p>
 <p>配置示例：</p>
@@ -86,7 +89,7 @@
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/</guid>
-            <pubDate>Thu, 04 Jan 2024 07:56:03 GMT</pubDate>
+            <pubDate>Fri, 05 Jan 2024 08:29:42 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -100,6 +103,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2024/1/5</td>
+<td><a href="./1.html#_1-5">什么是监听器？</a></td>
+</tr>
 <tr>
 <td>2024/1/4</td>
 <td><a href="./1.html#_1-4">什么是拦截器？</a></td>
@@ -118,6 +125,181 @@
 </tr>
 </tbody>
 </table>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Java8新特性详解]]></title>
+            <link>https://www.imufeng.cn/full-stack/java/characteristic/functional.html</link>
+            <guid>https://www.imufeng.cn/full-stack/java/characteristic/functional.html</guid>
+            <pubDate>Fri, 05 Jan 2024 08:29:42 GMT</pubDate>
+            <description><![CDATA[Lambda 表达式、Stream 流、Optional 类操作分享。]]></description>
+            <content:encoded><![CDATA[<h1 id="java8-新特性详解" tabindex="-1">Java8 新特性详解 <a class="header-anchor" href="#java8-新特性详解" aria-label="Permalink to &quot;Java8 新特性详解&quot;">&ZeroWidthSpace;</a></h1>
+<blockquote>
+<p>Lambda 表达式、Stream 流、Optional 类操作分享。</p>
+</blockquote>
+<h2 id="一、lambda表达式" tabindex="-1">一、Lambda表达式 <a class="header-anchor" href="#一、lambda表达式" aria-label="Permalink to &quot;一、Lambda表达式&quot;">&ZeroWidthSpace;</a></h2>
+<p>Lambda表达式可以让你简洁的表示一个行为或传递代码。Lambda表达式可以理解为简洁的表示可传递匿名函数的一种方式：它没有名称，但是有参数列表、函数主体、返回类型</p>
+<ul>
+<li><strong>匿名：</strong> 没有名称</li>
+<li><strong>函数：</strong> Lambda函数不像方法那样属于特定的类。但是和方法一样，有参数列表、函数体以及返回类型 。也可以抛出异常。</li>
+<li><strong>传递：</strong> Lambda表达式可以作为参数传递给方法或存储在变量中。</li>
+<li><strong>简介：</strong> 无需像匿名类那样写很多模板代码。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<div class="language-Java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">Java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// 不使用Lambda</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Comparator&#x3C;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Apple</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">> byWeight </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Comparator&#x3C;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Apple</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>(){</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">	public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> compare</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(Apple </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">a1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, Apple </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">a2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">){</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">		return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> a1.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">getWeidht</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">().</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">compareTo</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(a2.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">getWeight</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">());</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">	}</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}  </span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// 使用Lambda表达式</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Comparator&#x3C;Apple> byWeight </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    (Apple a1, Apple a2) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">-></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> a1.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">getWeight</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">().</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">compareTo</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(a2.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">getWeight</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">());</span></span></code></pre>
+</div><p><img src="https://cdn.imufeng.cn/imufeng/epub_26211813_42" alt="img"></p>
+<h2 id="二、stream流" tabindex="-1">二、Stream流 <a class="header-anchor" href="#二、stream流" aria-label="Permalink to &quot;二、Stream流&quot;">&ZeroWidthSpace;</a></h2>
+<blockquote>
+<p><code>Stream流</code> 是 Java8 提供对集合或数组进行链状流式操作的函数式编程模式。</p>
+</blockquote>
+<h3 id="_2-1-中间操作" tabindex="-1">2.1 中间操作 <a class="header-anchor" href="#_2-1-中间操作" aria-label="Permalink to &quot;2.1 中间操作&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>
+<p><strong>filter：</strong> 过滤</p>
+</li>
+<li>
+<p><strong>map：</strong> 计算或转换</p>
+</li>
+<li>
+<p><strong>distinct：</strong> 去除重复对象（equals 方法）</p>
+</li>
+<li>
+<p><strong>sorted：</strong> 排序，可以实现 Comparator 接口重写 compareTo 方法进行排序</p>
+</li>
+<li>
+<p><strong>limit：</strong> 设置流的最大长度</p>
+</li>
+<li>
+<p><strong>skip：</strong> 跳过前n个元素</p>
+</li>
+<li>
+<p><strong>flatMap：</strong> 将一个对象转换为多个对象作为流中的元素</p>
+</li>
+</ul>
+<h3 id="_2-2-终结操作" tabindex="-1">2.2 终结操作 <a class="header-anchor" href="#_2-2-终结操作" aria-label="Permalink to &quot;2.2 终结操作&quot;">&ZeroWidthSpace;</a></h3>
+<div class="danger custom-block"><p class="custom-block-title">注意</p>
+<p>如果没有终结操作，中间操作不会执行</p>
+</div>
+<h4 id="常规操作" tabindex="-1">常规操作 <a class="header-anchor" href="#常规操作" aria-label="Permalink to &quot;常规操作&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>
+<p><strong>forEach：</strong> 遍历</p>
+</li>
+<li>
+<p><strong>count：</strong> 计数</p>
+</li>
+<li>
+<p><strong>max&amp;min：</strong> 求最值 需要指定比较最大值的规则 返回 Optional</p>
+</li>
+<li>
+<p><strong>collect：</strong> 将流转换为集合</p>
+</li>
+</ul>
+<h4 id="查找与匹配" tabindex="-1">查找与匹配 <a class="header-anchor" href="#查找与匹配" aria-label="Permalink to &quot;查找与匹配&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>
+<p><strong>anyMatch：</strong> 判断是否存在能够符合匹配条件的元素</p>
+</li>
+<li>
+<p><strong>allMatch：</strong> 判断是否全部匹配条件</p>
+</li>
+<li>
+<p><strong>noneMatch：</strong> 是否都不符合条件</p>
+</li>
+<li>
+<p><strong>findAny：</strong> 获取任意一个符合条件元素（不一定是第一个）</p>
+</li>
+<li>
+<p><strong>findFirst：</strong> 获取第一个符合条件的元素</p>
+</li>
+</ul>
+<h4 id="reduce归并" tabindex="-1">reduce归并 <a class="header-anchor" href="#reduce归并" aria-label="Permalink to &quot;reduce归并&quot;">&ZeroWidthSpace;</a></h4>
+<p>对流中的数据按照你指定的计算方式计算出一个结果 （缩减操作）</p>
+<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">System.out.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">println</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(people.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">stream</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">distinct</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">map</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(People</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">::</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">getAge)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">reduce</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, (o1, o2) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">-></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> o1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">+=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> o2));</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">System.out.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">println</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(people.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">stream</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">distinct</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">map</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(People</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">::</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">getAge)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">reduce</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, Integer</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">::</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">sum));</span></span></code></pre>
+</div><div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">System.out.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">println</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(people.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">stream</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">distinct</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">map</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(People</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">::</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">getAge)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">reduce</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(Integer.MIN_VALUE, Integer</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">::</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">max));</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">System.out.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">println</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(people.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">stream</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">distinct</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">map</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(People</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">::</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">getAge)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">reduce</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(Integer.MAX_VALUE, Integer</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">::</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">min));</span></span></code></pre>
+</div><h2 id="三、optional" tabindex="-1">三、Optional <a class="header-anchor" href="#三、optional" aria-label="Permalink to &quot;三、Optional&quot;">&ZeroWidthSpace;</a></h2>
+<blockquote>
+<p>使用 Optional 可以写出更优雅的代码来避免空指针异常</p>
+<p>Optional 类似于包装类，将具体的数据封装到Optional对象内部。我们可以使用Optional中封装好的方法操作封装的数据。优雅的避免空指针异常</p>
+</blockquote>
+<h3 id="创建对象" tabindex="-1">创建对象 <a class="header-anchor" href="#创建对象" aria-label="Permalink to &quot;创建对象&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>ofNullAble()</code> 方法会将其封装为一个Optional对象</p>
+<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">People people </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> People</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">();</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Optional&#x3C;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">People</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">> people1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Optional.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ofNullable</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(people);</span></span></code></pre>
+</div><p>如果能够保证传入的对象非空，则可以使用of()方法封装</p>
+<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">People people </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> People</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">();</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">people.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">setName</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mufeng"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">people.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">setAge</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">13</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Optional&#x3C;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">People</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">> people1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Optional.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">of</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(people);</span></span></code></pre>
+</div><p>如果需要一个空值，使用 emepy() 方法</p>
+<h3 id="安全获取值" tabindex="-1">安全获取值 <a class="header-anchor" href="#安全获取值" aria-label="Permalink to &quot;安全获取值&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>orElseGet()</code>	如果非空则返回，如果为空则给默认值</p>
+<p><code>orElseThrow()</code> 获取数据，为空则抛出异常</p>
+<h3 id="其他方法" tabindex="-1">其他方法 <a class="header-anchor" href="#其他方法" aria-label="Permalink to &quot;其他方法&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>filter()</code> 类似于Stream流中的filter方法</p>
+<p><code>isPeresent（）</code> 进行是否存在值的判断（更推荐使用<code>ifPeresent()</code>方法）</p>
+<p><code>map()</code> 数据转换。类似于Stream流中的map方法</p>
+<h2 id="四、函数式接口" tabindex="-1">四、函数式接口 <a class="header-anchor" href="#四、函数式接口" aria-label="Permalink to &quot;四、函数式接口&quot;">&ZeroWidthSpace;</a></h2>
+<blockquote>
+<p><strong>只有一个抽象方法的接口称为函数式接口</strong></p>
+<p>JDK的函数式接口都加上了<code>@FunctionalInterface</code>进行标识。但是加不加都无所谓。</p>
+</blockquote>
+<h3 id="常用的函数式接口" tabindex="-1">常用的函数式接口 <a class="header-anchor" href="#常用的函数式接口" aria-label="Permalink to &quot;常用的函数式接口&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>Consumer</code>	消费接口</p>
+<p><code>Function</code>	计算转换接口</p>
+<p><code>Predicate</code>	判断接口</p>
+<p><code>Supplier</code>	生产型接口</p>
+<h3 id="常用的默认方法" tabindex="-1">常用的默认方法 <a class="header-anchor" href="#常用的默认方法" aria-label="Permalink to &quot;常用的默认方法&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>and</code>	判断条件的并集</p>
+<p><code>or</code>	判断条件的交集</p>
+<p><code>negate</code>	判断条件取反</p>
+<h3 id="方法引用" tabindex="-1">方法引用 <a class="header-anchor" href="#方法引用" aria-label="Permalink to &quot;方法引用&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>类名/对象名::方法名</code></p>
+]]></content:encoded>
+            <enclosure url="https://cdn.imufeng.cn/imufeng/epub_26211813_42" length="0" type="image//imufeng/epub_26211813_42"/>
+        </item>
+        <item>
+            <title><![CDATA[我的分享]]></title>
+            <link>https://www.imufeng.cn/share/</link>
+            <guid>https://www.imufeng.cn/share/</guid>
+            <pubDate>Thu, 04 Jan 2024 07:56:03 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="我的分享" tabindex="-1">我的分享 <a class="header-anchor" href="#我的分享" aria-label="Permalink to &quot;我的分享&quot;">&ZeroWidthSpace;</a></h1>
+]]></content:encoded>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/technology/</link>
+            <guid>https://www.imufeng.cn/technology/</guid>
+            <pubDate>Thu, 04 Jan 2024 07:56:03 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
+<ol>
+<li><a href="./web/acme-sh.html">使用 <code>acme.sh</code> 部署泛域名证书</a></li>
+<li><a href="./web/linux-lamp/">LAMP 架构的编译安装</a></li>
+<li><a href="./web/wordpress-by-docker-compose.html">基于DockerCompose的WordPress环境部署（附配置优化）</a></li>
+<li><a href="./service/mysql-for-win-install.html">Mysql for Windows 安装及初始化</a></li>
+</ol>
 ]]></content:encoded>
         </item>
         <item>
@@ -2555,160 +2737,6 @@ Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来�
 <h3 id="膜拜大佬" tabindex="-1">膜拜大佬 <a class="header-anchor" href="#膜拜大佬" aria-label="Permalink to &quot;膜拜大佬&quot;">&ZeroWidthSpace;</a></h3>
 <VPTeamMembers size="medium" :members="authoritys" /><h3 id="友链" tabindex="-1">友链 <a class="header-anchor" href="#友链" aria-label="Permalink to &quot;友链&quot;">&ZeroWidthSpace;</a></h3>
 <VPTeamMembers size="small" :members="friends" />]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Java8新特性详解]]></title>
-            <link>https://www.imufeng.cn/full-stack/java/characteristic/functional.html</link>
-            <guid>https://www.imufeng.cn/full-stack/java/characteristic/functional.html</guid>
-            <pubDate>Fri, 20 Oct 2023 08:13:59 GMT</pubDate>
-            <description><![CDATA[Lambda 表达式、Stream 流、Optional 类操作分享。]]></description>
-            <content:encoded><![CDATA[<h1 id="java8-新特性详解" tabindex="-1">Java8 新特性详解 <a class="header-anchor" href="#java8-新特性详解" aria-label="Permalink to &quot;Java8 新特性详解&quot;">&ZeroWidthSpace;</a></h1>
-<blockquote>
-<p>Lambda 表达式、Stream 流、Optional 类操作分享。</p>
-</blockquote>
-<h2 id="一、lambda表达式" tabindex="-1">一、Lambda表达式 <a class="header-anchor" href="#一、lambda表达式" aria-label="Permalink to &quot;一、Lambda表达式&quot;">&ZeroWidthSpace;</a></h2>
-<p>Lambda表达式可以让你简洁的表示一个行为或传递代码。Lambda表达式可以理解为简洁的表示可传递匿名函数的一种方式：它没有名称，但是有参数列表、函数主体、返回类型</p>
-<ul>
-<li><strong>匿名：</strong> 没有名称</li>
-<li><strong>函数：</strong> Lambda函数不像方法那样属于特定的类。但是和方法一样，有参数列表、函数体以及返回类型 。也可以抛出异常。</li>
-<li><strong>传递：</strong> Lambda表达式可以作为参数传递给方法或存储在变量中。</li>
-<li><strong>简介：</strong> 无需像匿名类那样写很多模板代码。</li>
-</ul>
-<p><strong>示例：</strong></p>
-<div class="language-Java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">Java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// 不使用Lambda</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Comparator&#x3C;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Apple</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">> byWeight </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Comparator&#x3C;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Apple</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>(){</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">	public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> int</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> compare</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(Apple </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">a1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, Apple </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">a2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">){</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">		return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> a1.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">getWeidht</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">().</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">compareTo</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(a2.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">getWeight</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">());</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">	}</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}  </span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// 使用Lambda表达式</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Comparator&#x3C;Apple> byWeight </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> </span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    (Apple a1, Apple a2) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">-></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> a1.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">getWeight</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">().</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">compareTo</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(a2.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">getWeight</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">());</span></span></code></pre>
-</div><p><img src="https://cdn.imufeng.cn/imufeng/epub_26211813_42" alt="img"></p>
-<h2 id="二、stream流" tabindex="-1">二、Stream流 <a class="header-anchor" href="#二、stream流" aria-label="Permalink to &quot;二、Stream流&quot;">&ZeroWidthSpace;</a></h2>
-<blockquote>
-<p><code>Stream流</code> 是 Java8 提供对集合或数组进行链状流式操作的函数式编程模式。</p>
-</blockquote>
-<h3 id="_2-1-中间操作" tabindex="-1">2.1 中间操作 <a class="header-anchor" href="#_2-1-中间操作" aria-label="Permalink to &quot;2.1 中间操作&quot;">&ZeroWidthSpace;</a></h3>
-<ul>
-<li>
-<p><strong>filter：</strong> 过滤</p>
-</li>
-<li>
-<p><strong>map：</strong> 计算或转换</p>
-</li>
-<li>
-<p><strong>distinct：</strong> 去除重复对象（equals 方法）</p>
-</li>
-<li>
-<p><strong>sorted：</strong> 排序，可以实现 Comparator 接口重写 compareTo 方法进行排序</p>
-</li>
-<li>
-<p><strong>limit：</strong> 设置流的最大长度</p>
-</li>
-<li>
-<p><strong>skip：</strong> 跳过前n个元素</p>
-</li>
-<li>
-<p><strong>flatMap：</strong> 将一个对象转换为多个对象作为流中的元素</p>
-</li>
-</ul>
-<h3 id="_2-2-终结操作" tabindex="-1">2.2 终结操作 <a class="header-anchor" href="#_2-2-终结操作" aria-label="Permalink to &quot;2.2 终结操作&quot;">&ZeroWidthSpace;</a></h3>
-<div class="danger custom-block"><p class="custom-block-title">注意</p>
-<p>如果没有终结操作，中间操作不会执行</p>
-</div>
-<h4 id="常规操作" tabindex="-1">常规操作 <a class="header-anchor" href="#常规操作" aria-label="Permalink to &quot;常规操作&quot;">&ZeroWidthSpace;</a></h4>
-<ul>
-<li>
-<p><strong>forEach：</strong> 遍历</p>
-</li>
-<li>
-<p><strong>count：</strong> 计数</p>
-</li>
-<li>
-<p><strong>max&amp;min：</strong> 求最值 需要指定比较最大值的规则 返回 Optional</p>
-</li>
-<li>
-<p><strong>collect：</strong> 将流转换为集合</p>
-</li>
-</ul>
-<h4 id="查找与匹配" tabindex="-1">查找与匹配 <a class="header-anchor" href="#查找与匹配" aria-label="Permalink to &quot;查找与匹配&quot;">&ZeroWidthSpace;</a></h4>
-<ul>
-<li>
-<p><strong>anyMatch：</strong> 判断是否存在能够符合匹配条件的元素</p>
-</li>
-<li>
-<p><strong>allMatch：</strong> 判断是否全部匹配条件</p>
-</li>
-<li>
-<p><strong>noneMatch：</strong> 是否都不符合条件</p>
-</li>
-<li>
-<p><strong>findAny：</strong> 获取任意一个符合条件元素（不一定是第一个）</p>
-</li>
-<li>
-<p><strong>findFirst：</strong> 获取第一个符合条件的元素</p>
-</li>
-</ul>
-<h4 id="reduce归并" tabindex="-1">reduce归并 <a class="header-anchor" href="#reduce归并" aria-label="Permalink to &quot;reduce归并&quot;">&ZeroWidthSpace;</a></h4>
-<p>对流中的数据按照你指定的计算方式计算出一个结果 （缩减操作）</p>
-<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">System.out.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">println</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(people.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">stream</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">distinct</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">map</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(People</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">::</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">getAge)</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">reduce</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, (o1, o2) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">-></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> o1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">+=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> o2));</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">System.out.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">println</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(people.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">stream</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">distinct</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">map</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(People</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">::</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">getAge)</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">reduce</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, Integer</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">::</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">sum));</span></span></code></pre>
-</div><div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">System.out.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">println</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(people.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">stream</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">distinct</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">map</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(People</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">::</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">getAge)</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">reduce</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(Integer.MIN_VALUE, Integer</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">::</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">max));</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">System.out.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">println</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(people.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">stream</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">distinct</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">map</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(People</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">::</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">getAge)</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">reduce</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(Integer.MAX_VALUE, Integer</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">::</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">min));</span></span></code></pre>
-</div><h2 id="三、optional" tabindex="-1">三、Optional <a class="header-anchor" href="#三、optional" aria-label="Permalink to &quot;三、Optional&quot;">&ZeroWidthSpace;</a></h2>
-<blockquote>
-<p>使用 Optional 可以写出更优雅的代码来避免空指针异常</p>
-<p>Optional 类似于包装类，将具体的数据封装到Optional对象内部。我们可以使用Optional中封装好的方法操作封装的数据。优雅的避免空指针异常</p>
-</blockquote>
-<h3 id="创建对象" tabindex="-1">创建对象 <a class="header-anchor" href="#创建对象" aria-label="Permalink to &quot;创建对象&quot;">&ZeroWidthSpace;</a></h3>
-<p><code>ofNullAble()</code> 方法会将其封装为一个Optional对象</p>
-<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">People people </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> People</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">();</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Optional&#x3C;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">People</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">> people1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Optional.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ofNullable</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(people);</span></span></code></pre>
-</div><p>如果能够保证传入的对象非空，则可以使用of()方法封装</p>
-<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">People people </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> People</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">();</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">people.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">setName</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mufeng"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">people.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">setAge</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">13</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Optional&#x3C;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">People</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">> people1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Optional.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">of</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(people);</span></span></code></pre>
-</div><p>如果需要一个空值，使用 emepy() 方法</p>
-<h3 id="安全获取值" tabindex="-1">安全获取值 <a class="header-anchor" href="#安全获取值" aria-label="Permalink to &quot;安全获取值&quot;">&ZeroWidthSpace;</a></h3>
-<p><code>orElseGet()</code>	如果非空则返回，如果为空则给默认值</p>
-<p><code>orElseThrow()</code> 获取数据，为空则抛出异常</p>
-<h3 id="其他方法" tabindex="-1">其他方法 <a class="header-anchor" href="#其他方法" aria-label="Permalink to &quot;其他方法&quot;">&ZeroWidthSpace;</a></h3>
-<p><code>filter()</code> 类似于Stream流中的filter方法</p>
-<p><code>isPeresent（）</code> 进行是否存在值的判断（更推荐使用<code>ifPeresent()</code>方法）</p>
-<p><code>map()</code> 数据转换。类似于Stream流中的map方法</p>
-<h2 id="四、函数式接口" tabindex="-1">四、函数式接口 <a class="header-anchor" href="#四、函数式接口" aria-label="Permalink to &quot;四、函数式接口&quot;">&ZeroWidthSpace;</a></h2>
-<blockquote>
-<p><strong>只有一个抽象方法的接口称为函数式接口</strong></p>
-<p>JDK的函数式接口都加上了<code>@FunctionalInterface</code>进行标识。但是加不加都无所谓。</p>
-</blockquote>
-<h3 id="常用的函数式接口" tabindex="-1">常用的函数式接口 <a class="header-anchor" href="#常用的函数式接口" aria-label="Permalink to &quot;常用的函数式接口&quot;">&ZeroWidthSpace;</a></h3>
-<p><code>Consumer</code>	消费接口</p>
-<p><code>Function</code>	计算转换接口</p>
-<p><code>Predicate</code>	判断接口</p>
-<p><code>Supplier</code>	生产型接口</p>
-<h3 id="常用的默认方法" tabindex="-1">常用的默认方法 <a class="header-anchor" href="#常用的默认方法" aria-label="Permalink to &quot;常用的默认方法&quot;">&ZeroWidthSpace;</a></h3>
-<p><code>and</code>	判断条件的并集</p>
-<p><code>or</code>	判断条件的交集</p>
-<p><code>negate</code>	判断条件取反</p>
-<h3 id="方法引用" tabindex="-1">方法引用 <a class="header-anchor" href="#方法引用" aria-label="Permalink to &quot;方法引用&quot;">&ZeroWidthSpace;</a></h3>
-<p><code>类名/对象名::方法名</code></p>
-]]></content:encoded>
-            <enclosure url="https://cdn.imufeng.cn/imufeng/epub_26211813_42" length="0" type="image//imufeng/epub_26211813_42"/>
         </item>
         <item>
             <title><![CDATA[目录]]></title>
