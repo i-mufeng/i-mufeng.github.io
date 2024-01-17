@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Fri, 12 Jan 2024 07:43:24 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 17 Jan 2024 06:57:42 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,8 +17,90 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/1.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/1.html</guid>
-            <pubDate>Fri, 05 Jan 2024 08:29:42 GMT</pubDate>
-            <content:encoded><![CDATA[<h2 id="_1-5" tabindex="-1">1-5 <a class="header-anchor" href="#_1-5" aria-label="Permalink to &quot;1-5&quot;">&ZeroWidthSpace;</a></h2>
+            <pubDate>Wed, 17 Jan 2024 06:56:55 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="_1-17" tabindex="-1">1-17 <a class="header-anchor" href="#_1-17" aria-label="Permalink to &quot;1-17&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="为什么dns通常基于-udp" tabindex="-1">为什么DNS通常基于 UDP？ <a class="header-anchor" href="#为什么dns通常基于-udp" aria-label="Permalink to &quot;为什么DNS通常基于 UDP？&quot;">&ZeroWidthSpace;</a></h3>
+<p>DNS 通常基于 UDP，因为 UDP 没有连接的开销，而且 DNS 服务需要尽可能快地响应请求，而不是等待连接建立。但当数据长度大于512字节时，为保证传输质量，就会使用基于TCP的实现形式。</p>
+<h2 id="_1-16" tabindex="-1">1-16 <a class="header-anchor" href="#_1-16" aria-label="Permalink to &quot;1-16&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="tcp-三次握手中-最后一次回复丢失-会发生什么" tabindex="-1">TCP 三次握手中，最后一次回复丢失，会发生什么？ <a class="header-anchor" href="#tcp-三次握手中-最后一次回复丢失-会发生什么" aria-label="Permalink to &quot;TCP 三次握手中，最后一次回复丢失，会发生什么？&quot;">&ZeroWidthSpace;</a></h3>
+<p>如果最后一次回复丢失，客户端会认为服务端没有收到确认信息，会再次发送确认信息，服务端收到确认信息后，会再次发送确认信息，客户端收到确认信息后，会再次发送确认信息，如此循环，直到连接超时。</p>
+<h2 id="_1-15" tabindex="-1">1-15 <a class="header-anchor" href="#_1-15" aria-label="Permalink to &quot;1-15&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是-tcp-三次握手" tabindex="-1">什么是 TCP 三次握手？ <a class="header-anchor" href="#什么是-tcp-三次握手" aria-label="Permalink to &quot;什么是 TCP 三次握手？&quot;">&ZeroWidthSpace;</a></h3>
+<p>TCP 三次握手是指建立 TCP 连接时，客户端和服务端需要进行三次通信，以确认双方的接收能力和发送能力是否正常。</p>
+<ol>
+<li>发送端首先发送一个带SYN（synchronize）标志的数据包给接收方【第一次的seq序列号是随机产生的，这样是为了网络安全，如果不是随机产生初始序列号，黑客将会以很容易的方式获取到你与其他主机之间的初始化序列号，并且伪造序列号进行攻击】</li>
+<li>接收端收到后，回传一个带有SYN/ACK（acknowledgement）标志的数据包以示传达确认信息【SYN 是为了告诉发送端，发送方到接收方的通道没问题；ACK 用来验证接收方到发送方的通道没问题】</li>
+<li>最后，发送端再回传一个带ACK标志的数据包，代表握手结束若在握手某个过程中某个阶段莫名中断，TCP协议会再次以相同的顺序发送相同的数据包</li>
+</ol>
+<h2 id="_1-14" tabindex="-1">1-14 <a class="header-anchor" href="#_1-14" aria-label="Permalink to &quot;1-14&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是754层网络模型" tabindex="-1">什么是754层网络模型？ <a class="header-anchor" href="#什么是754层网络模型" aria-label="Permalink to &quot;什么是754层网络模型？&quot;">&ZeroWidthSpace;</a></h3>
+<p><img src="https://www.pdai.tech/images/develop/network/dev-network-protocol-1.png" alt="754网络模型及对应" title="754网络模型"></p>
+<p>OSI依层次结构来划分：应用层（Application）、表示层（Presentation）、会话层（Session）、传输层（Transport）、网络层（Network）、数据链路层（Data Link）、物理层（Physical）</p>
+<h2 id="_1-13" tabindex="-1">1-13 <a class="header-anchor" href="#_1-13" aria-label="Permalink to &quot;1-13&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是日志系统和日志门面" tabindex="-1">什么是日志系统和日志门面？ <a class="header-anchor" href="#什么是日志系统和日志门面" aria-label="Permalink to &quot;什么是日志系统和日志门面？&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>日志系统</strong>是用来记录应用程序运行时的状态信息，比如错误日志、警告日志、调试日志等。</p>
+<ul>
+<li>Log4j</li>
+<li>Logback</li>
+<li>Log4j2</li>
+</ul>
+<p><strong>日志门面</strong>是一种日志系统的抽象，它定义了一组日志系统的公共接口，以便于应用程序通过这组公共接口来记录日志，而不用关心具体的日志系统实现。</p>
+<ul>
+<li>SLF4J</li>
+<li>Commons Logging</li>
+<li>Log4j-to-SLF4J</li>
+</ul>
+<h2 id="_1-12" tabindex="-1">1-12 <a class="header-anchor" href="#_1-12" aria-label="Permalink to &quot;1-12&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是-jwt" tabindex="-1">什么是 JWT? <a class="header-anchor" href="#什么是-jwt" aria-label="Permalink to &quot;什么是 JWT?&quot;">&ZeroWidthSpace;</a></h3>
+<p>JWT（JSON Web Token）是一个开放标准（RFC 7519），它定义了一种紧凑且自包含的方式，用于作为 JSON 对象在各方之间安全地传输信息。</p>
+<p>通过非对称加密算法，可以对 JWT 进行签名，从而保证 JWT 的真实性和完整性。</p>
+<h2 id="_1-11" tabindex="-1">1-11 <a class="header-anchor" href="#_1-11" aria-label="Permalink to &quot;1-11&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="spring-security-的原理" tabindex="-1">Spring Security 的原理? <a class="header-anchor" href="#spring-security-的原理" aria-label="Permalink to &quot;Spring Security 的原理?&quot;">&ZeroWidthSpace;</a></h3>
+<p>SpringSecurity 的核心是一个过滤器链，它由一系列的过滤器组成，每个过滤器负责一项安全控制功能，比如认证、授权、会话管理等。</p>
+<h2 id="_1-10" tabindex="-1">1-10 <a class="header-anchor" href="#_1-10" aria-label="Permalink to &quot;1-10&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是-spring-security" tabindex="-1">什么是 Spring Security？ <a class="header-anchor" href="#什么是-spring-security" aria-label="Permalink to &quot;什么是 Spring Security？&quot;">&ZeroWidthSpace;</a></h3>
+<p>SpringSecurity 是基于 Spring 的安全框架，它提供了较为全面的一套安全性解决方案，并且可以与 SpringMVC、SpringBoot 等框架无缝集成。
+它充分利用了依赖注入和 AOP 技术，可以将安全性应用到方法调用或 Web 请求上，为应用系统提供声明式的安全访问控制功能。</p>
+<h2 id="_1-9" tabindex="-1">1-9 <a class="header-anchor" href="#_1-9" aria-label="Permalink to &quot;1-9&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="谈谈你对-cglib-的理解" tabindex="-1">谈谈你对 CGLib 的理解？ <a class="header-anchor" href="#谈谈你对-cglib-的理解" aria-label="Permalink to &quot;谈谈你对 CGLib 的理解？&quot;">&ZeroWidthSpace;</a></h3>
+<p>JDK 动态代理机制只能代理实现接口的类，一般没有实现接口的类不能进行代理。使用 CGLib 实现动态代理，完全不受代理类必须实现接口的限制。</p>
+<p>CGLib 的原理是对指定目标类生成一个子类，并覆盖其中方法实现增强，但因为采用的是继承，所以不能对 final 修饰的类进行代理。</p>
+<p>CGLib 的调用流程就是通过调用拦截器的 intercept 方法来实现对被代理类的调用。而拦截逻辑可以写在 intercept 方法的 invokeSuper(o, objects);的前后实现拦截。</p>
+<h2 id="_1-8" tabindex="-1">1-8 <a class="header-anchor" href="#_1-8" aria-label="Permalink to &quot;1-8&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="有哪些aop-advice通知的类型" tabindex="-1">有哪些AOP Advice通知的类型？ <a class="header-anchor" href="#有哪些aop-advice通知的类型" aria-label="Permalink to &quot;有哪些AOP Advice通知的类型？&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li><strong>前置通知（Before advice） ：</strong> 这些类型的 Advice 在 joinpoint 方法之前执行，并使用 @Before 注解标记进行配置。</li>
+<li><strong>后置通知（After advice） ：</strong> 这些类型的 Advice 在连接点方法之后执行，无论方法退出是正常还是异常返回，并使用 @After 注解标记进行配置。</li>
+<li><strong>返回后通知（After return advice） ：</strong> 这些类型的 Advice 在连接点方法正常执行后执行，并使用@AfterReturning 注解标记进行配置。</li>
+<li><strong>环绕通知（Around advice） ：</strong> 些类型的 Advice 在连接点之前和之后执行，并使用 @Around 注解标记进行配置。</li>
+<li><strong>抛出异常后通知（After throwing advice） ：</strong> 仅在 joinpoint 方法通过抛出异常退出并使用 @AfterThrowing 注解标记配置时执行。</li>
+</ul>
+<h2 id="_1-7" tabindex="-1">1-7 <a class="header-anchor" href="#_1-7" aria-label="Permalink to &quot;1-7&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="aop-包含的几个概念" tabindex="-1">AOP 包含的几个概念? <a class="header-anchor" href="#aop-包含的几个概念" aria-label="Permalink to &quot;AOP 包含的几个概念?&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li><strong>切面（Aspect）：</strong> 一个关注点的模块化，这个关注点可能会横切多个对象。</li>
+<li><strong>连接点（Joinpoint）：</strong> 程序执行过程中的某个特定的点，比如某方法调用的时候或者处理异常的时候。</li>
+<li><strong>通知（Advice）：</strong> 在切面的某个特定的连接点上执行的动作。</li>
+<li><strong>切入点（Pointcut）：</strong> 匹配连接点的断言，在 AOP 中通知和一个切入点表达式关联。</li>
+<li><strong>引入（Introduction）：</strong> 在不修改代码的前提下，引入可以在运行期为类动态地添加一些方法或字段。</li>
+<li><strong>目标对象（Target Object）：</strong> 被一个或者多个切面所通知的对象，也称为被通知（advised）对象。</li>
+<li><strong>织入（Weaving）：</strong> 把切面连接到其它的应用程序类型或者对象上，并创建一个被通知的对象，这些可以在运行期完成，也可以在编译期完成。</li>
+</ul>
+<h2 id="_1-6" tabindex="-1">1-6 <a class="header-anchor" href="#_1-6" aria-label="Permalink to &quot;1-6&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="列举一些重要的spring模块。" tabindex="-1">列举一些重要的Spring模块。 <a class="header-anchor" href="#列举一些重要的spring模块。" aria-label="Permalink to &quot;列举一些重要的Spring模块。&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>Spring Core：核心容器，提供 IoC 和 DI 的功能。</li>
+<li>Spring AOP：面向切面编程，提供声明式事务管理。</li>
+<li>Spring Aspects：提供与 AspectJ 的集成功能。</li>
+<li>Spring JDBC：提供了 JAVA 数据库连接功能。</li>
+<li>Spring Web：提供了基本的 Web 开发功能。</li>
+<li>Spring MVC：提供了 MVC 模式的 Web 开发功能。</li>
+<li>Spring ORM：提供了对常见的 ORM 框架的支持，如 Hibernate、JPA 等。</li>
+<li>Spring Test：提供了对 JUnit 和 TestNG 的支持。</li>
+<li>Spring Session：提供了对 Session 的集成支持。</li>
+<li>Spring Security：提供了对安全认证和授权的支持。</li>
+</ul>
+<h2 id="_1-5" tabindex="-1">1-5 <a class="header-anchor" href="#_1-5" aria-label="Permalink to &quot;1-5&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="什么是监听器" tabindex="-1">什么是监听器？ <a class="header-anchor" href="#什么是监听器" aria-label="Permalink to &quot;什么是监听器？&quot;">&ZeroWidthSpace;</a></h3>
 <p>监听器是 Servlet 规范中的一种组件，可以监听 ServletContext、HttpSession、ServletRequest 等域对象的创建和销毁，以及域对象中属性的变化。</p>
 <p>配置示例：</p>
@@ -84,12 +166,13 @@
 <h3 id="spring-boot-怎么注册事件监听器" tabindex="-1">Spring Boot 怎么注册事件监听器？ <a class="header-anchor" href="#spring-boot-怎么注册事件监听器" aria-label="Permalink to &quot;Spring Boot 怎么注册事件监听器？&quot;">&ZeroWidthSpace;</a></h3>
 <p>SpringBoot 可以通过 <code>@EventListener</code> 注解来注册事件监听器，该注解可以用在方法上，也可以用在类上。</p>
 ]]></content:encoded>
+            <enclosure url="https://www.pdai.tech/images/develop/network/dev-network-protocol-1.png &quot;754网络模型&quot;" length="0" type="image/png%20%22754%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B%22"/>
         </item>
         <item>
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/</guid>
-            <pubDate>Fri, 05 Jan 2024 08:29:42 GMT</pubDate>
+            <pubDate>Wed, 17 Jan 2024 06:56:55 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -103,6 +186,54 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2024/1/17</td>
+<td><a href="./1.html#_1-17">为什么DNS通常基于 UDP？</a></td>
+</tr>
+<tr>
+<td>2024/1/16</td>
+<td><a href="./1.html#_1-16">TCP 三次握手中，最后一次回复丢失，会发生什么？</a></td>
+</tr>
+<tr>
+<td>2024/1/15</td>
+<td><a href="./1.html#_1-15">什么是 TCP 三次握手？</a></td>
+</tr>
+<tr>
+<td>2024/1/14</td>
+<td><a href="./1.html#_1-14">什么是754层网络模型？</a></td>
+</tr>
+<tr>
+<td>2024/1/13</td>
+<td><a href="./1.html#_1-13">什么是日志系统和日志门面？</a></td>
+</tr>
+<tr>
+<td>2024/1/12</td>
+<td><a href="./1.html#_1-12">什么是 JWT？</a></td>
+</tr>
+<tr>
+<td>2024/1/11</td>
+<td><a href="./1.html#_1-11">Spring Security 的原理？</a></td>
+</tr>
+<tr>
+<td>2024/1/10</td>
+<td><a href="./1.html#_1-10">什么是 Spring Security？</a></td>
+</tr>
+<tr>
+<td>2024/1/9</td>
+<td><a href="./1.html#_1-9">谈谈你对 CGLib 的理解？</a></td>
+</tr>
+<tr>
+<td>2024/1/8</td>
+<td><a href="./1.html#_1-8">有哪些AOP Advice通知的类型？</a></td>
+</tr>
+<tr>
+<td>2024/1/7</td>
+<td><a href="./1.html#_1-7">AOP 包含的几个概念?</a></td>
+</tr>
+<tr>
+<td>2024/1/6</td>
+<td><a href="./1.html#_1-6">列举一些重要的Spring模块。</a></td>
+</tr>
 <tr>
 <td>2024/1/5</td>
 <td><a href="./1.html#_1-5">什么是监听器？</a></td>
