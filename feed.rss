@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Wed, 17 Jan 2024 06:57:42 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 18 Jan 2024 13:02:41 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,8 +17,12 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/1.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/1.html</guid>
-            <pubDate>Wed, 17 Jan 2024 06:56:55 GMT</pubDate>
-            <content:encoded><![CDATA[<h2 id="_1-17" tabindex="-1">1-17 <a class="header-anchor" href="#_1-17" aria-label="Permalink to &quot;1-17&quot;">&ZeroWidthSpace;</a></h2>
+            <pubDate>Thu, 18 Jan 2024 13:01:47 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="_1-18" tabindex="-1">1-18 <a class="header-anchor" href="#_1-18" aria-label="Permalink to &quot;1-18&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是http协议" tabindex="-1">什么是http协议？ <a class="header-anchor" href="#什么是http协议" aria-label="Permalink to &quot;什么是http协议？&quot;">&ZeroWidthSpace;</a></h3>
+<p>http 协议是应用层的协议，中文名称是超文本传输协议，是客户端和服务端相互通信时将信息以http报文的形式传输。</p>
+<p>http 协议基于 TCP 协议。</p>
+<h2 id="_1-17" tabindex="-1">1-17 <a class="header-anchor" href="#_1-17" aria-label="Permalink to &quot;1-17&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="为什么dns通常基于-udp" tabindex="-1">为什么DNS通常基于 UDP？ <a class="header-anchor" href="#为什么dns通常基于-udp" aria-label="Permalink to &quot;为什么DNS通常基于 UDP？&quot;">&ZeroWidthSpace;</a></h3>
 <p>DNS 通常基于 UDP，因为 UDP 没有连接的开销，而且 DNS 服务需要尽可能快地响应请求，而不是等待连接建立。但当数据长度大于512字节时，为保证传输质量，就会使用基于TCP的实现形式。</p>
 <h2 id="_1-16" tabindex="-1">1-16 <a class="header-anchor" href="#_1-16" aria-label="Permalink to &quot;1-16&quot;">&ZeroWidthSpace;</a></h2>
@@ -172,7 +176,7 @@
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/</guid>
-            <pubDate>Wed, 17 Jan 2024 06:56:55 GMT</pubDate>
+            <pubDate>Thu, 18 Jan 2024 13:01:47 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -186,6 +190,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2024/1/18</td>
+<td><a href="./1.html#_1-18">什么是HTTP？</a></td>
+</tr>
 <tr>
 <td>2024/1/17</td>
 <td><a href="./1.html#_1-17">为什么DNS通常基于 UDP？</a></td>
