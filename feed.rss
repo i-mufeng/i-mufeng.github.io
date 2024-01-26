@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Tue, 23 Jan 2024 07:53:38 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 26 Jan 2024 09:23:58 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,8 +17,39 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/1.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/1.html</guid>
-            <pubDate>Tue, 23 Jan 2024 07:52:46 GMT</pubDate>
-            <content:encoded><![CDATA[<h2 id="_1-23" tabindex="-1">1-23 <a class="header-anchor" href="#_1-23" aria-label="Permalink to &quot;1-23&quot;">&ZeroWidthSpace;</a></h2>
+            <pubDate>Fri, 26 Jan 2024 09:23:02 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="_1-26" tabindex="-1">1-26 <a class="header-anchor" href="#_1-26" aria-label="Permalink to &quot;1-26&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="java-throw-和-throws-的区别" tabindex="-1">JAVA throw 和 throws 的区别？ <a class="header-anchor" href="#java-throw-和-throws-的区别" aria-label="Permalink to &quot;JAVA throw 和 throws 的区别？&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>throw 用在方法体内，用来抛出一个异常对象，将这个异常对象传递到调用者处，并终止当前方法的执行。</li>
+<li>throws 用在方法声明后面，跟的是异常类名，可以跟多个异常类名，用逗号隔开，表示当前方法不处理异常，而是提醒该方法的调用者来处理异常（将异常抛给调用者），
+如果调用者也不处理异常，那么继续往上抛，最终抛给 JVM 处理，JVM 会终止程序的运行。</li>
+</ul>
+<h2 id="_1-25" tabindex="-1">1-25 <a class="header-anchor" href="#_1-25" aria-label="Permalink to &quot;1-25&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="getname、getcanonicalname-与-getsimplename-的区别" tabindex="-1">getName、getCanonicalName 与 getSimpleName 的区别? <a class="header-anchor" href="#getname、getcanonicalname-与-getsimplename-的区别" aria-label="Permalink to &quot;getName、getCanonicalName 与 getSimpleName 的区别?&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>getName()：获取全限定类名，包含包名。</li>
+<li>getCanonicalName()：获取全限定类名，不包含包名。</li>
+<li>getSimpleName()：获取类名，不包含包名。</li>
+</ul>
+<h2 id="_1-24" tabindex="-1">1-24 <a class="header-anchor" href="#_1-24" aria-label="Permalink to &quot;1-24&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是反射" tabindex="-1">什么是反射？ <a class="header-anchor" href="#什么是反射" aria-label="Permalink to &quot;什么是反射？&quot;">&ZeroWidthSpace;</a></h3>
+<p>反射是指程序可以访问、检测和修改它本身状态或行为的一种能力。
+Java 反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；
+对于任意一个对象，都能够调用它的任意一个方法和属性。</p>
+<p>如下：</p>
+<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    @</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Test</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> classTest</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">() throws Exception {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        // 获取Class对象的三种方式</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        logger.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">info</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"根据类名:  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> +</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> User.class);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        logger.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">info</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"根据对象:  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> +</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> User</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">().</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">getClass</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">());</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        logger.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">info</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"根据全限定类名:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> +</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Class.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">forName</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"com.test.User"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">));</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        // 常用的方法</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        logger.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">info</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"获取全限定类名:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> +</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> userClass.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">getName</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">());</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        logger.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">info</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"获取类名:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> +</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> userClass.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">getSimpleName</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">());</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        logger.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">info</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"实例化:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> +</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> userClass.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">newInstance</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">());</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span></code></pre>
+</div><h2 id="_1-23" tabindex="-1">1-23 <a class="header-anchor" href="#_1-23" aria-label="Permalink to &quot;1-23&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="quartz是做什么用的" tabindex="-1">Quartz是做什么用的？ <a class="header-anchor" href="#quartz是做什么用的" aria-label="Permalink to &quot;Quartz是做什么用的？&quot;">&ZeroWidthSpace;</a></h3>
 <p>Quartz 是开源的 JAVA 任务调度框架，能够灵活且简单的管理定时任务。支持数据库集成、集群、插件等。支持使用 <code>cron-like</code> 表达式。</p>
 <h2 id="_1-22" tabindex="-1">1-22 <a class="header-anchor" href="#_1-22" aria-label="Permalink to &quot;1-22&quot;">&ZeroWidthSpace;</a></h2>
@@ -221,7 +252,7 @@
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/</guid>
-            <pubDate>Tue, 23 Jan 2024 07:52:46 GMT</pubDate>
+            <pubDate>Fri, 26 Jan 2024 09:23:02 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -235,6 +266,18 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2024/1/26</td>
+<td><a href="./1.html#_1-26">JAVA throw 和 throws 的区别？</a></td>
+</tr>
+<tr>
+<td>2024/1/25</td>
+<td><a href="./1.html#_1-25">getName、getCanonicalName 与 getSimpleName 的区别?</a></td>
+</tr>
+<tr>
+<td>2024/1/24</td>
+<td><a href="./1.html#_1-24">什么是反射？</a></td>
+</tr>
 <tr>
 <td>2024/1/23</td>
 <td><a href="./1.html#_1-23">Quartz是做什么用的？</a></td>
