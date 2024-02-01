@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Mon, 29 Jan 2024 09:07:17 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 01 Feb 2024 09:13:40 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,8 +17,17 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/1.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/1.html</guid>
-            <pubDate>Mon, 29 Jan 2024 09:05:39 GMT</pubDate>
-            <content:encoded><![CDATA[<h2 id="_1-29" tabindex="-1">1-29 <a class="header-anchor" href="#_1-29" aria-label="Permalink to &quot;1-29&quot;">&ZeroWidthSpace;</a></h2>
+            <pubDate>Thu, 01 Feb 2024 09:07:04 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="_1-31" tabindex="-1">1-31 <a class="header-anchor" href="#_1-31" aria-label="Permalink to &quot;1-31&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是同步" tabindex="-1">什么是同步？ <a class="header-anchor" href="#什么是同步" aria-label="Permalink to &quot;什么是同步？&quot;">&ZeroWidthSpace;</a></h3>
+<p>同步 IO 和 非同步 IO 是操作系统级别的，主要描述操作系统在收到程序请求 IO 操作后，
+如果 IO 资源没有准备好，该如何响应程序的问题。前者不响应，直到 IO 资源准备好，后者返回标记，
+当 IO 资源准备好之后，再通过事件机制返回给程序。</p>
+<h2 id="_1-30" tabindex="-1">1-30 <a class="header-anchor" href="#_1-30" aria-label="Permalink to &quot;1-30&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是阻塞" tabindex="-1">什么是阻塞？ <a class="header-anchor" href="#什么是阻塞" aria-label="Permalink to &quot;什么是阻塞？&quot;">&ZeroWidthSpace;</a></h3>
+<p>阻塞 IO 和 非阻塞 IO 是程序级别的，主要描述程序请求操作系统 IO 操作后，
+如果 IO 资源没有准备好，那么程序该如何处理的问题，前者等待，后者继续执行（一直轮询）。</p>
+<h2 id="_1-29" tabindex="-1">1-29 <a class="header-anchor" href="#_1-29" aria-label="Permalink to &quot;1-29&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="如何理解-io-流" tabindex="-1">如何理解 IO 流？ <a class="header-anchor" href="#如何理解-io-流" aria-label="Permalink to &quot;如何理解 IO 流？&quot;">&ZeroWidthSpace;</a></h3>
 <p>从数据传输方式来讲，IO 流分为字节流和字符流，字节流处理二进制文件，字符流读取单个字符，用于处理文本文件。</p>
 <p>从数据流向来讲，IO 流分为输入流和输出流，输入流用于读取数据，输出流用于写入数据。</p>
@@ -295,10 +304,20 @@ Java 反射机制是在运行状态中，对于任意一个类，都能够知道
             <enclosure url="https://www.pdai.tech/images/develop/network/dev-network-protocol-1.png &quot;754网络模型&quot;" length="0" type="image/png%20%22754%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B%22"/>
         </item>
         <item>
+            <link>https://www.imufeng.cn/question-by-day/2024/2.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2024/2.html</guid>
+            <pubDate>Thu, 01 Feb 2024 09:07:04 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="_2-1" tabindex="-1">2-1 <a class="header-anchor" href="#_2-1" aria-label="Permalink to &quot;2-1&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="类加载的生命周期" tabindex="-1">类加载的生命周期？ <a class="header-anchor" href="#类加载的生命周期" aria-label="Permalink to &quot;类加载的生命周期？&quot;">&ZeroWidthSpace;</a></h3>
+<p>了加载的过程包括了 加载、验证。准备。解析、初始化五个阶段，
+除了解析之外，其余阶段的顺序是确定的，解析阶段可以在初始化之后进行。</p>
+]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/</guid>
-            <pubDate>Mon, 29 Jan 2024 09:05:39 GMT</pubDate>
+            <pubDate>Thu, 01 Feb 2024 09:07:04 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -312,6 +331,18 @@ Java 反射机制是在运行状态中，对于任意一个类，都能够知道
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2024/2/1</td>
+<td><a href="./2.html#_2-1">什么是同步？</a></td>
+</tr>
+<tr>
+<td>2024/1/31</td>
+<td><a href="./1.html#_1-31">什么是阻塞？</a></td>
+</tr>
+<tr>
+<td>2024/1/30</td>
+<td><a href="./1.html#_1-30">如何理解 IO 流？</a></td>
+</tr>
 <tr>
 <td>2024/1/29</td>
 <td><a href="./1.html#_1-29">如何理解 IO 流？</a></td>
@@ -3861,11 +3892,6 @@ Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来�
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/12.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/12.html</guid>
-            <pubDate>Sat, 07 Oct 2023 09:47:18 GMT</pubDate>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/question-by-day/2024/2.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2024/2.html</guid>
             <pubDate>Sat, 07 Oct 2023 09:47:18 GMT</pubDate>
         </item>
         <item>
