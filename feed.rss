@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Sun, 18 Feb 2024 02:14:32 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 19 Feb 2024 09:21:43 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -15,37 +15,18 @@
         </image>
         <copyright>Mblog © 2021-2023 Created by 沐风</copyright>
         <item>
-            <link>https://www.imufeng.cn/friend-link-list/</link>
-            <guid>https://www.imufeng.cn/friend-link-list/</guid>
-            <pubDate>Sun, 18 Feb 2024 02:13:35 GMT</pubDate>
-            <content:encoded><![CDATA[<details class="details custom-block"><summary>友链申请格式</summary>
-<ul>
-<li>
-<p><strong>站点名称：</strong> <code>沐风的小站</code></p>
-</li>
-<li>
-<p><strong>站点地址：</strong> <code>https://imufeng.cn</code></p>
-</li>
-<li>
-<p><strong>一句话：</strong> <code>但愿岁月如客，来去皆从容。</code></p>
-</li>
-<li>
-<p><strong>头像链接：</strong> <code>https://cravatar.cn/avatar/f1dcdc8fa782b81824df5d67022e4d4a</code></p>
-</li>
-<li>
-<p><strong>其他平台：</strong> <code>[Github/Twitter...](link)</code></p>
-</li>
-</ul>
-</details>
-<h3 id="膜拜大佬" tabindex="-1">膜拜大佬 <a class="header-anchor" href="#膜拜大佬" aria-label="Permalink to &quot;膜拜大佬&quot;">&ZeroWidthSpace;</a></h3>
-<VPTeamMembers size="medium" :members="authoritys" /><h3 id="友链" tabindex="-1">友链 <a class="header-anchor" href="#友链" aria-label="Permalink to &quot;友链&quot;">&ZeroWidthSpace;</a></h3>
-<VPTeamMembers size="small" :members="friends" />]]></content:encoded>
-        </item>
-        <item>
             <link>https://www.imufeng.cn/question-by-day/2024/2.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/2.html</guid>
-            <pubDate>Sun, 18 Feb 2024 02:13:35 GMT</pubDate>
-            <content:encoded><![CDATA[<h2 id="_2-18" tabindex="-1">2-18 <a class="header-anchor" href="#_2-18" aria-label="Permalink to &quot;2-18&quot;">&ZeroWidthSpace;</a></h2>
+            <pubDate>Mon, 19 Feb 2024 09:20:22 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="_2-19" tabindex="-1">2-19 <a class="header-anchor" href="#_2-19" aria-label="Permalink to &quot;2-19&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="简述快速排序的过程。" tabindex="-1">简述快速排序的过程。 <a class="header-anchor" href="#简述快速排序的过程。" aria-label="Permalink to &quot;简述快速排序的过程。&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>选择一个基准元素（第一个或最后一个）。</li>
+<li>通过一趟排序将待排序的记录分割成独立的两个部分，其中一部分记录的元素值均比基准元素值小，另一部分记录的元素值比基准值大。</li>
+<li>此时基准元素在其排好序后的正确位置。</li>
+<li>然后分别对这两部分记录使用相同方法进行排序，直到整个序列有序。</li>
+</ol>
+<h2 id="_2-18" tabindex="-1">2-18 <a class="header-anchor" href="#_2-18" aria-label="Permalink to &quot;2-18&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="arraylist-和-linkedlist-的区别是什么" tabindex="-1">ArrayList 和 LinkedList 的区别是什么？ <a class="header-anchor" href="#arraylist-和-linkedlist-的区别是什么" aria-label="Permalink to &quot;ArrayList 和 LinkedList 的区别是什么？&quot;">&ZeroWidthSpace;</a></h3>
 <ul>
 <li>ArrayList 是基于动态数组实现的，LinkedList 是基于双向链表实现的。</li>
@@ -231,219 +212,92 @@ ArrayList 具有自动增加底层数组容量的能力，当数组容量不足�
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/</guid>
-            <pubDate>Sun, 18 Feb 2024 02:13:35 GMT</pubDate>
+            <pubDate>Mon, 19 Feb 2024 09:20:22 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
 </blockquote>
 <h3 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h3>
-<table>
-<thead>
-<tr>
-<th>时间</th>
-<th>问题</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2024/2/18</td>
-<td><a href="./2.html#_2-18">ArrayList 和 LinkedList 的区别是什么？</a></td>
-</tr>
-<tr>
-<td>2024/2/17</td>
-<td><a href="./2.html#_2-17">HashMap 的实现原理？</a></td>
-</tr>
-<tr>
-<td>2024/2/16</td>
-<td><a href="./2.html#_2-16">HashSet 的实现原理？</a></td>
-</tr>
-<tr>
-<td>2024/2/15</td>
-<td><a href="./2.html#_2-15">如何决定使用 HashMap 还是 TreeMap？</a></td>
-</tr>
-<tr>
-<td>2024/2/14</td>
-<td><a href="./2.html#_2-14">HashMap 和 HashTable 的区别？</a></td>
-</tr>
-<tr>
-<td>2024/2/13</td>
-<td><a href="./2.html#_2-13">HashMap 什么样的类适合作为键？</a></td>
-</tr>
-<tr>
-<td>2024/2/12</td>
-<td><a href="./2.html#_2-12">List 和 Map 的区别？</a></td>
-</tr>
-<tr>
-<td>2024/2/11</td>
-<td><a href="./2.html#_2-11">（力扣题库）计算数组最大连续 1 的个数。</a></td>
-</tr>
-<tr>
-<td>2024/2/10</td>
-<td><a href="./2.html#_2-10">什么是栈，什么是队列？</a></td>
-</tr>
-<tr>
-<td>2024/2/9</td>
-<td><a href="./2.html#_2-9">什么是快速失败和安全失败机制？</a></td>
-</tr>
-<tr>
-<td>2024/2/8</td>
-<td><a href="./2.html#_2-8">ArrayList 底层是什么？</a></td>
-</tr>
-<tr>
-<td>2024/2/7</td>
-<td><a href="./2.html#_2-7">JAVA 集合有哪些类？</a></td>
-</tr>
-<tr>
-<td>2024/2/6</td>
-<td><a href="./2.html#_2-6">所有的 final 修饰的字段都是编译期常量吗?</a></td>
-</tr>
-<tr>
-<td>2024/2/5</td>
-<td><a href="./2.html#_2-5">什么是重复注解？</a></td>
-</tr>
-<tr>
-<td>2024/2/4</td>
-<td><a href="./2.html#_2-4">什么是类型注解？</a></td>
-</tr>
-<tr>
-<td>2024/2/3</td>
-<td><a href="./2.html#_2-3">Optional 要解决什么问题？</a></td>
-</tr>
-<tr>
-<td>2024/2/2</td>
-<td><a href="./2.html#_2-2">什么是 FunctionalInterface？</a></td>
-</tr>
-<tr>
-<td>2024/2/1</td>
-<td><a href="./2.html#_2-1">类加载的生命周期？</a></td>
-</tr>
-<tr>
-<td>2024/1/31</td>
-<td><a href="./1.html#_1-31">什么是同步？</a></td>
-</tr>
-<tr>
-<td>2024/1/30</td>
-<td><a href="./1.html#_1-30">什么是阻塞？</a></td>
-</tr>
-<tr>
-<td>2024/1/29</td>
-<td><a href="./1.html#_1-29">如何理解 IO 流？</a></td>
-</tr>
-<tr>
-<td>2024/1/28</td>
-<td><a href="./1.html#_1-28">描述异常的底层？</a></td>
-</tr>
-<tr>
-<td>2024/1/27</td>
-<td><a href="./1.html#_1-27">Java 7 的 try-with-resource?</a></td>
-</tr>
-<tr>
-<td>2024/1/26</td>
-<td><a href="./1.html#_1-26">JAVA throw 和 throws 的区别？</a></td>
-</tr>
-<tr>
-<td>2024/1/25</td>
-<td><a href="./1.html#_1-25">getName、getCanonicalName 与 getSimpleName 的区别?</a></td>
-</tr>
-<tr>
-<td>2024/1/24</td>
-<td><a href="./1.html#_1-24">什么是反射？</a></td>
-</tr>
-<tr>
-<td>2024/1/23</td>
-<td><a href="./1.html#_1-23">Quartz 是做什么用的？</a></td>
-</tr>
-<tr>
-<td>2024/1/22</td>
-<td><a href="./1.html#_1-22">如何限制规定泛型的范围？</a></td>
-</tr>
-<tr>
-<td>2024/1/21</td>
-<td><a href="./1.html#_1-21">泛型类如何定义使用？</a></td>
-</tr>
-<tr>
-<td>2024/1/20</td>
-<td><a href="./1.html#_1-20">this() &amp; super() 在构造方法中的区别？</a></td>
-</tr>
-<tr>
-<td>2024/1/19</td>
-<td><a href="./1.html#_1-19">什么是 Java 移位运算符？</a></td>
-</tr>
-<tr>
-<td>2024/1/18</td>
-<td><a href="./1.html#_1-18">JAVA 能在 Switch 中使用 String 吗?</a></td>
-</tr>
-<tr>
-<td>2024/1/17</td>
-<td><a href="./1.html#_1-17">为什么 DNS 通常基于 UDP？</a></td>
-</tr>
-<tr>
-<td>2024/1/16</td>
-<td><a href="./1.html#_1-16">TCP 三次握手中，最后一次回复丢失，会发生什么？</a></td>
-</tr>
-<tr>
-<td>2024/1/15</td>
-<td><a href="./1.html#_1-15">什么是 TCP 三次握手？</a></td>
-</tr>
-<tr>
-<td>2024/1/14</td>
-<td><a href="./1.html#_1-14">什么是754层网络模型？</a></td>
-</tr>
-<tr>
-<td>2024/1/13</td>
-<td><a href="./1.html#_1-13">什么是日志系统和日志门面？</a></td>
-</tr>
-<tr>
-<td>2024/1/12</td>
-<td><a href="./1.html#_1-12">什么是 JWT？</a></td>
-</tr>
-<tr>
-<td>2024/1/11</td>
-<td><a href="./1.html#_1-11">Spring Security 的原理？</a></td>
-</tr>
-<tr>
-<td>2024/1/10</td>
-<td><a href="./1.html#_1-10">什么是 Spring Security？</a></td>
-</tr>
-<tr>
-<td>2024/1/9</td>
-<td><a href="./1.html#_1-9">谈谈你对 CGLib 的理解？</a></td>
-</tr>
-<tr>
-<td>2024/1/8</td>
-<td><a href="./1.html#_1-8">有哪些AOP Advice通知的类型？</a></td>
-</tr>
-<tr>
-<td>2024/1/7</td>
-<td><a href="./1.html#_1-7">AOP 包含的几个概念?</a></td>
-</tr>
-<tr>
-<td>2024/1/6</td>
-<td><a href="./1.html#_1-6">列举一些重要的Spring模块。</a></td>
-</tr>
-<tr>
-<td>2024/1/5</td>
-<td><a href="./1.html#_1-5">什么是监听器？</a></td>
-</tr>
-<tr>
-<td>2024/1/4</td>
-<td><a href="./1.html#_1-4">什么是拦截器？</a></td>
-</tr>
-<tr>
-<td>2024/1/3</td>
-<td><a href="./1.html#_1-3">Spring Boot 的默认编码是？</a></td>
-</tr>
-<tr>
-<td>2024/1/2</td>
-<td><a href="./1.html#_1-2">Spring Boot 应用如何优雅关闭？</a></td>
-</tr>
-<tr>
-<td>2024/1/1</td>
-<td><a href="./1.html#_1-1">Spring Boot 怎么注册事件监听器？</a></td>
-</tr>
-</tbody>
-</table>
+<p>| 时间        | 问题                                                            |
+|-----------|---------------------------------------------------------------|、
+| 2024/2/19 | <a href="./2.html#_2-19">简述快速排序的过程。</a>                                  |
+| 2024/2/18 | <a href="./2.html#_2-18">ArrayList 和 LinkedList 的区别是什么？</a>                |
+| 2024/2/17 | <a href="./2.html#_2-17">HashMap 的实现原理？</a>                                |
+| 2024/2/16 | <a href="./2.html#_2-16">HashSet 的实现原理？</a>                                |
+| 2024/2/15 | <a href="./2.html#_2-15">如何决定使用 HashMap 还是 TreeMap？</a>                    |
+| 2024/2/14 | <a href="./2.html#_2-14">HashMap 和 HashTable 的区别？</a>                      |
+| 2024/2/13 | <a href="./2.html#_2-13">HashMap 什么样的类适合作为键？</a>                           |
+| 2024/2/12 | <a href="./2.html#_2-12">List 和 Map 的区别？</a>                               |
+| 2024/2/11 | <a href="./2.html#_2-11">（力扣题库）计算数组最大连续 1 的个数。</a>                         |
+| 2024/2/10 | <a href="./2.html#_2-10">什么是栈，什么是队列？</a>                                   |
+| 2024/2/9  | <a href="./2.html#_2-9">什么是快速失败和安全失败机制？</a>                                |
+| 2024/2/8  | <a href="./2.html#_2-8">ArrayList 底层是什么？</a>                               |
+| 2024/2/7  | <a href="./2.html#_2-7">JAVA 集合有哪些类？</a>                                   |
+| 2024/2/6  | <a href="./2.html#_2-6">所有的 final 修饰的字段都是编译期常量吗?</a>                       |
+| 2024/2/5  | <a href="./2.html#_2-5">什么是重复注解？</a>                                       |
+| 2024/2/4  | <a href="./2.html#_2-4">什么是类型注解？</a>                                       |
+| 2024/2/3  | <a href="./2.html#_2-3">Optional 要解决什么问题？</a>                              |
+| 2024/2/2  | <a href="./2.html#_2-2">什么是 FunctionalInterface？</a>                       |
+| 2024/2/1  | <a href="./2.html#_2-1">类加载的生命周期？</a>                                      |
+| 2024/1/31 | <a href="./1.html#_1-31">什么是同步？</a>                                        |
+| 2024/1/30 | <a href="./1.html#_1-30">什么是阻塞？</a>                                        |
+| 2024/1/29 | <a href="./1.html#_1-29">如何理解 IO 流？</a>                                    |
+| 2024/1/28 | <a href="./1.html#_1-28">描述异常的底层？</a>                                      |
+| 2024/1/27 | <a href="./1.html#_1-27">Java 7 的 try-with-resource?</a>                   |
+| 2024/1/26 | <a href="./1.html#_1-26">JAVA throw 和 throws 的区别？</a>                      |
+| 2024/1/25 | <a href="./1.html#_1-25">getName、getCanonicalName 与 getSimpleName 的区别?</a> |
+| 2024/1/24 | <a href="./1.html#_1-24">什么是反射？</a>                                        |
+| 2024/1/23 | <a href="./1.html#_1-23">Quartz 是做什么用的？</a>                                |
+| 2024/1/22 | <a href="./1.html#_1-22">如何限制规定泛型的范围？</a>                                  |
+| 2024/1/21 | <a href="./1.html#_1-21">泛型类如何定义使用？</a>                                    |
+| 2024/1/20 | <a href="./1.html#_1-20">this() &amp; super() 在构造方法中的区别？</a>                   |
+| 2024/1/19 | <a href="./1.html#_1-19">什么是 Java 移位运算符？</a>                               |
+| 2024/1/18 | <a href="./1.html#_1-18">JAVA 能在 Switch 中使用 String 吗?</a>                  |
+| 2024/1/17 | <a href="./1.html#_1-17">为什么 DNS 通常基于 UDP？</a>                             |
+| 2024/1/16 | <a href="./1.html#_1-16">TCP 三次握手中，最后一次回复丢失，会发生什么？</a>                     |
+| 2024/1/15 | <a href="./1.html#_1-15">什么是 TCP 三次握手？</a>                                 |
+| 2024/1/14 | <a href="./1.html#_1-14">什么是754层网络模型？</a>                                  |
+| 2024/1/13 | <a href="./1.html#_1-13">什么是日志系统和日志门面？</a>                                 |
+| 2024/1/12 | <a href="./1.html#_1-12">什么是 JWT？</a>                                      |
+| 2024/1/11 | <a href="./1.html#_1-11">Spring Security 的原理？</a>                          |
+| 2024/1/10 | <a href="./1.html#_1-10">什么是 Spring Security？</a>                          |
+| 2024/1/9  | <a href="./1.html#_1-9">谈谈你对 CGLib 的理解？</a>                                |
+| 2024/1/8  | <a href="./1.html#_1-8">有哪些AOP Advice通知的类型？</a>                            |
+| 2024/1/7  | <a href="./1.html#_1-7">AOP 包含的几个概念?</a>                                   |
+| 2024/1/6  | <a href="./1.html#_1-6">列举一些重要的Spring模块。</a>                               |
+| 2024/1/5  | <a href="./1.html#_1-5">什么是监听器？</a>                                        |
+| 2024/1/4  | <a href="./1.html#_1-4">什么是拦截器？</a>                                        |
+| 2024/1/3  | <a href="./1.html#_1-3">Spring Boot 的默认编码是？</a>                            |
+| 2024/1/2  | <a href="./1.html#_1-2">Spring Boot 应用如何优雅关闭？</a>                          |
+| 2024/1/1  | <a href="./1.html#_1-1">Spring Boot 怎么注册事件监听器？</a>                         |</p>
 ]]></content:encoded>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/friend-link-list/</link>
+            <guid>https://www.imufeng.cn/friend-link-list/</guid>
+            <pubDate>Sun, 18 Feb 2024 02:13:35 GMT</pubDate>
+            <content:encoded><![CDATA[<details class="details custom-block"><summary>友链申请格式</summary>
+<ul>
+<li>
+<p><strong>站点名称：</strong> <code>沐风的小站</code></p>
+</li>
+<li>
+<p><strong>站点地址：</strong> <code>https://imufeng.cn</code></p>
+</li>
+<li>
+<p><strong>一句话：</strong> <code>但愿岁月如客，来去皆从容。</code></p>
+</li>
+<li>
+<p><strong>头像链接：</strong> <code>https://cravatar.cn/avatar/f1dcdc8fa782b81824df5d67022e4d4a</code></p>
+</li>
+<li>
+<p><strong>其他平台：</strong> <code>[Github/Twitter...](link)</code></p>
+</li>
+</ul>
+</details>
+<h3 id="膜拜大佬" tabindex="-1">膜拜大佬 <a class="header-anchor" href="#膜拜大佬" aria-label="Permalink to &quot;膜拜大佬&quot;">&ZeroWidthSpace;</a></h3>
+<VPTeamMembers size="medium" :members="authoritys" /><h3 id="友链" tabindex="-1">友链 <a class="header-anchor" href="#友链" aria-label="Permalink to &quot;友链&quot;">&ZeroWidthSpace;</a></h3>
+<VPTeamMembers size="small" :members="friends" />]]></content:encoded>
         </item>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/1.html</link>
