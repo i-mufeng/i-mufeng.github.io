@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Tue, 20 Feb 2024 09:09:24 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 21 Feb 2024 09:32:40 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,8 +17,11 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/2.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/2.html</guid>
-            <pubDate>Tue, 20 Feb 2024 09:08:29 GMT</pubDate>
-            <content:encoded><![CDATA[<h2 id="_2-20" tabindex="-1">2-20 <a class="header-anchor" href="#_2-20" aria-label="Permalink to &quot;2-20&quot;">&ZeroWidthSpace;</a></h2>
+            <pubDate>Wed, 21 Feb 2024 09:31:50 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="_2-21" tabindex="-1">2-21 <a class="header-anchor" href="#_2-21" aria-label="Permalink to &quot;2-21&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是散列表" tabindex="-1">什么是散列表？ <a class="header-anchor" href="#什么是散列表" aria-label="Permalink to &quot;什么是散列表？&quot;">&ZeroWidthSpace;</a></h3>
+<p>散列表（Hash table，也叫哈希表），是根据关键码值（Key value）而直接进行访问的数据结构。也就是说，它通过把关键码值映射到表中一个位置来访问记录，以加快查找的速度。</p>
+<h2 id="_2-20" tabindex="-1">2-20 <a class="header-anchor" href="#_2-20" aria-label="Permalink to &quot;2-20&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="hashmap-是怎么解决-hash-冲突的" tabindex="-1">HashMap 是怎么解决 hash 冲突的？ <a class="header-anchor" href="#hashmap-是怎么解决-hash-冲突的" aria-label="Permalink to &quot;HashMap 是怎么解决 hash 冲突的？&quot;">&ZeroWidthSpace;</a></h3>
 <p>HashMap 是基于哈希表实现的，哈希表是数组和链表的结合体，数组是 HashMap 的主体，链表则是主要为了解决哈希冲突而存在的。
 HashMap 的做法是用链表和红黑树存储相同 hash 值的 value。当 hash 冲突的个数比较少时，使用链表否则使用红黑树。</p>
@@ -216,7 +219,7 @@ ArrayList 具有自动增加底层数组容量的能力，当数组容量不足�
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/</guid>
-            <pubDate>Tue, 20 Feb 2024 09:08:29 GMT</pubDate>
+            <pubDate>Wed, 21 Feb 2024 09:31:50 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -230,6 +233,10 @@ ArrayList 具有自动增加底层数组容量的能力，当数组容量不足�
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2024/2/21</td>
+<td><a href="./2.html#_2-21">什么是散列表？</a></td>
+</tr>
 <tr>
 <td>2024/2/20</td>
 <td><a href="./2.html#_2-20">HashMap 是怎么解决 hash 冲突的？</a></td>
