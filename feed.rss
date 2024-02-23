@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Wed, 21 Feb 2024 09:32:40 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 23 Feb 2024 09:02:25 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,8 +17,21 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/2.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/2.html</guid>
-            <pubDate>Wed, 21 Feb 2024 09:31:50 GMT</pubDate>
-            <content:encoded><![CDATA[<h2 id="_2-21" tabindex="-1">2-21 <a class="header-anchor" href="#_2-21" aria-label="Permalink to &quot;2-21&quot;">&ZeroWidthSpace;</a></h2>
+            <pubDate>Fri, 23 Feb 2024 09:01:37 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="_2-23" tabindex="-1">2-23 <a class="header-anchor" href="#_2-23" aria-label="Permalink to &quot;2-23&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="怎么确保一个集合不能被修改" tabindex="-1">怎么确保一个集合不能被修改？ <a class="header-anchor" href="#怎么确保一个集合不能被修改" aria-label="Permalink to &quot;怎么确保一个集合不能被修改？&quot;">&ZeroWidthSpace;</a></h3>
+<p>可以使用 <code>Collections.unmodifiableList()</code> 方法来确保一个集合不能被修改。</p>
+<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">List&#x3C;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">String</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">> list </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ArrayList&#x3C;>();</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">list.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">add</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"a"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">list.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">add</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"b"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">list.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">add</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"c"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">List&#x3C;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">String</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">> unmodifiableList </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Collections.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">unmodifiableList</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(list);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">unmodifiableList.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">add</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"d"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// 运行时抛出 Java. lang. UnsupportedOperationException 异常。</span></span></code></pre>
+</div><h2 id="_2-22" tabindex="-1">2-22 <a class="header-anchor" href="#_2-22" aria-label="Permalink to &quot;2-22&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="iterator-是什么" tabindex="-1">Iterator 是什么？ <a class="header-anchor" href="#iterator-是什么" aria-label="Permalink to &quot;Iterator 是什么？&quot;">&ZeroWidthSpace;</a></h3>
+<p>Iterator 是 JAVA 集合框架中的迭代器接口，它是一个对象，它可以遍历并选择集合中的元素。迭代器取代了 JAVA 集合框架中的 Enumeration，迭代器允许调用者在迭代过程中移除元素。</p>
+<h2 id="_2-21" tabindex="-1">2-21 <a class="header-anchor" href="#_2-21" aria-label="Permalink to &quot;2-21&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="什么是散列表" tabindex="-1">什么是散列表？ <a class="header-anchor" href="#什么是散列表" aria-label="Permalink to &quot;什么是散列表？&quot;">&ZeroWidthSpace;</a></h3>
 <p>散列表（Hash table，也叫哈希表），是根据关键码值（Key value）而直接进行访问的数据结构。也就是说，它通过把关键码值映射到表中一个位置来访问记录，以加快查找的速度。</p>
 <h2 id="_2-20" tabindex="-1">2-20 <a class="header-anchor" href="#_2-20" aria-label="Permalink to &quot;2-20&quot;">&ZeroWidthSpace;</a></h2>
@@ -219,7 +232,7 @@ ArrayList 具有自动增加底层数组容量的能力，当数组容量不足�
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/</guid>
-            <pubDate>Wed, 21 Feb 2024 09:31:50 GMT</pubDate>
+            <pubDate>Fri, 23 Feb 2024 09:01:37 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -233,6 +246,14 @@ ArrayList 具有自动增加底层数组容量的能力，当数组容量不足�
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2024/2/23</td>
+<td><a href="./2.html#_2-23">怎么确保一个集合不能被修改？</a></td>
+</tr>
+<tr>
+<td>2024/2/22</td>
+<td><a href="./2.html#_2-22">Iterator 是什么？</a></td>
+</tr>
 <tr>
 <td>2024/2/21</td>
 <td><a href="./2.html#_2-21">什么是散列表？</a></td>
