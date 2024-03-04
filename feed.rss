@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Fri, 23 Feb 2024 09:02:25 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 04 Mar 2024 03:03:04 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,8 +17,48 @@
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/2.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/2.html</guid>
-            <pubDate>Fri, 23 Feb 2024 09:01:37 GMT</pubDate>
-            <content:encoded><![CDATA[<h2 id="_2-23" tabindex="-1">2-23 <a class="header-anchor" href="#_2-23" aria-label="Permalink to &quot;2-23&quot;">&ZeroWidthSpace;</a></h2>
+            <pubDate>Mon, 04 Mar 2024 03:01:56 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="_2-29" tabindex="-1">2-29 <a class="header-anchor" href="#_2-29" aria-label="Permalink to &quot;2-29&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="mybatis-如何将查询结果封装为对象" tabindex="-1">Mybatis 如何将查询结果封装为对象？ <a class="header-anchor" href="#mybatis-如何将查询结果封装为对象" aria-label="Permalink to &quot;Mybatis 如何将查询结果封装为对象？&quot;">&ZeroWidthSpace;</a></h3>
+<p>Mybatis 有两种映射形式，第一种是使用``标签，逐一定义数据库列名和对象属性名之间的映射关系。 第二种是使用sql列的别名功能，将列的别名书写为对象属性名。</p>
+<p>有了列名与属性名的映射关系后，Mybatis通过反射创建对象，同时使用反射给对象的属性逐一赋值并返回，那些找不到映射关系的属性，是无法完成赋值的。</p>
+<h2 id="_2-28" tabindex="-1">2-28 <a class="header-anchor" href="#_2-28" aria-label="Permalink to &quot;2-28&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="dao-接口的工作原理是什么" tabindex="-1">Dao 接口的工作原理是什么 <a class="header-anchor" href="#dao-接口的工作原理是什么" aria-label="Permalink to &quot;Dao 接口的工作原理是什么&quot;">&ZeroWidthSpace;</a></h3>
+<p>Dao 接口即 Mapper 接口，接口的全限名，就是映射文件中的namespace的值；接口的方法名，就是映射文件中 Mapper 的 Statement 的 id 值；
+接口方法内的参数，就是传递给 sql 的参数。</p>
+<p>Mapper 接口是没有实现类的，当调用接口方法时，接口全限名+方法名拼接字符串作为key值，可唯一定位一个 MapperStatement。
+在 Mybatis 中每、、、标签，都会被解析为一个 MapperStatement 对象。</p>
+<h2 id="_2-27" tabindex="-1">2-27 <a class="header-anchor" href="#_2-27" aria-label="Permalink to &quot;2-27&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="mybatis-查询时当实体类中的属性名和表中的字段名不一样-怎么办" tabindex="-1">Mybatis 查询时当实体类中的属性名和表中的字段名不一样，怎么办？ <a class="header-anchor" href="#mybatis-查询时当实体类中的属性名和表中的字段名不一样-怎么办" aria-label="Permalink to &quot;Mybatis 查询时当实体类中的属性名和表中的字段名不一样，怎么办？&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li>通过在查询的sql语句中定义字段名的别名，让字段名的别名和实体类的属性名一致。</li>
+<li>通过 `` 来映射字段名和实体类属性名的一一对应的关系。</li>
+</ol>
+<h2 id="_2-26" tabindex="-1">2-26 <a class="header-anchor" href="#_2-26" aria-label="Permalink to &quot;2-26&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="mybatis-中-和-的区别是什么" tabindex="-1">Mybatis 中 <code>#{}</code> 和 <code>${}</code> 的区别是什么？ <a class="header-anchor" href="#mybatis-中-和-的区别是什么" aria-label="Permalink to &quot;Mybatis 中 `#{}` 和 `${}` 的区别是什么？&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li><code>#{}</code> 是预编译处理，可以防止 SQL 注入。</li>
+<li><code>${}</code> 是字符串替换，不会进行预编译处理，可能会导致 SQL 注入。</li>
+</ul>
+<div class="language-xml vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">xml</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">select</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"selectBlog"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> resultType</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Blog"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  &#x3C;!-- Mybatis在处理#{}时，会将sql中的#{}替换为?号，调用PreparedStatement的set方法来赋值； --></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  select * from blog where id = #{id}</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">select</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span></code></pre>
+</div><div class="language-xml vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">xml</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">select</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"selectBlog"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> resultType</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Blog"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  &#x3C;!-- Mybatis在处理${}时，就是把${}替换成变量的值。--></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  select * from blog where id = ${id}</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">select</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span></code></pre>
+</div><h2 id="_2-25" tabindex="-1">2-25 <a class="header-anchor" href="#_2-25" aria-label="Permalink to &quot;2-25&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是-orm" tabindex="-1">什么是 ORM？ <a class="header-anchor" href="#什么是-orm" aria-label="Permalink to &quot;什么是 ORM？&quot;">&ZeroWidthSpace;</a></h3>
+<p>ORM（Object-Relational Mapping）对象关系映射，是一种数据持久化技术。它在对象模型和关系型数据库直接建立起对应关系，并且提供一种机制，
+通过JavaBean对象去操作数据库表的数据。 MyBatis通过简单的XML或者注解的方式进行配置和原始映射，将实体类和SQL语句之间建立映射关系，
+是一种半自动（之所以说是半自动，因为我们要自己写SQL）的ORM实现。</p>
+<h2 id="_2-24" tabindex="-1">2-24 <a class="header-anchor" href="#_2-24" aria-label="Permalink to &quot;2-24&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是数据持久化" tabindex="-1">什么是数据持久化？ <a class="header-anchor" href="#什么是数据持久化" aria-label="Permalink to &quot;什么是数据持久化？&quot;">&ZeroWidthSpace;</a></h3>
+<p>数据持久化是将内存中的数据模型转换为存储模型，以及将存储模型转换为内存中的数据模型的统称。
+例如，文件的存储、数据的读取等都是数据持久化操作。数据模型可以是任何数据结构或对象的模型、XML、二进制流等。
+当我们编写应用程序操作数据库，对表数据进行增删改查的操作的时候就是数据持久化的操作。</p>
+<h2 id="_2-23" tabindex="-1">2-23 <a class="header-anchor" href="#_2-23" aria-label="Permalink to &quot;2-23&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="怎么确保一个集合不能被修改" tabindex="-1">怎么确保一个集合不能被修改？ <a class="header-anchor" href="#怎么确保一个集合不能被修改" aria-label="Permalink to &quot;怎么确保一个集合不能被修改？&quot;">&ZeroWidthSpace;</a></h3>
 <p>可以使用 <code>Collections.unmodifiableList()</code> 方法来确保一个集合不能被修改。</p>
 <div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">List&#x3C;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">String</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">> list </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ArrayList&#x3C;>();</span></span>
@@ -229,10 +269,41 @@ ArrayList 具有自动增加底层数组容量的能力，当数组容量不足�
 ]]></content:encoded>
         </item>
         <item>
+            <link>https://www.imufeng.cn/question-by-day/2024/3.html</link>
+            <guid>https://www.imufeng.cn/question-by-day/2024/3.html</guid>
+            <pubDate>Mon, 04 Mar 2024 03:01:56 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="_3-3" tabindex="-1">3-3 <a class="header-anchor" href="#_3-3" aria-label="Permalink to &quot;3-3&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="请描述-mybatis-的动态-sql。" tabindex="-1">请描述 Mybatis 的动态 SQL。 <a class="header-anchor" href="#请描述-mybatis-的动态-sql。" aria-label="Permalink to &quot;请描述 Mybatis 的动态 SQL。&quot;">&ZeroWidthSpace;</a></h3>
+<p>Mybatis 的动态 SQL 是通过<code>标签来实现的，</code>标签可以根据条件来动态拼接 SQL 语句。</p>
+<ul>
+<li>if 标签：判断条件是否成立，成立则拼接 SQL 语句。</li>
+<li>choose 标签：类似于 Java 中的 switch 语句，根据条件来选择拼接 SQL 语句。</li>
+<li>when 标签：配合 choose 标签使用，表示条件成立时拼接 SQL 语句。</li>
+<li>otherwise 标签：配合 choose 标签使用，表示条件不成立时拼接 SQL 语句。</li>
+<li>trim 标签：去除 SQL 语句中的多余字符。</li>
+<li>where 标签：配合 trim 标签使用，去除 SQL 语句中的多余字符。</li>
+<li>set 标签：配合 trim 标签使用，去除 SQL 语句中的多余字符。</li>
+<li>foreach 标签：遍历集合，拼接 SQL 语句。</li>
+</ul>
+<h2 id="_3-2" tabindex="-1">3-2 <a class="header-anchor" href="#_3-2" aria-label="Permalink to &quot;3-2&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="请描述-mybatis-的缓存机制。" tabindex="-1">请描述 Mybatis 的缓存机制。 <a class="header-anchor" href="#请描述-mybatis-的缓存机制。" aria-label="Permalink to &quot;请描述 Mybatis 的缓存机制。&quot;">&ZeroWidthSpace;</a></h3>
+<p>Mybatis 的缓存机制分为一级缓存和二级缓存。</p>
+<p><strong>一级缓存</strong> 是 SqlSession 级别的缓存，当调用 SqlSession 的查询方法时，Mybatis 会将查询结果放入到缓存中，
+当再次查询相同的数据时，直接从缓存中获取，不会再次查询数据库。</p>
+<p><strong>二级缓存</strong> 是 Mapper 级别的缓存，多个 SqlSession 共享同一个 Mapper 的二级缓存，当调用 SqlSession 的查询方法时，
+Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时，直接从缓存中获取，不会再次查询数据库。</p>
+<h2 id="_3-1" tabindex="-1">3-1 <a class="header-anchor" href="#_3-1" aria-label="Permalink to &quot;3-1&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="mybatis-实现一对一有几种方式" tabindex="-1">MyBatis 实现一对一有几种方式? <a class="header-anchor" href="#mybatis-实现一对一有几种方式" aria-label="Permalink to &quot;MyBatis 实现一对一有几种方式?&quot;">&ZeroWidthSpace;</a></h3>
+<p>有联合查询和嵌套查询。</p>
+<p><strong>联合查询</strong> 是几个表联合查询,只查询一次, 通过在resultMap里面配置association节点配置一对一的类就可以完成；</p>
+<p><strong>嵌套查询</strong> 是先查一个表，根据这个表里面的结果的 外键 id，去再另外一个表里面查询数据,也是通过 association 配置，但另外一个表的查询通过 select 属性配置。</p>
+]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/</guid>
-            <pubDate>Fri, 23 Feb 2024 09:01:37 GMT</pubDate>
+            <pubDate>Mon, 04 Mar 2024 03:01:56 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -246,6 +317,42 @@ ArrayList 具有自动增加底层数组容量的能力，当数组容量不足�
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2024/3/3</td>
+<td><a href="./3.html#_3-3">请描述 Mybatis 的动态 SQL。</a></td>
+</tr>
+<tr>
+<td>2024/3/2</td>
+<td><a href="./3.html#_3-2">请描述 Mybatis 的缓存机制。</a></td>
+</tr>
+<tr>
+<td>2024/3/1</td>
+<td><a href="./3.html#_3-1">MyBatis 实现一对一有几种方式?</a></td>
+</tr>
+<tr>
+<td>2024/2/29</td>
+<td><a href="./2.html#_2-29">Mybatis 如何将查询结果封装为对象？</a></td>
+</tr>
+<tr>
+<td>2024/2/28</td>
+<td><a href="./2.html#_2-28">Dao 接口的工作原理是什么</a></td>
+</tr>
+<tr>
+<td>2024/2/27</td>
+<td><a href="./2.html#_2-27">Mybatis 查询时当实体类中的属性名和表中的字段名不一样，怎么办？</a></td>
+</tr>
+<tr>
+<td>2024/2/26</td>
+<td><a href="./2.html#_2-26">Mybatis 中 <code>#{}</code> 和 <code>${}</code> 的区别是什么？</a></td>
+</tr>
+<tr>
+<td>2024/2/25</td>
+<td><a href="./2.html#_2-25">什么是 ORM？</a></td>
+</tr>
+<tr>
+<td>2024/2/24</td>
+<td><a href="./2.html#_2-24">什么是数据持久化？</a></td>
+</tr>
 <tr>
 <td>2024/2/23</td>
 <td><a href="./2.html#_2-23">怎么确保一个集合不能被修改？</a></td>
@@ -4184,11 +4291,6 @@ Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来�
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/12.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/12.html</guid>
-            <pubDate>Sat, 07 Oct 2023 09:47:18 GMT</pubDate>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/question-by-day/2024/3.html</link>
-            <guid>https://www.imufeng.cn/question-by-day/2024/3.html</guid>
             <pubDate>Sat, 07 Oct 2023 09:47:18 GMT</pubDate>
         </item>
         <item>
