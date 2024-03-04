@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Mon, 04 Mar 2024 03:03:04 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 04 Mar 2024 03:06:58 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -13,7 +13,7 @@
             <url>https://www.imufeng.cn/logo.svg</url>
             <link>https://www.imufeng.cn</link>
         </image>
-        <copyright>Mblog © 2021-2023 Created by 沐风</copyright>
+        <copyright>Mblog © 2021-2024 Created by 沐风</copyright>
         <item>
             <link>https://www.imufeng.cn/question-by-day/2024/2.html</link>
             <guid>https://www.imufeng.cn/question-by-day/2024/2.html</guid>
