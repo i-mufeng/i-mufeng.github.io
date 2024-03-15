@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Fri, 15 Mar 2024 01:52:52 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 15 Mar 2024 02:49:40 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -17,7 +17,7 @@
         <item>
             <link>https://www.imufeng.cn/friend-link-list/</link>
             <guid>https://www.imufeng.cn/friend-link-list/</guid>
-            <pubDate>Fri, 15 Mar 2024 01:48:11 GMT</pubDate>
+            <pubDate>Fri, 15 Mar 2024 02:48:52 GMT</pubDate>
             <content:encoded><![CDATA[<details class="details custom-block"><summary>友链申请格式</summary>
 <ul>
 <li>
