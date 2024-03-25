@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Mon, 25 Mar 2024 08:20:20 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 25 Mar 2024 08:26:09 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -14,6 +14,157 @@
             <link>https://www.imufeng.cn</link>
         </image>
         <copyright>Mblog © 2021-2024 Created by 沐风</copyright>
+        <item>
+            <link>https://www.imufeng.cn/full-stack/</link>
+            <guid>https://www.imufeng.cn/full-stack/</guid>
+            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="一、后端技术分享" tabindex="-1">一、后端技术分享 <a class="header-anchor" href="#一、后端技术分享" aria-label="Permalink to &quot;一、后端技术分享&quot;">&ZeroWidthSpace;</a></h2>
+<h2 id="二、前端技术分享" tabindex="-1">二、前端技术分享 <a class="header-anchor" href="#二、前端技术分享" aria-label="Permalink to &quot;二、前端技术分享&quot;">&ZeroWidthSpace;</a></h2>
+<h2 id="三、系统运维交流" tabindex="-1">三、系统运维交流 <a class="header-anchor" href="#三、系统运维交流" aria-label="Permalink to &quot;三、系统运维交流&quot;">&ZeroWidthSpace;</a></h2>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[算法和数据结构]]></title>
+            <link>https://www.imufeng.cn/computer-basics/data-structure/</link>
+            <guid>https://www.imufeng.cn/computer-basics/data-structure/</guid>
+            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="算法和数据结构" tabindex="-1">算法和数据结构 <a class="header-anchor" href="#算法和数据结构" aria-label="Permalink to &quot;算法和数据结构&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[计算机网络]]></title>
+            <link>https://www.imufeng.cn/computer-basics/network/</link>
+            <guid>https://www.imufeng.cn/computer-basics/network/</guid>
+            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="计算机网络" tabindex="-1">计算机网络 <a class="header-anchor" href="#计算机网络" aria-label="Permalink to &quot;计算机网络&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[操作系统]]></title>
+            <link>https://www.imufeng.cn/computer-basics/operating-system/</link>
+            <guid>https://www.imufeng.cn/computer-basics/operating-system/</guid>
+            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="操作系统" tabindex="-1">操作系统 <a class="header-anchor" href="#操作系统" aria-label="Permalink to &quot;操作系统&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[数据库]]></title>
+            <link>https://www.imufeng.cn/full-stack/database/</link>
+            <guid>https://www.imufeng.cn/full-stack/database/</guid>
+            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="数据库" tabindex="-1">数据库 <a class="header-anchor" href="#数据库" aria-label="Permalink to &quot;数据库&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[前端笔记]]></title>
+            <link>https://www.imufeng.cn/full-stack/front-end/</link>
+            <guid>https://www.imufeng.cn/full-stack/front-end/</guid>
+            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="前端笔记" tabindex="-1">前端笔记 <a class="header-anchor" href="#前端笔记" aria-label="Permalink to &quot;前端笔记&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="css布局篇" tabindex="-1">css布局篇 <a class="header-anchor" href="#css布局篇" aria-label="Permalink to &quot;css布局篇&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li><a href="./flex.html">浅学 Flex 流式布局</a></li>
+</ul>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Java]]></title>
+            <link>https://www.imufeng.cn/full-stack/java/</link>
+            <guid>https://www.imufeng.cn/full-stack/java/</guid>
+            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="java" tabindex="-1">Java <a class="header-anchor" href="#java" aria-label="Permalink to &quot;Java&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="面向对象" tabindex="-1">面向对象 <a class="header-anchor" href="#面向对象" aria-label="Permalink to &quot;面向对象&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li><a href="./oop/abstract.html">抽象类和抽象方法</a></li>
+</ul>
+<h3 id="重学-java-设计模式" tabindex="-1">重学 JAVA 设计模式 <a class="header-anchor" href="#重学-java-设计模式" aria-label="Permalink to &quot;重学 JAVA 设计模式&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li><a href="./design-patterns/">重学 JAVA 设计模式</a></li>
+</ul>
+<h3 id="java-特性分享" tabindex="-1">JAVA 特性分享 <a class="header-anchor" href="#java-特性分享" aria-label="Permalink to &quot;JAVA 特性分享&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li><a href="./characteristic/functional.html">Java8新特性详解</a></li>
+</ul>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[其他]]></title>
+            <link>https://www.imufeng.cn/full-stack/other/</link>
+            <guid>https://www.imufeng.cn/full-stack/other/</guid>
+            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="其他" tabindex="-1">其他 <a class="header-anchor" href="#其他" aria-label="Permalink to &quot;其他&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
+<ul>
+<li><a href="./xpath.html">XPATH 学习笔记</a></li>
+<li><a href="./redis.html">Redis 自学笔记</a></li>
+</ul>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Rust]]></title>
+            <link>https://www.imufeng.cn/full-stack/rust/</link>
+            <guid>https://www.imufeng.cn/full-stack/rust/</guid>
+            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="rust" tabindex="-1">Rust <a class="header-anchor" href="#rust" aria-label="Permalink to &quot;Rust&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[每日一题]]></title>
+            <link>https://www.imufeng.cn/interview/question-by-day/</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/</guid>
+            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <description><![CDATA[每天至少一道全栈题目分享，范围不限。]]></description>
+            <content:encoded><![CDATA[<h1 id="每日一题" tabindex="-1">每日一题 <a class="header-anchor" href="#每日一题" aria-label="Permalink to &quot;每日一题&quot;">&ZeroWidthSpace;</a></h1>
+<blockquote>
+<p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
+</blockquote>
+<ul>
+<li><a href="./2023/">2023</a></li>
+<li><a href="./2024/">2024</a></li>
+</ul>
+]]></content:encoded>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/interview/skills/</link>
+            <guid>https://www.imufeng.cn/interview/skills/</guid>
+            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[生活随笔]]></title>
+            <link>https://www.imufeng.cn/notes/life-notes/</link>
+            <guid>https://www.imufeng.cn/notes/life-notes/</guid>
+            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="生活随笔" tabindex="-1">生活随笔 <a class="header-anchor" href="#生活随笔" aria-label="Permalink to &quot;生活随笔&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[读书笔记]]></title>
+            <link>https://www.imufeng.cn/notes/reading-notes/</link>
+            <guid>https://www.imufeng.cn/notes/reading-notes/</guid>
+            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="读书笔记" tabindex="-1">读书笔记 <a class="header-anchor" href="#读书笔记" aria-label="Permalink to &quot;读书笔记&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[科技周报]]></title>
+            <link>https://www.imufeng.cn/notes/technology-weekly/</link>
+            <guid>https://www.imufeng.cn/notes/technology-weekly/</guid>
+            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="科技周报" tabindex="-1">科技周报 <a class="header-anchor" href="#科技周报" aria-label="Permalink to &quot;科技周报&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[浅学Flex流式布局]]></title>
             <link>https://www.imufeng.cn/full-stack/front-end/flex.html</link>
@@ -5071,40 +5222,6 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[前端笔记]]></title>
-            <link>https://www.imufeng.cn/full-stack/front-end/</link>
-            <guid>https://www.imufeng.cn/full-stack/front-end/</guid>
-            <pubDate>Mon, 25 Mar 2024 07:49:17 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="前端笔记" tabindex="-1">前端笔记 <a class="header-anchor" href="#前端笔记" aria-label="Permalink to &quot;前端笔记&quot;">&ZeroWidthSpace;</a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="css布局篇" tabindex="-1">css布局篇 <a class="header-anchor" href="#css布局篇" aria-label="Permalink to &quot;css布局篇&quot;">&ZeroWidthSpace;</a></h3>
-<ul>
-<li><a href="./flex.html">浅学 Flex 流式布局</a></li>
-</ul>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Java]]></title>
-            <link>https://www.imufeng.cn/full-stack/java/</link>
-            <guid>https://www.imufeng.cn/full-stack/java/</guid>
-            <pubDate>Mon, 25 Mar 2024 07:49:17 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="java" tabindex="-1">Java <a class="header-anchor" href="#java" aria-label="Permalink to &quot;Java&quot;">&ZeroWidthSpace;</a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="面向对象" tabindex="-1">面向对象 <a class="header-anchor" href="#面向对象" aria-label="Permalink to &quot;面向对象&quot;">&ZeroWidthSpace;</a></h3>
-<ul>
-<li><a href="./oop/abstract.html">抽象类和抽象方法</a></li>
-</ul>
-<h3 id="重学-java-设计模式" tabindex="-1">重学 JAVA 设计模式 <a class="header-anchor" href="#重学-java-设计模式" aria-label="Permalink to &quot;重学 JAVA 设计模式&quot;">&ZeroWidthSpace;</a></h3>
-<ul>
-<li><a href="./design-patterns/">重学 JAVA 设计模式</a></li>
-</ul>
-<h3 id="java-特性分享" tabindex="-1">JAVA 特性分享 <a class="header-anchor" href="#java-特性分享" aria-label="Permalink to &quot;JAVA 特性分享&quot;">&ZeroWidthSpace;</a></h3>
-<ul>
-<li><a href="./characteristic/functional.html">Java8新特性详解</a></li>
-</ul>
-]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[重学JAVA设计模式]]></title>
             <link>https://www.imufeng.cn/full-stack/java/design-patterns/</link>
             <guid>https://www.imufeng.cn/full-stack/java/design-patterns/</guid>
@@ -5147,35 +5264,6 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
             <guid>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/singleton.html</guid>
             <pubDate>Mon, 25 Mar 2024 07:49:17 GMT</pubDate>
             <description><![CDATA[在一个较为复杂的继承链中，祖先类更具有一般性，作为派生其他类的基类而不糊将其作为用来构造实例。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[其他]]></title>
-            <link>https://www.imufeng.cn/full-stack/other/</link>
-            <guid>https://www.imufeng.cn/full-stack/other/</guid>
-            <pubDate>Tue, 19 Mar 2024 09:14:12 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="其他" tabindex="-1">其他 <a class="header-anchor" href="#其他" aria-label="Permalink to &quot;其他&quot;">&ZeroWidthSpace;</a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
-<ul>
-<li><a href="./xpath.html">XPATH 学习笔记</a></li>
-<li><a href="./redis.html">Redis 自学笔记</a></li>
-</ul>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[每日一题]]></title>
-            <link>https://www.imufeng.cn/interview/question-by-day/</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/</guid>
-            <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
-            <description><![CDATA[每天至少一道全栈题目分享，范围不限。]]></description>
-            <content:encoded><![CDATA[<h1 id="每日一题" tabindex="-1">每日一题 <a class="header-anchor" href="#每日一题" aria-label="Permalink to &quot;每日一题&quot;">&ZeroWidthSpace;</a></h1>
-<blockquote>
-<p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
-</blockquote>
-<ul>
-<li><a href="./2023/">2023</a></li>
-<li><a href="./2024/">2024</a></li>
-</ul>
-]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[每日一题 - 2023]]></title>
@@ -5654,85 +5742,6 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
 <h3 id="膜拜大佬" tabindex="-1">膜拜大佬 <a class="header-anchor" href="#膜拜大佬" aria-label="Permalink to &quot;膜拜大佬&quot;">&ZeroWidthSpace;</a></h3>
 <VPTeamMembers size="medium" :members="authoritys" /><h3 id="友链" tabindex="-1">友链 <a class="header-anchor" href="#友链" aria-label="Permalink to &quot;友链&quot;">&ZeroWidthSpace;</a></h3>
 <VPTeamMembers size="small" :members="friends" />]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[算法和数据结构]]></title>
-            <link>https://www.imufeng.cn/computer-basics/data-structure/</link>
-            <guid>https://www.imufeng.cn/computer-basics/data-structure/</guid>
-            <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="算法和数据结构" tabindex="-1">算法和数据结构 <a class="header-anchor" href="#算法和数据结构" aria-label="Permalink to &quot;算法和数据结构&quot;">&ZeroWidthSpace;</a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[计算机网络]]></title>
-            <link>https://www.imufeng.cn/computer-basics/network/</link>
-            <guid>https://www.imufeng.cn/computer-basics/network/</guid>
-            <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="计算机网络" tabindex="-1">计算机网络 <a class="header-anchor" href="#计算机网络" aria-label="Permalink to &quot;计算机网络&quot;">&ZeroWidthSpace;</a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[操作系统]]></title>
-            <link>https://www.imufeng.cn/computer-basics/operating-system/</link>
-            <guid>https://www.imufeng.cn/computer-basics/operating-system/</guid>
-            <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="操作系统" tabindex="-1">操作系统 <a class="header-anchor" href="#操作系统" aria-label="Permalink to &quot;操作系统&quot;">&ZeroWidthSpace;</a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[数据库]]></title>
-            <link>https://www.imufeng.cn/full-stack/database/</link>
-            <guid>https://www.imufeng.cn/full-stack/database/</guid>
-            <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="数据库" tabindex="-1">数据库 <a class="header-anchor" href="#数据库" aria-label="Permalink to &quot;数据库&quot;">&ZeroWidthSpace;</a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Rust]]></title>
-            <link>https://www.imufeng.cn/full-stack/rust/</link>
-            <guid>https://www.imufeng.cn/full-stack/rust/</guid>
-            <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="rust" tabindex="-1">Rust <a class="header-anchor" href="#rust" aria-label="Permalink to &quot;Rust&quot;">&ZeroWidthSpace;</a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
-]]></content:encoded>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/interview/skills/</link>
-            <guid>https://www.imufeng.cn/interview/skills/</guid>
-            <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
-            <content:encoded><![CDATA[<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[生活随笔]]></title>
-            <link>https://www.imufeng.cn/notes/life-notes/</link>
-            <guid>https://www.imufeng.cn/notes/life-notes/</guid>
-            <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="生活随笔" tabindex="-1">生活随笔 <a class="header-anchor" href="#生活随笔" aria-label="Permalink to &quot;生活随笔&quot;">&ZeroWidthSpace;</a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[读书笔记]]></title>
-            <link>https://www.imufeng.cn/notes/reading-notes/</link>
-            <guid>https://www.imufeng.cn/notes/reading-notes/</guid>
-            <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="读书笔记" tabindex="-1">读书笔记 <a class="header-anchor" href="#读书笔记" aria-label="Permalink to &quot;读书笔记&quot;">&ZeroWidthSpace;</a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[科技周报]]></title>
-            <link>https://www.imufeng.cn/notes/technology-weekly/</link>
-            <guid>https://www.imufeng.cn/notes/technology-weekly/</guid>
-            <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="科技周报" tabindex="-1">科技周报 <a class="header-anchor" href="#科技周报" aria-label="Permalink to &quot;科技周报&quot;">&ZeroWidthSpace;</a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
-]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Linux企业级运维]]></title>
@@ -6359,15 +6368,6 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
 <p>注：构建服务所需的包可在<a href="https://download.csdn.net/download/qq_45417634/13208956" target="_blank" rel="noreferrer">server_source_2020.iso </a>请自行下载，您也可以在所需安装包官网下载
 本地源配置、防火墙、selinux等是linux较为基础的内容，不再赘述。
 本文均为原创，如需与博主交流可email至mufeng.yu@qq.com</p>
-]]></content:encoded>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/full-stack/</link>
-            <guid>https://www.imufeng.cn/full-stack/</guid>
-            <pubDate>Wed, 11 Oct 2023 10:42:02 GMT</pubDate>
-            <content:encoded><![CDATA[<h2 id="一、后端技术分享" tabindex="-1">一、后端技术分享 <a class="header-anchor" href="#一、后端技术分享" aria-label="Permalink to &quot;一、后端技术分享&quot;">&ZeroWidthSpace;</a></h2>
-<h2 id="二、前端技术分享" tabindex="-1">二、前端技术分享 <a class="header-anchor" href="#二、前端技术分享" aria-label="Permalink to &quot;二、前端技术分享&quot;">&ZeroWidthSpace;</a></h2>
-<h2 id="三、系统运维交流" tabindex="-1">三、系统运维交流 <a class="header-anchor" href="#三、系统运维交流" aria-label="Permalink to &quot;三、系统运维交流&quot;">&ZeroWidthSpace;</a></h2>
 ]]></content:encoded>
         </item>
         <item>
