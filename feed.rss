@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Mon, 25 Mar 2024 08:26:09 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 26 Mar 2024 01:17:01 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -167,8 +167,8 @@
         </item>
         <item>
             <title><![CDATA[浅学Flex流式布局]]></title>
-            <link>https://www.imufeng.cn/full-stack/front-end/flex.html</link>
-            <guid>https://www.imufeng.cn/full-stack/front-end/flex.html</guid>
+            <link>https://www.imufeng.cn/full-stack/front-end/flex</link>
+            <guid>https://www.imufeng.cn/full-stack/front-end/flex</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <description><![CDATA[Flex（Flexible Box）弹性布局，用于为盒装模型提供较大的灵活性。能够灵活，充分利用浏览器的空间，减少了多端适配的难度和成本。]]></description>
             <content:encoded><![CDATA[<h1 id="浅学-flex-流式布局" tabindex="-1">浅学 Flex 流式布局 <a class="header-anchor" href="#浅学-flex-流式布局" aria-label="Permalink to &quot;浅学 Flex 流式布局&quot;">&ZeroWidthSpace;</a></h1>
@@ -392,8 +392,8 @@
         </item>
         <item>
             <title><![CDATA[Redis自学笔记]]></title>
-            <link>https://www.imufeng.cn/full-stack/other/redis.html</link>
-            <guid>https://www.imufeng.cn/full-stack/other/redis.html</guid>
+            <link>https://www.imufeng.cn/full-stack/other/redis</link>
+            <guid>https://www.imufeng.cn/full-stack/other/redis</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <description><![CDATA[Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。]]></description>
             <content:encoded><![CDATA[<h1 id="redis-自学笔记" tabindex="-1">Redis 自学笔记 <a class="header-anchor" href="#redis-自学笔记" aria-label="Permalink to &quot;Redis 自学笔记&quot;">&ZeroWidthSpace;</a></h1>
@@ -1005,8 +1005,8 @@
         </item>
         <item>
             <title><![CDATA[XPATH自学笔记]]></title>
-            <link>https://www.imufeng.cn/full-stack/other/xpath.html</link>
-            <guid>https://www.imufeng.cn/full-stack/other/xpath.html</guid>
+            <link>https://www.imufeng.cn/full-stack/other/xpath</link>
+            <guid>https://www.imufeng.cn/full-stack/other/xpath</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <description><![CDATA[XPath 是一门在 XML 文档中查找信息的语言，用于在 XML 文档中通过元素和属性进行导航。]]></description>
             <content:encoded><![CDATA[<h1 id="xpath自学笔记" tabindex="-1">XPATH自学笔记 <a class="header-anchor" href="#xpath自学笔记" aria-label="Permalink to &quot;XPATH自学笔记&quot;">&ZeroWidthSpace;</a></h1>
@@ -1655,8 +1655,8 @@
         </item>
         <item>
             <title><![CDATA[泛域名证书申请以及部署]]></title>
-            <link>https://www.imufeng.cn/training/linux/acme-sh.html</link>
-            <guid>https://www.imufeng.cn/training/linux/acme-sh.html</guid>
+            <link>https://www.imufeng.cn/training/linux/acme-sh</link>
+            <guid>https://www.imufeng.cn/training/linux/acme-sh</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <description><![CDATA[使用 acme.sh 部署 Let's Encrypt 泛域名证书。]]></description>
             <content:encoded><![CDATA[<h1 id="泛域名证书申请以及部署" tabindex="-1">泛域名证书申请以及部署 <a class="header-anchor" href="#泛域名证书申请以及部署" aria-label="Permalink to &quot;泛域名证书申请以及部署&quot;">&ZeroWidthSpace;</a></h1>
@@ -1793,8 +1793,8 @@
         </item>
         <item>
             <title><![CDATA[基于DockerCompose的WordPress环境部署（附配置优化）]]></title>
-            <link>https://www.imufeng.cn/training/linux/wordpress-by-docker-compose.html</link>
-            <guid>https://www.imufeng.cn/training/linux/wordpress-by-docker-compose.html</guid>
+            <link>https://www.imufeng.cn/training/linux/wordpress-by-docker-compose</link>
+            <guid>https://www.imufeng.cn/training/linux/wordpress-by-docker-compose</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <description><![CDATA[本文将带你快速了解 docker compose 安装部署 WordPress。]]></description>
             <content:encoded><![CDATA[<h1 id="基于dockercompose的wordpress环境部署-附配置优化" tabindex="-1">基于DockerCompose的WordPress环境部署（附配置优化） <a class="header-anchor" href="#基于dockercompose的wordpress环境部署-附配置优化" aria-label="Permalink to &quot;基于DockerCompose的WordPress环境部署（附配置优化）&quot;">&ZeroWidthSpace;</a></h1>
@@ -1933,8 +1933,8 @@
         </item>
         <item>
             <title><![CDATA[Java8新特性详解]]></title>
-            <link>https://www.imufeng.cn/full-stack/java/characteristic/functional.html</link>
-            <guid>https://www.imufeng.cn/full-stack/java/characteristic/functional.html</guid>
+            <link>https://www.imufeng.cn/full-stack/java/characteristic/functional</link>
+            <guid>https://www.imufeng.cn/full-stack/java/characteristic/functional</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <description><![CDATA[Lambda 表达式、Stream 流、Optional 类操作分享。]]></description>
             <content:encoded><![CDATA[<h1 id="java8-新特性详解" tabindex="-1">Java8 新特性详解 <a class="header-anchor" href="#java8-新特性详解" aria-label="Permalink to &quot;Java8 新特性详解&quot;">&ZeroWidthSpace;</a></h1>
@@ -2086,8 +2086,8 @@
         </item>
         <item>
             <title><![CDATA[抽象类和抽象方法]]></title>
-            <link>https://www.imufeng.cn/full-stack/java/oop/abstract.html</link>
-            <guid>https://www.imufeng.cn/full-stack/java/oop/abstract.html</guid>
+            <link>https://www.imufeng.cn/full-stack/java/oop/abstract</link>
+            <guid>https://www.imufeng.cn/full-stack/java/oop/abstract</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <description><![CDATA[在一个较为复杂的继承链中，祖先类更具有一般性，作为派生其他类的基类而不糊将其作为用来构造实例。]]></description>
             <content:encoded><![CDATA[<h1 id="抽象类和抽象方法" tabindex="-1">抽象类和抽象方法 <a class="header-anchor" href="#抽象类和抽象方法" aria-label="Permalink to &quot;抽象类和抽象方法&quot;">&ZeroWidthSpace;</a></h1>
@@ -2145,8 +2145,8 @@
 ]]></content:encoded>
         </item>
         <item>
-            <link>https://www.imufeng.cn/interview/question-by-day/2023/10.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2023/10.html</guid>
+            <link>https://www.imufeng.cn/interview/question-by-day/2023/10</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2023/10</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <description><![CDATA[
 
@@ -2947,8 +2947,8 @@ Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来�
 ]]></content:encoded>
         </item>
         <item>
-            <link>https://www.imufeng.cn/interview/question-by-day/2023/11.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2023/11.html</guid>
+            <link>https://www.imufeng.cn/interview/question-by-day/2023/11</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2023/11</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <description><![CDATA[## 11-30 
 
@@ -3631,8 +3631,8 @@ ScheduledThreadPoolExecutor。</p>
 ]]></content:encoded>
         </item>
         <item>
-            <link>https://www.imufeng.cn/interview/question-by-day/2023/12.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2023/12.html</guid>
+            <link>https://www.imufeng.cn/interview/question-by-day/2023/12</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2023/12</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <content:encoded><![CDATA[<h2 id="_12-31" tabindex="-1">12-31 <a class="header-anchor" href="#_12-31" aria-label="Permalink to &quot;12-31&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="spring-boot-如何配置多个数据源" tabindex="-1">Spring Boot 如何配置多个数据源？ <a class="header-anchor" href="#spring-boot-如何配置多个数据源" aria-label="Permalink to &quot;Spring Boot 如何配置多个数据源？&quot;">&ZeroWidthSpace;</a></h3>
@@ -3902,8 +3902,8 @@ ScheduledThreadPoolExecutor。</p>
 </div>]]></content:encoded>
         </item>
         <item>
-            <link>https://www.imufeng.cn/interview/question-by-day/2023/9.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2023/9.html</guid>
+            <link>https://www.imufeng.cn/interview/question-by-day/2023/9</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2023/9</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <content:encoded><![CDATA[<h2 id="_9-30" tabindex="-1">9-30 <a class="header-anchor" href="#_9-30" aria-label="Permalink to &quot;9-30&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="java中的重载和重写有什么区别" tabindex="-1">Java中的重载和重写有什么区别？ <a class="header-anchor" href="#java中的重载和重写有什么区别" aria-label="Permalink to &quot;Java中的重载和重写有什么区别？&quot;">&ZeroWidthSpace;</a></h3>
@@ -3981,8 +3981,8 @@ ScheduledThreadPoolExecutor。</p>
 ]]></content:encoded>
         </item>
         <item>
-            <link>https://www.imufeng.cn/interview/question-by-day/2024/1.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/1.html</guid>
+            <link>https://www.imufeng.cn/interview/question-by-day/2024/1</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2024/1</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <content:encoded><![CDATA[<h2 id="_1-31" tabindex="-1">1-31 <a class="header-anchor" href="#_1-31" aria-label="Permalink to &quot;1-31&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="什么是同步" tabindex="-1">什么是同步？ <a class="header-anchor" href="#什么是同步" aria-label="Permalink to &quot;什么是同步？&quot;">&ZeroWidthSpace;</a></h3>
@@ -4270,8 +4270,8 @@ Java 反射机制是在运行状态中，对于任意一个类，都能够知道
             <enclosure url="https://www.pdai.tech/images/develop/network/dev-network-protocol-1.png" length="0" type="image/png"/>
         </item>
         <item>
-            <link>https://www.imufeng.cn/interview/question-by-day/2024/2.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/2.html</guid>
+            <link>https://www.imufeng.cn/interview/question-by-day/2024/2</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2024/2</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <content:encoded><![CDATA[<h2 id="_2-29" tabindex="-1">2-29 <a class="header-anchor" href="#_2-29" aria-label="Permalink to &quot;2-29&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="mybatis-如何将查询结果封装为对象" tabindex="-1">Mybatis 如何将查询结果封装为对象？ <a class="header-anchor" href="#mybatis-如何将查询结果封装为对象" aria-label="Permalink to &quot;Mybatis 如何将查询结果封装为对象？&quot;">&ZeroWidthSpace;</a></h3>
@@ -4525,8 +4525,8 @@ ArrayList 具有自动增加底层数组容量的能力，当数组容量不足�
         </item>
         <item>
             <title><![CDATA[每日一题]]></title>
-            <link>https://www.imufeng.cn/interview/question-by-day/2024/3.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/3.html</guid>
+            <link>https://www.imufeng.cn/interview/question-by-day/2024/3</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2024/3</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="每日一题" tabindex="-1">每日一题 <a class="header-anchor" href="#每日一题" aria-label="Permalink to &quot;每日一题&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_3-25" tabindex="-1">3-25 <a class="header-anchor" href="#_3-25" aria-label="Permalink to &quot;3-25&quot;">&ZeroWidthSpace;</a></h2>
@@ -5252,16 +5252,16 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
 ]]></content:encoded>
         </item>
         <item>
-            <link>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/factory-method.html</link>
-            <guid>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/factory-method.html</guid>
+            <link>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/factory-method</link>
+            <guid>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/factory-method</guid>
             <pubDate>Mon, 25 Mar 2024 07:49:17 GMT</pubDate>
             <description><![CDATA[设计模式（Design Patterns），是一套被反复使用、多数人知晓的、经过分类的、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。]]></description>
             <content:encoded><![CDATA[<h1 id="" tabindex="-1"> <a class="header-anchor" href="#" aria-label="Permalink to &quot;&quot;">&ZeroWidthSpace;</a></h1>
 ]]></content:encoded>
         </item>
         <item>
-            <link>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/singleton.html</link>
-            <guid>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/singleton.html</guid>
+            <link>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/singleton</link>
+            <guid>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/singleton</guid>
             <pubDate>Mon, 25 Mar 2024 07:49:17 GMT</pubDate>
             <description><![CDATA[在一个较为复杂的继承链中，祖先类更具有一般性，作为派生其他类的基类而不糊将其作为用来构造实例。]]></description>
         </item>
@@ -5672,48 +5672,48 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
 ]]></content:encoded>
         </item>
         <item>
-            <link>https://www.imufeng.cn/interview/question-by-day/2024/10.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/10.html</guid>
+            <link>https://www.imufeng.cn/interview/question-by-day/2024/10</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2024/10</guid>
             <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
         </item>
         <item>
-            <link>https://www.imufeng.cn/interview/question-by-day/2024/11.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/11.html</guid>
+            <link>https://www.imufeng.cn/interview/question-by-day/2024/11</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2024/11</guid>
             <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
         </item>
         <item>
-            <link>https://www.imufeng.cn/interview/question-by-day/2024/12.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/12.html</guid>
+            <link>https://www.imufeng.cn/interview/question-by-day/2024/12</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2024/12</guid>
             <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
         </item>
         <item>
-            <link>https://www.imufeng.cn/interview/question-by-day/2024/4.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/4.html</guid>
+            <link>https://www.imufeng.cn/interview/question-by-day/2024/4</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2024/4</guid>
             <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
         </item>
         <item>
-            <link>https://www.imufeng.cn/interview/question-by-day/2024/5.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/5.html</guid>
+            <link>https://www.imufeng.cn/interview/question-by-day/2024/5</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2024/5</guid>
             <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
         </item>
         <item>
-            <link>https://www.imufeng.cn/interview/question-by-day/2024/6.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/6.html</guid>
+            <link>https://www.imufeng.cn/interview/question-by-day/2024/6</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2024/6</guid>
             <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
         </item>
         <item>
-            <link>https://www.imufeng.cn/interview/question-by-day/2024/7.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/7.html</guid>
+            <link>https://www.imufeng.cn/interview/question-by-day/2024/7</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2024/7</guid>
             <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
         </item>
         <item>
-            <link>https://www.imufeng.cn/interview/question-by-day/2024/8.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/8.html</guid>
+            <link>https://www.imufeng.cn/interview/question-by-day/2024/8</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2024/8</guid>
             <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
         </item>
         <item>
-            <link>https://www.imufeng.cn/interview/question-by-day/2024/9.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/9.html</guid>
+            <link>https://www.imufeng.cn/interview/question-by-day/2024/9</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2024/9</guid>
             <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
         </item>
         <item>
@@ -5771,8 +5771,8 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         </item>
         <item>
             <title><![CDATA[MysqlforWindows安装及初始化]]></title>
-            <link>https://www.imufeng.cn/training/software/mysql-for-win-install.html</link>
-            <guid>https://www.imufeng.cn/training/software/mysql-for-win-install.html</guid>
+            <link>https://www.imufeng.cn/training/software/mysql-for-win-install</link>
+            <guid>https://www.imufeng.cn/training/software/mysql-for-win-install</guid>
             <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
             <description><![CDATA[Mysql for Windows 安装及初始化。]]></description>
             <content:encoded><![CDATA[<h1 id="mysql-for-windows-安装及初始化" tabindex="-1">Mysql for Windows 安装及初始化 <a class="header-anchor" href="#mysql-for-windows-安装及初始化" aria-label="Permalink to &quot;Mysql for Windows 安装及初始化&quot;">&ZeroWidthSpace;</a></h1>
@@ -5877,8 +5877,8 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         </item>
         <item>
             <title><![CDATA[第一步编译安装httpd服务器]]></title>
-            <link>https://www.imufeng.cn/training/linux/linux-lamp/first.html</link>
-            <guid>https://www.imufeng.cn/training/linux/linux-lamp/first.html</guid>
+            <link>https://www.imufeng.cn/training/linux/linux-lamp/first</link>
+            <guid>https://www.imufeng.cn/training/linux/linux-lamp/first</guid>
             <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="第一步-编译安装httpd服务器" tabindex="-1">第一步 编译安装httpd服务器 <a class="header-anchor" href="#第一步-编译安装httpd服务器" aria-label="Permalink to &quot;第一步 编译安装httpd服务器&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_1、安装前准备" tabindex="-1">1、安装前准备 <a class="header-anchor" href="#_1、安装前准备" aria-label="Permalink to &quot;1、安装前准备&quot;">&ZeroWidthSpace;</a></h2>
@@ -6123,8 +6123,8 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         </item>
         <item>
             <title><![CDATA[第二步编译安装mariadb数据库环境]]></title>
-            <link>https://www.imufeng.cn/training/linux/linux-lamp/second.html</link>
-            <guid>https://www.imufeng.cn/training/linux/linux-lamp/second.html</guid>
+            <link>https://www.imufeng.cn/training/linux/linux-lamp/second</link>
+            <guid>https://www.imufeng.cn/training/linux/linux-lamp/second</guid>
             <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="第二步-编译安装mariadb数据库环境" tabindex="-1">第二步 编译安装mariadb数据库环境 <a class="header-anchor" href="#第二步-编译安装mariadb数据库环境" aria-label="Permalink to &quot;第二步 编译安装mariadb数据库环境&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_1、mariadb数据库概述" tabindex="-1">1、Mariadb数据库概述 <a class="header-anchor" href="#_1、mariadb数据库概述" aria-label="Permalink to &quot;1、Mariadb数据库概述&quot;">&ZeroWidthSpace;</a></h2>
@@ -6268,8 +6268,8 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         </item>
         <item>
             <title><![CDATA[第三步编译安装PHP]]></title>
-            <link>https://www.imufeng.cn/training/linux/linux-lamp/third.html</link>
-            <guid>https://www.imufeng.cn/training/linux/linux-lamp/third.html</guid>
+            <link>https://www.imufeng.cn/training/linux/linux-lamp/third</link>
+            <guid>https://www.imufeng.cn/training/linux/linux-lamp/third</guid>
             <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="第三步-编译安装php" tabindex="-1">第三步 编译安装PHP <a class="header-anchor" href="#第三步-编译安装php" aria-label="Permalink to &quot;第三步 编译安装PHP&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_1、安装前准备" tabindex="-1">1、安装前准备 <a class="header-anchor" href="#_1、安装前准备" aria-label="Permalink to &quot;1、安装前准备&quot;">&ZeroWidthSpace;</a></h2>
