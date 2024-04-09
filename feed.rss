@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Tue, 09 Apr 2024 08:16:01 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 09 Apr 2024 09:05:06 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -14,6 +14,574 @@
             <link>https://www.imufeng.cn</link>
         </image>
         <copyright>Mblog © 2021-2024 Created by 沐风</copyright>
+        <item>
+            <title><![CDATA[每日一题-202404]]></title>
+            <link>https://www.imufeng.cn/interview/question-by-day/2024/4.html</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2024/4.html</guid>
+            <pubDate>Tue, 09 Apr 2024 09:04:02 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="每日一题-202404" tabindex="-1">每日一题 - 202404 <a class="header-anchor" href="#每日一题-202404" aria-label="Permalink to &quot;每日一题 - 202404&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_4-9" tabindex="-1">4-9 <a class="header-anchor" href="#_4-9" aria-label="Permalink to &quot;4-9&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="力扣题库-1-两数之和" tabindex="-1">力扣题库-1 两数之和 <a class="header-anchor" href="#力扣题库-1-两数之和" aria-label="Permalink to &quot;力扣题库-1 两数之和&quot;">&ZeroWidthSpace;</a></h3>
+<p><a href="https://leetcode-cn.com/problems/two-sum/description/" target="_blank" rel="noreferrer">原题链接 - 两数之和</a></p>
+<p><strong>🔥 题目：</strong> 给定一个整数数组 <code>nums</code> 和一个整数 <code>target</code>，请你在该数组中找出和为 <code>target</code> 的两个整数，并返回它们的数组下标。</p>
+<h4 id="题解1-暴力方法" tabindex="-1">题解1 暴力方法 <a class="header-anchor" href="#题解1-暴力方法" aria-label="Permalink to &quot;题解1 暴力方法&quot;">&ZeroWidthSpace;</a></h4>
+<p>由于过于简单，所以不再赘述。</p>
+<p>时间复杂度：<mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="6.606ex" height="2.452ex" role="img" focusable="false" viewBox="0 -833.9 2919.8 1083.9" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z" style="stroke-width: 3;"/></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z" style="stroke-width: 3;"/></g><g data-mml-node="msup" transform="translate(1152,0)"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z" style="stroke-width: 3;"/></g><g data-mml-node="mn" transform="translate(975.3,363) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" style="stroke-width: 3;"/></g></g><g data-mml-node="mo" transform="translate(2530.8,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z" style="stroke-width: 3;"/></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container> 其中 <mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.009ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 888 683" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z" style="stroke-width: 3;"/></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></mjx-assistive-mml></mjx-container> 是数组中的元素数量。最坏情况下数组中任意两个数都要被匹配一次。</p>
+<p>空间复杂度：<mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="4.618ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2041 1000" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z" style="stroke-width: 3;"/></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z" style="stroke-width: 3;"/></g><g data-mml-node="mn" transform="translate(1152,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" style="stroke-width: 3;"/></g><g data-mml-node="mo" transform="translate(1652,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z" style="stroke-width: 3;"/></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container>。</p>
+<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> static</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[] </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">twoSum</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[] nums, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> target) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">; i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> nums.length; i</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> i1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">; i1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> nums.length; i1</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">==</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> i1) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                    continue</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                }</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (nums[i] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> nums[i1] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">==</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> target) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                    return</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[]{i, i1};</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        }</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> null</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span></code></pre>
+</div><h4 id="题解2-哈希表" tabindex="-1">题解2 哈希表 <a class="header-anchor" href="#题解2-哈希表" aria-label="Permalink to &quot;题解2 哈希表&quot;">&ZeroWidthSpace;</a></h4>
+<p>对于哈希表的运用我还是不够熟练，这个题解是看完官方题解思路后完成的。</p>
+<p>时间复杂度：<mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="5.495ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2429 1000" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z" style="stroke-width: 3;"/></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z" style="stroke-width: 3;"/></g><g data-mml-node="mi" transform="translate(1152,0)"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z" style="stroke-width: 3;"/></g><g data-mml-node="mo" transform="translate(2040,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z" style="stroke-width: 3;"/></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container> 。其中 <mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.009ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 888 683" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z" style="stroke-width: 3;"/></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></mjx-assistive-mml></mjx-container> 是数组中的元素数量。</p>
+<p>空间复杂度：<mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="5.495ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2429 1000" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z" style="stroke-width: 3;"/></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z" style="stroke-width: 3;"/></g><g data-mml-node="mi" transform="translate(1152,0)"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z" style="stroke-width: 3;"/></g><g data-mml-node="mo" transform="translate(2040,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z" style="stroke-width: 3;"/></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container> 。其中 <mjx-container class="MathJax" jax="SVG" style="direction: ltr; position: relative;"><svg style="overflow: visible; min-height: 1px; min-width: 1px; vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.009ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 888 683" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z" style="stroke-width: 3;"/></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline" style="top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; position: absolute; padding: 1px 0px 0px 0px; border: 0px; display: block; width: auto; overflow: hidden;"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></mjx-assistive-mml></mjx-container> 是数组中的元素数量。</p>
+<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> static</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[] </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">twoSum</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[] nums, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> target) {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        Map&#x3C;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Integer</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Integer</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">> map </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> HashMap&#x3C;>();</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">; i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> nums.length; i</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> complement </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> target </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> nums[i];</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (map.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">containsKey</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(complement)) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                return</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[]{map.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">get</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(complement), i};</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            map.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">put</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(nums[i], i);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        }</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> null</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span></code></pre>
+</div><h2 id="_4-8" tabindex="-1">4-8 <a class="header-anchor" href="#_4-8" aria-label="Permalink to &quot;4-8&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="为什么推荐使用-isempty-方法判空" tabindex="-1">为什么推荐使用 isEmpty() 方法判空？ <a class="header-anchor" href="#为什么推荐使用-isempty-方法判空" aria-label="Permalink to &quot;为什么推荐使用 isEmpty() 方法判空？&quot;">&ZeroWidthSpace;</a></h3>
+<p>根据《阿里巴巴 Java 开发手册》：</p>
+<blockquote>
+<p>判断所有集合内部的元素是否为空，使用 isEmpty() 方法，而不是 size()==0 的方式。</p>
+</blockquote>
+<ul>
+<li><code>isEmpty()</code> 方法可读性更好，更优雅，</li>
+<li><code>isEmpty()</code> 方法的时间复杂度是 O(1)，而 <code>size()</code> 方法在有些集合中的时间复杂度不是 O(1)。</li>
+</ul>
+<h2 id="_4-7" tabindex="-1">4-7 <a class="header-anchor" href="#_4-7" aria-label="Permalink to &quot;4-7&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="力扣题库-88-合并两个有序数组" tabindex="-1">力扣题库-88 合并两个有序数组 <a class="header-anchor" href="#力扣题库-88-合并两个有序数组" aria-label="Permalink to &quot;力扣题库-88 合并两个有序数组&quot;">&ZeroWidthSpace;</a></h3>
+<p><a href="https://leetcode.cn/problems/merge-sorted-array/description/" target="_blank" rel="noreferrer">原题链接 - 合并两个有序数组</a></p>
+<p><strong>🔥 题目：</strong> 给定两个 <strong>非递减顺序</strong> 排列的整数数组 <code>nums1</code> 和 <code>nums2</code>，以及其长度 <code>m</code>、<code>n</code>，需要将 <code>nums2</code> 合并到 <code>nums1</code> 中，使 <code>nums1</code> 成为一个有序数组。</p>
+<h4 id="题解-1" tabindex="-1">题解 1 <a class="header-anchor" href="#题解-1" aria-label="Permalink to &quot;题解 1&quot;">&ZeroWidthSpace;</a></h4>
+<p>如果不考虑时间及空间复杂度，可以直接将 <code>nums2</code> 数组拷贝到 <code>nums1</code> 数组后，再进行排序：</p>
+<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (n </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">>=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) System.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">arraycopy</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(nums2, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, nums1, m, n);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Arrays.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sort</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(nums1);</span></span></code></pre>
+</div><h4 id="题解-2" tabindex="-1">题解 2 <a class="header-anchor" href="#题解-2" aria-label="Permalink to &quot;题解 2&quot;">&ZeroWidthSpace;</a></h4>
+<p>基于<a href="https://leetcode.cn/problems/merge-sorted-array/solutions/666608/he-bing-liang-ge-you-xu-shu-zu-by-leetco-rrb0" target="_blank" rel="noreferrer">官方题解3</a>
+双指针的结题思路，进行简单优化得出如下空间复杂度为 O(1) 的解法：</p>
+<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Solution</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> merge</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[] </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">nums1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70"> m</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[] </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">nums2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70"> n</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        // 创建两个双指针指向各个数组的末尾</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> p1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> m </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, p2 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> n </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        while</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (p1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">>=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ||</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> p2 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">>=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">            // 如果一个数组遍历结束，则直接保留剩余元素即可。</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (p2 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (p1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                nums1[p2] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> nums2[p2</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">--</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">];</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">else</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">                // 从后往前遍历，比较大小，将较大的元素放到 nums1 的末尾，并移动指正</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                nums1[p1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> p2 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> nums1[p1] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> nums2[p2] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> nums1[p1</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">--</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> nums2[p2</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">--</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">];</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><p><a href="https://leetcode.cn/problems/merge-sorted-array/solutions/2727444/ti-jie-3-jian-hua-ban-by-06jdn7fykv-p1z2" target="_blank" rel="noreferrer">💗 点击查看详细题解</a></p>
+<h2 id="_4-6" tabindex="-1">4-6 <a class="header-anchor" href="#_4-6" aria-label="Permalink to &quot;4-6&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="bigdecimal-类有哪些常见方法。" tabindex="-1"><code>BigDecimal</code> 类有哪些常见方法。 <a class="header-anchor" href="#bigdecimal-类有哪些常见方法。" aria-label="Permalink to &quot;`BigDecimal` 类有哪些常见方法。&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li><code>add(BigDecimal value)</code>：加法</li>
+<li><code>subtract(BigDecimal value)</code>：减法</li>
+<li><code>multiply(BigDecimal value)</code>：乘法</li>
+<li><code>divide(BigDecimal value)</code>：除法</li>
+<li><code>pow(int n)</code>：幂运算</li>
+<li><code>abs()</code>：绝对值</li>
+<li><code>negate()</code>：取反</li>
+<li><code>setScale(int newScale, RoundingMode roundingMode)</code>：设置精度</li>
+<li><code>compareTo(BigDecimal value)</code>：比较大小</li>
+</ul>
+<h2 id="_4-5" tabindex="-1">4-5 <a class="header-anchor" href="#_4-5" aria-label="Permalink to &quot;4-5&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是-bigdecimal-类" tabindex="-1">什么是 <code>BigDecimal</code> 类？ <a class="header-anchor" href="#什么是-bigdecimal-类" aria-label="Permalink to &quot;什么是 `BigDecimal` 类？&quot;">&ZeroWidthSpace;</a></h3>
+<p>《阿里巴巴 Java 开发手册》中提到：“为了避免精度丢失，可以使用 BigDecimal 来进行浮点数的运算”。</p>
+<p>这是由于计算机中，十进制小数无法精确表示，会存在类似于 <code>2.0f - 1.9f != 1.8f - 1.7f</code>的情况，所以在 JAVA 中提供了 <code>BigDecimal</code> 类来解决这个问题。</p>
+<p><code>BigDecimal</code> 类是 JAVA 中用于精确计算浮点数的类，它提供了大量的方法用于精确计算浮点数，避免了浮点数计算时的精度丢失问题。</p>
+<h2 id="_4-4" tabindex="-1">4-4 <a class="header-anchor" href="#_4-4" aria-label="Permalink to &quot;4-4&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="java-如何做序列化" tabindex="-1">JAVA 如何做序列化？ <a class="header-anchor" href="#java-如何做序列化" aria-label="Permalink to &quot;JAVA 如何做序列化？&quot;">&ZeroWidthSpace;</a></h3>
+<p>在 JAVA 中，如果要对一个对象进行序列化，需要实现 <code>java.io.Serializable</code> 接口，并且添加 <code>serialVersionUID</code> 字段。</p>
+<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> java.io.Serial;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> java.io.Serializable;</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> User</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> implements</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Serializable</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    @</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Serial</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> // java14 引入的注解，表示该字段是序列化的一部分。详见 {java.io.Serial}</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    private</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> static</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> final</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> long</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> serialVersionUID </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1L</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    private</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> String name;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    private</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> age;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    private</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> String address;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    public</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> User</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(String </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70"> age</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, String </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">address</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.name </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> name;</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.age </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> age;</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.address </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> address;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><h2 id="_4-3" tabindex="-1">4-3 <a class="header-anchor" href="#_4-3" aria-label="Permalink to &quot;4-3&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是序列化和反序列化" tabindex="-1">什么是序列化和反序列化？ <a class="header-anchor" href="#什么是序列化和反序列化" aria-label="Permalink to &quot;什么是序列化和反序列化？&quot;">&ZeroWidthSpace;</a></h3>
+<p>在 JAVA 中，如果需要将 JAVA 对象持久存储，或者在网络传输，就需要将对象转变为为字节流，这个过程就是序列化。</p>
+<p>将在序列化过程中所生成的二进制字节流转换成数据结构或者对象的过程，就是反序列化。</p>
+<h2 id="_4-2" tabindex="-1">4-2 <a class="header-anchor" href="#_4-2" aria-label="Permalink to &quot;4-2&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="java-中有没有引用传递" tabindex="-1">JAVA 中有没有引用传递？ <a class="header-anchor" href="#java-中有没有引用传递" aria-label="Permalink to &quot;JAVA 中有没有引用传递？&quot;">&ZeroWidthSpace;</a></h3>
+<p>JAVA 中没有引用传递，只有值传递。</p>
+<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> static</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> main</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">String</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[] args) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">      int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[] arr </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> { </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">4</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> };</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      System.out.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">println</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(arr[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]);</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">      change</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(arr);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      System.out.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">println</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(arr[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> static</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> change</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[] array) {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">      // 将数组的第一个元素变为0</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      array[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span></code></pre>
+</div><p>上方案例中，输出的结果为 <code>1 0</code> ，说明在 <code>change</code> 方法中修改了数组的第一个元素，但是并没有改变数组的引用。</p>
+<h2 id="_4-1" tabindex="-1">4-1 <a class="header-anchor" href="#_4-1" aria-label="Permalink to &quot;4-1&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="值传递-引用传递" tabindex="-1">值传递&amp;引用传递 <a class="header-anchor" href="#值传递-引用传递" aria-label="Permalink to &quot;值传递&amp;引用传递&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>值传递：传递的是实际的值，会创建一个副本，对形参的修改不会影响实参。</li>
+<li>引用传递：传递的是实际的地址，对形参的修改会影响实参。</li>
+</ul>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[每日一题 - 2024]]></title>
+            <link>https://www.imufeng.cn/interview/question-by-day/2024/</link>
+            <guid>https://www.imufeng.cn/interview/question-by-day/2024/</guid>
+            <pubDate>Tue, 09 Apr 2024 09:04:02 GMT</pubDate>
+            <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
+            <content:encoded><![CDATA[<blockquote>
+<p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
+</blockquote>
+<h3 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h3>
+<table>
+<thead>
+<tr>
+<th>时间</th>
+<th>问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>04/09</td>
+<td><a href="./4.html#_4-9">力扣题库-1 两数之和</a></td>
+</tr>
+<tr>
+<td>04/08</td>
+<td><a href="./4.html#_4-8">为什么推荐使用 isEmpty() 方法判空？</a></td>
+</tr>
+<tr>
+<td>04/07</td>
+<td><a href="./4.html#_4-7">力扣题库-88 合并两个有序数组</a></td>
+</tr>
+<tr>
+<td>04/06</td>
+<td><a href="./4.html#_4-6">BigDecimal 类有哪些常见方法？</a></td>
+</tr>
+<tr>
+<td>04/05</td>
+<td><a href="./4.html#_4-5">什么是 BigDecimal 类？</a></td>
+</tr>
+<tr>
+<td>04/04</td>
+<td><a href="./4.html#_4-4">JAVA 如何做序列化？</a></td>
+</tr>
+<tr>
+<td>04/03</td>
+<td><a href="./4.html#_4-3">什么是序列化和反序列化？</a></td>
+</tr>
+<tr>
+<td>04/02</td>
+<td><a href="./4.html#_4-2">JAVA 中有没有引用传递？</a></td>
+</tr>
+<tr>
+<td>04/01</td>
+<td><a href="./4.html#_4-1">值传递&amp;引用传递</a></td>
+</tr>
+<tr>
+<td>03/31</td>
+<td><a href="./3.html#_3-31">获取 class 对象有哪些方式？</a></td>
+</tr>
+<tr>
+<td>03/30</td>
+<td><a href="./3.html#_3-30">反射的应用场景有哪些？</a></td>
+</tr>
+<tr>
+<td>03/29</td>
+<td><a href="./3.html#_3-29">什么是通配符？</a></td>
+</tr>
+<tr>
+<td>03/28</td>
+<td><a href="./3.html#_3-28">什么是泛型擦除机制？</a></td>
+</tr>
+<tr>
+<td>03/27</td>
+<td><a href="./3.html#_3-27">泛型的使用方式有哪些？</a></td>
+</tr>
+<tr>
+<td>03/26</td>
+<td><a href="./3.html#_3-26">什么是 AIO？</a></td>
+</tr>
+<tr>
+<td>03/25</td>
+<td><a href="./3.html#_3-25">什么是 NIO？</a></td>
+</tr>
+<tr>
+<td>03/24</td>
+<td><a href="./3.html#_3-24">什么是 BIO？</a></td>
+</tr>
+<tr>
+<td>03/23</td>
+<td><a href="./3.html#_3-23">JAVA 中有哪些流？</a></td>
+</tr>
+<tr>
+<td>03/22</td>
+<td><a href="./3.html#_3-22">什么是动态代理？</a></td>
+</tr>
+<tr>
+<td>03/21</td>
+<td><a href="./3.html#_3-21">什么是静态代理？</a></td>
+</tr>
+<tr>
+<td>03/20</td>
+<td><a href="./3.html#_3-20">代理模式的分类？</a></td>
+</tr>
+<tr>
+<td>03/19</td>
+<td><a href="./3.html#_3-19">什么是代理模式？</a></td>
+</tr>
+<tr>
+<td>03/18</td>
+<td><a href="./3.html#_3-18">什么是工厂模式？</a></td>
+</tr>
+<tr>
+<td>03/17</td>
+<td><a href="./3.html#_3-17">单例模式有哪些创建方式？</a></td>
+</tr>
+<tr>
+<td>03/16</td>
+<td><a href="./3.html#_3-16">什么是合成复用原则？</a></td>
+</tr>
+<tr>
+<td>03/15</td>
+<td><a href="./3.html#_3-15">什么是迪米特法则？</a></td>
+</tr>
+<tr>
+<td>03/14</td>
+<td><a href="./3.html#_3-14">什么是接口隔离原则？</a></td>
+</tr>
+<tr>
+<td>03/13</td>
+<td><a href="./3.html#_3-13">什么是依赖倒置原则？</a></td>
+</tr>
+<tr>
+<td>03/12</td>
+<td><a href="./3.html#_3-12">什么是里氏替换原则？</a></td>
+</tr>
+<tr>
+<td>03/11</td>
+<td><a href="./3.html#_3-11">什么是开放封闭原则？</a></td>
+</tr>
+<tr>
+<td>03/10</td>
+<td><a href="./3.html#_3-10">设计模式的六大原则？</a></td>
+</tr>
+<tr>
+<td>03/09</td>
+<td><a href="./3.html#_3-9">设计模式有哪些？</a></td>
+</tr>
+<tr>
+<td>03/08</td>
+<td><a href="./3.html#_3-8">设计模式有哪些类别？</a></td>
+</tr>
+<tr>
+<td>03/07</td>
+<td><a href="./3.html#_3-7">什么是设计模式?</a></td>
+</tr>
+<tr>
+<td>03/06</td>
+<td><a href="./3.html#_3-6">Mybatis Plus 有哪些主要的 API？</a></td>
+</tr>
+<tr>
+<td>03/05</td>
+<td><a href="./3.html#_3-5">什么是 Mybatis Plus？</a></td>
+</tr>
+<tr>
+<td>03/04</td>
+<td><a href="./3.html#_3-4">Mybatis 的动态 SQL 是什么？</a></td>
+</tr>
+<tr>
+<td>03/03</td>
+<td><a href="./3.html#_3-3">请描述 Mybatis 的动态 SQL。</a></td>
+</tr>
+<tr>
+<td>03/02</td>
+<td><a href="./3.html#_3-2">请描述 Mybatis 的缓存机制。</a></td>
+</tr>
+<tr>
+<td>03/01</td>
+<td><a href="./3.html#_3-1">MyBatis 实现一对一有几种方式?</a></td>
+</tr>
+<tr>
+<td>02/29</td>
+<td><a href="./2.html#_2-29">Mybatis 如何将查询结果封装为对象？</a></td>
+</tr>
+<tr>
+<td>02/28</td>
+<td><a href="./2.html#_2-28">Dao 接口的工作原理是什么</a></td>
+</tr>
+<tr>
+<td>02/27</td>
+<td><a href="./2.html#_2-27">Mybatis 查询时当实体类中的属性名和表中的字段名不一样，怎么办？</a></td>
+</tr>
+<tr>
+<td>02/26</td>
+<td><a href="./2.html#_2-26">Mybatis 中 <code>#{}</code> 和 <code>${}</code> 的区别是什么？</a></td>
+</tr>
+<tr>
+<td>02/25</td>
+<td><a href="./2.html#_2-25">什么是 ORM？</a></td>
+</tr>
+<tr>
+<td>02/24</td>
+<td><a href="./2.html#_2-24">什么是数据持久化？</a></td>
+</tr>
+<tr>
+<td>02/23</td>
+<td><a href="./2.html#_2-23">怎么确保一个集合不能被修改？</a></td>
+</tr>
+<tr>
+<td>02/22</td>
+<td><a href="./2.html#_2-22">Iterator 是什么？</a></td>
+</tr>
+<tr>
+<td>02/21</td>
+<td><a href="./2.html#_2-21">什么是散列表？</a></td>
+</tr>
+<tr>
+<td>02/20</td>
+<td><a href="./2.html#_2-20">HashMap 是怎么解决 hash 冲突的？</a></td>
+</tr>
+<tr>
+<td>02/19</td>
+<td><a href="./2.html#_2-19">简述快速排序的过程。</a></td>
+</tr>
+<tr>
+<td>02/18</td>
+<td><a href="./2.html#_2-18">ArrayList 和 LinkedList 的区别是什么？</a></td>
+</tr>
+<tr>
+<td>02/17</td>
+<td><a href="./2.html#_2-17">HashMap 的实现原理？</a></td>
+</tr>
+<tr>
+<td>02/16</td>
+<td><a href="./2.html#_2-16">HashSet 的实现原理？</a></td>
+</tr>
+<tr>
+<td>02/15</td>
+<td><a href="./2.html#_2-15">如何决定使用 HashMap 还是 TreeMap？</a></td>
+</tr>
+<tr>
+<td>02/14</td>
+<td><a href="./2.html#_2-14">HashMap 和 HashTable 的区别？</a></td>
+</tr>
+<tr>
+<td>02/13</td>
+<td><a href="./2.html#_2-13">HashMap 什么样的类适合作为键？</a></td>
+</tr>
+<tr>
+<td>02/12</td>
+<td><a href="./2.html#_2-12">List 和 Map 的区别？</a></td>
+</tr>
+<tr>
+<td>02/11</td>
+<td><a href="./2.html#_2-11">（力扣题库）计算数组最大连续 1 的个数。</a></td>
+</tr>
+<tr>
+<td>02/10</td>
+<td><a href="./2.html#_2-10">什么是栈，什么是队列？</a></td>
+</tr>
+<tr>
+<td>02/09</td>
+<td><a href="./2.html#_2-9">什么是快速失败和安全失败机制？</a></td>
+</tr>
+<tr>
+<td>02/08</td>
+<td><a href="./2.html#_2-8">ArrayList 底层是什么？</a></td>
+</tr>
+<tr>
+<td>02/07</td>
+<td><a href="./2.html#_2-7">JAVA 集合有哪些类？</a></td>
+</tr>
+<tr>
+<td>02/06</td>
+<td><a href="./2.html#_2-6">所有的 final 修饰的字段都是编译期常量吗?</a></td>
+</tr>
+<tr>
+<td>02/05</td>
+<td><a href="./2.html#_2-5">什么是重复注解？</a></td>
+</tr>
+<tr>
+<td>02/04</td>
+<td><a href="./2.html#_2-4">什么是类型注解？</a></td>
+</tr>
+<tr>
+<td>02/03</td>
+<td><a href="./2.html#_2-3">Optional 要解决什么问题？</a></td>
+</tr>
+<tr>
+<td>02/02</td>
+<td><a href="./2.html#_2-2">什么是 FunctionalInterface？</a></td>
+</tr>
+<tr>
+<td>02/01</td>
+<td><a href="./2.html#_2-1">类加载的生命周期？</a></td>
+</tr>
+<tr>
+<td>01/31</td>
+<td><a href="./1.html#_1-31">什么是同步？</a></td>
+</tr>
+<tr>
+<td>01/30</td>
+<td><a href="./1.html#_1-30">什么是阻塞？</a></td>
+</tr>
+<tr>
+<td>01/29</td>
+<td><a href="./1.html#_1-29">如何理解 IO 流？</a></td>
+</tr>
+<tr>
+<td>01/28</td>
+<td><a href="./1.html#_1-28">描述异常的底层？</a></td>
+</tr>
+<tr>
+<td>01/27</td>
+<td><a href="./1.html#_1-27">Java 7 的 try-with-resource?</a></td>
+</tr>
+<tr>
+<td>01/26</td>
+<td><a href="./1.html#_1-26">JAVA throw 和 throws 的区别？</a></td>
+</tr>
+<tr>
+<td>01/25</td>
+<td><a href="./1.html#_1-25">getName、getCanonicalName 与 getSimpleName 的区别?</a></td>
+</tr>
+<tr>
+<td>01/24</td>
+<td><a href="./1.html#_1-24">什么是反射？</a></td>
+</tr>
+<tr>
+<td>01/23</td>
+<td><a href="./1.html#_1-23">Quartz 是做什么用的？</a></td>
+</tr>
+<tr>
+<td>01/22</td>
+<td><a href="./1.html#_1-22">如何限制规定泛型的范围？</a></td>
+</tr>
+<tr>
+<td>01/21</td>
+<td><a href="./1.html#_1-21">泛型类如何定义使用？</a></td>
+</tr>
+<tr>
+<td>01/20</td>
+<td><a href="./1.html#_1-20">this() &amp; super() 在构造方法中的区别？</a></td>
+</tr>
+<tr>
+<td>01/19</td>
+<td><a href="./1.html#_1-19">什么是 Java 移位运算符？</a></td>
+</tr>
+<tr>
+<td>01/18</td>
+<td><a href="./1.html#_1-18">JAVA 能在 Switch 中使用 String 吗?</a></td>
+</tr>
+<tr>
+<td>01/17</td>
+<td><a href="./1.html#_1-17">为什么 DNS 通常基于 UDP？</a></td>
+</tr>
+<tr>
+<td>01/16</td>
+<td><a href="./1.html#_1-16">TCP 三次握手中，最后一次回复丢失，会发生什么？</a></td>
+</tr>
+<tr>
+<td>01/15</td>
+<td><a href="./1.html#_1-15">什么是 TCP 三次握手？</a></td>
+</tr>
+<tr>
+<td>01/14</td>
+<td><a href="./1.html#_1-14">什么是754层网络模型？</a></td>
+</tr>
+<tr>
+<td>01/13</td>
+<td><a href="./1.html#_1-13">什么是日志系统和日志门面？</a></td>
+</tr>
+<tr>
+<td>01/12</td>
+<td><a href="./1.html#_1-12">什么是 JWT？</a></td>
+</tr>
+<tr>
+<td>01/11</td>
+<td><a href="./1.html#_1-11">Spring Security 的原理？</a></td>
+</tr>
+<tr>
+<td>01/10</td>
+<td><a href="./1.html#_1-10">什么是 Spring Security？</a></td>
+</tr>
+<tr>
+<td>01/09</td>
+<td><a href="./1.html#_1-9">谈谈你对 CGLib 的理解？</a></td>
+</tr>
+<tr>
+<td>01/08</td>
+<td><a href="./1.html#_1-8">有哪些AOP Advice通知的类型？</a></td>
+</tr>
+<tr>
+<td>01/07</td>
+<td><a href="./1.html#_1-7">AOP 包含的几个概念?</a></td>
+</tr>
+<tr>
+<td>01/06</td>
+<td><a href="./1.html#_1-6">列举一些重要的Spring模块。</a></td>
+</tr>
+<tr>
+<td>01/05</td>
+<td><a href="./1.html#_1-5">什么是监听器？</a></td>
+</tr>
+<tr>
+<td>01/04</td>
+<td><a href="./1.html#_1-4">什么是拦截器？</a></td>
+</tr>
+<tr>
+<td>01/03</td>
+<td><a href="./1.html#_1-3">Spring Boot 的默认编码是？</a></td>
+</tr>
+<tr>
+<td>01/02</td>
+<td><a href="./1.html#_1-2">Spring Boot 应用如何优雅关闭？</a></td>
+</tr>
+<tr>
+<td>01/01</td>
+<td><a href="./1.html#_1-1">Spring Boot 怎么注册事件监听器？</a></td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Redis自学笔记]]></title>
             <link>https://www.imufeng.cn/full-stack/other/redis.html</link>
@@ -2408,534 +2976,6 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
 <p>有联合查询和嵌套查询。</p>
 <p><strong>联合查询</strong> 是几个表联合查询,只查询一次, 通过在resultMap里面配置association节点配置一对一的类就可以完成；</p>
 <p><strong>嵌套查询</strong> 是先查一个表，根据这个表里面的结果的 外键 id，去再另外一个表里面查询数据,也是通过 association 配置，但另外一个表的查询通过 select 属性配置。</p>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[每日一题-202404]]></title>
-            <link>https://www.imufeng.cn/interview/question-by-day/2024/4.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/4.html</guid>
-            <pubDate>Mon, 08 Apr 2024 09:32:40 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="每日一题-202404" tabindex="-1">每日一题 - 202404 <a class="header-anchor" href="#每日一题-202404" aria-label="Permalink to &quot;每日一题 - 202404&quot;">&ZeroWidthSpace;</a></h1>
-<h2 id="_4-8" tabindex="-1">4-8 <a class="header-anchor" href="#_4-8" aria-label="Permalink to &quot;4-8&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="为什么推荐使用-isempty-方法判空" tabindex="-1">为什么推荐使用 isEmpty() 方法判空？ <a class="header-anchor" href="#为什么推荐使用-isempty-方法判空" aria-label="Permalink to &quot;为什么推荐使用 isEmpty() 方法判空？&quot;">&ZeroWidthSpace;</a></h3>
-<p>根据《阿里巴巴 Java 开发手册》：</p>
-<blockquote>
-<p>判断所有集合内部的元素是否为空，使用 isEmpty() 方法，而不是 size()==0 的方式。</p>
-</blockquote>
-<ul>
-<li><code>isEmpty()</code> 方法可读性更好，更优雅，</li>
-<li><code>isEmpty()</code> 方法的时间复杂度是 O(1)，而 <code>size()</code> 方法在有些集合中的时间复杂度不是 O(1)。</li>
-</ul>
-<h2 id="_4-7" tabindex="-1">4-7 <a class="header-anchor" href="#_4-7" aria-label="Permalink to &quot;4-7&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="力扣题库-88-合并两个有序数组" tabindex="-1">力扣题库-88 合并两个有序数组 <a class="header-anchor" href="#力扣题库-88-合并两个有序数组" aria-label="Permalink to &quot;力扣题库-88 合并两个有序数组&quot;">&ZeroWidthSpace;</a></h3>
-<p><a href="https://leetcode.cn/problems/merge-sorted-array/description/" target="_blank" rel="noreferrer">原题链接 - 合并两个有序数组</a></p>
-<p><strong>🔥 题目：</strong> 给定两个 <strong>非递减顺序</strong> 排列的整数数组 <code>nums1</code> 和 <code>nums2</code>，以及其长度 <code>m</code>、<code>n</code>，需要将 <code>nums2</code> 合并到 <code>nums1</code> 中，使 <code>nums1</code> 成为一个有序数组。</p>
-<h4 id="题解-1" tabindex="-1">题解 1 <a class="header-anchor" href="#题解-1" aria-label="Permalink to &quot;题解 1&quot;">&ZeroWidthSpace;</a></h4>
-<p>如果不考虑时间及空间复杂度，可以直接将 <code>nums2</code> 数组拷贝到 <code>nums1</code> 数组后，再进行排序：</p>
-<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (n </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">>=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) System.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">arraycopy</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(nums2, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, nums1, m, n);</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Arrays.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sort</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(nums1);</span></span></code></pre>
-</div><h4 id="题解-2" tabindex="-1">题解 2 <a class="header-anchor" href="#题解-2" aria-label="Permalink to &quot;题解 2&quot;">&ZeroWidthSpace;</a></h4>
-<p>基于<a href="https://leetcode.cn/problems/merge-sorted-array/solutions/666608/he-bing-liang-ge-you-xu-shu-zu-by-leetco-rrb0" target="_blank" rel="noreferrer">官方题解3</a>
-双指针的结题思路，进行简单优化得出如下空间复杂度为 O(1) 的解法：</p>
-<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Solution</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> merge</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[] </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">nums1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70"> m</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[] </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">nums2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70"> n</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        // 创建两个双指针指向各个数组的末尾</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> p1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> m </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, p2 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> n </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        while</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (p1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">>=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ||</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> p2 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">>=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">            // 如果一个数组遍历结束，则直接保留剩余元素即可。</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (p2 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (p1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                nums1[p2] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> nums2[p2</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">--</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">];</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">else</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">                // 从后往前遍历，比较大小，将较大的元素放到 nums1 的末尾，并移动指正</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                nums1[p1 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> p2 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> nums1[p1] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> nums2[p2] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> nums1[p1</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">--</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> nums2[p2</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">--</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">];</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
-</div><p><a href="https://leetcode.cn/problems/merge-sorted-array/solutions/2727444/ti-jie-3-jian-hua-ban-by-06jdn7fykv-p1z2" target="_blank" rel="noreferrer">💗 点击查看详细题解</a></p>
-<h2 id="_4-6" tabindex="-1">4-6 <a class="header-anchor" href="#_4-6" aria-label="Permalink to &quot;4-6&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="bigdecimal-类有哪些常见方法。" tabindex="-1"><code>BigDecimal</code> 类有哪些常见方法。 <a class="header-anchor" href="#bigdecimal-类有哪些常见方法。" aria-label="Permalink to &quot;`BigDecimal` 类有哪些常见方法。&quot;">&ZeroWidthSpace;</a></h3>
-<ul>
-<li><code>add(BigDecimal value)</code>：加法</li>
-<li><code>subtract(BigDecimal value)</code>：减法</li>
-<li><code>multiply(BigDecimal value)</code>：乘法</li>
-<li><code>divide(BigDecimal value)</code>：除法</li>
-<li><code>pow(int n)</code>：幂运算</li>
-<li><code>abs()</code>：绝对值</li>
-<li><code>negate()</code>：取反</li>
-<li><code>setScale(int newScale, RoundingMode roundingMode)</code>：设置精度</li>
-<li><code>compareTo(BigDecimal value)</code>：比较大小</li>
-</ul>
-<h2 id="_4-5" tabindex="-1">4-5 <a class="header-anchor" href="#_4-5" aria-label="Permalink to &quot;4-5&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="什么是-bigdecimal-类" tabindex="-1">什么是 <code>BigDecimal</code> 类？ <a class="header-anchor" href="#什么是-bigdecimal-类" aria-label="Permalink to &quot;什么是 `BigDecimal` 类？&quot;">&ZeroWidthSpace;</a></h3>
-<p>《阿里巴巴 Java 开发手册》中提到：“为了避免精度丢失，可以使用 BigDecimal 来进行浮点数的运算”。</p>
-<p>这是由于计算机中，十进制小数无法精确表示，会存在类似于 <code>2.0f - 1.9f != 1.8f - 1.7f</code>的情况，所以在 JAVA 中提供了 <code>BigDecimal</code> 类来解决这个问题。</p>
-<p><code>BigDecimal</code> 类是 JAVA 中用于精确计算浮点数的类，它提供了大量的方法用于精确计算浮点数，避免了浮点数计算时的精度丢失问题。</p>
-<h2 id="_4-4" tabindex="-1">4-4 <a class="header-anchor" href="#_4-4" aria-label="Permalink to &quot;4-4&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="java-如何做序列化" tabindex="-1">JAVA 如何做序列化？ <a class="header-anchor" href="#java-如何做序列化" aria-label="Permalink to &quot;JAVA 如何做序列化？&quot;">&ZeroWidthSpace;</a></h3>
-<p>在 JAVA 中，如果要对一个对象进行序列化，需要实现 <code>java.io.Serializable</code> 接口，并且添加 <code>serialVersionUID</code> 字段。</p>
-<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> java.io.Serial;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> java.io.Serializable;</span></span>
-<span class="line"></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> User</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> implements</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Serializable</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    @</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Serial</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> // java14 引入的注解，表示该字段是序列化的一部分。详见 {java.io.Serial}</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    private</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> static</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> final</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> long</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> serialVersionUID </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1L</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    private</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> String name;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    private</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> age;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    private</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> String address;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    public</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> User</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(String </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70"> age</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, String </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">address</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
-<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.name </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> name;</span></span>
-<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.age </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> age;</span></span>
-<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.address </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> address;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
-</div><h2 id="_4-3" tabindex="-1">4-3 <a class="header-anchor" href="#_4-3" aria-label="Permalink to &quot;4-3&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="什么是序列化和反序列化" tabindex="-1">什么是序列化和反序列化？ <a class="header-anchor" href="#什么是序列化和反序列化" aria-label="Permalink to &quot;什么是序列化和反序列化？&quot;">&ZeroWidthSpace;</a></h3>
-<p>在 JAVA 中，如果需要将 JAVA 对象持久存储，或者在网络传输，就需要将对象转变为为字节流，这个过程就是序列化。</p>
-<p>将在序列化过程中所生成的二进制字节流转换成数据结构或者对象的过程，就是反序列化。</p>
-<h2 id="_4-2" tabindex="-1">4-2 <a class="header-anchor" href="#_4-2" aria-label="Permalink to &quot;4-2&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="java-中有没有引用传递" tabindex="-1">JAVA 中有没有引用传递？ <a class="header-anchor" href="#java-中有没有引用传递" aria-label="Permalink to &quot;JAVA 中有没有引用传递？&quot;">&ZeroWidthSpace;</a></h3>
-<p>JAVA 中没有引用传递，只有值传递。</p>
-<div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> static</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> main</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">String</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[] args) {</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">      int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[] arr </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> { </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">4</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> };</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      System.out.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">println</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(arr[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]);</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">      change</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(arr);</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      System.out.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">println</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(arr[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]);</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> static</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> change</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[] array) {</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">      // 将数组的第一个元素变为0</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      array[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span></code></pre>
-</div><p>上方案例中，输出的结果为 <code>1 0</code> ，说明在 <code>change</code> 方法中修改了数组的第一个元素，但是并没有改变数组的引用。</p>
-<h2 id="_4-1" tabindex="-1">4-1 <a class="header-anchor" href="#_4-1" aria-label="Permalink to &quot;4-1&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="值传递-引用传递" tabindex="-1">值传递&amp;引用传递 <a class="header-anchor" href="#值传递-引用传递" aria-label="Permalink to &quot;值传递&amp;引用传递&quot;">&ZeroWidthSpace;</a></h3>
-<ul>
-<li>值传递：传递的是实际的值，会创建一个副本，对形参的修改不会影响实参。</li>
-<li>引用传递：传递的是实际的地址，对形参的修改会影响实参。</li>
-</ul>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[每日一题 - 2024]]></title>
-            <link>https://www.imufeng.cn/interview/question-by-day/2024/</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/</guid>
-            <pubDate>Mon, 08 Apr 2024 09:32:40 GMT</pubDate>
-            <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
-            <content:encoded><![CDATA[<blockquote>
-<p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
-</blockquote>
-<h3 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h3>
-<table>
-<thead>
-<tr>
-<th>时间</th>
-<th>问题</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>04/08</td>
-<td><a href="./4.html#_4-8">为什么推荐使用 isEmpty() 方法判空？</a></td>
-</tr>
-<tr>
-<td>04/07</td>
-<td><a href="./4.html#_4-7">力扣题库-88 合并两个有序数组</a></td>
-</tr>
-<tr>
-<td>04/06</td>
-<td><a href="./4.html#_4-6">BigDecimal 类有哪些常见方法？</a></td>
-</tr>
-<tr>
-<td>04/05</td>
-<td><a href="./4.html#_4-5">什么是 BigDecimal 类？</a></td>
-</tr>
-<tr>
-<td>04/04</td>
-<td><a href="./4.html#_4-4">JAVA 如何做序列化？</a></td>
-</tr>
-<tr>
-<td>04/03</td>
-<td><a href="./4.html#_4-3">什么是序列化和反序列化？</a></td>
-</tr>
-<tr>
-<td>04/02</td>
-<td><a href="./4.html#_4-2">JAVA 中有没有引用传递？</a></td>
-</tr>
-<tr>
-<td>04/01</td>
-<td><a href="./4.html#_4-1">值传递&amp;引用传递</a></td>
-</tr>
-<tr>
-<td>03/31</td>
-<td><a href="./3.html#_3-31">获取 class 对象有哪些方式？</a></td>
-</tr>
-<tr>
-<td>03/30</td>
-<td><a href="./3.html#_3-30">反射的应用场景有哪些？</a></td>
-</tr>
-<tr>
-<td>03/29</td>
-<td><a href="./3.html#_3-29">什么是通配符？</a></td>
-</tr>
-<tr>
-<td>03/28</td>
-<td><a href="./3.html#_3-28">什么是泛型擦除机制？</a></td>
-</tr>
-<tr>
-<td>03/27</td>
-<td><a href="./3.html#_3-27">泛型的使用方式有哪些？</a></td>
-</tr>
-<tr>
-<td>03/26</td>
-<td><a href="./3.html#_3-26">什么是 AIO？</a></td>
-</tr>
-<tr>
-<td>03/25</td>
-<td><a href="./3.html#_3-25">什么是 NIO？</a></td>
-</tr>
-<tr>
-<td>03/24</td>
-<td><a href="./3.html#_3-24">什么是 BIO？</a></td>
-</tr>
-<tr>
-<td>03/23</td>
-<td><a href="./3.html#_3-23">JAVA 中有哪些流？</a></td>
-</tr>
-<tr>
-<td>03/22</td>
-<td><a href="./3.html#_3-22">什么是动态代理？</a></td>
-</tr>
-<tr>
-<td>03/21</td>
-<td><a href="./3.html#_3-21">什么是静态代理？</a></td>
-</tr>
-<tr>
-<td>03/20</td>
-<td><a href="./3.html#_3-20">代理模式的分类？</a></td>
-</tr>
-<tr>
-<td>03/19</td>
-<td><a href="./3.html#_3-19">什么是代理模式？</a></td>
-</tr>
-<tr>
-<td>03/18</td>
-<td><a href="./3.html#_3-18">什么是工厂模式？</a></td>
-</tr>
-<tr>
-<td>03/17</td>
-<td><a href="./3.html#_3-17">单例模式有哪些创建方式？</a></td>
-</tr>
-<tr>
-<td>03/16</td>
-<td><a href="./3.html#_3-16">什么是合成复用原则？</a></td>
-</tr>
-<tr>
-<td>03/15</td>
-<td><a href="./3.html#_3-15">什么是迪米特法则？</a></td>
-</tr>
-<tr>
-<td>03/14</td>
-<td><a href="./3.html#_3-14">什么是接口隔离原则？</a></td>
-</tr>
-<tr>
-<td>03/13</td>
-<td><a href="./3.html#_3-13">什么是依赖倒置原则？</a></td>
-</tr>
-<tr>
-<td>03/12</td>
-<td><a href="./3.html#_3-12">什么是里氏替换原则？</a></td>
-</tr>
-<tr>
-<td>03/11</td>
-<td><a href="./3.html#_3-11">什么是开放封闭原则？</a></td>
-</tr>
-<tr>
-<td>03/10</td>
-<td><a href="./3.html#_3-10">设计模式的六大原则？</a></td>
-</tr>
-<tr>
-<td>03/09</td>
-<td><a href="./3.html#_3-9">设计模式有哪些？</a></td>
-</tr>
-<tr>
-<td>03/08</td>
-<td><a href="./3.html#_3-8">设计模式有哪些类别？</a></td>
-</tr>
-<tr>
-<td>03/07</td>
-<td><a href="./3.html#_3-7">什么是设计模式?</a></td>
-</tr>
-<tr>
-<td>03/06</td>
-<td><a href="./3.html#_3-6">Mybatis Plus 有哪些主要的 API？</a></td>
-</tr>
-<tr>
-<td>03/05</td>
-<td><a href="./3.html#_3-5">什么是 Mybatis Plus？</a></td>
-</tr>
-<tr>
-<td>03/04</td>
-<td><a href="./3.html#_3-4">Mybatis 的动态 SQL 是什么？</a></td>
-</tr>
-<tr>
-<td>03/03</td>
-<td><a href="./3.html#_3-3">请描述 Mybatis 的动态 SQL。</a></td>
-</tr>
-<tr>
-<td>03/02</td>
-<td><a href="./3.html#_3-2">请描述 Mybatis 的缓存机制。</a></td>
-</tr>
-<tr>
-<td>03/01</td>
-<td><a href="./3.html#_3-1">MyBatis 实现一对一有几种方式?</a></td>
-</tr>
-<tr>
-<td>02/29</td>
-<td><a href="./2.html#_2-29">Mybatis 如何将查询结果封装为对象？</a></td>
-</tr>
-<tr>
-<td>02/28</td>
-<td><a href="./2.html#_2-28">Dao 接口的工作原理是什么</a></td>
-</tr>
-<tr>
-<td>02/27</td>
-<td><a href="./2.html#_2-27">Mybatis 查询时当实体类中的属性名和表中的字段名不一样，怎么办？</a></td>
-</tr>
-<tr>
-<td>02/26</td>
-<td><a href="./2.html#_2-26">Mybatis 中 <code>#{}</code> 和 <code>${}</code> 的区别是什么？</a></td>
-</tr>
-<tr>
-<td>02/25</td>
-<td><a href="./2.html#_2-25">什么是 ORM？</a></td>
-</tr>
-<tr>
-<td>02/24</td>
-<td><a href="./2.html#_2-24">什么是数据持久化？</a></td>
-</tr>
-<tr>
-<td>02/23</td>
-<td><a href="./2.html#_2-23">怎么确保一个集合不能被修改？</a></td>
-</tr>
-<tr>
-<td>02/22</td>
-<td><a href="./2.html#_2-22">Iterator 是什么？</a></td>
-</tr>
-<tr>
-<td>02/21</td>
-<td><a href="./2.html#_2-21">什么是散列表？</a></td>
-</tr>
-<tr>
-<td>02/20</td>
-<td><a href="./2.html#_2-20">HashMap 是怎么解决 hash 冲突的？</a></td>
-</tr>
-<tr>
-<td>02/19</td>
-<td><a href="./2.html#_2-19">简述快速排序的过程。</a></td>
-</tr>
-<tr>
-<td>02/18</td>
-<td><a href="./2.html#_2-18">ArrayList 和 LinkedList 的区别是什么？</a></td>
-</tr>
-<tr>
-<td>02/17</td>
-<td><a href="./2.html#_2-17">HashMap 的实现原理？</a></td>
-</tr>
-<tr>
-<td>02/16</td>
-<td><a href="./2.html#_2-16">HashSet 的实现原理？</a></td>
-</tr>
-<tr>
-<td>02/15</td>
-<td><a href="./2.html#_2-15">如何决定使用 HashMap 还是 TreeMap？</a></td>
-</tr>
-<tr>
-<td>02/14</td>
-<td><a href="./2.html#_2-14">HashMap 和 HashTable 的区别？</a></td>
-</tr>
-<tr>
-<td>02/13</td>
-<td><a href="./2.html#_2-13">HashMap 什么样的类适合作为键？</a></td>
-</tr>
-<tr>
-<td>02/12</td>
-<td><a href="./2.html#_2-12">List 和 Map 的区别？</a></td>
-</tr>
-<tr>
-<td>02/11</td>
-<td><a href="./2.html#_2-11">（力扣题库）计算数组最大连续 1 的个数。</a></td>
-</tr>
-<tr>
-<td>02/10</td>
-<td><a href="./2.html#_2-10">什么是栈，什么是队列？</a></td>
-</tr>
-<tr>
-<td>02/09</td>
-<td><a href="./2.html#_2-9">什么是快速失败和安全失败机制？</a></td>
-</tr>
-<tr>
-<td>02/08</td>
-<td><a href="./2.html#_2-8">ArrayList 底层是什么？</a></td>
-</tr>
-<tr>
-<td>02/07</td>
-<td><a href="./2.html#_2-7">JAVA 集合有哪些类？</a></td>
-</tr>
-<tr>
-<td>02/06</td>
-<td><a href="./2.html#_2-6">所有的 final 修饰的字段都是编译期常量吗?</a></td>
-</tr>
-<tr>
-<td>02/05</td>
-<td><a href="./2.html#_2-5">什么是重复注解？</a></td>
-</tr>
-<tr>
-<td>02/04</td>
-<td><a href="./2.html#_2-4">什么是类型注解？</a></td>
-</tr>
-<tr>
-<td>02/03</td>
-<td><a href="./2.html#_2-3">Optional 要解决什么问题？</a></td>
-</tr>
-<tr>
-<td>02/02</td>
-<td><a href="./2.html#_2-2">什么是 FunctionalInterface？</a></td>
-</tr>
-<tr>
-<td>02/01</td>
-<td><a href="./2.html#_2-1">类加载的生命周期？</a></td>
-</tr>
-<tr>
-<td>01/31</td>
-<td><a href="./1.html#_1-31">什么是同步？</a></td>
-</tr>
-<tr>
-<td>01/30</td>
-<td><a href="./1.html#_1-30">什么是阻塞？</a></td>
-</tr>
-<tr>
-<td>01/29</td>
-<td><a href="./1.html#_1-29">如何理解 IO 流？</a></td>
-</tr>
-<tr>
-<td>01/28</td>
-<td><a href="./1.html#_1-28">描述异常的底层？</a></td>
-</tr>
-<tr>
-<td>01/27</td>
-<td><a href="./1.html#_1-27">Java 7 的 try-with-resource?</a></td>
-</tr>
-<tr>
-<td>01/26</td>
-<td><a href="./1.html#_1-26">JAVA throw 和 throws 的区别？</a></td>
-</tr>
-<tr>
-<td>01/25</td>
-<td><a href="./1.html#_1-25">getName、getCanonicalName 与 getSimpleName 的区别?</a></td>
-</tr>
-<tr>
-<td>01/24</td>
-<td><a href="./1.html#_1-24">什么是反射？</a></td>
-</tr>
-<tr>
-<td>01/23</td>
-<td><a href="./1.html#_1-23">Quartz 是做什么用的？</a></td>
-</tr>
-<tr>
-<td>01/22</td>
-<td><a href="./1.html#_1-22">如何限制规定泛型的范围？</a></td>
-</tr>
-<tr>
-<td>01/21</td>
-<td><a href="./1.html#_1-21">泛型类如何定义使用？</a></td>
-</tr>
-<tr>
-<td>01/20</td>
-<td><a href="./1.html#_1-20">this() &amp; super() 在构造方法中的区别？</a></td>
-</tr>
-<tr>
-<td>01/19</td>
-<td><a href="./1.html#_1-19">什么是 Java 移位运算符？</a></td>
-</tr>
-<tr>
-<td>01/18</td>
-<td><a href="./1.html#_1-18">JAVA 能在 Switch 中使用 String 吗?</a></td>
-</tr>
-<tr>
-<td>01/17</td>
-<td><a href="./1.html#_1-17">为什么 DNS 通常基于 UDP？</a></td>
-</tr>
-<tr>
-<td>01/16</td>
-<td><a href="./1.html#_1-16">TCP 三次握手中，最后一次回复丢失，会发生什么？</a></td>
-</tr>
-<tr>
-<td>01/15</td>
-<td><a href="./1.html#_1-15">什么是 TCP 三次握手？</a></td>
-</tr>
-<tr>
-<td>01/14</td>
-<td><a href="./1.html#_1-14">什么是754层网络模型？</a></td>
-</tr>
-<tr>
-<td>01/13</td>
-<td><a href="./1.html#_1-13">什么是日志系统和日志门面？</a></td>
-</tr>
-<tr>
-<td>01/12</td>
-<td><a href="./1.html#_1-12">什么是 JWT？</a></td>
-</tr>
-<tr>
-<td>01/11</td>
-<td><a href="./1.html#_1-11">Spring Security 的原理？</a></td>
-</tr>
-<tr>
-<td>01/10</td>
-<td><a href="./1.html#_1-10">什么是 Spring Security？</a></td>
-</tr>
-<tr>
-<td>01/09</td>
-<td><a href="./1.html#_1-9">谈谈你对 CGLib 的理解？</a></td>
-</tr>
-<tr>
-<td>01/08</td>
-<td><a href="./1.html#_1-8">有哪些AOP Advice通知的类型？</a></td>
-</tr>
-<tr>
-<td>01/07</td>
-<td><a href="./1.html#_1-7">AOP 包含的几个概念?</a></td>
-</tr>
-<tr>
-<td>01/06</td>
-<td><a href="./1.html#_1-6">列举一些重要的Spring模块。</a></td>
-</tr>
-<tr>
-<td>01/05</td>
-<td><a href="./1.html#_1-5">什么是监听器？</a></td>
-</tr>
-<tr>
-<td>01/04</td>
-<td><a href="./1.html#_1-4">什么是拦截器？</a></td>
-</tr>
-<tr>
-<td>01/03</td>
-<td><a href="./1.html#_1-3">Spring Boot 的默认编码是？</a></td>
-</tr>
-<tr>
-<td>01/02</td>
-<td><a href="./1.html#_1-2">Spring Boot 应用如何优雅关闭？</a></td>
-</tr>
-<tr>
-<td>01/01</td>
-<td><a href="./1.html#_1-1">Spring Boot 怎么注册事件监听器？</a></td>
-</tr>
-</tbody>
-</table>
 ]]></content:encoded>
         </item>
         <item>
