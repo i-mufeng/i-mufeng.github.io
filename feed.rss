@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Wed, 10 Apr 2024 02:49:47 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 10 Apr 2024 08:00:29 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -18,8 +18,14 @@
             <title><![CDATA[每日一题-202404]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/4.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/4.html</guid>
-            <pubDate>Tue, 09 Apr 2024 09:04:02 GMT</pubDate>
+            <pubDate>Wed, 10 Apr 2024 07:59:26 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="每日一题-202404" tabindex="-1">每日一题 - 202404 <a class="header-anchor" href="#每日一题-202404" aria-label="Permalink to &quot;每日一题 - 202404&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_4-10" tabindex="-1">4-10 <a class="header-anchor" href="#_4-10" aria-label="Permalink to &quot;4-10&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="合并和变基有什么区别" tabindex="-1">合并和变基有什么区别？ <a class="header-anchor" href="#合并和变基有什么区别" aria-label="Permalink to &quot;合并和变基有什么区别？&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>合并（merge）</strong> 和 <strong>变基（rebase）</strong> 的最终目的都是整合来自不同分支的修改。</p>
+<p>合并是一种非破坏性的操作，它不会对现有分支中的提交进行修改，而是创建一个新的提交来整合不同分支的修改。</p>
+<p>变基会为原始分支中的每个提交创建全新的提交来重写项目历史记录，能够让代码提交记录更加清晰明了。</p>
+<p>参考地址：<a href="https://www.atlassian.com/zh/git/tutorials/merging-vs-rebasing" target="_blank" rel="noreferrer">Merging vs. rebasing</a></p>
 <h2 id="_4-9" tabindex="-1">4-9 <a class="header-anchor" href="#_4-9" aria-label="Permalink to &quot;4-9&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="力扣题库-1-两数之和" tabindex="-1">力扣题库-1 两数之和 <a class="header-anchor" href="#力扣题库-1-两数之和" aria-label="Permalink to &quot;力扣题库-1 两数之和&quot;">&ZeroWidthSpace;</a></h3>
 <p><a href="https://leetcode-cn.com/problems/two-sum/description/" target="_blank" rel="noreferrer">原题链接 - 两数之和</a></p>
@@ -164,7 +170,7 @@
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/</guid>
-            <pubDate>Tue, 09 Apr 2024 09:04:02 GMT</pubDate>
+            <pubDate>Wed, 10 Apr 2024 07:58:55 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -178,6 +184,14 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>04/11</td>
+<td><a href="./4.html#_4-11">力扣题库-27 移除元素</a></td>
+</tr>
+<tr>
+<td>04/10</td>
+<td><a href="./4.html#_4-10">合并和变基有什么区别？</a></td>
+</tr>
 <tr>
 <td>04/09</td>
 <td><a href="./4.html#_4-9">力扣题库-1 两数之和</a></td>
