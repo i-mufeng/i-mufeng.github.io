@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Thu, 18 Apr 2024 07:59:25 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 26 Apr 2024 15:12:27 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -18,8 +18,179 @@
             <title><![CDATA[每日一题-202404]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/4.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/4.html</guid>
-            <pubDate>Thu, 18 Apr 2024 07:58:21 GMT</pubDate>
+            <pubDate>Fri, 26 Apr 2024 15:11:14 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="每日一题-202404" tabindex="-1">每日一题 - 202404 <a class="header-anchor" href="#每日一题-202404" aria-label="Permalink to &quot;每日一题 - 202404&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_4-26" tabindex="-1">4-26 <a class="header-anchor" href="#_4-26" aria-label="Permalink to &quot;4-26&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="常用的跨域解决方案有哪些" tabindex="-1">常用的跨域解决方案有哪些 <a class="header-anchor" href="#常用的跨域解决方案有哪些" aria-label="Permalink to &quot;常用的跨域解决方案有哪些&quot;">&ZeroWidthSpace;</a></h3>
+<h5 id="_1-cors" tabindex="-1">（1）CORS： <a class="header-anchor" href="#_1-cors" aria-label="Permalink to &quot;（1）CORS：&quot;">&ZeroWidthSpace;</a></h5>
+<p>跨域资源共享（Cross-Origin Resource Sharing），是一种允许浏览器向跨域服务器发送 Ajax 请求的机制，支持现代浏览器，服务器端需要设置 Access-Control-Allow-Origin 头信息，指定允许的源或通配符，从而实现跨域请求。</p>
+<h5 id="_2-代理" tabindex="-1">（2）代理： <a class="header-anchor" href="#_2-代理" aria-label="Permalink to &quot;（2）代理：&quot;">&ZeroWidthSpace;</a></h5>
+<p>在同源页面内部发送 AJAX 请求到同域服务器，由服务器代理转发请求到跨域服务器，最后再将结果返回给同源页面。</p>
+<h5 id="_3-websocket" tabindex="-1">（3）WebSocket： <a class="header-anchor" href="#_3-websocket" aria-label="Permalink to &quot;（3）WebSocket：&quot;">&ZeroWidthSpace;</a></h5>
+<p>WebSocket 是一种 HTML5 协议，它使得浏览器和服务器之间可以建立持久化的连接，可以直接使用 Socket 进行通信，避免了浏览器的跨域限制。</p>
+<h2 id="_4-25" tabindex="-1">4-25 <a class="header-anchor" href="#_4-25" aria-label="Permalink to &quot;4-25&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="vue中的spa引用如何优化首屏加载速度" tabindex="-1">vue中的spa引用如何优化首屏加载速度 <a class="header-anchor" href="#vue中的spa引用如何优化首屏加载速度" aria-label="Permalink to &quot;vue中的spa引用如何优化首屏加载速度&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li>请求优化：<code>CDN</code> 将第三方的类库放到 CDN 上，能够大幅度减少生产环境中的项目体积，另外 CDN 能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。</li>
+<li>缓存：将长时间不会改变的第三方类库或者静态资源设置为强缓存，将 max-age 设置为一个非常长的时间，再将访问路径加上哈希达到哈希值变了以后保证获取到最新资源，好的缓存策略有助于减轻服务器的压力，并且显著的提升用户的体验</li>
+<li>gzip：开启 <code>gzip</code> 压缩，通常开启 gzip 压缩能够有效的缩小传输资源的大小。</li>
+<li>http2：如果系统首屏同一时间需要加载的静态资源非常多，但是浏览器对同域名的<code>tcp</code>连接数量是有限制的(chrome 为 6 个)超过规定数量的 tcp 连接，则必须要等到之前的请求收到响应后才能继续发送，而 http2 则可以在多个 tcp 连接中并发多个请求没有限制，在一些网络较差的环境开启 http2 性能提升尤为明显。</li>
+<li>懒加载：当 url 匹配到相应的路径时，通过<code>import</code>动态加载页面组件，这样首屏的代码量会大幅减少，webpack 会把动态加载的页面组件分离成单独的一个 chunk.js 文件</li>
+<li>预渲染：由于浏览器在渲染出页面之前，需要先加载和解析相应的 html、css 和 js 文件，为此会有一段白屏的时间，可以添加loading，或者骨架屏幕尽可能的减少白屏对用户的影响体积优化</li>
+<li>合理使用第三方库：对于一些第三方 ui 框架、类库，尽量使用按需加载，减少打包体积</li>
+<li>使用可视化工具分析打包后的模块体积：webpack-bundle- analyzer 这个插件在每次打包后能够更加直观的分析打包后模块的体积，再对其中比较大的模块进行优化</li>
+<li>提高代码使用率：利用代码分割，将脚本中无需立即调用的代码在代码构建时转变为异步加载的过程</li>
+<li>封装：构建良好的项目架构，按照项目需求就行全局组件，插件，过滤器，指令，utils 等做一 些公共封装，可以有效减少我们的代码量，而且更容易维护资源优化</li>
+<li>图片懒加载：使用图片懒加载可以优化同一时间减少 http 请求开销，避免显示图片导致的画面抖动，提高用户体验</li>
+<li>使用 svg 图标：相对于用一张图片来表示图标，svg 拥有更好的图片质量，体积更小，并且不需要开启额外的 http 请求</li>
+<li>压缩图片：可以使用 image-webpack-loader，在用户肉眼分辨不清的情况下一定程度上压缩图片</li>
+</ul>
+<h2 id="_4-24" tabindex="-1">4-24 <a class="header-anchor" href="#_4-24" aria-label="Permalink to &quot;4-24&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="如何实现vue项目中的性能优化" tabindex="-1">如何实现vue项目中的性能优化 <a class="header-anchor" href="#如何实现vue项目中的性能优化" aria-label="Permalink to &quot;如何实现vue项目中的性能优化&quot;">&ZeroWidthSpace;</a></h3>
+<h5 id="_1-编码阶段" tabindex="-1">（1）编码阶段 <a class="header-anchor" href="#_1-编码阶段" aria-label="Permalink to &quot;（1）编码阶段&quot;">&ZeroWidthSpace;</a></h5>
+<ul>
+<li>尽量减少 <em>data</em> 中的数据，<em>data</em> 中的数据都会增加 <em>getter</em> 和 <em>setter</em>，会收集对应的 <em>watcher</em></li>
+<li><em>v-if</em> 和 <em>v-for</em> 不能连用</li>
+<li>如果需要使用 <em>v-for</em> 给每项元素绑定事件时使用事件代理</li>
+<li><em>SPA</em> 页面采用 <em>keep-alive</em> 缓存组件</li>
+<li>在更多的情况下，使用 <em>v-if</em> 替代 <em>v-show</em></li>
+<li><em>key</em> 保证唯一</li>
+<li>使用路由懒加载、异步组件</li>
+<li>防抖、节流</li>
+<li>第三方模块按需导入</li>
+<li>长列表滚动到可视区域动态加载</li>
+<li>图片懒加载</li>
+</ul>
+<h5 id="_2-seo-优化" tabindex="-1">（2）*SEO* 优化 <a class="header-anchor" href="#_2-seo-优化" aria-label="Permalink to &quot;（2）*SEO\* 优化&quot;">&ZeroWidthSpace;</a></h5>
+<ul>
+<li>预渲染</li>
+<li>服务端渲染 <em>SSR</em></li>
+</ul>
+<h5 id="_3-打包优化" tabindex="-1">（3）打包优化 <a class="header-anchor" href="#_3-打包优化" aria-label="Permalink to &quot;（3）打包优化&quot;">&ZeroWidthSpace;</a></h5>
+<ul>
+<li>压缩代码</li>
+<li><em>Tree Shaking/Scope Hoisting</em></li>
+<li>使用 <em>cdn</em> 加载第三方模块</li>
+<li>多线程打包 <em>happypack</em></li>
+<li><em>splitChunks</em> 抽离公共文件</li>
+<li><em>sourceMap</em> 优化</li>
+</ul>
+<h5 id="_4-用户体验" tabindex="-1">（4）用户体验 <a class="header-anchor" href="#_4-用户体验" aria-label="Permalink to &quot;（4）用户体验&quot;">&ZeroWidthSpace;</a></h5>
+<ul>
+<li>骨架屏</li>
+<li><em>PWA</em></li>
+</ul>
+<p>还可以使用缓存(客户端缓存、服务端缓存)优化、服务端开启 gzip 压缩等。</p>
+<h2 id="_4-23" tabindex="-1">4-23 <a class="header-anchor" href="#_4-23" aria-label="Permalink to &quot;4-23&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="vue修饰符" tabindex="-1">vue修饰符 <a class="header-anchor" href="#vue修饰符" aria-label="Permalink to &quot;vue修饰符&quot;">&ZeroWidthSpace;</a></h3>
+<h4 id="_1-事件修饰符" tabindex="-1">（1）事件修饰符 <a class="header-anchor" href="#_1-事件修饰符" aria-label="Permalink to &quot;（1）事件修饰符&quot;">&ZeroWidthSpace;</a></h4>
+<p>在事件处理程序中调用 <em>event.preventDefault</em> 或 <em>event.stopPropagation</em> 方法是非常常见的需求。尽管可以在 <em>methods</em> 中轻松实现这点，但更好的方式是：<em>methods</em> 只有纯粹的数据逻辑，而不是去处理 <em>DOM</em> 事件细节。</p>
+<p>常见的事件修饰符如下：</p>
+<ul>
+<li><em>.stop</em>：阻止冒泡。</li>
+<li><em>.prevent</em>：阻止默认事件。</li>
+<li><em>.capture</em>：使用事件捕获模式。</li>
+<li><em>.self</em>：只在当前元素本身触发。</li>
+<li><em>.once</em>：只触发一次。</li>
+<li><em>.passive</em>：默认行为将会立即触发。</li>
+</ul>
+<h4 id="_2-按键修饰符" tabindex="-1">（2）按键修饰符 <a class="header-anchor" href="#_2-按键修饰符" aria-label="Permalink to &quot;（2）按键修饰符&quot;">&ZeroWidthSpace;</a></h4>
+<p>在 <em>vue</em> 中还提供了有鼠标修饰符，键值修饰符，系统修饰符等功能。</p>
+<ul>
+<li>.<em>left</em>：左键</li>
+<li>.<em>right</em>：右键</li>
+<li>.<em>middle</em>：滚轮</li>
+<li>.<em>enter</em>：回车</li>
+<li>.<em>tab</em>：制表键</li>
+<li>.<em>delete</em>：捕获 “删除” 和 “退格” 键</li>
+<li>.<em>esc</em>：返回</li>
+<li>.<em>space</em>：空格</li>
+<li>.<em>up</em>：上</li>
+<li>.<em>down</em>：下</li>
+<li>.<em>left</em>：左</li>
+<li>.<em>right</em>：右</li>
+<li>.<em>ctrl</em>：<em>ctrl</em> 键</li>
+<li>.<em>alt</em>：<em>alt</em> 键</li>
+<li>.<em>shift</em>：<em>shift</em> 键</li>
+<li>.<em>meta</em>：<em>meta</em> 键</li>
+</ul>
+<h4 id="_3-表单修饰符" tabindex="-1">（3）表单修饰符 <a class="header-anchor" href="#_3-表单修饰符" aria-label="Permalink to &quot;（3）表单修饰符&quot;">&ZeroWidthSpace;</a></h4>
+<p>常见的有 <em>.lazy</em>、 <em>.number</em> 和 <em>.trim</em>。</p>
+<ul>
+<li>.<em>lazy</em>：在文本框失去焦点时才会渲染</li>
+<li>.<em>number</em>：将文本框中所输入的内容转换为number类型</li>
+<li>.<em>trim</em>：可以自动过滤输入首尾的空格</li>
+</ul>
+<h2 id="_4-22" tabindex="-1">4-22 <a class="header-anchor" href="#_4-22" aria-label="Permalink to &quot;4-22&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="nexttick的作用" tabindex="-1">nextTick的作用 <a class="header-anchor" href="#nexttick的作用" aria-label="Permalink to &quot;nextTick的作用&quot;">&ZeroWidthSpace;</a></h3>
+<p>在下次 DOM 更新循环结束之后执行延迟回调。nextTick主要使用了宏任务和微任务。根据执行环境分别尝试采用</p>
+<p>Promise
+MutationObserver
+setImmediate
+如果以上都不行则采用setTimeout</p>
+<p>定义了一个异步方法，多次调用nextTick会将方法存入队列中，通过这个异步方法清空当前队列。</p>
+<h2 id="_4-21" tabindex="-1">4-21 <a class="header-anchor" href="#_4-21" aria-label="Permalink to &quot;4-21&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="v-if和v-show的区别" tabindex="-1">v-if和v-show的区别 <a class="header-anchor" href="#v-if和v-show的区别" aria-label="Permalink to &quot;v-if和v-show的区别&quot;">&ZeroWidthSpace;</a></h3>
+<h4 id="_1-共同点" tabindex="-1">（1）共同点 <a class="header-anchor" href="#_1-共同点" aria-label="Permalink to &quot;（1）共同点&quot;">&ZeroWidthSpace;</a></h4>
+<blockquote>
+<p><code>v-show</code> 与 <code>v-if</code> 的作用效果是相同的(不含v-else)，都能控制元素在页面是否显示</p>
+<p>用法上也是相同的：</p>
+<ul>
+<li>当表达式为<code>true</code>的时候，都会占据页面的位置</li>
+<li>当表达式都为<code>false</code>时，都不会占据页面位置</li>
+</ul>
+</blockquote>
+<h4 id="_2-不同点" tabindex="-1">（2）不同点 <a class="header-anchor" href="#_2-不同点" aria-label="Permalink to &quot;（2）不同点&quot;">&ZeroWidthSpace;</a></h4>
+<blockquote>
+<p><code>v-show</code>隐藏则是为该元素添加<code>css--display:none</code>，<code>dom</code>元素依旧还在。</p>
+<p><code>v-if</code>显示隐藏是将<code>dom</code>元素整个添加或删除。</p>
+<p><code>v-if</code>有更高的切换消耗；<code>v-show</code>有更高的初始渲染消耗；</p>
+</blockquote>
+<h2 id="_4-20" tabindex="-1">4-20 <a class="header-anchor" href="#_4-20" aria-label="Permalink to &quot;4-20&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="vue组件的通信方式" tabindex="-1">vue组件的通信方式 <a class="header-anchor" href="#vue组件的通信方式" aria-label="Permalink to &quot;vue组件的通信方式&quot;">&ZeroWidthSpace;</a></h3>
+<h4 id="_1-使用props-属性" tabindex="-1">（1）使用Props（属性）： <a class="header-anchor" href="#_1-使用props-属性" aria-label="Permalink to &quot;（1）使用Props（属性）：&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>
+<p>父组件可以通过在子组件上绑定属性（props）来向子组件传递数据。</p>
+</li>
+<li>
+<p>子组件通过在模板中使用props来访问这些属性。</p>
+</li>
+<li>
+<p>这是一种父向子组件传递数据的单向通信方式。</p>
+<blockquote>
+<p>父-&gt;子<code>props</code>，子-&gt;父 <code>$on、$emit</code></p>
+<p>获取父子组件实例 <code>$parent、$children</code></p>
+</blockquote>
+</li>
+</ul>
+<h4 id="_2-使用自定义事件" tabindex="-1">（2）使用自定义事件： <a class="header-anchor" href="#_2-使用自定义事件" aria-label="Permalink to &quot;（2）使用自定义事件：&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>子组件可以触发自定义事件，而父组件可以监听这些事件。</li>
+<li>这允许子组件向父组件发送消息。</li>
+<li>这是一种子向父组件传递数据的方式。</li>
+</ul>
+<h4 id="_3-使用-refs" tabindex="-1">（3）使用<code>$refs</code>： <a class="header-anchor" href="#_3-使用-refs" aria-label="Permalink to &quot;（3）使用`$refs`：&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>父组件可以通过<code>ref</code>属性引用子组件，并直接访问子组件的属性和方法。</li>
+<li>这是一种直接的通信方式，但通常不推荐在多个子组件之间使用。</li>
+</ul>
+<h4 id="_4-使用vuex-状态管理库" tabindex="-1">（4）使用Vuex（状态管理库）： <a class="header-anchor" href="#_4-使用vuex-状态管理库" aria-label="Permalink to &quot;（4）使用Vuex（状态管理库）：&quot;">&ZeroWidthSpace;</a></h4>
+<ul>
+<li>如果父子组件之间的通信较复杂，或者涉及多个组件，可以使用Vuex来实现全局状态管理。</li>
+<li>Vuex允许不同组件共享数据，并通过触发和监听事件来进行通信。</li>
+</ul>
+<p>这些方法中的选择取决于您的具体需求和组件之间的关系。<code>在大多数情况下，使用Props和自定义事件是足够</code>的，但在更复杂的情况下，考虑使用Vuex或其他适当的通信模式。</p>
+<h2 id="_4-19" tabindex="-1">4-19 <a class="header-anchor" href="#_4-19" aria-label="Permalink to &quot;4-19&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="vue的响应式原理" tabindex="-1">vue的响应式原理 <a class="header-anchor" href="#vue的响应式原理" aria-label="Permalink to &quot;vue的响应式原理&quot;">&ZeroWidthSpace;</a></h3>
+<p>Vue在初始化数据时，会遍历组件的data对象，并使用<code>Object.defineProperty</code>重新定义data中的所有属性，将其所有属性值转化为getter和setter的形式。当页面使用对应属性时，首先会进行依赖收集(收集当前组件的<code>watcher</code>)如果属性发生变化会通知相关依赖进行更新操作。</p>
+<p>Vue3.x改用<code>Proxy</code>替代Object.defineProperty。因为Proxy可以直接监听对象和数组的变化，并且有多达13种拦截方法。并且作为新标准将受到浏览器厂商重点持续的性能优化。</p>
+<blockquote>
+<p>Proxy只会代理对象的第一层，Vue3是怎样处理的?</p>
+<p>判断当前Reflect.get的返回值是否为Object，如果是则再通过<code>reactive</code>方法做代理， 这样就实现了深度观测。</p>
+<p>监测数组的时候可能触发多次get/set，如何防止多次触发？</p>
+<p>判断key是否为当前被代理对象target自身属性，也可以判断旧值与新值是否相等，只有满足以上两个条件之一时，才有可能执行trigger。</p>
+</blockquote>
 <h2 id="_4-18" tabindex="-1">4-18 <a class="header-anchor" href="#_4-18" aria-label="Permalink to &quot;4-18&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="hashmap-和-hashtable-的区别" tabindex="-1">HashMap 和 Hashtable 的区别 <a class="header-anchor" href="#hashmap-和-hashtable-的区别" aria-label="Permalink to &quot;HashMap 和 Hashtable 的区别&quot;">&ZeroWidthSpace;</a></h3>
 <ul>
@@ -332,7 +503,7 @@
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/</guid>
-            <pubDate>Thu, 18 Apr 2024 07:58:21 GMT</pubDate>
+            <pubDate>Fri, 26 Apr 2024 15:11:14 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -346,6 +517,38 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>04/26</td>
+<td><a href="./4.html#_4-26">常用的 跨域 解决方案有哪些</a></td>
+</tr>
+<tr>
+<td>04/25</td>
+<td><a href="./4.html#_4-25">vue 中的 spa 引用如何优化首屏加载速度</a></td>
+</tr>
+<tr>
+<td>04/24</td>
+<td><a href="./4.html#_4-24">如何实现 vue 项目中的性能优化</a></td>
+</tr>
+<tr>
+<td>04/23</td>
+<td><a href="./4.html#_4-23">vue 修饰符</a></td>
+</tr>
+<tr>
+<td>04/22</td>
+<td><a href="./4.html#_4-22">nextTick 的作用</a></td>
+</tr>
+<tr>
+<td>04/21</td>
+<td><a href="./4.html#_4-21">v-if 和 v-show 的区别</a></td>
+</tr>
+<tr>
+<td>04/20</td>
+<td><a href="./4.html#_4-20">vue 组件的通信方式</a></td>
+</tr>
+<tr>
+<td>04/19</td>
+<td><a href="./4.html#_4-19">vue 的响应式原理</a></td>
+</tr>
 <tr>
 <td>04/18</td>
 <td><a href="./4.html#_4-18">HashMap 和 Hashtable 的区别</a></td>
@@ -784,6 +987,13 @@
 </tr>
 </tbody>
 </table>
+]]></content:encoded>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/interview/skills/</link>
+            <guid>https://www.imufeng.cn/interview/skills/</guid>
+            <pubDate>Fri, 26 Apr 2024 09:06:27 GMT</pubDate>
+            <content:encoded><![CDATA[<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 ]]></content:encoded>
         </item>
         <item>
@@ -3960,13 +4170,6 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
 <li><a href="./2023/">2023</a></li>
 <li><a href="./2024/">2024</a></li>
 </ul>
-]]></content:encoded>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/interview/skills/</link>
-            <guid>https://www.imufeng.cn/interview/skills/</guid>
-            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
-            <content:encoded><![CDATA[<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 ]]></content:encoded>
         </item>
         <item>
