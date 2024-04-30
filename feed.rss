@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Fri, 26 Apr 2024 15:12:27 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 30 Apr 2024 07:11:03 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -18,8 +18,62 @@
             <title><![CDATA[每日一题-202404]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/4.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/4.html</guid>
-            <pubDate>Fri, 26 Apr 2024 15:11:14 GMT</pubDate>
+            <pubDate>Tue, 30 Apr 2024 07:09:59 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="每日一题-202404" tabindex="-1">每日一题 - 202404 <a class="header-anchor" href="#每日一题-202404" aria-label="Permalink to &quot;每日一题 - 202404&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_4-30" tabindex="-1">4-30 <a class="header-anchor" href="#_4-30" aria-label="Permalink to &quot;4-30&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="如何理解-es6-的-reflect-对象" tabindex="-1">如何理解 ES6 的 Reflect 对象？ <a class="header-anchor" href="#如何理解-es6-的-reflect-对象" aria-label="Permalink to &quot;如何理解 ES6 的 Reflect 对象？&quot;">&ZeroWidthSpace;</a></h3>
+<p>Reflect 是一个内置的对象，它提供拦截 JavaScript 操作的方法。</p>
+<p>与大多数全局对象不同 Reflect 并非一个构造函数，所以不能通过 new 运算符对其进行调用，
+或者将 Reflect 对象作为一个函数来调用。Reflect 的所有属性和方法都是静态的（就像 Math 对象）。</p>
+<p>常用方法：</p>
+<ul>
+<li><code>Reflect.apply(target, thisArgument, argumentsList)</code>  调用函数，并传入一个数组作为参数</li>
+<li><code>Reflect.get(target, propertyKey[, receiver])</code>   获得对象某个属性的值</li>
+<li><code>Reflect.has(target, propertyKey)</code>    判断对象是否存在某个属性</li>
+<li><code>Reflect.ownKeys(target);</code>    返回对象自身的属性</li>
+<li><code>Reflect.set(target, propertyKey, value[, receiver])</code>    给对象添加一个属性。返回 boolean</li>
+</ul>
+<h2 id="_4-29" tabindex="-1">4-29 <a class="header-anchor" href="#_4-29" aria-label="Permalink to &quot;4-29&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="如何理解-es6-的-proxy-对象" tabindex="-1">如何理解 ES6 的 Proxy 对象？ <a class="header-anchor" href="#如何理解-es6-的-proxy-对象" aria-label="Permalink to &quot;如何理解 ES6 的 Proxy 对象？&quot;">&ZeroWidthSpace;</a></h3>
+<p>ES6 用于创建一个对象的代理，从而实现基本操作的拦截和自定义。 <code>const p = new Proxy(target, handler)</code>，
+其中，target 表示需要包装的目标对象，可以是任意类型的对象。handler 通常为函数，用于定义代理对象 p 的行为。</p>
+<div class="language-javascript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> handler</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  get</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">function</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">obj</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">prop</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> prop </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">in</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> obj </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> obj[prop] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 37</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  },</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> p</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Proxy</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({}, handler);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">p.a </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">p.b </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> undefined</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(p.a, p.b); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// 1, undefined</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"c"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> in</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> p, p.c); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// false, 37</span></span></code></pre>
+</div><h2 id="_4-28" tabindex="-1">4-28 <a class="header-anchor" href="#_4-28" aria-label="Permalink to &quot;4-28&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="如何理解-es6-的-promise-对象" tabindex="-1">如何理解 ES6 的 Promise 对象？ <a class="header-anchor" href="#如何理解-es6-的-promise-对象" aria-label="Permalink to &quot;如何理解 ES6 的 Promise 对象？&quot;">&ZeroWidthSpace;</a></h3>
+<div class="language-javascript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">new</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Promise</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">((</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">resolve</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">reject</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    doSomeThing</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">then</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">result</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">/*正常运行后。。。*/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">catch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">error</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">/*报错时。。。*/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">finally</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(() </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">/*结束时操作。。。*/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span></code></pre>
+</div><p>Promise 是已部编程的一种解决方案，用于替代回调函数，更加强大和合理。</p>
+<p>传统的回调函数在多个回调中，代码结构会嵌套多层，极大的增加的阅读难度。</p>
+<p>Promise 对象通过链式操作降低了代码难度并极大的加强了代码的可读性。</p>
+<div class="language-javascript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">doSomething</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">().</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">then</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">function</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">result</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  return</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> doSomethingElse</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(result);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">then</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">function</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">newResult</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  return</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> doThirdThing</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(newResult);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">then</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">function</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">finalResult</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'得到最终结果: '</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> +</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> finalResult);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">catch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(failureCallback);</span></span></code></pre>
+</div><h2 id="_4-27" tabindex="-1">4-27 <a class="header-anchor" href="#_4-27" aria-label="Permalink to &quot;4-27&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是-spa" tabindex="-1">什么是 SPA？ <a class="header-anchor" href="#什么是-spa" aria-label="Permalink to &quot;什么是 SPA？&quot;">&ZeroWidthSpace;</a></h3>
+<p>SPA 指 single-page application（单页面应用），通过动态重写当前页面 DOM 与用户进行交互，避免了页面之间切换打断用户体验。</p>
 <h2 id="_4-26" tabindex="-1">4-26 <a class="header-anchor" href="#_4-26" aria-label="Permalink to &quot;4-26&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="常用的跨域解决方案有哪些" tabindex="-1">常用的跨域解决方案有哪些 <a class="header-anchor" href="#常用的跨域解决方案有哪些" aria-label="Permalink to &quot;常用的跨域解决方案有哪些&quot;">&ZeroWidthSpace;</a></h3>
 <h5 id="_1-cors" tabindex="-1">（1）CORS： <a class="header-anchor" href="#_1-cors" aria-label="Permalink to &quot;（1）CORS：&quot;">&ZeroWidthSpace;</a></h5>
@@ -29,7 +83,7 @@
 <h5 id="_3-websocket" tabindex="-1">（3）WebSocket： <a class="header-anchor" href="#_3-websocket" aria-label="Permalink to &quot;（3）WebSocket：&quot;">&ZeroWidthSpace;</a></h5>
 <p>WebSocket 是一种 HTML5 协议，它使得浏览器和服务器之间可以建立持久化的连接，可以直接使用 Socket 进行通信，避免了浏览器的跨域限制。</p>
 <h2 id="_4-25" tabindex="-1">4-25 <a class="header-anchor" href="#_4-25" aria-label="Permalink to &quot;4-25&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="vue中的spa引用如何优化首屏加载速度" tabindex="-1">vue中的spa引用如何优化首屏加载速度 <a class="header-anchor" href="#vue中的spa引用如何优化首屏加载速度" aria-label="Permalink to &quot;vue中的spa引用如何优化首屏加载速度&quot;">&ZeroWidthSpace;</a></h3>
+<h3 id="vue-中的-spa-引用如何优化首屏加载速度" tabindex="-1">vue 中的 spa 引用如何优化首屏加载速度 <a class="header-anchor" href="#vue-中的-spa-引用如何优化首屏加载速度" aria-label="Permalink to &quot;vue 中的 spa 引用如何优化首屏加载速度&quot;">&ZeroWidthSpace;</a></h3>
 <ul>
 <li>请求优化：<code>CDN</code> 将第三方的类库放到 CDN 上，能够大幅度减少生产环境中的项目体积，另外 CDN 能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。</li>
 <li>缓存：将长时间不会改变的第三方类库或者静态资源设置为强缓存，将 max-age 设置为一个非常长的时间，再将访问路径加上哈希达到哈希值变了以后保证获取到最新资源，好的缓存策略有助于减轻服务器的压力，并且显著的提升用户的体验</li>
@@ -46,7 +100,7 @@
 <li>压缩图片：可以使用 image-webpack-loader，在用户肉眼分辨不清的情况下一定程度上压缩图片</li>
 </ul>
 <h2 id="_4-24" tabindex="-1">4-24 <a class="header-anchor" href="#_4-24" aria-label="Permalink to &quot;4-24&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="如何实现vue项目中的性能优化" tabindex="-1">如何实现vue项目中的性能优化 <a class="header-anchor" href="#如何实现vue项目中的性能优化" aria-label="Permalink to &quot;如何实现vue项目中的性能优化&quot;">&ZeroWidthSpace;</a></h3>
+<h3 id="如何实现-vue-项目中的性能优化" tabindex="-1">如何实现 vue 项目中的性能优化 <a class="header-anchor" href="#如何实现-vue-项目中的性能优化" aria-label="Permalink to &quot;如何实现 vue 项目中的性能优化&quot;">&ZeroWidthSpace;</a></h3>
 <h5 id="_1-编码阶段" tabindex="-1">（1）编码阶段 <a class="header-anchor" href="#_1-编码阶段" aria-label="Permalink to &quot;（1）编码阶段&quot;">&ZeroWidthSpace;</a></h5>
 <ul>
 <li>尽量减少 <em>data</em> 中的数据，<em>data</em> 中的数据都会增加 <em>getter</em> 和 <em>setter</em>，会收集对应的 <em>watcher</em></li>
@@ -82,7 +136,7 @@
 </ul>
 <p>还可以使用缓存(客户端缓存、服务端缓存)优化、服务端开启 gzip 压缩等。</p>
 <h2 id="_4-23" tabindex="-1">4-23 <a class="header-anchor" href="#_4-23" aria-label="Permalink to &quot;4-23&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="vue修饰符" tabindex="-1">vue修饰符 <a class="header-anchor" href="#vue修饰符" aria-label="Permalink to &quot;vue修饰符&quot;">&ZeroWidthSpace;</a></h3>
+<h3 id="vue-修饰符" tabindex="-1">vue 修饰符 <a class="header-anchor" href="#vue-修饰符" aria-label="Permalink to &quot;vue 修饰符&quot;">&ZeroWidthSpace;</a></h3>
 <h4 id="_1-事件修饰符" tabindex="-1">（1）事件修饰符 <a class="header-anchor" href="#_1-事件修饰符" aria-label="Permalink to &quot;（1）事件修饰符&quot;">&ZeroWidthSpace;</a></h4>
 <p>在事件处理程序中调用 <em>event.preventDefault</em> 或 <em>event.stopPropagation</em> 方法是非常常见的需求。尽管可以在 <em>methods</em> 中轻松实现这点，但更好的方式是：<em>methods</em> 只有纯粹的数据逻辑，而不是去处理 <em>DOM</em> 事件细节。</p>
 <p>常见的事件修饰符如下：</p>
@@ -122,7 +176,7 @@
 <li>.<em>trim</em>：可以自动过滤输入首尾的空格</li>
 </ul>
 <h2 id="_4-22" tabindex="-1">4-22 <a class="header-anchor" href="#_4-22" aria-label="Permalink to &quot;4-22&quot;">&ZeroWidthSpace;</a></h2>
-<h3 id="nexttick的作用" tabindex="-1">nextTick的作用 <a class="header-anchor" href="#nexttick的作用" aria-label="Permalink to &quot;nextTick的作用&quot;">&ZeroWidthSpace;</a></h3>
+<h3 id="nexttick-的作用" tabindex="-1">nextTick 的作用 <a class="header-anchor" href="#nexttick-的作用" aria-label="Permalink to &quot;nextTick 的作用&quot;">&ZeroWidthSpace;</a></h3>
 <p>在下次 DOM 更新循环结束之后执行延迟回调。nextTick主要使用了宏任务和微任务。根据执行环境分别尝试采用</p>
 <p>Promise
 MutationObserver
@@ -503,7 +557,7 @@ setImmediate
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/</guid>
-            <pubDate>Fri, 26 Apr 2024 15:11:14 GMT</pubDate>
+            <pubDate>Tue, 30 Apr 2024 07:09:59 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -517,6 +571,22 @@ setImmediate
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>04/30</td>
+<td><a href="./4.html#_4-30">如何理解 ES6 的 Reflect 对象？</a></td>
+</tr>
+<tr>
+<td>04/29</td>
+<td><a href="./4.html#_4-29">如何理解 ES6 的 Proxy 对象？</a></td>
+</tr>
+<tr>
+<td>04/28</td>
+<td><a href="./4.html#_4-28">如何理解 ES6 的 Promise 对象？</a></td>
+</tr>
+<tr>
+<td>04/27</td>
+<td><a href="./4.html#_4-27">什么是 SPA？</a></td>
+</tr>
 <tr>
 <td>04/26</td>
 <td><a href="./4.html#_4-26">常用的 跨域 解决方案有哪些</a></td>
