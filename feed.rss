@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Fri, 10 May 2024 00:33:45 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 10 May 2024 08:28:53 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -18,7 +18,7 @@
             <title><![CDATA[每日一题-202405]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/5.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/5.html</guid>
-            <pubDate>Thu, 09 May 2024 09:05:54 GMT</pubDate>
+            <pubDate>Fri, 10 May 2024 08:27:53 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="每日一题-202405" tabindex="-1">每日一题 - 202405 <a class="header-anchor" href="#每日一题-202405" aria-label="Permalink to &quot;每日一题 - 202405&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_5-1" tabindex="-1">5-1 <a class="header-anchor" href="#_5-1" aria-label="Permalink to &quot;5-1&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="ssr是什么" tabindex="-1">SSR是什么？ <a class="header-anchor" href="#ssr是什么" aria-label="Permalink to &quot;SSR是什么？&quot;">&ZeroWidthSpace;</a></h3>
@@ -297,14 +297,32 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
 <h3 id="computed-和-watch-的区别" tabindex="-1">computed 和 watch 的区别？ <a class="header-anchor" href="#computed-和-watch-的区别" aria-label="Permalink to &quot;computed 和 watch 的区别？&quot;">&ZeroWidthSpace;</a></h3>
 <p><strong>computed：</strong> 是计算属性，依赖其它属性值，并且 computed 的值有缓存，只有它依赖的属性值发生改变，下一次获取 computed 的值时才会重新计算 computed  的值；</p>
 <p><strong>watch：</strong> 更多的是「观察」的作用，类似于某些数据的监听回调 ，每当监听的数据变化时都会执行回调进行后续操作；</p>
-]]></content:encoded>
+<h2 id="_5-10" tabindex="-1">5-10 <a class="header-anchor" href="#_5-10" aria-label="Permalink to &quot;5-10&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="js模块编程题" tabindex="-1">JS模块编程题 <a class="header-anchor" href="#js模块编程题" aria-label="Permalink to &quot;JS模块编程题&quot;">&ZeroWidthSpace;</a></h3>
+<h4 id="题目" tabindex="-1">题目： <a class="header-anchor" href="#题目" aria-label="Permalink to &quot;题目：&quot;">&ZeroWidthSpace;</a></h4>
+<p>完成函数 createModule，调用之后满足如下要求：
+1、返回一个对象
+2、对象的 greeting 属性值等于 str1， name 属性值等于 str2
+3、对象存在一个 sayIt 方法，该方法返回的字符串为 greeting属性值 + ', ' + name属性值</p>
+<h4 id="题解" tabindex="-1">题解： <a class="header-anchor" href="#题解" aria-label="Permalink to &quot;题解：&quot;">&ZeroWidthSpace;</a></h4>
+<div class="language-javascript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> createModule</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">str1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">str2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    let</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> res </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        greeting: str1,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        name: str2,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    res.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sayIt</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> function</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">() {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.greeting </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">+</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ', '</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> +</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.name;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> res;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div>]]></content:encoded>
             <enclosure url="https://static.vue-js.com/d9862c00-69b8-11eb-ab90-d9ae814b240d.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/</guid>
-            <pubDate>Thu, 09 May 2024 09:05:54 GMT</pubDate>
+            <pubDate>Fri, 10 May 2024 08:27:53 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -318,6 +336,10 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>05/10</td>
+<td><a href="./5.html#_5-10">JS模块编程题</a></td>
+</tr>
 <tr>
 <td>05/09</td>
 <td><a href="./5.html#_5-9"> computed和watch的区别？</a></td>
