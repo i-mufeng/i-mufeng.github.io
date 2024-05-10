@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Wed, 08 May 2024 09:24:55 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 10 May 2024 00:33:45 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -18,7 +18,7 @@
             <title><![CDATA[每日一题-202405]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/5.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/5.html</guid>
-            <pubDate>Wed, 08 May 2024 09:23:53 GMT</pubDate>
+            <pubDate>Thu, 09 May 2024 09:05:54 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="每日一题-202405" tabindex="-1">每日一题 - 202405 <a class="header-anchor" href="#每日一题-202405" aria-label="Permalink to &quot;每日一题 - 202405&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_5-1" tabindex="-1">5-1 <a class="header-anchor" href="#_5-1" aria-label="Permalink to &quot;5-1&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="ssr是什么" tabindex="-1">SSR是什么？ <a class="header-anchor" href="#ssr是什么" aria-label="Permalink to &quot;SSR是什么？&quot;">&ZeroWidthSpace;</a></h3>
@@ -293,6 +293,10 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
 <p>在确定好输出内容后，根据配置确定输出的路径和文件名</p>
 <p>在 <code>Compiler</code> 开始生成文件前，钩子 <code>emit</code> 会被执行，这是我们修改最终文件的最后一个机会</p>
 <p>从而<code>webpack</code>整个打包过程则结束了</p>
+<h2 id="_5-9" tabindex="-1">5-9 <a class="header-anchor" href="#_5-9" aria-label="Permalink to &quot;5-9&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="computed-和-watch-的区别" tabindex="-1">computed 和 watch 的区别？ <a class="header-anchor" href="#computed-和-watch-的区别" aria-label="Permalink to &quot;computed 和 watch 的区别？&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>computed：</strong> 是计算属性，依赖其它属性值，并且 computed 的值有缓存，只有它依赖的属性值发生改变，下一次获取 computed 的值时才会重新计算 computed  的值；</p>
+<p><strong>watch：</strong> 更多的是「观察」的作用，类似于某些数据的监听回调 ，每当监听的数据变化时都会执行回调进行后续操作；</p>
 ]]></content:encoded>
             <enclosure url="https://static.vue-js.com/d9862c00-69b8-11eb-ab90-d9ae814b240d.png" length="0" type="image/png"/>
         </item>
@@ -300,7 +304,7 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/</guid>
-            <pubDate>Wed, 08 May 2024 09:23:53 GMT</pubDate>
+            <pubDate>Thu, 09 May 2024 09:05:54 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -314,6 +318,10 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>05/09</td>
+<td><a href="./5.html#_5-9"> computed和watch的区别？</a></td>
+</tr>
 <tr>
 <td>05/08</td>
 <td><a href="./5.html#_5-8">webpack 的构建流程？</a></td>
