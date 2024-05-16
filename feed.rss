@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Mon, 13 May 2024 09:21:38 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 16 May 2024 09:16:16 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -18,8 +18,136 @@
             <title><![CDATA[每日一题-202405]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/5.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/5.html</guid>
-            <pubDate>Mon, 13 May 2024 09:20:28 GMT</pubDate>
+            <pubDate>Thu, 16 May 2024 09:15:10 GMT</pubDate>
+            <description><![CDATA[
+# 每日一题 - 202405
+
+## 5-16
+
+### 理解keep-alive
+
+keep-alive 是 Vue 内置的一个组件，可以使被包含的组件保留状态，避免重新渲染 ，其有以下特性：
+
+- 一般结合路由和动态组件一起使用，用于缓存组件；
+- 提供 include 和 exclude 属性，两者都支持字符串或正则表达式， include 表示只有名称匹配的组件会被缓存，exclude 表示任何名称匹配的组件都不会被缓存 ，其中 exclude 的优先级比 include 高；
+- 对应两个钩子函数 activated 和 deactivated ，当组件被激活时，触发钩子函数 activated，当组件被移除时，触发钩子函数 deactivated。
+
+
+## 5-15
+
+### Vue 的父组件和子组件生命周期钩子函数执行顺序
+
+Vue 的父组件和子组件生命周期钩子函数执行顺序可以归类为以下 4 部分：
+
+- 加载渲染过程
+
+  父 beforeCreate -> 父 created -> 父 beforeMount -> 子 beforeCreate -> 子 created -> 子 beforeMount -> 子 mounted -> 父 mounted
+
+- 子组件更新过程
+
+  父 beforeUpdate -> 子 beforeUpdate -> 子 updated -> 父 updated
+
+- 父组件更新过程
+
+  父 beforeUpdate -> 父 updated
+
+- 销毁过程
+
+  父 beforeDestroy -> 子 beforeDestroy -> 子 destroyed -> 父 destroyed
+
+
+## 5-14
+
+### Vue 生命周期
+
+Vue 实例有一个完整的生命周期，也就是从开始创建、初始化数据、编译模版、挂载 Dom -> 渲染、更新 -> 渲染、卸载等一系列过程，我们称这是 Vue 的生命周期。
+
+| **生命周期**  | **描述**                                                     |
+| ]]></description>
             <content:encoded><![CDATA[<h1 id="每日一题-202405" tabindex="-1">每日一题 - 202405 <a class="header-anchor" href="#每日一题-202405" aria-label="Permalink to &quot;每日一题 - 202405&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_5-16" tabindex="-1">5-16 <a class="header-anchor" href="#_5-16" aria-label="Permalink to &quot;5-16&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="理解keep-alive" tabindex="-1">理解keep-alive <a class="header-anchor" href="#理解keep-alive" aria-label="Permalink to &quot;理解keep-alive&quot;">&ZeroWidthSpace;</a></h3>
+<p>keep-alive 是 Vue 内置的一个组件，可以使被包含的组件保留状态，避免重新渲染 ，其有以下特性：</p>
+<ul>
+<li>一般结合路由和动态组件一起使用，用于缓存组件；</li>
+<li>提供 include 和 exclude 属性，两者都支持字符串或正则表达式， include 表示只有名称匹配的组件会被缓存，exclude 表示任何名称匹配的组件都不会被缓存 ，其中 exclude 的优先级比 include 高；</li>
+<li>对应两个钩子函数 activated 和 deactivated ，当组件被激活时，触发钩子函数 activated，当组件被移除时，触发钩子函数 deactivated。</li>
+</ul>
+<h2 id="_5-15" tabindex="-1">5-15 <a class="header-anchor" href="#_5-15" aria-label="Permalink to &quot;5-15&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="vue-的父组件和子组件生命周期钩子函数执行顺序" tabindex="-1">Vue 的父组件和子组件生命周期钩子函数执行顺序 <a class="header-anchor" href="#vue-的父组件和子组件生命周期钩子函数执行顺序" aria-label="Permalink to &quot;Vue 的父组件和子组件生命周期钩子函数执行顺序&quot;">&ZeroWidthSpace;</a></h3>
+<p>Vue 的父组件和子组件生命周期钩子函数执行顺序可以归类为以下 4 部分：</p>
+<ul>
+<li>
+<p>加载渲染过程</p>
+<p>父 beforeCreate -&gt; 父 created -&gt; 父 beforeMount -&gt; 子 beforeCreate -&gt; 子 created -&gt; 子 beforeMount -&gt; 子 mounted -&gt; 父 mounted</p>
+</li>
+<li>
+<p>子组件更新过程</p>
+<p>父 beforeUpdate -&gt; 子 beforeUpdate -&gt; 子 updated -&gt; 父 updated</p>
+</li>
+<li>
+<p>父组件更新过程</p>
+<p>父 beforeUpdate -&gt; 父 updated</p>
+</li>
+<li>
+<p>销毁过程</p>
+<p>父 beforeDestroy -&gt; 子 beforeDestroy -&gt; 子 destroyed -&gt; 父 destroyed</p>
+</li>
+</ul>
+<h2 id="_5-14" tabindex="-1">5-14 <a class="header-anchor" href="#_5-14" aria-label="Permalink to &quot;5-14&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="vue-生命周期" tabindex="-1">Vue 生命周期 <a class="header-anchor" href="#vue-生命周期" aria-label="Permalink to &quot;Vue 生命周期&quot;">&ZeroWidthSpace;</a></h3>
+<p>Vue 实例有一个完整的生命周期，也就是从开始创建、初始化数据、编译模版、挂载 Dom -&gt; 渲染、更新 -&gt; 渲染、卸载等一系列过程，我们称这是 Vue 的生命周期。</p>
+<table>
+<thead>
+<tr>
+<th><strong>生命周期</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>beforeCreate</td>
+<td>组件实例被创建之初，组件的属性生效之前</td>
+</tr>
+<tr>
+<td>created</td>
+<td>组件实例已经完全创建，属性也绑定，但真实 dom 还没有生成，$el 还不可用</td>
+</tr>
+<tr>
+<td>beforeMount</td>
+<td>在挂载开始之前被调用：相关的 render 函数首次被调用</td>
+</tr>
+<tr>
+<td>mounted</td>
+<td>el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子</td>
+</tr>
+<tr>
+<td>beforeUpdate</td>
+<td>组件数据更新之前调用，发生在虚拟 DOM 打补丁之前</td>
+</tr>
+<tr>
+<td>update</td>
+<td>组件数据更新之后</td>
+</tr>
+<tr>
+<td>activited</td>
+<td>keep-alive 专属，组件被激活时调用</td>
+</tr>
+<tr>
+<td>deactivated</td>
+<td>keep-alive 专属，组件被销毁时调用</td>
+</tr>
+<tr>
+<td>beforeDestory</td>
+<td>组件销毁前调用</td>
+</tr>
+<tr>
+<td>destoryed</td>
+<td>组件销毁后调用</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/8/19/16ca74f183827f46~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.awebp" alt="1.png"></p>
 <h2 id="_5-13" tabindex="-1">5-13 <a class="header-anchor" href="#_5-13" aria-label="Permalink to &quot;5-13&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="js-双色球机选一注" tabindex="-1">JS 双色球机选一注 <a class="header-anchor" href="#js-双色球机选一注" aria-label="Permalink to &quot;JS 双色球机选一注&quot;">&ZeroWidthSpace;</a></h3>
 <h4 id="描述" tabindex="-1">描述 <a class="header-anchor" href="#描述" aria-label="Permalink to &quot;描述&quot;">&ZeroWidthSpace;</a></h4>
@@ -676,13 +804,13 @@ SSR解决方案，后端渲染出完整的首屏的dom结构返回，前端拿�
 Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
 </blockquote>
 ]]></content:encoded>
-            <enclosure url="https://uploadfiles.nowcoder.com/images/20180912/56_1536742847965_6A5DCE935C2B11A7798DAD3BC7BBD64B" length="0" type="image//images/20180912/56_1536742847965_6A5DCE935C2B11A7798DAD3BC7BBD64B"/>
+            <enclosure url="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/8/19/16ca74f183827f46~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.awebp" length="0" type="image/awebp"/>
         </item>
         <item>
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/</guid>
-            <pubDate>Mon, 13 May 2024 09:14:27 GMT</pubDate>
+            <pubDate>Thu, 16 May 2024 09:15:10 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -696,6 +824,18 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>05/16</td>
+<td><a href="./5.html#_5-16">理解 keep-alive</a></td>
+</tr>
+<tr>
+<td>05/15</td>
+<td><a href="./5.html#_5-15">Vue 的父组件和子组件生命周期钩子函数执行顺序</a></td>
+</tr>
+<tr>
+<td>05/14</td>
+<td><a href="./5.html#_5-14">Vue 生命周期</a></td>
+</tr>
 <tr>
 <td>05/13</td>
 <td><a href="./5.html#_5-13">JS 双色球机选一注</a></td>
