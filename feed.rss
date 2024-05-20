@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Fri, 17 May 2024 09:02:51 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 20 May 2024 09:23:42 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -18,9 +18,283 @@
             <title><![CDATA[每日一题-202405]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/5.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/5.html</guid>
-            <pubDate>Fri, 17 May 2024 09:01:26 GMT</pubDate>
+            <pubDate>Mon, 20 May 2024 09:22:40 GMT</pubDate>
             <description><![CDATA[
 # 每日一题 - 202405
+
+## 5-20
+
+### 理解provide与inject
+
+> 1、provide和inject是一对新的API，用于在父组件中提供数据，然后在子组件中注入数据。
+>
+> 2、provide：是一个对象，或者是一个返回对象的函数。里面呢就包含要给子孙后代的东西，也就是属性和属性值。
+>
+> 3、inject：一个字符串数组，或者是一个对象。属性值可以是一个对象，包含from和default默认值。
+
+```vue
+//在父组件中，使用provide提供数据：
+//name：定义提供 property的 name。
+//value ：property的值。
+ setup(){
+    provide('info',"值")
+  }
+//在子组件中，使用inject注入数据
+//name：接收 provide提供的属性名。
+//default：设置默认值，可以不写，是可选参数。
+setup(){
+    const info = inject("info")
+    inject('info',"设置默认值")
+    return {
+        info
+    }
+  }
+```
+
+> provide和inject只能在setup函数中使用，而且provide提供的数据只能在其子组件中使用。如果要在兄弟组件中共享数据，可以使用一个共享的对象或者使用Vuex等状态管理库。
+
+
+## 5-19
+
+### js-tool-big-box工具包
+
+js-tool-big-box工具主要解决防抖（`debounce`）和节流（`throttle`）的公共方法
+
+**防抖**：
+
+```javascript
+<template>
+  <div>
+    <input @keyup="handleChange" v-model="inputVal" />
+  </div>
+</template>
+<script>
+import { eventBox } from 'js-tool-big-box';
+export default {
+  data() {
+    return {
+      inputVal: ''
+    }
+  },
+    created() {
+        this.myDebounce = eventBox.debounce((data) => {
+          this.sendAjax(data);
+        }, 2000);
+      },
+methods: {
+    handleChange(event) {
+      const val = event.target.value;
+      this.myDebounce(val);
+    },
+    sendAjax(data) {
+      console.log('发送时间：：', new Date().getTime());
+      console.log('发送请求：', data);
+    },
+  }
+}
+</script>
+```
+
+**节流**：
+
+```javascript
+<script>
+import { eventBox } from 'js-tool-big-box';
+ 
+export default {
+  name: 'dj',
+  data () {
+    return {
+      inputVal: ''
+    }
+  },
+  created() {
+    this.myThrottle = eventBox.throttle((data) => {
+      this.sendAjax(data);
+    }, 2000);
+  },
+  methods: {
+    handleChange(event) {
+      const val = event.target.value;
+      this.myThrottle(val);
+    },
+    sendAjax(data) {
+      console.log('发送时间：：', new Date().getTime());
+      console.log('发送请求：', data);
+    },
+  }
+}
+</script>
+```
+
+
+## 5-18
+
+### Flutter状态管理
+
+以下是常用的状态管理框架：
+
+**1、state状态管理**
+
+```dart
+ @override
+  InheritedWidget inheritFromWidgetOfExactType(Type targetType, { Object aspect }) {
+    /// 在共享 map _inheritedWidgets 中查找
+    final InheritedElement ancestor = _inheritedWidgets == null ? null : _inheritedWidgets[targetType];
+    if (ancestor != null) {
+      /// 返回找到的 InheritedWidget ，同时添加当前 element 处理
+      return inheritFromElement(ancestor, aspect: aspect);
+    }
+    _hadUnsatisfiedDependencies = true;
+    return null;
+  }
+
+  @override
+  InheritedWidget inheritFromElement(InheritedElement ancestor, { Object aspect }) {
+    _dependencies ??= HashSet<InheritedElement>();
+    _dependencies.add(ancestor);
+   /// 就是将当前 element（this） 添加到  _dependents 里
+   /// 也就是 InheritedElement 的 _dependents
+   /// _dependents[dependent] = value;
+    ancestor.updateDependencies(this, aspect);
+    return ancestor.widget;
+  }
+
+  @override
+  void notifyClients(InheritedWidget oldWidget) {
+    for (Element dependent in _dependents.keys) {
+      notifyDependent(oldWidget, dependent);
+    }
+  }
+```
+
+**2、Provider状态管理**
+
+优点： `不复杂，好理解，代码量不大的情况下，可以方便组合和控制刷新颗粒度` ， 其实一开始官方也有一个 `flutter-provide` ，不过后来无了， `Provider`成了它的替代品。
+
+缺点：`相对依赖Flutter 和 Widget；需要依赖Context`
+
+```dart
+class _ProviderPageState extends State<ProviderPage> {
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(builder: (_) => ProviderModel()),
+      ],
+      child: Scaffold(
+        appBar: AppBar(
+          title: LayoutBuilder(
+            builder: (BuildContext context, BoxConstraints constraints) {
+              var counter =  Provider.of<ProviderModel>(context);
+              return new Text("Provider ${counter.count.toString()}");
+            },
+          )
+        ),
+        body: CountWidget(),
+      ),
+    );
+  }
+}
+
+class CountWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Consumer<ProviderModel>(builder: (context, counter, _) {
+      return new Column(
+        children: <Widget>[
+          new Expanded(child: new Center(child: new Text(counter.count.toString()))),
+          new Center(
+            child: new FlatButton(
+                onPressed: () {
+                  counter.add();
+                },
+                color: Colors.blue,
+                child: new Text("+")),
+          )
+        ],
+      );
+    });
+  }
+}
+
+class ProviderModel extends ChangeNotifier {
+  int _count = 0;
+
+  int get count => _count;
+
+  void add() {
+    _count++;
+    notifyListeners();
+  }
+}
+```
+
+**3、Bloc状态管理**
+
+BLoC算是 Flutter 早期比较知名的状态管理框架，它同样是存在 `bloc` 和 `flutter_bloc` 这样的依赖关系，**它是基于事件驱动来实现的状态管理**。
+
+优点：`代码更加解耦，这是事件驱动的特性,把状态更新和事件绑定，可以灵活得实现状态拦截，重试甚至撤回`
+
+缺点：`需要写更多的代码，开发节奏会有点影响,接收代码的新维护人员，缺乏有效文档时容易陷入对着事件和业务蒙圈,项目后期事件容易混乱交织`
+
+```dart
+BlocSelector<BlocA, BlocAState, SelectedState>(
+  selector: (state) {
+    // return selected state based on the provided state.
+  },
+  builder: (context, state) {
+    // return widget here based on the selected state.
+  },
+)
+
+MultiBlocListener(
+  listeners: [
+    BlocListener<BlocA, BlocAState>(
+      listener: (context, state) {},
+    ),
+    BlocListener<BlocB, BlocBState>(
+      listener: (context, state) {},
+    ),
+    BlocListener<BlocC, BlocCState>(
+      listener: (context, state) {},
+    ),
+  ],
+  child: ChildA(),
+)
+```
+
+**4、flutter_redux状态管理**
+
+优点：`解耦,对 redux 开发友好,适合中大型项目里协作开发`
+
+缺点：`影响开发速度，要写一堆模版,不是很贴合 Flutter 开发思路`
+
+**5、GetX状态管理**
+
+优点：`瑞士军刀式护航；对新人友好；可以减少很多代码`
+
+缺点：`全家桶，做的太多对于一些使用者来说是致命缺点，需要解决的 Bug 也多；“魔法”使用较多，脱离 Flutter 原本轨迹；入侵性极强`
+
+
+## 5-17
+
+### 了解Flutter
+
+`Flutter`是由Google推出的开源UI软件开发工具包，用于构建原生、精美的移动、web和桌面应用。它使用Dart语言作为开发语言，并通过自己的渲染引擎绘制UI。
+
+> **Flutter的优势：**
+>
+> - 提高开发效率
+    >   - 同一份代码开发iOS和Android
+>   - 用更少的代码做更多的事情
+>   - 轻松迭代
+      >     - 在应用程序运行时更改代码并重新加载（通过热重载）
+>     - 修复崩溃并继续从应用程序停止的地方进行调试
+> - 创建美观，高度定制的用户体验
+    >   - 受益于使用Flutter框架提供的丰富的Material Design和Cupertino（iOS风格）的widget
+>   - 实现定制、美观、品牌驱动的设计，而不受原生控件的限制
+
 
 ## 5-16
 
@@ -65,6 +339,242 @@ Vue 实例有一个完整的生命周期，也就是从`开始创建、初始化
 | **生命周期**  | **描述**                                                     |
 | ]]></description>
             <content:encoded><![CDATA[<h1 id="每日一题-202405" tabindex="-1">每日一题 - 202405 <a class="header-anchor" href="#每日一题-202405" aria-label="Permalink to &quot;每日一题 - 202405&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_5-20" tabindex="-1">5-20 <a class="header-anchor" href="#_5-20" aria-label="Permalink to &quot;5-20&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="理解provide与inject" tabindex="-1">理解provide与inject <a class="header-anchor" href="#理解provide与inject" aria-label="Permalink to &quot;理解provide与inject&quot;">&ZeroWidthSpace;</a></h3>
+<blockquote>
+<p>1、provide和inject是一对新的API，用于在父组件中提供数据，然后在子组件中注入数据。</p>
+<p>2、provide：是一个对象，或者是一个返回对象的函数。里面呢就包含要给子孙后代的东西，也就是属性和属性值。</p>
+<p>3、inject：一个字符串数组，或者是一个对象。属性值可以是一个对象，包含from和default默认值。</p>
+</blockquote>
+<div class="language-vue vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">vue</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">//在父组件中，使用provide提供数据：</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">//name：定义提供 property的 name。</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">//value ：property的值。</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> setup(){</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    provide('info',"值")</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">//在子组件中，使用inject注入数据</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">//name：接收 provide提供的属性名。</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">//default：设置默认值，可以不写，是可选参数。</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">setup(){</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    const info = inject("info")</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    inject('info',"设置默认值")</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    return {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        info</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span></code></pre>
+</div><blockquote>
+<p>provide和inject只能在setup函数中使用，而且provide提供的数据只能在其子组件中使用。如果要在兄弟组件中共享数据，可以使用一个共享的对象或者使用Vuex等状态管理库。</p>
+</blockquote>
+<h2 id="_5-19" tabindex="-1">5-19 <a class="header-anchor" href="#_5-19" aria-label="Permalink to &quot;5-19&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="js-tool-big-box工具包" tabindex="-1">js-tool-big-box工具包 <a class="header-anchor" href="#js-tool-big-box工具包" aria-label="Permalink to &quot;js-tool-big-box工具包&quot;">&ZeroWidthSpace;</a></h3>
+<p>js-tool-big-box工具主要解决防抖（<code>debounce</code>）和节流（<code>throttle</code>）的公共方法</p>
+<p><strong>防抖</strong>：</p>
+<div class="language-javascript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">template</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">input</span><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;--shiki-light-font-style:italic;--shiki-dark-font-style:italic"> @keyup="handleChange"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> v-model</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"inputVal"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">template</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">script</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">import { eventBox } from 'js-tool-big-box';</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">export default {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  data</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">() {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    return {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">      inputVal</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">''</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  },</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    created</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">() {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        this.myDebounce </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> eventBox.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">debounce</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">((</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">data</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">          this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sendAjax</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(data);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        }, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">2000</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      },</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">methods: {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    handleChange</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">event</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">      const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> val</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> event.target.value;</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">      this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">myDebounce</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(val);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    },</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    sendAjax</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">data</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'发送时间：：'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Date</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">().</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">getTime</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">());</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'发送请求：'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, data);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    },</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">script</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span></code></pre>
+</div><p><strong>节流</strong>：</p>
+<div class="language-javascript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">script</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">import { eventBox } from 'js-tool-big-box';</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">export default {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  name: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'dj'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  data</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> () {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    return {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">      inputVal</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">''</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  },</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  created</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">() {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    this.myThrottle </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> eventBox.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">throttle</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">((</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">data</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">      this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sendAjax</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(data);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">2000</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  },</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  methods: {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    handleChange</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">event</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">      const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> val</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> event.target.value;</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">      this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">myThrottle</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(val);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    },</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    sendAjax</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">data</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'发送时间：：'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Date</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">().</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">getTime</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">());</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'发送请求：'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, data);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    },</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">script</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span></code></pre>
+</div><h2 id="_5-18" tabindex="-1">5-18 <a class="header-anchor" href="#_5-18" aria-label="Permalink to &quot;5-18&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="flutter状态管理" tabindex="-1">Flutter状态管理 <a class="header-anchor" href="#flutter状态管理" aria-label="Permalink to &quot;Flutter状态管理&quot;">&ZeroWidthSpace;</a></h3>
+<p>以下是常用的状态管理框架：</p>
+<p><strong>1、state状态管理</strong></p>
+<div class="language-dart vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">dart</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> @override</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  InheritedWidget</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> inheritFromWidgetOfExactType</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">Type</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> targetType, { </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">Object</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> aspect }) {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    /// 在共享 map _inheritedWidgets 中查找</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    final</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> InheritedElement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ancestor </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> _inheritedWidgets </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">==</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> null</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ?</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> null</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> :</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> _inheritedWidgets[targetType];</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (ancestor </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">!=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> null</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">      /// 返回找到的 InheritedWidget ，同时添加当前 element 处理</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">      return</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> inheritFromElement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(ancestor, aspect</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> aspect);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    _hadUnsatisfiedDependencies </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> null</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  @override</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  InheritedWidget</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> inheritFromElement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">InheritedElement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ancestor, { </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">Object</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> aspect }) {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    _dependencies </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">??=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> HashSet</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">InheritedElement</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>();</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    _dependencies.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">add</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(ancestor);</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">   /// 就是将当前 element（this） 添加到  _dependents 里</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">   /// 也就是 InheritedElement 的 _dependents</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">   /// _dependents</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">[dependent]</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> = value;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    ancestor.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">updateDependencies</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, aspect);</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ancestor.widget;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  @override</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> notifyClients</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">InheritedWidget</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> oldWidget) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">Element</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> dependent </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">in</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> _dependents.keys) {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">      notifyDependent</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(oldWidget, dependent);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span></code></pre>
+</div><p><strong>2、Provider状态管理</strong></p>
+<p>优点： <code>不复杂，好理解，代码量不大的情况下，可以方便组合和控制刷新颗粒度</code> ， 其实一开始官方也有一个 <code>flutter-provide</code> ，不过后来无了， <code>Provider</code>成了它的替代品。</p>
+<p>缺点：<code>相对依赖Flutter 和 Widget；需要依赖Context</code></p>
+<div class="language-dart vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">dart</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">class</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> _ProviderPageState</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> extends</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> State</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">ProviderPage</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  @override</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  Widget</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> build</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">BuildContext</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> context) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> MultiProvider</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      providers</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        ChangeNotifierProvider</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(builder</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (_) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> ProviderModel</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      ],</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      child</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Scaffold</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        appBar</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> AppBar</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          title</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> LayoutBuilder</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            builder</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">BuildContext</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> context, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">BoxConstraints</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> constraints) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">              var</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> counter </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  Provider</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">of</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">ProviderModel</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>(context);</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">              return</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Text</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Provider ${</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">counter</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">count</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">toString</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">()}"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            },</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          )</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        ),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        body</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> CountWidget</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      ),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    );</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">class</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> CountWidget</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> extends</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> StatelessWidget</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  @override</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  Widget</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> build</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">BuildContext</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> context) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Consumer</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">ProviderModel</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>(builder</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (context, counter, _) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">      return</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Column</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        children</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> &#x3C;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">Widget</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">          new</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Expanded</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(child</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Center</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(child</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Text</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(counter.count.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">toString</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()))),</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">          new</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Center</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            child</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> FlatButton</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                onPressed</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> () {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                  counter.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">add</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">();</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                },</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                color</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Colors</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.blue,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                child</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Text</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"+"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          )</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        ],</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      );</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    });</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">class</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> ProviderModel</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> extends</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> ChangeNotifier</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> _count </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  int</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> get</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> count </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> _count;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> add</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">() {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    _count</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    notifyListeners</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">();</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><p><strong>3、Bloc状态管理</strong></p>
+<p>BLoC算是 Flutter 早期比较知名的状态管理框架，它同样是存在 <code>bloc</code> 和 <code>flutter_bloc</code> 这样的依赖关系，<strong>它是基于事件驱动来实现的状态管理</strong>。</p>
+<p>优点：<code>代码更加解耦，这是事件驱动的特性,把状态更新和事件绑定，可以灵活得实现状态拦截，重试甚至撤回</code></p>
+<p>缺点：<code>需要写更多的代码，开发节奏会有点影响,接收代码的新维护人员，缺乏有效文档时容易陷入对着事件和业务蒙圈,项目后期事件容易混乱交织</code></p>
+<div class="language-dart vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">dart</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">BlocSelector</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">BlocA</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">BlocAState</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">SelectedState</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  selector</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (state) {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    // return selected state based on the provided state.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  },</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  builder</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (context, state) {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    // return widget here based on the selected state.</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  },</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">MultiBlocListener</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  listeners</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    BlocListener</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">BlocA</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">BlocAState</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      listener</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (context, state) {},</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    ),</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    BlocListener</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">BlocB</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">BlocBState</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      listener</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (context, state) {},</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    ),</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    BlocListener</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">BlocC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">BlocCState</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      listener</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (context, state) {},</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    ),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  ],</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  child</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> ChildA</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span></code></pre>
+</div><p><strong>4、flutter_redux状态管理</strong></p>
+<p>优点：<code>解耦,对 redux 开发友好,适合中大型项目里协作开发</code></p>
+<p>缺点：<code>影响开发速度，要写一堆模版,不是很贴合 Flutter 开发思路</code></p>
+<p><strong>5、GetX状态管理</strong></p>
+<p>优点：<code>瑞士军刀式护航；对新人友好；可以减少很多代码</code></p>
+<p>缺点：<code>全家桶，做的太多对于一些使用者来说是致命缺点，需要解决的 Bug 也多；“魔法”使用较多，脱离 Flutter 原本轨迹；入侵性极强</code></p>
+<h2 id="_5-17" tabindex="-1">5-17 <a class="header-anchor" href="#_5-17" aria-label="Permalink to &quot;5-17&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="了解flutter" tabindex="-1">了解Flutter <a class="header-anchor" href="#了解flutter" aria-label="Permalink to &quot;了解Flutter&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>Flutter</code>是由Google推出的开源UI软件开发工具包，用于构建原生、精美的移动、web和桌面应用。它使用Dart语言作为开发语言，并通过自己的渲染引擎绘制UI。</p>
+<blockquote>
+<p><strong>Flutter的优势：</strong></p>
+<ul>
+<li>提高开发效率
+<ul>
+<li>同一份代码开发iOS和Android</li>
+<li>用更少的代码做更多的事情</li>
+<li>轻松迭代
+<ul>
+<li>在应用程序运行时更改代码并重新加载（通过热重载）</li>
+<li>修复崩溃并继续从应用程序停止的地方进行调试</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>创建美观，高度定制的用户体验
+<ul>
+<li>受益于使用Flutter框架提供的丰富的Material Design和Cupertino（iOS风格）的widget</li>
+<li>实现定制、美观、品牌驱动的设计，而不受原生控件的限制</li>
+</ul>
+</li>
+</ul>
+</blockquote>
 <h2 id="_5-16" tabindex="-1">5-16 <a class="header-anchor" href="#_5-16" aria-label="Permalink to &quot;5-16&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="理解keep-alive" tabindex="-1">理解keep-alive <a class="header-anchor" href="#理解keep-alive" aria-label="Permalink to &quot;理解keep-alive&quot;">&ZeroWidthSpace;</a></h3>
 <p><code>keep-alive</code> 是 Vue 内置的一个组件，可以使被包含的组件保留状态，避免重新渲染 ，其有以下特性：</p>
@@ -693,7 +1203,7 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/</guid>
-            <pubDate>Thu, 16 May 2024 09:15:10 GMT</pubDate>
+            <pubDate>Mon, 20 May 2024 09:22:40 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -707,6 +1217,22 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>05/20</td>
+<td><a href="./5.html#_5-20">理解 provide 与 inject</a></td>
+</tr>
+<tr>
+<td>05/19</td>
+<td><a href="./5.html#_5-19">js-tool-big-box 工具包</a></td>
+</tr>
+<tr>
+<td>05/18</td>
+<td><a href="./5.html#_5-18">Flutter 状态管理</a></td>
+</tr>
+<tr>
+<td>05/17</td>
+<td><a href="./5.html#_5-17">了解 Flutter</a></td>
+</tr>
 <tr>
 <td>05/16</td>
 <td><a href="./5.html#_5-16">理解 keep-alive</a></td>
