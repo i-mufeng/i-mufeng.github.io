@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Mon, 20 May 2024 09:23:42 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 21 May 2024 08:59:19 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -18,9 +18,54 @@
             <title><![CDATA[每日一题-202405]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/5.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/5.html</guid>
-            <pubDate>Mon, 20 May 2024 09:22:40 GMT</pubDate>
+            <pubDate>Tue, 21 May 2024 08:58:13 GMT</pubDate>
             <description><![CDATA[
 # 每日一题 - 202405
+
+## 5-21
+
+### TS中type和interface的区别
+
+`interface`可以重复声明，type不行，继承方式不一样，type使用交叉类型方式，`interface使用extends实现`。在对象扩展的情况下，使用接口继承要比交叉类型的性能更好。建议使用interface来描述对象对外暴露的借口，使用type将一组类型重命名（或对类型进行复杂编程）。
+
+```typescript
+interface iMan {
+  name: string;
+  age: number;
+}
+// 接口可以进行声明合并
+interface iMan {
+  hobby: string;
+}
+
+type tMan = {
+  name: string;
+  age: number;
+};
+// type不能重复定义
+// type tMan = {}
+
+// 继承方式不同,接口继承使用extends
+interface iManPlus extends iMan {
+  height: string;
+}
+// type继承使用&，又称交叉类型
+type tManPlus = { height: string } & tMan;
+
+const aMan: iManPlus = {
+  name: "aa",
+  age: 15,
+  height: "175cm",
+  hobby: "eat",
+};
+
+const bMan: tManPlus = {
+  name: "bb",
+  age: 15,
+  height: "150cm",
+};
+```
+
 
 ## 5-20
 
@@ -339,7 +384,45 @@ Vue 实例有一个完整的生命周期，也就是从`开始创建、初始化
 | **生命周期**  | **描述**                                                     |
 | ]]></description>
             <content:encoded><![CDATA[<h1 id="每日一题-202405" tabindex="-1">每日一题 - 202405 <a class="header-anchor" href="#每日一题-202405" aria-label="Permalink to &quot;每日一题 - 202405&quot;">&ZeroWidthSpace;</a></h1>
-<h2 id="_5-20" tabindex="-1">5-20 <a class="header-anchor" href="#_5-20" aria-label="Permalink to &quot;5-20&quot;">&ZeroWidthSpace;</a></h2>
+<h2 id="_5-21" tabindex="-1">5-21 <a class="header-anchor" href="#_5-21" aria-label="Permalink to &quot;5-21&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="ts中type和interface的区别" tabindex="-1">TS中type和interface的区别 <a class="header-anchor" href="#ts中type和interface的区别" aria-label="Permalink to &quot;TS中type和interface的区别&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>interface</code>可以重复声明，type不行，继承方式不一样，type使用交叉类型方式，<code>interface使用extends实现</code>。在对象扩展的情况下，使用接口继承要比交叉类型的性能更好。建议使用interface来描述对象对外暴露的借口，使用type将一组类型重命名（或对类型进行复杂编程）。</p>
+<div class="language-typescript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">typescript</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">interface</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> iMan</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  name</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  age</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> number</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// 接口可以进行声明合并</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">interface</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> iMan</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  hobby</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">type</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> tMan</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  name</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  age</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> number</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">};</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// type不能重复定义</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// type tMan = {}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// 继承方式不同,接口继承使用extends</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">interface</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> iManPlus</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> extends</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> iMan</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  height</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// type继承使用&#x26;，又称交叉类型</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">type</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> tManPlus</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> { </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">height</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">&#x26;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> tMan</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> aMan</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> iManPlus</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  name: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"aa"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  age: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">15</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  height: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"175cm"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  hobby: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"eat"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> bMan</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> tManPlus</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  name: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"bb"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  age: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">15</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  height: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"150cm"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">};</span></span></code></pre>
+</div><h2 id="_5-20" tabindex="-1">5-20 <a class="header-anchor" href="#_5-20" aria-label="Permalink to &quot;5-20&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="理解provide与inject" tabindex="-1">理解provide与inject <a class="header-anchor" href="#理解provide与inject" aria-label="Permalink to &quot;理解provide与inject&quot;">&ZeroWidthSpace;</a></h3>
 <blockquote>
 <p>1、provide和inject是一对新的API，用于在父组件中提供数据，然后在子组件中注入数据。</p>
@@ -1203,7 +1286,7 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/</guid>
-            <pubDate>Mon, 20 May 2024 09:22:40 GMT</pubDate>
+            <pubDate>Tue, 21 May 2024 08:58:13 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -1217,6 +1300,10 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>05/21</td>
+<td><a href="./5.html#_5-21">TS 中 type 和 interface 的区别</a></td>
+</tr>
 <tr>
 <td>05/20</td>
 <td><a href="./5.html#_5-20">理解 provide 与 inject</a></td>
