@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Tue, 21 May 2024 08:59:19 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 29 May 2024 01:16:08 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -18,9 +18,301 @@
             <title><![CDATA[每日一题-202405]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/5.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/5.html</guid>
-            <pubDate>Tue, 21 May 2024 08:58:13 GMT</pubDate>
+            <pubDate>Wed, 29 May 2024 01:15:03 GMT</pubDate>
             <description><![CDATA[
 # 每日一题 - 202405
+
+## 5-29
+
+### 简述 node/v8 中的垃圾回收机制
+
+`v8` 中的垃圾回收机制分为三种
+
+1. `Scavenge`，工作在新生代，把 `from space` 中的存活对象移至 `to space`
+2. `Mark-Sweep`，标记清除。新生代的某些对象由于过度活跃会被移至老生代，此时对老生代中活对象进行标记，并清理死对象
+3. `Mark-Compact`，标记整理。
+
+> 当一个函数执行结束之后，JavaScript 引擎会通过向下移动 ESP 来销毁该函数保存在栈中的执行上下文。 要回收堆中的垃圾数据，就需要用到 JavaScript 中的垃圾回收器了。 代际假说（The Generational Hypothesis），是垃圾回收领域中一个重要的术语，后续垃圾回收的策略都是建立在该假说的基础之上的，所以很是重要。 代际假说有以下两个特点：
+>
+> 1. 大部分对象在内存中存在的时间很短，简单来说，就是很多对象一经分配内存，很快就变得不可访问；
+>
+> 2. 是不死的对象，会活得更久。 在 V8 中会把堆分为新生代和老生代两个区域，新生代中存放的是生存时间短的对象，老生代中存放的生存时间久的对象。
+     >
+     >    ● 副垃圾回收器，主要负责新生代的垃圾回收。
+     >
+     >    ● 主垃圾回收器，主要负责老生代的垃圾回收。
+>
+> **全停顿**![1620974853612-a480b43e-b3bb-452f-a502-3a0162548a7f](https://user-images.githubusercontent.com/19986739/153329224-c2120a5d-4f25-4659-9347-d6217d5a5ce8.png)
+>
+> **增量标记**![1620975019709-efc33748-fbfc-4fb5-a19d-97abadbf8f97](https://user-images.githubusercontent.com/19986739/153329251-e6a21086-f646-48d5-a23c-c2e3351497ef.png)
+>
+> 使用增量标记算法，可以把一个完整的垃圾回收任务拆分为很多小的任务，这些小的任务执行时间比较短，可以穿插在其他的 JavaScript 任务中间执行，增强用户体验。
+
+
+## 5-28
+
+### JS如何在url中传递数组
+
+在 URL 中如何传递数组这种复杂的数据，完全**取决于项目中前后端成员关于复杂数据在 URL 中传输的约定**，一般情况下可以使用以下方式来传递数组：
+
+```javascript
+a = 3 & a = 4 & a = 5;
+
+a = 3, 4, 5;
+
+a[] = 3 & a[] = 4 & a[] = 5;
+
+a[0] = 3 & a[1] = 4 & a[2] = 5;
+```
+
+> 但同样，需要后端开发者写一个 `querystring.parse` 来对指定的格式解析进行支持，同时也有对各种复杂 qs 支持较好的 package，如：[qs: 据说是对 querystring 复杂对象解析最好的库](https://github.com/ljharb/qs#parsing-arrays)
+
+
+## 5-27
+
+### Vue3中的ref、toRef和toRefs
+
+`ref`:接收一个内部值，生成对应的响应式数据，该内部值挂载在ref对象的value属性上；该对象可以用于模版和reactive。使用ref是为了解决值类型在setup、computed、合成函数等情况下的响应式丢失问题。
+
+`toRef`:为响应式对象（reactive）的一个属性创建对应的ref，且该方式创建的ref与源属性保持同步。
+
+`toRefs`：将响应式对象转换成普通对象，对象的每个属性都是对应的ref，两者间保持同步。使用toRefs进行对象解构。
+
+```javascript
+function ref(val) {
+    const wrapper = {value: val}
+    Object.defineProperty(wrapper, '__v_isRef', {value: true})
+    return reactive(wrapper)
+}
+
+function toRef(obj, key) {
+    const wrapper = {
+        get value() {
+            return obj[key]
+        },
+        set value(val) {
+            obj[key] = val
+        }
+    }
+    Object.defineProperty(wrapper, '__v_isRef', {value: true})
+    return wrapper
+}
+
+function toRefs(obj) {
+    const ret = {}
+    for (const key in obj) {
+        ret[key] = toRef(obj, key)
+    }
+    
+    return ret
+}
+
+// 自动脱ref
+function proxyRefs(target) {
+    return new Proxy(target, {
+        get(target, key, receiver) {
+            const value = Reflect.get(target, key, receiver)
+            return value.__v_isRef ? value.value : value
+        },
+        set(target, key, newValue, receiver) {
+            const value = target[key]
+            if(value.__v_isRef) {
+                value.value = newValue
+                return true
+            }
+            return Reflect.set(target, key, newValue, receiver)
+        }
+    })
+}
+```
+
+
+## 5-26
+
+### TypeScript中any、unknown、never
+
+`any和unkonwn`在TS类型中属于最顶层的Top Type，即所有的类型都是它俩的子类型。
+
+`never`则相反，它作为Bottom Type是所有类型的子类型。
+
+
+## 5-25
+
+### 浏览器的事件循环机制
+
+> JavaScript是单线程的（指的是js引擎在执行代码的时候只有一个主线程，每次只能干一件事），同时还是非阻塞运行的（执行异步任务的时候，会先挂起相应任务，待异步返回结果再执行回调）
+
+在js代码执行时，会将对象存在`堆（heap）`中，在`栈（stack）`中存放一些基础类型变量和对象的指针。在执行方法时，会根据当前方法的执行上下文，来进行一个执行。对于普通函数就是正常的入栈出栈即可，涉及到异步任务的时候，js执行会将对应的任务放到事件队列中（微任务队列、宏任务队列）。
+
+> - 常见微任务：queueMicrotask、Promise、MutationObserve等。
+> - 常见宏任务：ajax、setTimeout、setInterval、script（js整体代码）、IO操作、UI交互、postMessage等。
+
+故事件循环可以理解为是一个`桥梁`，连接着应用程序的js和系统调用之间的通道。其过程为：
+
+1. 执行一个宏任务（一般为一段script），若没有可选的宏任务，就直接处理微任务。
+2. 执行中遇到微任务，就将其添加到微任务的任务队列中。
+3. 执行中遇到宏任务，就将其提交到宏任务队列中。
+4. 执行完当前执行的宏任务后，去查询当前有无需要执行的微任务，有就执行
+5. 检查渲染，若需要渲染，浏览器执行渲染任务
+6. 渲染完毕后，Js线程会去执行下一个宏任务。。。（如此循环）
+
+```javascript
+console.log("script start");
+
+const promiseA = new Promise((resolve, reject) => {
+  console.log("init promiseA");
+  resolve("promiseA");
+});
+
+const promiseB = new Promise((resolve, reject) => {
+  console.log("init promiseB");
+  resolve("promiseB");
+});
+
+setTimeout(() => {
+  console.log("setTimeout run");
+  promiseB.then(res => {
+    console.log("promiseB res :>> ", res);
+  });
+  console.log("setTimeout end");
+}, 500);
+
+promiseA.then(res => {
+  console.log("promiseA res :>> ", res);
+});
+
+queueMicrotask(() => {
+  console.log("queue Microtask run");
+});
+
+console.log("script end");
+
+// script start
+// init promiseA
+// init promiseB
+// script end
+// promiseA res :>>  promiseA
+// queue Microtask run
+// setTimeout run
+// setTimeout end
+// promiseB res :>>  promiseB
+```
+
+
+## 5-24
+
+### 箭头函数和普通函数的区别
+
+箭头函数不会创建自身的this，只会从上一级`继承this`，箭头函数的this在定义的时候就已经确认了，之后不会改变。同时箭头函数无法作为构造函数使用，**没有自身的prototype，也没有arguments**。
+
+```javascript
+this.id = "global";
+
+console.log("this.id :>> ", this.id); // this.id :>>  global
+
+function normalFun() {
+  return this.id;
+}
+
+const arrowFun = () => {
+  return this.id;
+};
+
+const newNormal = new normalFun();
+console.log("newNormal :>> ", newNormal); // newNormal :>>  normalFun {}
+try {
+  const newArrow = new arrowFun();
+} catch (error) {
+  console.log("error :>> ", error); // error :>>  TypeError: arrowFun is not a constructor
+}
+
+console.log("normalFun :>> ", normalFun()); // normalFun :>>  undefined
+console.log("arrowFun() :>> ", arrowFun()); // arrowFun() :>>  global
+
+const obj = {
+  id: "obj",
+  normalFun,
+  arrowFun,
+};
+
+const normalFunBindObj = normalFun.bind(obj);
+const arrowFunBindObj = arrowFun.bind(obj);
+console.log("normalFun.call(obj) :>> ", normalFun.call(obj)); // normalFun.call(obj) :>>  obj
+console.log("normalFunBindObj() :>> ", normalFunBindObj()); // normalFunBindObj() :>>  obj
+console.log("arrowFun.call(obj) :>> :>> ", arrowFun.call(obj)); // arrowFun.call(obj) :>> :>>  global
+console.log("arrowFunBindObj() :>> ", arrowFunBindObj()); // arrowFunBindObj() :>>  global
+console.log("obj.normalFun() :>> ", obj.normalFun()); // obj.normalFun() :>>  obj
+console.log("obj.arrowFun() :>> ", obj.arrowFun()); // obj.arrowFun() :>>  global
+```
+
+
+## 5-23
+
+### 实现一个类似关键字new功能的函数
+
+在js中`new`关键字主要做了：首先创建一个空对象，这个对象会作为执行new构造函数之后返回的对象实例，将创建的空对象原型（`__proto__`）指向构造函数的prototype属性，同时将这个空对象赋值给构造函数内部的`this`，并执行构造函数逻辑，根据构造函数的执行逻辑，返回初始创建的对象或构造函数的显式返回值。
+
+```javascript
+function newFn(...args) {
+  const constructor = args.shift();
+  const obj = Object.create(constructor.prototype);
+  const result = constructor.apply(obj, args);
+  return typeof result === "object" && result !== null ? result : obj;
+}
+
+function Person(name) {
+  this.name = name;
+}
+
+const p = newFn(Person, "Jerome");
+
+console.log("p.name :>> ", p.name); // p.name :>>  Jerome
+```
+
+
+## 5-22
+
+### 数组的forEach和map方法的区别
+
+`forEach`是对数组的每一个元素执行一次给定的函数。
+
+`map`是创建一个新数组，该新数组由原数组的每个元素都调用一次提供的函数返回值。
+
+```javascript
+const arr = [1,2,3,4,5,6];
+
+arr.forEach(x =>{
+    x = x + 1;
+    console.log("x :>> ", x);
+})
+// x :>>  2
+// x :>>  3
+// x :>>  4
+// x :>>  5
+// x :>>  6
+// x :>>  7
+console.log("arr :>> ", arr); // arr :>>  [1,2,3,4,5,6]
+
+const mapArr = arr.map(x =>{
+    x = x * 2;
+    return x;
+})
+console.log("mapArr :>> ", mapArr); // mapArr :>>  [2,4,6,8,10,12]
+console.log("arr :>> ", arr);  // arr :>>  [1,2,3,4,5,6]
+```
+
+> pop()：删除数组后面的最后一个元素，返回值为被删除的那个元素。
+> 
+> push()：将一个元素或多个元素添加到数组末尾，并返回新的长度。
+> 
+> shift()：删除数组中的第一个元素，并返回被删除元素的值。
+> 
+> unshift()：将一个或多个元素添加到数组的**开头**，并返回该数组的**新长度**。
+> 
+> splice()：通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回被修改的内容。
+> 
+> reverse(): 反转数组。
+
 
 ## 5-21
 
@@ -384,6 +676,246 @@ Vue 实例有一个完整的生命周期，也就是从`开始创建、初始化
 | **生命周期**  | **描述**                                                     |
 | ]]></description>
             <content:encoded><![CDATA[<h1 id="每日一题-202405" tabindex="-1">每日一题 - 202405 <a class="header-anchor" href="#每日一题-202405" aria-label="Permalink to &quot;每日一题 - 202405&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_5-29" tabindex="-1">5-29 <a class="header-anchor" href="#_5-29" aria-label="Permalink to &quot;5-29&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="简述-node-v8-中的垃圾回收机制" tabindex="-1">简述 node/v8 中的垃圾回收机制 <a class="header-anchor" href="#简述-node-v8-中的垃圾回收机制" aria-label="Permalink to &quot;简述 node/v8 中的垃圾回收机制&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>v8</code> 中的垃圾回收机制分为三种</p>
+<ol>
+<li><code>Scavenge</code>，工作在新生代，把 <code>from space</code> 中的存活对象移至 <code>to space</code></li>
+<li><code>Mark-Sweep</code>，标记清除。新生代的某些对象由于过度活跃会被移至老生代，此时对老生代中活对象进行标记，并清理死对象</li>
+<li><code>Mark-Compact</code>，标记整理。</li>
+</ol>
+<blockquote>
+<p>当一个函数执行结束之后，JavaScript 引擎会通过向下移动 ESP 来销毁该函数保存在栈中的执行上下文。 要回收堆中的垃圾数据，就需要用到 JavaScript 中的垃圾回收器了。 代际假说（The Generational Hypothesis），是垃圾回收领域中一个重要的术语，后续垃圾回收的策略都是建立在该假说的基础之上的，所以很是重要。 代际假说有以下两个特点：</p>
+<ol>
+<li>
+<p>大部分对象在内存中存在的时间很短，简单来说，就是很多对象一经分配内存，很快就变得不可访问；</p>
+</li>
+<li>
+<p>是不死的对象，会活得更久。 在 V8 中会把堆分为新生代和老生代两个区域，新生代中存放的是生存时间短的对象，老生代中存放的生存时间久的对象。</p>
+<p>● 副垃圾回收器，主要负责新生代的垃圾回收。</p>
+<p>● 主垃圾回收器，主要负责老生代的垃圾回收。</p>
+</li>
+</ol>
+<p><strong>全停顿</strong><img src="https://user-images.githubusercontent.com/19986739/153329224-c2120a5d-4f25-4659-9347-d6217d5a5ce8.png" alt="1620974853612-a480b43e-b3bb-452f-a502-3a0162548a7f"></p>
+<p><strong>增量标记</strong><img src="https://user-images.githubusercontent.com/19986739/153329251-e6a21086-f646-48d5-a23c-c2e3351497ef.png" alt="1620975019709-efc33748-fbfc-4fb5-a19d-97abadbf8f97"></p>
+<p>使用增量标记算法，可以把一个完整的垃圾回收任务拆分为很多小的任务，这些小的任务执行时间比较短，可以穿插在其他的 JavaScript 任务中间执行，增强用户体验。</p>
+</blockquote>
+<h2 id="_5-28" tabindex="-1">5-28 <a class="header-anchor" href="#_5-28" aria-label="Permalink to &quot;5-28&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="js如何在url中传递数组" tabindex="-1">JS如何在url中传递数组 <a class="header-anchor" href="#js如何在url中传递数组" aria-label="Permalink to &quot;JS如何在url中传递数组&quot;">&ZeroWidthSpace;</a></h3>
+<p>在 URL 中如何传递数组这种复杂的数据，完全<strong>取决于项目中前后端成员关于复杂数据在 URL 中传输的约定</strong>，一般情况下可以使用以下方式来传递数组：</p>
+<div class="language-javascript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">a </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 3</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> &#x26;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> a </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 4</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> &#x26;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> a </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">a </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">4</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">a[] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 3</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> &#x26;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> a[] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 4</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> &#x26;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> a[] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">a[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 3</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> &#x26;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> a[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 4</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> &#x26;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> a[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span></code></pre>
+</div><blockquote>
+<p>但同样，需要后端开发者写一个 <code>querystring.parse</code> 来对指定的格式解析进行支持，同时也有对各种复杂 qs 支持较好的 package，如：<a href="https://github.com/ljharb/qs#parsing-arrays" target="_blank" rel="noreferrer">qs: 据说是对 querystring 复杂对象解析最好的库</a></p>
+</blockquote>
+<h2 id="_5-27" tabindex="-1">5-27 <a class="header-anchor" href="#_5-27" aria-label="Permalink to &quot;5-27&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="vue3中的ref、toref和torefs" tabindex="-1">Vue3中的ref、toRef和toRefs <a class="header-anchor" href="#vue3中的ref、toref和torefs" aria-label="Permalink to &quot;Vue3中的ref、toRef和toRefs&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>ref</code>:接收一个内部值，生成对应的响应式数据，该内部值挂载在ref对象的value属性上；该对象可以用于模版和reactive。使用ref是为了解决值类型在setup、computed、合成函数等情况下的响应式丢失问题。</p>
+<p><code>toRef</code>:为响应式对象（reactive）的一个属性创建对应的ref，且该方式创建的ref与源属性保持同步。</p>
+<p><code>toRefs</code>：将响应式对象转换成普通对象，对象的每个属性都是对应的ref，两者间保持同步。使用toRefs进行对象解构。</p>
+<div class="language-javascript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> ref</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">val</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> wrapper</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {value: val}</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    Object.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">defineProperty</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(wrapper, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'__v_isRef'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, {value: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> reactive</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(wrapper)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> toRef</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">obj</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">key</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> wrapper</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        get</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">() {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> obj[key]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        },</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        set</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">val</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            obj[key] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> val</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    Object.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">defineProperty</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(wrapper, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'__v_isRef'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, {value: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> wrapper</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> toRefs</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">obj</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> ret</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {}</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> key</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> in</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> obj) {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        ret[key] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> toRef</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(obj, key)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    </span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ret</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// 自动脱ref</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> proxyRefs</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">target</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Proxy</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(target, {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        get</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">target</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">key</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">receiver</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> value</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Reflect.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">get</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(target, key, receiver)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> value.__v_isRef </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> value.value </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> value</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        },</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        set</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">target</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">key</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">newValue</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">receiver</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> value</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> target[key]</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(value.__v_isRef) {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                value.value </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> newValue</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> true</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            }</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Reflect.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">set</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(target, key, newValue, receiver)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    })</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><h2 id="_5-26" tabindex="-1">5-26 <a class="header-anchor" href="#_5-26" aria-label="Permalink to &quot;5-26&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="typescript中any、unknown、never" tabindex="-1">TypeScript中any、unknown、never <a class="header-anchor" href="#typescript中any、unknown、never" aria-label="Permalink to &quot;TypeScript中any、unknown、never&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>any和unkonwn</code>在TS类型中属于最顶层的Top Type，即所有的类型都是它俩的子类型。</p>
+<p><code>never</code>则相反，它作为Bottom Type是所有类型的子类型。</p>
+<h2 id="_5-25" tabindex="-1">5-25 <a class="header-anchor" href="#_5-25" aria-label="Permalink to &quot;5-25&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="浏览器的事件循环机制" tabindex="-1">浏览器的事件循环机制 <a class="header-anchor" href="#浏览器的事件循环机制" aria-label="Permalink to &quot;浏览器的事件循环机制&quot;">&ZeroWidthSpace;</a></h3>
+<blockquote>
+<p>JavaScript是单线程的（指的是js引擎在执行代码的时候只有一个主线程，每次只能干一件事），同时还是非阻塞运行的（执行异步任务的时候，会先挂起相应任务，待异步返回结果再执行回调）</p>
+</blockquote>
+<p>在js代码执行时，会将对象存在<code>堆（heap）</code>中，在<code>栈（stack）</code>中存放一些基础类型变量和对象的指针。在执行方法时，会根据当前方法的执行上下文，来进行一个执行。对于普通函数就是正常的入栈出栈即可，涉及到异步任务的时候，js执行会将对应的任务放到事件队列中（微任务队列、宏任务队列）。</p>
+<blockquote>
+<ul>
+<li>常见微任务：queueMicrotask、Promise、MutationObserve等。</li>
+<li>常见宏任务：ajax、setTimeout、setInterval、script（js整体代码）、IO操作、UI交互、postMessage等。</li>
+</ul>
+</blockquote>
+<p>故事件循环可以理解为是一个<code>桥梁</code>，连接着应用程序的js和系统调用之间的通道。其过程为：</p>
+<ol>
+<li>执行一个宏任务（一般为一段script），若没有可选的宏任务，就直接处理微任务。</li>
+<li>执行中遇到微任务，就将其添加到微任务的任务队列中。</li>
+<li>执行中遇到宏任务，就将其提交到宏任务队列中。</li>
+<li>执行完当前执行的宏任务后，去查询当前有无需要执行的微任务，有就执行</li>
+<li>检查渲染，若需要渲染，浏览器执行渲染任务</li>
+<li>渲染完毕后，Js线程会去执行下一个宏任务。。。（如此循环）</li>
+</ol>
+<div class="language-javascript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"script start"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> promiseA</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Promise</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">((</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">resolve</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">reject</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"init promiseA"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  resolve</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"promiseA"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> promiseB</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Promise</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">((</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">resolve</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">reject</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"init promiseB"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  resolve</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"promiseB"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">setTimeout</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(() </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"setTimeout run"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  promiseB.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">then</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">res</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"promiseB res :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, res);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  });</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"setTimeout end"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">500</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">promiseA.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">then</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">res</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"promiseA res :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, res);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">queueMicrotask</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(() </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"queue Microtask run"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"script end"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// script start</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// init promiseA</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// init promiseB</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// script end</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// promiseA res :>>  promiseA</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// queue Microtask run</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// setTimeout run</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// setTimeout end</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// promiseB res :>>  promiseB</span></span></code></pre>
+</div><h2 id="_5-24" tabindex="-1">5-24 <a class="header-anchor" href="#_5-24" aria-label="Permalink to &quot;5-24&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="箭头函数和普通函数的区别" tabindex="-1">箭头函数和普通函数的区别 <a class="header-anchor" href="#箭头函数和普通函数的区别" aria-label="Permalink to &quot;箭头函数和普通函数的区别&quot;">&ZeroWidthSpace;</a></h3>
+<p>箭头函数不会创建自身的this，只会从上一级<code>继承this</code>，箭头函数的this在定义的时候就已经确认了，之后不会改变。同时箭头函数无法作为构造函数使用，<strong>没有自身的prototype，也没有arguments</strong>。</p>
+<div class="language-javascript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.id </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "global"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"this.id :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.id); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// this.id :>>  global</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> normalFun</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">() {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.id;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> arrowFun</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> () </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.id;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> newNormal</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> normalFun</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">();</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"newNormal :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, newNormal); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// newNormal :>>  normalFun {}</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">try</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> newArrow</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> arrowFun</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">();</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">} </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">catch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (error) {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"error :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, error); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// error :>>  TypeError: arrowFun is not a constructor</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"normalFun :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">normalFun</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// normalFun :>>  undefined</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"arrowFun() :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">arrowFun</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// arrowFun() :>>  global</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> obj</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  id: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"obj"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  normalFun,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  arrowFun,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> normalFunBindObj</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> normalFun.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bind</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(obj);</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> arrowFunBindObj</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> arrowFun.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bind</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(obj);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"normalFun.call(obj) :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, normalFun.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">call</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(obj)); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// normalFun.call(obj) :>>  obj</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"normalFunBindObj() :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">normalFunBindObj</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// normalFunBindObj() :>>  obj</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"arrowFun.call(obj) :>> :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, arrowFun.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">call</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(obj)); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// arrowFun.call(obj) :>> :>>  global</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"arrowFunBindObj() :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">arrowFunBindObj</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// arrowFunBindObj() :>>  global</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"obj.normalFun() :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, obj.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">normalFun</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// obj.normalFun() :>>  obj</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"obj.arrowFun() :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, obj.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">arrowFun</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// obj.arrowFun() :>>  global</span></span></code></pre>
+</div><h2 id="_5-23" tabindex="-1">5-23 <a class="header-anchor" href="#_5-23" aria-label="Permalink to &quot;5-23&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="实现一个类似关键字new功能的函数" tabindex="-1">实现一个类似关键字new功能的函数 <a class="header-anchor" href="#实现一个类似关键字new功能的函数" aria-label="Permalink to &quot;实现一个类似关键字new功能的函数&quot;">&ZeroWidthSpace;</a></h3>
+<p>在js中<code>new</code>关键字主要做了：首先创建一个空对象，这个对象会作为执行new构造函数之后返回的对象实例，将创建的空对象原型（<code>__proto__</code>）指向构造函数的prototype属性，同时将这个空对象赋值给构造函数内部的<code>this</code>，并执行构造函数逻辑，根据构造函数的执行逻辑，返回初始创建的对象或构造函数的显式返回值。</p>
+<div class="language-javascript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> newFn</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">...</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">args</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> constructor</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> args.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">shift</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">();</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> obj</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Object.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">create</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">constructor</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">prototype</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> result</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> constructor.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">apply</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(obj, args);</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  return</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> typeof</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> result </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">===</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "object"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> &#x26;&#x26;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> result </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">!==</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> null</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> result </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> obj;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Person</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.name </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> name;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> p</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> newFn</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(Person, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Jerome"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"p.name :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, p.name); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// p.name :>>  Jerome</span></span></code></pre>
+</div><h2 id="_5-22" tabindex="-1">5-22 <a class="header-anchor" href="#_5-22" aria-label="Permalink to &quot;5-22&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="数组的foreach和map方法的区别" tabindex="-1">数组的forEach和map方法的区别 <a class="header-anchor" href="#数组的foreach和map方法的区别" aria-label="Permalink to &quot;数组的forEach和map方法的区别&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>forEach</code>是对数组的每一个元素执行一次给定的函数。</p>
+<p><code>map</code>是创建一个新数组，该新数组由原数组的每个元素都调用一次提供的函数返回值。</p>
+<div class="language-javascript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> arr</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">4</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">6</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">];</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">arr.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">forEach</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">x</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    x </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> x </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"x :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, x);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// x :>>  2</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// x :>>  3</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// x :>>  4</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// x :>>  5</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// x :>>  6</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// x :>>  7</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"arr :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, arr); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// arr :>>  [1,2,3,4,5,6]</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> mapArr</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> arr.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">map</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">x</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    x </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> x </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">*</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> x;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mapArr :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, mapArr); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// mapArr :>>  [2,4,6,8,10,12]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"arr :>> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, arr);  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// arr :>>  [1,2,3,4,5,6]</span></span></code></pre>
+</div><blockquote>
+<p>pop()：删除数组后面的最后一个元素，返回值为被删除的那个元素。</p>
+<p>push()：将一个元素或多个元素添加到数组末尾，并返回新的长度。</p>
+<p>shift()：删除数组中的第一个元素，并返回被删除元素的值。</p>
+<p>unshift()：将一个或多个元素添加到数组的<strong>开头</strong>，并返回该数组的<strong>新长度</strong>。</p>
+<p>splice()：通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组形式返回被修改的内容。</p>
+<p>reverse(): 反转数组。</p>
+</blockquote>
 <h2 id="_5-21" tabindex="-1">5-21 <a class="header-anchor" href="#_5-21" aria-label="Permalink to &quot;5-21&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="ts中type和interface的区别" tabindex="-1">TS中type和interface的区别 <a class="header-anchor" href="#ts中type和interface的区别" aria-label="Permalink to &quot;TS中type和interface的区别&quot;">&ZeroWidthSpace;</a></h3>
 <p><code>interface</code>可以重复声明，type不行，继承方式不一样，type使用交叉类型方式，<code>interface使用extends实现</code>。在对象扩展的情况下，使用接口继承要比交叉类型的性能更好。建议使用interface来描述对象对外暴露的借口，使用type将一组类型重命名（或对类型进行复杂编程）。</p>
@@ -1280,13 +1812,13 @@ SSR解决方案，后端渲染出完整的首屏的dom结构返回，前端拿�
 Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
 </blockquote>
 ]]></content:encoded>
-            <enclosure url="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/8/19/16ca74f183827f46~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.awebp" length="0" type="image/awebp"/>
+            <enclosure url="https://user-images.githubusercontent.com/19986739/153329224-c2120a5d-4f25-4659-9347-d6217d5a5ce8.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/</guid>
-            <pubDate>Tue, 21 May 2024 08:58:13 GMT</pubDate>
+            <pubDate>Wed, 29 May 2024 01:15:03 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -1300,6 +1832,38 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>05/29</td>
+<td><a href="./5.html#_5-29">简述 node/v8 中的垃圾回收机制</a></td>
+</tr>
+<tr>
+<td>05/28</td>
+<td><a href="./5.html#_5-28">JS 如何在url中传递数组</a></td>
+</tr>
+<tr>
+<td>05/27</td>
+<td><a href="./5.html#_5-27">Vue3中的ref、toRef和toRefs</a></td>
+</tr>
+<tr>
+<td>05/26</td>
+<td><a href="./5.html#_5-26">TypeScript中any、unknown、never</a></td>
+</tr>
+<tr>
+<td>05/25</td>
+<td><a href="./5.html#_5-25">浏览器的事件循环机制</a></td>
+</tr>
+<tr>
+<td>05/24</td>
+<td><a href="./5.html#_5-24">箭头函数和普通函数的区别</a></td>
+</tr>
+<tr>
+<td>05/23</td>
+<td><a href="./5.html#_5-23">实现一个类似关键字new功能的函数</a></td>
+</tr>
+<tr>
+<td>05/22</td>
+<td><a href="./5.html#_5-22">数组的forEach和map方法的区别</a></td>
+</tr>
 <tr>
 <td>05/21</td>
 <td><a href="./5.html#_5-21">TS 中 type 和 interface 的区别</a></td>
