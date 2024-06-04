@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Mon, 03 Jun 2024 01:35:48 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 04 Jun 2024 08:41:09 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -18,8 +18,73 @@
             <title><![CDATA[每日一题-202406]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/6.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/6.html</guid>
-            <pubDate>Mon, 03 Jun 2024 01:34:38 GMT</pubDate>
+            <pubDate>Tue, 04 Jun 2024 08:40:03 GMT</pubDate>
             <content:encoded><![CDATA[<h1 id="每日一题-202406" tabindex="-1">每日一题 - 202406 <a class="header-anchor" href="#每日一题-202406" aria-label="Permalink to &quot;每日一题 - 202406&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_6-4" tabindex="-1">6-4 <a class="header-anchor" href="#_6-4" aria-label="Permalink to &quot;6-4&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是-csrf-攻击" tabindex="-1">什么是 CSRF 攻击？ <a class="header-anchor" href="#什么是-csrf-攻击" aria-label="Permalink to &quot;什么是 CSRF 攻击？&quot;">&ZeroWidthSpace;</a></h3>
+<p><code>CSRF</code> (Cross-site request forgery)，跨站请求伪造，又称为 <code>one-click attack</code>，是一种挟制用户在当前已登录的Web应用程序上执行非本意的操作的攻击方法。跟跨网站脚本（XSS）相比，XSS 利用的是用户对指定网站的信任，CSRF 利用的是网站对用户网页浏览器的信任。</p>
+<ol>
+<li>使用 JSON API。当进行 CSRF 攻击时，请求体通过 <code>&lt;form&gt;</code> 构建，请求头为 <code>application/www-form-urlencoded</code>。它难以发送 JSON 数据被服务器所理解。</li>
+<li>CSRF Token。生成一个随机的 token，切勿放在 cookie 中，每次请求手动携带该 token 进行校验。</li>
+<li>SameSite Cookie。设置为 Lax 或者 Strict，禁止发送第三方 Cookie。</li>
+</ol>
+<h2 id="_6-3" tabindex="-1">6-3 <a class="header-anchor" href="#_6-3" aria-label="Permalink to &quot;6-3&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="简述-http-的缓存机制" tabindex="-1">简述 http 的缓存机制 <a class="header-anchor" href="#简述-http-的缓存机制" aria-label="Permalink to &quot;简述 http 的缓存机制&quot;">&ZeroWidthSpace;</a></h3>
+<p><strong>缓存过程</strong></p>
+<blockquote>
+<p>浏览器与服务器通信的方式为应答模式，即是：浏览器发起HTTP请求 – 服务器响应该请求。那么浏览器第一次向服务器发起该请求后拿到请求结果，会根据响应报文中HTTP头的缓存标识，决定是否缓存结果，是则将请求结果和缓存标识存入浏览器缓存中。</p>
+<p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/4/19/162db6359673e7d0~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.awebp" alt="img"></p>
+</blockquote>
+<p>Http 缓存分为以下两种，两者都是通过 HTTP 响应头控制缓存</p>
+<ol>
+<li><code>强制缓存</code></li>
+<li><code>协商缓存</code></li>
+</ol>
+<h4 id="强制缓存" tabindex="-1">强制缓存 <a class="header-anchor" href="#强制缓存" aria-label="Permalink to &quot;强制缓存&quot;">&ZeroWidthSpace;</a></h4>
+<p>​	强制缓存就是向浏览器缓存查找该请求结果，并根据该结果的缓存规则来决定是否使用该缓存结果的过程，强制缓存的情况主要有三种(暂不分析协商缓存过程)；</p>
+<p>1、不存在该缓存结果和缓存标识，强制缓存失效，则直接向服务器发起请求（跟第一次发起请求一致）</p>
+<p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/4/19/162db63596c9de23~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.awebp" alt="img"></p>
+<p>2、存在该缓存结果和缓存标识，但该结果已失效，强制缓存失效，则使用协商缓存(暂不分析)</p>
+<p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/4/19/162db63597182316~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.awebp" alt="img"></p>
+<p>3、存在该缓存结果和缓存标识，且该结果尚未失效，强制缓存生效，直接返回该结果</p>
+<p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/4/19/162db6359acd19d3~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.awebp" alt="img"></p>
+<p>与之相关的 <code>Response Headers</code> 有以下几个：</p>
+<h5 id="expires" tabindex="-1">Expires <a class="header-anchor" href="#expires" aria-label="Permalink to &quot;Expires&quot;">&ZeroWidthSpace;</a></h5>
+<p>Expires是HTTP/1.0控制网页缓存的字段，其值为服务器返回该请求结果缓存的到期时间，即再次发起该请求时，如果客户端的时间小于Expires的值时，直接使用缓存结果。</p>
+<blockquote>
+<p>Expires是HTTP/1.0的字段，但是现在浏览器默认使用的是HTTP/1.1，那么在HTTP/1.1中网页缓存还是否由Expires控制？</p>
+</blockquote>
+<p>到了HTTP/1.1，Expire已经被Cache-Control替代，原因在于Expires控制缓存的原理是使用客户端的时间与服务端返回的时间做对比，那么如果客户端与服务端的时间因为某些原因（例如时区不同；客户端和服务端有一方的时间不准确）发生误差，那么强制缓存则会直接失效，这样的话强制缓存的存在则毫无意义，那么Cache-Control又是如何控制的呢？</p>
+<h5 id="cache-control" tabindex="-1">Cache-Control <a class="header-anchor" href="#cache-control" aria-label="Permalink to &quot;Cache-Control&quot;">&ZeroWidthSpace;</a></h5>
+<p>在HTTP/1.1中，Cache-Control是最重要的规则，主要用于控制网页缓存，主要取值为：</p>
+<ul>
+<li>public：所有内容都将被缓存（客户端和代理服务器都可缓存）</li>
+<li>private：所有内容只有客户端可以缓存，Cache-Control的默认取值</li>
+<li>no-cache：客户端缓存内容，但是是否使用缓存则需要经过协商缓存来验证决定</li>
+<li>no-store：所有内容都不会被缓存，即不使用强制缓存，也不使用协商缓存</li>
+<li>max-age=xxx (xxx is numeric)：缓存内容将在xxx秒后失效</li>
+</ul>
+<blockquote>
+<p>HTTP响应报文中expires的时间值，是一个绝对值。</p>
+<p>HTTP响应报文中Cache-Control为max-age=600，是相对值。</p>
+<p>由于Cache-Control的优先级比expires，那么直接根据Cache-Control的值进行缓存，意思就是说在600秒内再次发起该请求，则会直接使用缓存结果，强制缓存生效。</p>
+</blockquote>
+<h4 id="协商缓存" tabindex="-1">协商缓存 <a class="header-anchor" href="#协商缓存" aria-label="Permalink to &quot;协商缓存&quot;">&ZeroWidthSpace;</a></h4>
+<p>协商缓存就是强制缓存失效后，浏览器携带缓存标识向服务器发起请求，由服务器根据缓存标识决定是否使用缓存的过程，主要有以下两种情况：</p>
+<p>1、协商缓存生效，返回304</p>
+<p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/4/19/162db635cbfff69d~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.awebp" alt="img"></p>
+<p>2、协商缓存失效，返回200和请求结果结果</p>
+<p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/4/19/162db635cf070ff5~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.awebp" alt="img"></p>
+<p>与之相关的 <code>Request/Response Headers</code> 有以下几个</p>
+<h5 id="last-modified-if-modified-since" tabindex="-1">Last-Modified / If-Modified-Since <a class="header-anchor" href="#last-modified-if-modified-since" aria-label="Permalink to &quot;Last-Modified / If-Modified-Since&quot;">&ZeroWidthSpace;</a></h5>
+<p>Last-Modified是服务器响应请求时，返回该资源文件在服务器最后被修改的时间；</p>
+<p>If-Modified-Since则是客户端再次发起该请求时，携带上次请求返回的Last-Modified值，通过此字段值告诉服务器该资源上次请求返回的最后被修改时间。服务器收到该请求，发现请求头含有If-Modified-Since字段，则会根据If-Modified-Since的字段值与该资源在服务器的最后被修改时间做对比，若服务器的资源最后被修改时间大于If-Modified-Since的字段值，则重新返回资源，状态码为200；否则则返回304，代表资源无更新，可继续使用缓存文件。</p>
+<h5 id="etag-if-none-match" tabindex="-1">Etag / If-None-Match <a class="header-anchor" href="#etag-if-none-match" aria-label="Permalink to &quot;Etag / If-None-Match&quot;">&ZeroWidthSpace;</a></h5>
+<p>Etag是服务器响应请求时，返回当前资源文件的一个唯一标识(由服务器生成)；</p>
+<p>If-None-Match是客户端再次发起该请求时，携带上次请求返回的唯一标识Etag值，通过此字段值告诉服务器该资源上次请求返回的唯一标识值。服务器收到该请求后，发现该请求头中含有If-None-Match，则会根据If-None-Match的字段值与该资源在服务器的Etag值做对比，一致则返回304，代表资源无更新，继续使用缓存文件；不一致则重新返回资源文件，状态码为200</p>
+<h4 id="总结" tabindex="-1">总结 <a class="header-anchor" href="#总结" aria-label="Permalink to &quot;总结&quot;">&ZeroWidthSpace;</a></h4>
+<p>强制缓存优先于协商缓存进行，若强制缓存(Expires和Cache-Control)生效则直接使用缓存，若不生效则进行协商缓存(Last-Modified / If-Modified-Since和Etag / If-None-Match)，协商缓存由服务器决定是否使用缓存，若协商缓存失效，那么代表该请求的缓存失效，重新获取请求结果，再存入浏览器缓存中；生效则返回304，继续使用缓存，主要过程如下：</p>
+<p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/4/19/162db635ed5f6d26~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.awebp" alt="img"></p>
 <h2 id="_6-2" tabindex="-1">6-2 <a class="header-anchor" href="#_6-2" aria-label="Permalink to &quot;6-2&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="http-常见的状态码" tabindex="-1">http 常见的状态码 <a class="header-anchor" href="#http-常见的状态码" aria-label="Permalink to &quot;http 常见的状态码&quot;">&ZeroWidthSpace;</a></h3>
 <blockquote>
@@ -98,12 +163,13 @@
 </div><h4 id="方法3-复制execcommand" tabindex="-1">方法3：复制execCommand <a class="header-anchor" href="#方法3-复制execcommand" aria-label="Permalink to &quot;方法3：复制execCommand&quot;">&ZeroWidthSpace;</a></h4>
 <div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">document.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">execCommand</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"copy"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span></code></pre>
 </div>]]></content:encoded>
+            <enclosure url="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/4/19/162db6359673e7d0~tplv-t2oaga2asx-jj-mark:3024:0:0:0:q75.awebp" length="0" type="image/awebp"/>
         </item>
         <item>
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/</guid>
-            <pubDate>Mon, 03 Jun 2024 01:34:38 GMT</pubDate>
+            <pubDate>Tue, 04 Jun 2024 08:40:03 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -117,6 +183,14 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>06/04</td>
+<td><a href="./6.html#_6-4"> http 常见的状态码</a></td>
+</tr>
+<tr>
+<td>06/03</td>
+<td><a href="./6.html#_6-3"> 简述 http 的缓存机制</a></td>
+</tr>
 <tr>
 <td>06/02</td>
 <td><a href="./6.html#_6-2"> http 常见的状态码</a></td>
