@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Tue, 04 Jun 2024 08:41:09 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 06 Jun 2024 08:05:20 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -14,6 +14,33 @@
             <link>https://www.imufeng.cn</link>
         </image>
         <copyright>Mblog © 2021-2024 Created by 沐风</copyright>
+        <item>
+            <link>https://www.imufeng.cn/friend-link-list/</link>
+            <guid>https://www.imufeng.cn/friend-link-list/</guid>
+            <pubDate>Thu, 06 Jun 2024 08:04:19 GMT</pubDate>
+            <content:encoded><![CDATA[<details class="details custom-block"><summary>友链申请格式</summary>
+<ul>
+<li>
+<p><strong>站点名称：</strong> <code>沐风的小站</code></p>
+</li>
+<li>
+<p><strong>站点地址：</strong> <code>https://imufeng.cn</code></p>
+</li>
+<li>
+<p><strong>一句话：</strong> <code>但愿岁月如客，来去皆从容。</code></p>
+</li>
+<li>
+<p><strong>头像链接：</strong> <code>https://cravatar.cn/avatar/f1dcdc8fa782b81824df5d67022e4d4a</code></p>
+</li>
+<li>
+<p><strong>其他平台：</strong> <code>[Github/Twitter...](link)</code></p>
+</li>
+</ul>
+</details>
+<h3 id="膜拜大佬" tabindex="-1">膜拜大佬 <a class="header-anchor" href="#膜拜大佬" aria-label="Permalink to &quot;膜拜大佬&quot;">&ZeroWidthSpace;</a></h3>
+<VPTeamMembers size="medium" :members="authoritys" /><h3 id="友链" tabindex="-1">友链 <a class="header-anchor" href="#友链" aria-label="Permalink to &quot;友链&quot;">&ZeroWidthSpace;</a></h3>
+<VPTeamMembers size="small" :members="friends" />]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[每日一题-202406]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/6.html</link>
@@ -9051,33 +9078,6 @@ ScheduledThreadPoolExecutor。</p>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/9.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/9.html</guid>
             <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/friend-link-list/</link>
-            <guid>https://www.imufeng.cn/friend-link-list/</guid>
-            <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
-            <content:encoded><![CDATA[<details class="details custom-block"><summary>友链申请格式</summary>
-<ul>
-<li>
-<p><strong>站点名称：</strong> <code>沐风的小站</code></p>
-</li>
-<li>
-<p><strong>站点地址：</strong> <code>https://imufeng.cn</code></p>
-</li>
-<li>
-<p><strong>一句话：</strong> <code>但愿岁月如客，来去皆从容。</code></p>
-</li>
-<li>
-<p><strong>头像链接：</strong> <code>https://cravatar.cn/avatar/f1dcdc8fa782b81824df5d67022e4d4a</code></p>
-</li>
-<li>
-<p><strong>其他平台：</strong> <code>[Github/Twitter...](link)</code></p>
-</li>
-</ul>
-</details>
-<h3 id="膜拜大佬" tabindex="-1">膜拜大佬 <a class="header-anchor" href="#膜拜大佬" aria-label="Permalink to &quot;膜拜大佬&quot;">&ZeroWidthSpace;</a></h3>
-<VPTeamMembers size="medium" :members="authoritys" /><h3 id="友链" tabindex="-1">友链 <a class="header-anchor" href="#友链" aria-label="Permalink to &quot;友链&quot;">&ZeroWidthSpace;</a></h3>
-<VPTeamMembers size="small" :members="friends" />]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Linux企业级运维]]></title>
