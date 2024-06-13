@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Thu, 06 Jun 2024 08:05:20 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 13 Jun 2024 07:58:16 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -15,9 +15,57 @@
         </image>
         <copyright>Mblog © 2021-2024 Created by 沐风</copyright>
         <item>
+            <title><![CDATA[Linux 企业级运维]]></title>
+            <link>https://www.imufeng.cn/training/linux/</link>
+            <guid>https://www.imufeng.cn/training/linux/</guid>
+            <pubDate>Thu, 13 Jun 2024 07:57:11 GMT</pubDate>
+            <description><![CDATA[Linux 企业级运维
+ 工具部署
+使用 `acme.sh` 部署泛域名证书
+LAMP 架构的编译安装
+WordPress 容器化部署
+ Linux 企业级运维
+【专栏】LAMP 架构的编译安装
+【专]]></description>
+            <content:encoded><![CDATA[<h1 id="linux-企业级运维" tabindex="-1">Linux 企业级运维 <a class="header-anchor" href="#linux-企业级运维" aria-label="Permalink to &quot;Linux 企业级运维&quot;">&ZeroWidthSpace;</a></h1>
+<h3 id="工具部署" tabindex="-1">工具部署 <a class="header-anchor" href="#工具部署" aria-label="Permalink to &quot;工具部署&quot;">&ZeroWidthSpace;</a></h3>
+<p><a href="./acme-sh.html">使用 <code>acme.sh</code> 部署泛域名证书</a></p>
+<p><a href="./linux-lamp/">LAMP 架构的编译安装</a></p>
+<p><a href="./wordpress-by-docker-compose.html">WordPress 容器化部署</a></p>
+<h3 id="linux-企业级运维-1" tabindex="-1">Linux 企业级运维 <a class="header-anchor" href="#linux-企业级运维-1" aria-label="Permalink to &quot;Linux 企业级运维&quot;">&ZeroWidthSpace;</a></h3>
+<p>【专栏】<a href="./linux-lamp/">LAMP 架构的编译安装</a></p>
+<p>【专栏】<a href="./springboot-app-launch/">SpringBoot 项目上线部署流程</a></p>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[LAMP 编译安装三部曲]]></title>
+            <link>https://www.imufeng.cn/training/linux/linux-lamp/</link>
+            <guid>https://www.imufeng.cn/training/linux/linux-lamp/</guid>
+            <pubDate>Thu, 13 Jun 2024 07:57:11 GMT</pubDate>
+            <description><![CDATA[LAMP 是一种常用于搭建网站和应用程序的服务器架构，它由 Linux、Apache、MySQL（或MariaDB）、PHP 四个开源软件组成，也分别代表了操作系统、Web 服务器、数据库以及服务器端]]></description>
+            <content:encoded><![CDATA[<h1 id="lamp-编译安装三部曲" tabindex="-1">LAMP 编译安装三部曲 <a class="header-anchor" href="#lamp-编译安装三部曲" aria-label="Permalink to &quot;LAMP 编译安装三部曲&quot;">&ZeroWidthSpace;</a></h1>
+<blockquote>
+<p>本博文摘自于2019年博主相关课程笔记，由于相关技术过时，故不再做详细修改，请参阅后续教程。</p>
+</blockquote>
+<p>LAMP 是一种常用于搭建网站和应用程序的服务器架构，它由 Linux、Apache、MySQL（或MariaDB）、PHP 四个开源软件组成，也分别代表了操作系统、Web 服务器、数据库以及服务器端脚本语言。 与 LNMP 架构类似，区别在于使用的 Web 服务器组件。</p>
+<p>本教程将用三步带你完成 LAMP 架构的编译安装。</p>
+<ol>
+<li><a href="./first.html"> 第一步 编译安装 httpd 服务器 </a></li>
+<li><a href="./second.html"> 第二步 编译安装mariadb数据库环境</a></li>
+<li><a href="./third.html"> 第三步 编译安装PHP </a></li>
+</ol>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[膜拜大佬]]></title>
             <link>https://www.imufeng.cn/friend-link-list/</link>
             <guid>https://www.imufeng.cn/friend-link-list/</guid>
             <pubDate>Thu, 06 Jun 2024 08:04:19 GMT</pubDate>
+            <description><![CDATA[::: details 友链申请格式
+- 站点名称： `沐风的小站`
+- 站点地址： `https://imufeng.cn`
+- 一句话： `但愿岁月如客，来去皆从容。`
+- 头像链接： `http]]></description>
             <content:encoded><![CDATA[<details class="details custom-block"><summary>友链申请格式</summary>
 <ul>
 <li>
@@ -42,10 +90,14 @@
 <VPTeamMembers size="small" :members="friends" />]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[每日一题-202406]]></title>
+            <title><![CDATA[每日一题 - 202406]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/6.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/6.html</guid>
             <pubDate>Tue, 04 Jun 2024 08:40:03 GMT</pubDate>
+            <description><![CDATA[每日一题 - 202406
+ 6-4
+ 什么是 CSRF 攻击？
+`CSRF` (Cross-site request forgery)，跨站请求伪造，又称为 `one-click attack`，是]]></description>
             <content:encoded><![CDATA[<h1 id="每日一题-202406" tabindex="-1">每日一题 - 202406 <a class="header-anchor" href="#每日一题-202406" aria-label="Permalink to &quot;每日一题 - 202406&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_6-4" tabindex="-1">6-4 <a class="header-anchor" href="#_6-4" aria-label="Permalink to &quot;6-4&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="什么是-csrf-攻击" tabindex="-1">什么是 CSRF 攻击？ <a class="header-anchor" href="#什么是-csrf-攻击" aria-label="Permalink to &quot;什么是 CSRF 攻击？&quot;">&ZeroWidthSpace;</a></h3>
@@ -839,7 +891,7 @@
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[每日一题-202405]]></title>
+            <title><![CDATA[每日一题 - 202405]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/5.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/5.html</guid>
             <pubDate>Fri, 31 May 2024 08:59:56 GMT</pubDate>
@@ -2714,10 +2766,112 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
             <enclosure url="https://user-images.githubusercontent.com/19986739/153329224-c2120a5d-4f25-4659-9347-d6217d5a5ce8.png" length="0" type="image/png"/>
         </item>
         <item>
-            <title><![CDATA[每日一题-202404]]></title>
+            <title><![CDATA[Mysql 数据库编译安装]]></title>
+            <link>https://www.imufeng.cn/training/linux/springboot-app-launch/mysql.html</link>
+            <guid>https://www.imufeng.cn/training/linux/springboot-app-launch/mysql.html</guid>
+            <pubDate>Sun, 05 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[MySQL是一款流行的开源关系型数据库管理系统（RDBMS），适用于从小型网站到大型企业级应用的各种场景。它以GNU通用公共许可证发行，实现成本效益。MySQL具备高性能、高可靠性和强大的可伸缩性，支持多线程、跨平台操作，及多种存储引擎，适应不同数据处理需求。其优势在于开源免费、社区活跃、易于学习与使用，且能有效处理大量并发连接，提供丰富的SQL功能及安全性保障，成为Web开发和数据存储领域的首选方案。]]></description>
+            <content:encoded><![CDATA[<h1 id="第二步-mysql-数据库编译安装" tabindex="-1">第二步 Mysql 数据库编译安装 <a class="header-anchor" href="#第二步-mysql-数据库编译安装" aria-label="Permalink to &quot;第二步 Mysql 数据库编译安装&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="一、简介" tabindex="-1">一、简介 <a class="header-anchor" href="#一、简介" aria-label="Permalink to &quot;一、简介&quot;">&ZeroWidthSpace;</a></h2>
+<p>MySQL是最流行的关系型数据库管理系统之一，由瑞典 MySQL AB 公司开发，目前属于 Oracle 公司。因其性能高、可靠性强和易用性高而在各种应用中得到广泛应用。</p>
+<p>MYSQL 的编译安装使用 CMAKE 来完成，它是一款跨平台的开源的构建系统，用于管理软件的编译过程。它可以通过简单的配置文件（CMakeLists.txt）来描述项目的构建过程，生成适合本地平台的原生构建文件。它比传统的编译安装更加灵活和方便。</p>
+<p>之前有写过 MYSQL for Windows 直装教程：<a href="https://www.imufeng.cn/training/software/mysql-for-win-install.html" target="_blank" rel="noreferrer">Mysql for Windows 安装及初始化 </a>，但是企业级服务器部署中，为了提高性能并满足自定义配置，基本是要求编译安装。</p>
+<h2 id="二、环境准备" tabindex="-1">二、环境准备 <a class="header-anchor" href="#二、环境准备" aria-label="Permalink to &quot;二、环境准备&quot;">&ZeroWidthSpace;</a></h2>
+<p>MYSQL 编译安装对系统要求较高，推荐 4C8G 60G 配置。本次演示使用 AlmaLinux9 + mysql 8.0.37，系统配置为 16C 32G。可能好还需要提前配置阿里云 YUM 源等。</p>
+<h2 id="三、安装" tabindex="-1">三、安装 <a class="header-anchor" href="#三、安装" aria-label="Permalink to &quot;三、安装&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="_2-1-下载" tabindex="-1">2.1 下载 <a class="header-anchor" href="#_2-1-下载" aria-label="Permalink to &quot;2.1 下载&quot;">&ZeroWidthSpace;</a></h3>
+<p>安装包下载页面：<a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noreferrer">MySQL :: Download MySQL Community Server</a> ，本文章以 MYSQL-8.0.37 举例，下载文件带boost的源码包：<code>mysql-boost-8.0.37.tar.gz</code> ，推荐解压到 <code>/usr/src</code> ，解压后目录结构如下：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span>boost            Doxyfile-ignored     libchangestreams  packaging          sql-common</span></span>
+<span class="line"><span>client           Doxyfile.in          libmysql          plugin             storage</span></span>
+<span class="line"><span>cmake            doxygen_resources    libservices       README             strings</span></span>
+<span class="line"><span>CMakeLists.txt   extra                LICENSE           router             support-files</span></span>
+<span class="line"><span>components       include              man               run_doxygen.cmake  testclients</span></span>
+<span class="line"><span>config.h.cmake   INSTALL              mysql-test        scripts            unittest</span></span>
+<span class="line"><span>configure.cmake  libbinlogevents      MYSQL_VERSION     share              utilities</span></span>
+<span class="line"><span>Docs             libbinlogstandalone  mysys             sql                vio</span></span></code></pre>
+</div><h3 id="_2-2-编译检查" tabindex="-1">2.2 编译检查 <a class="header-anchor" href="#_2-2-编译检查" aria-label="Permalink to &quot;2.2 编译检查&quot;">&ZeroWidthSpace;</a></h3>
+<p>Mysql 编译安装使用 CMAKE 构建工具，CMAKE 是依赖于c语言的，所以我们首先必须安装 CMAKE 及其依赖：</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> yum</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> cmake</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> gcc</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> g++</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> gcc-toolset-12</span></span></code></pre>
+</div><p>CMAKE 安装之后，即可开始编译安装，编译安装选项不是固定的，你完全可以按照阅读官方文档<a href="https://dev.mysql.com/doc/mysqld-version-reference/en/build-options.html" target="_blank" rel="noreferrer">MySQL 8 Build Options</a> 并自行增删，这就是编译安装最大的魅力所在。以下是我的编译安装选项</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">cmake3</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -DCMAKE_INSTALL_PREFIX=/usr/local/mysql/</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DMYSQL_DATADIR=/usr/local/mysql/data </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DDEFAULT_CHARSET=utf8mb4 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DDEFAULT_COLLATION=utf8mb4_general_ci </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DWITH_EXTRA_CHARSETS=all </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DWITH_MYISAM_STORAGE_ENGINE=1 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DWITH_INNOBASE_STORAGE_ENGINE=1 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DWITH_MEMORY_STORAGE_ENGINE=1 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DWITH_READLINE=1 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DWITH_INNODB_MEMCACHED=1 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DWITH_DEBUG=OFF </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DWITH_ZLIB=bundled </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DENABLED_LOCAL_INFILE=1 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DENABLED_PROFILING=ON </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DMYSQL_MAINTAINER_MODE=OFF </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DMYSQL_TCP_PORT=3306 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DDOWNLOAD_BOOST=1 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DWITH_BOOST=/usr/src/mysql-8.0.37/boost  </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">-DFORCE_INSOURCE_BUILD=1</span></span></code></pre>
+</div><p>其他教程可能会给出一堆的 yum 安装，但是其中可能会有一些不需要的依赖，所以一般都是在执行 CMAKE 编译检查命令时，遇到报错缺少依赖再去安装，如下图：</p>
+<p><img src="https://cdn.imufeng.cn/mblog/ad341fa229ccf953b20b7b77c41131dd.png" alt="image-20240612162753836"></p>
+<p>根据图片我们可以发现，系统缺少 <code>libtirpc-devel</code>  软件包，此时即可按照提示安装该软件包后重新执行 CMAKE 命令。经过我的测试，以下依赖需要安装：</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> yum</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> openssl-devel</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ncurse-devel</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> libtirpc-devel</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rpcgen</span></span></code></pre>
+</div><p>只要看到如下内容，即可证明通过了编译安装检查，接下来你就可以开始安装了。</p>
+<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span>-- Configuring done (2.3s)</span></span>
+<span class="line"><span>-- Generating done (2.7s)</span></span>
+<span class="line"><span>-- Build files have been written to: /usr/src/mysql-8.0.37</span></span></code></pre>
+</div><h3 id="_2-3-开始安装" tabindex="-1">2.3 开始安装 <a class="header-anchor" href="#_2-3-开始安装" aria-label="Permalink to &quot;2.3 开始安装&quot;">&ZeroWidthSpace;</a></h3>
+<p>编译安装是个很久很漫长的过程，一定要注意留足60G左右的存储空间，否则可能会编译一个小时提示空间不足。如果你的配置足够高，可以为 make 添加 -j 选项来开启多线程，这里选择使用16线程来编译。</p>
+<p>执行命令：<code>make -j16 &amp;&amp; make install</code></p>
+<p>然后就是漫长的等待了。</p>
+<h2 id="四、启动" tabindex="-1">四、启动 <a class="header-anchor" href="#四、启动" aria-label="Permalink to &quot;四、启动&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="_4-1-配置文件" tabindex="-1">4.1 配置文件 <a class="header-anchor" href="#_4-1-配置文件" aria-label="Permalink to &quot;4.1 配置文件&quot;">&ZeroWidthSpace;</a></h3>
+<p>配置文件：<code>/etc/my.cnf</code></p>
+<div class="language-ini vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ini</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">[mysqld]</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">user</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> = mysql</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">basedir</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> = /usr/local/mysql</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">datadir</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=/data/mysql_dev </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 不指定就在 $basedir/data 下</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">lower_case_table_names</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=1 </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 忽略大小写</span></span></code></pre>
+</div><p>这么多就够了。</p>
+<h3 id="_4-2-用户和用户组" tabindex="-1">4.2 用户和用户组 <a class="header-anchor" href="#_4-2-用户和用户组" aria-label="Permalink to &quot;4.2 用户和用户组&quot;">&ZeroWidthSpace;</a></h3>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">groupadd</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mysql</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 不创建HOME目录，并不允许登录</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">useradd</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -M</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -g</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mysql</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /sbin/nologin</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /usr/local/mysql</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mysql</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">chown</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -R</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mysql.mysql</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /usr/local/mysql</span></span></code></pre>
+</div><h3 id="_4-3-环境变量" tabindex="-1">4.3 环境变量 <a class="header-anchor" href="#_4-3-环境变量" aria-label="Permalink to &quot;4.3 环境变量&quot;">&ZeroWidthSpace;</a></h3>
+<p>推荐为 MYSQL 添加一个系统环境变量，编辑<code>/etc/profile</code>，并写入如下内容：</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> PATH</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$PATH</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">:/usr/local/mysql/bin/</span></span></code></pre>
+</div><h3 id="_4-4-初始化" tabindex="-1">4.4 初始化 <a class="header-anchor" href="#_4-4-初始化" aria-label="Permalink to &quot;4.4 初始化&quot;">&ZeroWidthSpace;</a></h3>
+<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span>cd /usr/local/mysql/</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>./bin/mysqld --user=mysql --initialize -defaults-file=/etc/my.cnf</span></span></code></pre>
+</div><p>执行命令后，会获得一个临时密码，此密码强制要求登录后修改。</p>
+<h3 id="_4-5-启动" tabindex="-1">4.5 启动 <a class="header-anchor" href="#_4-5-启动" aria-label="Permalink to &quot;4.5 启动&quot;">&ZeroWidthSpace;</a></h3>
+<p>启动命令：<code>mysqld &amp;</code></p>
+<h2 id="五、连接测试" tabindex="-1">五、连接测试 <a class="header-anchor" href="#五、连接测试" aria-label="Permalink to &quot;五、连接测试&quot;">&ZeroWidthSpace;</a></h2>
+<p>Mysql 服务启动后，即可进行连接：<code>./mysql -uroot -ppassWord</code></p>
+<p>以下命令修改密码：</p>
+<div class="language-sql vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">sql</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ALTER</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> USER</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'root'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'localhost'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> IDENTIFIED </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">WITH</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> mysql_native_password </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">BY</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'PASSWORD'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span></code></pre>
+</div><h2 id="参考资料" tabindex="-1">参考资料 <a class="header-anchor" href="#参考资料" aria-label="Permalink to &quot;参考资料&quot;">&ZeroWidthSpace;</a></h2>
+<ul>
+<li><a href="https://www.runoob.com/mysql/mysql-tutorial.html" target="_blank" rel="noreferrer">MySQL 教程 | 菜鸟教程 (runoob.com)</a></li>
+<li><a href="https://dev.mysql.com/doc/mysqld-version-reference/en/build-options.html" target="_blank" rel="noreferrer">MySQL 8 Build Options</a></li>
+</ul>
+]]></content:encoded>
+            <enclosure url="https://cdn.imufeng.cn/mblog/de6d10ef17dcb6f1d9902dc612375980.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[每日一题 - 202404]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/4.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/4.html</guid>
             <pubDate>Tue, 30 Apr 2024 07:09:59 GMT</pubDate>
+            <description><![CDATA[每日一题 - 202404
+ 4-30
+ 如何理解 ES6 的 Reflect 对象？
+Reflect 是一个内置的对象，它提供拦截 JavaScript 操作的方法。
+与大多数全局对象不同 Refl]]></description>
             <content:encoded><![CDATA[<h1 id="每日一题-202404" tabindex="-1">每日一题 - 202404 <a class="header-anchor" href="#每日一题-202404" aria-label="Permalink to &quot;每日一题 - 202404&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_4-30" tabindex="-1">4-30 <a class="header-anchor" href="#_4-30" aria-label="Permalink to &quot;4-30&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="如何理解-es6-的-reflect-对象" tabindex="-1">如何理解 ES6 的 Reflect 对象？ <a class="header-anchor" href="#如何理解-es6-的-reflect-对象" aria-label="Permalink to &quot;如何理解 ES6 的 Reflect 对象？&quot;">&ZeroWidthSpace;</a></h3>
@@ -3253,14 +3407,306 @@ setImmediate
 ]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[目录]]></title>
             <link>https://www.imufeng.cn/interview/skills/</link>
             <guid>https://www.imufeng.cn/interview/skills/</guid>
             <pubDate>Fri, 26 Apr 2024 09:06:27 GMT</pubDate>
+            <description><![CDATA[目录]]></description>
             <content:encoded><![CDATA[<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Redis自学笔记]]></title>
+            <title><![CDATA[Nginx 服务器编译安装]]></title>
+            <link>https://www.imufeng.cn/training/linux/springboot-app-launch/nginx.html</link>
+            <guid>https://www.imufeng.cn/training/linux/springboot-app-launch/nginx.html</guid>
+            <pubDate>Sat, 20 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Nginx 作为当下最强大的正向/反向代理服务器，以及应用最广泛的轻量级Web服务器，能够适用于多种场景，本文将描述 Nginx WEB 服务器从源码编译安装的流程。]]></description>
+            <content:encoded><![CDATA[<h1 id="第一步-web-服务器-nginx-编译安装" tabindex="-1">第一步 WEB 服务器 Nginx 编译安装 <a class="header-anchor" href="#第一步-web-服务器-nginx-编译安装" aria-label="Permalink to &quot;第一步 WEB 服务器 Nginx 编译安装&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="一、简介" tabindex="-1">一、简介 <a class="header-anchor" href="#一、简介" aria-label="Permalink to &quot;一、简介&quot;">&ZeroWidthSpace;</a></h2>
+<p>根据 <a href="https://nginx.org/" target="_blank" rel="noreferrer">Nginx官网</a>介绍。Nginx 是 an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server（HTTP和反向代理服务器，邮件代理服务器和通用TCP/UDP代理服务器）。它还是应用最广泛的轻量级Web服务器。在性能上，Nginx占用很少的系统资源，能支持更多的并发连接，达到更高的访问效率；在功能上，Nginx是优秀的代理服务器和负载均衡服务器；在安装配置上，Nginx安装简单、配置灵活。</p>
+<h2 id="二、安装" tabindex="-1">二、安装 <a class="header-anchor" href="#二、安装" aria-label="Permalink to &quot;二、安装&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="_2-1-下载" tabindex="-1">2.1 下载 <a class="header-anchor" href="#_2-1-下载" aria-label="Permalink to &quot;2.1 下载&quot;">&ZeroWidthSpace;</a></h3>
+<p>下载地址：<a href="https://nginx.org/en/download.html" target="_blank" rel="noreferrer">nginx: download</a> 选择 Stable version 最新的稳定版即可。下载后，解压到 <code>/usr/src</code> 目录下，目录结构如下：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span>auto     CHANGES.ru  configure  html     Makefile  objs    src</span></span>
+<span class="line"><span>CHANGES  conf        contrib    LICENSE  man       README</span></span></code></pre>
+</div><h3 id="_2-2-安装前准备" tabindex="-1">2.2 安装前准备 <a class="header-anchor" href="#_2-2-安装前准备" aria-label="Permalink to &quot;2.2 安装前准备&quot;">&ZeroWidthSpace;</a></h3>
+<p>编译安装需要 C 语言及 make 工具的支持，先安装这两个，其他依赖根据编译检查的提示再逐一安装。</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">yum</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> make</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> gcc</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> g++</span></span></code></pre>
+</div><h3 id="_2-3-编译选项" tabindex="-1">2.3 编译选项 <a class="header-anchor" href="#_2-3-编译选项" aria-label="Permalink to &quot;2.3 编译选项&quot;">&ZeroWidthSpace;</a></h3>
+<p>我是用的编译安装选项如下，可以根据具体业务调整，详见官方文档 <a href="https://nginx.org/en/docs/configure.html" target="_blank" rel="noreferrer">Building nginx from Sources</a>。</p>
+<p>进入源码包所在目录执行以下命令做编译安装检查：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">./configure</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--prefix=/data/software/nginx</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--user</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">nginx</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--group</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">nginx</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">--with-pcre</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-http_ssl_module </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-http_v2_module </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-http_realip_module </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-http_addition_module </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-http_sub_module </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-http_dav_module </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-http_flv_module </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-http_mp4_module </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-http_gunzip_module </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-http_gzip_static_module </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-http_random_index_module </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-http_secure_link_module </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-http_stub_status_module </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-http_auth_request_module </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-http_image_filter_module </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-http_slice_module </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-mail </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-threads </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-file-aio </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-stream </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-mail_ssl_module </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--with-stream_ssl_module</span></span></code></pre>
+</div><p>检查过程中，会遇到一些报错，如下：</p>
+<p><img src="https://cdn.imufeng.cn/mblog/9921b40beeb127a45f05102faffdbbd0.png" alt="image-20240409103432796"></p>
+<p><img src="https://cdn.imufeng.cn/mblog/c5ef3f38fc2e7d31ab1de26901af20d0.png" alt="image-20240409103429712"></p>
+<p>从报错中，我们可以清晰的看到缺少 XXX 模块，一般都是安装 XXX-devel 包含依赖库的包即可，我安装了如下软件包：<code>pcre-devel</code>、<code>openssl-devel</code>、<code>gd-devel</code>。</p>
+<h3 id="_2-4-编译安装" tabindex="-1">2.4 编译安装 <a class="header-anchor" href="#_2-4-编译安装" aria-label="Permalink to &quot;2.4 编译安装&quot;">&ZeroWidthSpace;</a></h3>
+<p>使用 <code>make</code> 命令编译，使用 <code>make install</code> 命令安装。编译时可以使用 <code>make -j[n]</code> 参数指定多线程，一般为机器核心数。</p>
+<p><img src="https://cdn.imufeng.cn/mblog/6d7a88c02227819d393cdc7b78ec36c6.png" alt="image-20240409103602629"></p>
+<p>编译安装成功之后，即可在指定的路径看到 nginx 了：</p>
+<p><img src="https://cdn.imufeng.cn/mblog/bd2b17443881488fe9b780e5cc777ad2.png" alt="image-20240409113645980"></p>
+<h3 id="_2-5-启动" tabindex="-1">2.5 启动 <a class="header-anchor" href="#_2-5-启动" aria-label="Permalink to &quot;2.5 启动&quot;">&ZeroWidthSpace;</a></h3>
+<p>运行 <code>sbin</code> 里边的 <code>nginx</code> 文件即可启动 nginx：</p>
+<p><img src="https://cdn.imufeng.cn/mblog/c53087206ab2eea0f8f9a158190106e6.png" alt="image-20240409113830916"></p>
+<p>可以看到 80 端口已经被占用了，curl 访问一下，可以看到 html 页面结构，浏览器也可以直接访问，证明 nginx 启动没问题了。</p>
+<p><img src="https://cdn.imufeng.cn/mblog/5a6fa4a463b270f83af04c2963e1a097.png" alt="image-20240409103825846"></p>
+<p><img src="https://cdn.imufeng.cn/mblog/2b46410a1d937a58a0ee5d1d24827e5b.png" alt="image-20240409104522844"></p>
+<h2 id="三、配置" tabindex="-1">三、配置 <a class="header-anchor" href="#三、配置" aria-label="Permalink to &quot;三、配置&quot;">&ZeroWidthSpace;</a></h2>
+<p>Nginx 的配置推荐 <a href="https://www.digitalocean.com/community/tools/nginx" target="_blank" rel="noreferrer">Nginx 配置工具</a>，这个网站可以使用可视化页面带你进行 Nginx 的配置，非常适合小白。</p>
+<h3 id="_3-1-使用-systemd-管理" tabindex="-1">3.1 使用 systemd 管理 <a class="header-anchor" href="#_3-1-使用-systemd-管理" aria-label="Permalink to &quot;3.1 使用 systemd 管理&quot;">&ZeroWidthSpace;</a></h3>
+<p>要将 nginx 配置为服务交给 systemd 管理，需要新增一个 service 文件：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">vim</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /usr/lib/systemd/system/nginx.service</span></span></code></pre>
+</div><div class="language-ini vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ini</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">[Unit]</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Description</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=nginx web server</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Documentation</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=http://nginx.org/en/docs/</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">After</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=network.target remote-fs.target nss-lookup.target</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">[Service]</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Type</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=forking</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">PIDFile</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=/data/service/nginx/logs/nginx.pid</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ExecStartPre</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=/data/service/nginx/sbin/nginx -t -c /data/service/nginx/conf/nginx.conf</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ExecStart</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=/data/service/nginx/sbin/nginx -c /data/service/nginx/conf/nginx.conf</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ExecReload</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">= /data/service/nginx/sbin/nginx -s reload</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ExecStop</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">= /data/service/nginx/sbin/nginx -s stop</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">PrivateTmp</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=true</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">[Install]</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">WantedBy</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=multi-user.target</span></span></code></pre>
+</div><p>通过 systemctl 命令启动 nginx：</p>
+<p>启动前一定要使用 <code>nginx -s stop</code> 命令或 <code>kill</code> 命令停止 nginx，否则会报端口占用。</p>
+<p><img src="https://cdn.imufeng.cn/mblog/cf1ff822fe98d64c3f71c7625bac00f2.png" alt="image-20240409114356091"></p>
+<p>开机自启：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span>systemctl enable nginx</span></span>
+<span class="line"><span>Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /usr/lib/systemd/system/nginx.service.</span></span></code></pre>
+</div><h3 id="_3-2-基础配置" tabindex="-1">3.2 基础配置 <a class="header-anchor" href="#_3-2-基础配置" aria-label="Permalink to &quot;3.2 基础配置&quot;">&ZeroWidthSpace;</a></h3>
+<p>Nginx 只有一个配置文件就是 <code>nginx.conf</code> ，能看到的配置文件都是通过 <code>include</code> 引入的，方便管理。</p>
+<p>nginx.conf  配置结构如下：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span>...              #全局配置</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>events {         #events块</span></span>
+<span class="line"><span>   ...</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>http      #http块</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>    ...   #http全局块</span></span>
+<span class="line"><span>    server        #server块</span></span>
+<span class="line"><span>    { </span></span>
+<span class="line"><span>        ...       #server全局块</span></span>
+<span class="line"><span>        location [PATTERN]   #location块</span></span>
+<span class="line"><span>        {</span></span>
+<span class="line"><span>            ...</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        location [PATTERN] </span></span>
+<span class="line"><span>        {</span></span>
+<span class="line"><span>            ...</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    server</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>      ...</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    ...     #http全局块</span></span>
+<span class="line"><span>}</span></span></code></pre>
+</div><ul>
+<li>全局配置包括用户、进程 PID、日志等的配置。</li>
+<li>events 配置 nginx 的访问、网络连接。</li>
+<li>http 块配置包括多个 server 块，一个个的服务。</li>
+<li>server 可以配置多个，专有名词叫虚拟主机。</li>
+<li>localtion 配置匹配的路径，可以用正则表达式。</li>
+</ul>
+<p>下面是我服务器 <code>imufeng.cn</code> blog 服务的 nginx 配置：</p>
+<p><code>nginx.conf</code></p>
+<div class="language-nginx vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">nginx</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">user </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                nginx;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">pid </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                 logs/nginx.pid;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">worker_processes </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    auto;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">worker_rlimit_nofile </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">65535;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Load modules</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">include </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">             /etc/nginx/modules-enabled/*.conf;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">events</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    multi_accept </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">      on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    worker_connections </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">65535;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">http</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    charset </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">               utf-8;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    sendfile </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">              on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    tcp_nopush </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    tcp_nodelay </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">           on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server_tokens </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">         off</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    log_not_found </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">         off</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    types_hash_max_size </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">   2048</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    types_hash_bucket_size </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">64;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    client_max_body_size </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  16M</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # MIME</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    include </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">               mime.types;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    default_type </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          application/octet-stream;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Logging</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    access_log </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            off</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    error_log </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">             /dev/null;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # SSL</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_session_timeout </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">   1d</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_session_cache </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">     shared:SSL:10m;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_session_tickets </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">   off</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Diffie-Hellman parameter for DHE ciphersuites</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_dhparam </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">           cert/dhparam.pem;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Mozilla Intermediate configuration</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_protocols </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">         TLSv1.2 TLSv1.3;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_ciphers </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">           ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # OCSP Stapling</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_stapling </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">          on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_stapling_verify </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">   on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    resolver </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">              1.1.1.1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1.0.0.1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 8.8.8.8</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 8.8.4.4</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 208.67.222.222</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 208.67.220.220</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> valid=60s;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    resolver_timeout </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">      2s</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Load configs</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    include </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">               imufeng.cn/*.conf;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><p><code>imufeng.cn/blog.conf</code></p>
+<div class="language-nginx vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">nginx</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    listen </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">             443</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ssl http2;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    listen </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">             [::]:443 ssl http2;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server_name </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        blog.imufeng.cn;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    root </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">               /home/mblog-vitepress-web;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # SSL</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_certificate </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    cert/imufeng.cn.cer;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_certificate_key </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">cert/imufeng.cn.key;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # security</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    include </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            conf/global.conf/security.conf;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # logging</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    access_log </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">         logs/blog.imufeng.cn.log combined buffer=512k flush=5m;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    error_log </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          logs/blog.imufeng.cn.error.log</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> error</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # index.html fallback</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    location</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> / </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        add_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Content-Security-Policy </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"default-src 'self' 'unsafe-eval'  http: https: ws: wss: data: blob: 'unsafe-inline' 'unsafe-eval';"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        try_files </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$uri $uri/ $uri.html /404.html;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><p>其中证书及 dhparam 配置详见我的博客 <a href="https://www.imufeng.cn/training/linux/acme-sh.html" target="_blank" rel="noreferrer">泛域名证书申请以及部署 | MBlog (imufeng.cn)</a></p>
+<h2 id="参考资料" tabindex="-1">参考资料 <a class="header-anchor" href="#参考资料" aria-label="Permalink to &quot;参考资料&quot;">&ZeroWidthSpace;</a></h2>
+<ul>
+<li><a href="https://nginx.org/en/docs/configure.html" target="_blank" rel="noreferrer">Building nginx from Sources</a></li>
+<li><a href="https://www.runoob.com/w3cnote/nginx-setup-intro.html" target="_blank" rel="noreferrer">Nginx 配置详解 | 菜鸟教程 (runoob.com)</a></li>
+</ul>
+]]></content:encoded>
+            <enclosure url="https://cdn.imufeng.cn/mblog/006125ea4376a1e135b8a601c2418948.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[SpringBoot 企业级部署上线流程]]></title>
+            <link>https://www.imufeng.cn/training/linux/springboot-app-launch/</link>
+            <guid>https://www.imufeng.cn/training/linux/springboot-app-launch/</guid>
+            <pubDate>Mon, 15 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[本系列将从 Linux 企业级运维的角度出发，详细介绍 Linux 操作系统下 Nginx + JAVA + MYSQL + Redis + Minio 的安装部署，主要使用编译安装。]]></description>
+            <content:encoded><![CDATA[<h1 id="linux-企业级运维-springboot项目上线五部曲" tabindex="-1">Linux 企业级运维 - SpringBoot项目上线五部曲 <a class="header-anchor" href="#linux-企业级运维-springboot项目上线五部曲" aria-label="Permalink to &quot;Linux 企业级运维 - SpringBoot项目上线五部曲&quot;">&ZeroWidthSpace;</a></h1>
+<div class="tip custom-block"><p class="custom-block-title">观前提示</p>
+<p>本文将不会阐述 Linux 安装、基本配置等相关操作。阅读本教程前，你需要：</p>
+<ol>
+<li>Linux 基本操作知识储备</li>
+<li>前后端分离系统的基础及打包操作（maven、pnpm等）</li>
+<li>Linux 网络配置（nmcli、NetworkManager等）</li>
+<li>自行安装操作系统、更新系统，你可能还需要切换镜像源</li>
+</ol>
+</div>
+<p>Linux 服务器，其重要性不言而喻，本系列将从各个服务的安装、部署、配置等，系统性的讲解 SpringBoot 前后端分离项目的上线流程，
+本系列将区别于类似某些 Linux 面板的自动化部署，也避免使用容器等工具，所有的服务部署将尽量使用最新版本，并从源码进行编译安装。
+除 JAVA 使用 jdk17 外，本教程版本选择都为最新的稳定版，不推荐使用任何第三方站点下载。无法访问请自行科学。
+由于原生编译安装对于硬件资源的要求较高，轻量级的云 ECS 服务器可能不太满足，所以更推荐本地虚拟机操作。</p>
+<p>各服务版本及官网地址如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">地址</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Nginx 代理服务器</td>
+<td style="text-align:center">1.25.3</td>
+<td style="text-align:center"><a href="https://nginx.org/" target="_blank" rel="noreferrer">nginx news</a></td>
+<td style="text-align:center">源码编译安装</td>
+</tr>
+<tr>
+<td style="text-align:center">Mysql 数据库</td>
+<td style="text-align:center">8.0.37</td>
+<td style="text-align:center"><a href="https://www.mysql.com/cn/" target="_blank" rel="noreferrer">MySQL</a></td>
+<td style="text-align:center">源码编译安装</td>
+</tr>
+<tr>
+<td style="text-align:center">Redis 缓存中间件</td>
+<td style="text-align:center">7.2</td>
+<td style="text-align:center"><a href="https://redis.io/" target="_blank" rel="noreferrer">Redis</a></td>
+<td style="text-align:center">源码编译安装</td>
+</tr>
+<tr>
+<td style="text-align:center">MinIO</td>
+<td style="text-align:center">latest</td>
+<td style="text-align:center"><a href="https://www.minio.org.cn/" target="_blank" rel="noreferrer">MINIO</a></td>
+<td style="text-align:center">可执行文件</td>
+</tr>
+<tr>
+<td style="text-align:center">JDK 运行环境</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center"><a href="https://www.oracle.com/cn/java/technologies/downloads/#java17" target="_blank" rel="noreferrer">JDK-17</a></td>
+<td style="text-align:center">可执行文件</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>本博客不推荐从任何除官网外的第三方平台下载服务或源码包。</p>
+</blockquote>
+<h3 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h3>
+<ol>
+<li><a href="./nginx.html">WEB 服务器 Nginx 编译安装</a></li>
+<li><a href="./mysql.html">Mysql 数据库编译安装</a></li>
+</ol>
+]]></content:encoded>
+            <enclosure url="https://cdn.imufeng.cn/mblog/eace45811a4b7ff825f1495aab72a2b0.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Redis 自学笔记]]></title>
             <link>https://www.imufeng.cn/full-stack/other/redis.html</link>
             <guid>https://www.imufeng.cn/full-stack/other/redis.html</guid>
             <pubDate>Mon, 08 Apr 2024 09:32:40 GMT</pubDate>
@@ -3873,6 +4319,7 @@ setImmediate
 ]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[10-31]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2023/10.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2023/10.html</guid>
             <pubDate>Mon, 08 Apr 2024 09:32:40 GMT</pubDate>
@@ -4675,10 +5122,15 @@ Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来�
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[每日一题-202401]]></title>
+            <title><![CDATA[每日一题 - 202401]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/1.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/1.html</guid>
             <pubDate>Mon, 08 Apr 2024 09:32:40 GMT</pubDate>
+            <description><![CDATA[每日一题 - 202401
+ 1-31
+ 什么是同步？
+同步 IO 和 非同步 IO 是操作系统级别的，主要描述操作系统在收到程序请求 IO 操作后，
+如果 IO 资源没有准备好，该如何响应程序的问题]]></description>
             <content:encoded><![CDATA[<h1 id="每日一题-202401" tabindex="-1">每日一题 - 202401 <a class="header-anchor" href="#每日一题-202401" aria-label="Permalink to &quot;每日一题 - 202401&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_1-31" tabindex="-1">1-31 <a class="header-anchor" href="#_1-31" aria-label="Permalink to &quot;1-31&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="什么是同步" tabindex="-1">什么是同步？ <a class="header-anchor" href="#什么是同步" aria-label="Permalink to &quot;什么是同步？&quot;">&ZeroWidthSpace;</a></h3>
@@ -4966,10 +5418,14 @@ Java 反射机制是在运行状态中，对于任意一个类，都能够知道
             <enclosure url="https://www.pdai.tech/images/develop/network/dev-network-protocol-1.png" length="0" type="image/png"/>
         </item>
         <item>
-            <title><![CDATA[每日一题-202402]]></title>
+            <title><![CDATA[每日一题 - 202402]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/2.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/2.html</guid>
             <pubDate>Mon, 08 Apr 2024 09:32:40 GMT</pubDate>
+            <description><![CDATA[每日一题 - 202402
+ 2-29
+ Mybatis 如何将查询结果封装为对象？
+Mybatis 有两种映射形式，第一种是使用``标签，逐一定义数据库列名和对象属性名之间的映射关系。 第二种是使用]]></description>
             <content:encoded><![CDATA[<h1 id="每日一题-202402" tabindex="-1">每日一题 - 202402 <a class="header-anchor" href="#每日一题-202402" aria-label="Permalink to &quot;每日一题 - 202402&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_2-29" tabindex="-1">2-29 <a class="header-anchor" href="#_2-29" aria-label="Permalink to &quot;2-29&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="mybatis-如何将查询结果封装为对象" tabindex="-1">Mybatis 如何将查询结果封装为对象？ <a class="header-anchor" href="#mybatis-如何将查询结果封装为对象" aria-label="Permalink to &quot;Mybatis 如何将查询结果封装为对象？&quot;">&ZeroWidthSpace;</a></h3>
@@ -5222,10 +5678,15 @@ ArrayList 具有自动增加底层数组容量的能力，当数组容量不足�
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[每日一题-202403]]></title>
+            <title><![CDATA[每日一题 - 202403]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/3.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/3.html</guid>
             <pubDate>Mon, 08 Apr 2024 09:32:40 GMT</pubDate>
+            <description><![CDATA[每日一题 - 202403
+ 3-31
+ 获取 class 对象有哪些方式？
+- 通过类名获取： `Class.forName("com.example.User")`
+- 通过类对象获取： `Use]]></description>
             <content:encoded><![CDATA[<h1 id="每日一题-202403" tabindex="-1">每日一题 - 202403 <a class="header-anchor" href="#每日一题-202403" aria-label="Permalink to &quot;每日一题 - 202403&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_3-31" tabindex="-1">3-31 <a class="header-anchor" href="#_3-31" aria-label="Permalink to &quot;3-31&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="获取-class-对象有哪些方式" tabindex="-1">获取 class 对象有哪些方式？ <a class="header-anchor" href="#获取-class-对象有哪些方式" aria-label="Permalink to &quot;获取 class 对象有哪些方式？&quot;">&ZeroWidthSpace;</a></h3>
@@ -5656,7 +6117,7 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[浅学Flex流式布局]]></title>
+            <title><![CDATA[浅学 Flex 流式布局]]></title>
             <link>https://www.imufeng.cn/full-stack/front-end/flex.html</link>
             <guid>https://www.imufeng.cn/full-stack/front-end/flex.html</guid>
             <pubDate>Tue, 26 Mar 2024 07:36:51 GMT</pubDate>
@@ -5879,39 +6340,6 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
 <p>项目源码可以在 <a href="https://codepen.io/imufeng/pen/LYvLZmW" target="_blank" rel="noreferrer">A Pen by mufeng (codepen.io)</a> 看到，感谢您的支持。</p>
 ]]></content:encoded>
             <enclosure url="https://cdn.imufeng.cn/mblog/6175e8bcd0a48acaa01a9b31ce7b0695.png" length="0" type="image/png"/>
-        </item>
-        <item>
-            <title><![CDATA[重学JAVA设计模式]]></title>
-            <link>https://www.imufeng.cn/full-stack/java/design-patterns/</link>
-            <guid>https://www.imufeng.cn/full-stack/java/design-patterns/</guid>
-            <pubDate>Tue, 26 Mar 2024 03:29:39 GMT</pubDate>
-            <description><![CDATA[设计模式（Design Patterns），是一套被反复使用、多数人知晓的、经过分类的、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。]]></description>
-            <content:encoded><![CDATA[<h1 id="重学-java-设计模式" tabindex="-1">重学 JAVA 设计模式 <a class="header-anchor" href="#重学-java-设计模式" aria-label="Permalink to &quot;重学 JAVA 设计模式&quot;">&ZeroWidthSpace;</a></h1>
-<h2 id="简介" tabindex="-1">简介 <a class="header-anchor" href="#简介" aria-label="Permalink to &quot;简介&quot;">&ZeroWidthSpace;</a></h2>
-<p>为了尽量复用代码，降低代码的耦合度，基于面向对象编程（OOP）的设计模式应运而生。</p>
-<p>设计模式（Design Patterns）代表了最佳的实践，是一套被反复使用、多数人知晓的、经过分类的、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。</p>
-<h2 id="设计模式的原则" tabindex="-1">设计模式的原则 <a class="header-anchor" href="#设计模式的原则" aria-label="Permalink to &quot;设计模式的原则&quot;">&ZeroWidthSpace;</a></h2>
-<p>设计模式主要有以下原则：</p>
-<ul>
-<li><strong>开闭原则</strong></li>
-<li><strong>里氏替换原则</strong></li>
-<li><strong>依赖倒置原则</strong></li>
-<li><strong>接口隔离原则</strong></li>
-<li><strong>迪米特法则</strong></li>
-<li><strong>合成复用原则</strong></li>
-<li><strong>单一职责原则</strong></li>
-</ul>
-<p>设计模式的七大原则及实例详见： <a href="./principle.html">设计模式七大原则</a></p>
-<h2 id="设计模式的分类" tabindex="-1">设计模式的分类 <a class="header-anchor" href="#设计模式的分类" aria-label="Permalink to &quot;设计模式的分类&quot;">&ZeroWidthSpace;</a></h2>
-<p>设计模式主要分为三大类：<strong>创建型模式</strong>、<strong>结构型模式</strong>、<strong>行为型模式</strong>。受到<a href="https://www.liaoxuefeng.com/wiki/1252599548343744/1264742167474528" target="_blank" rel="noreferrer">廖雪峰老师的教程</a>启发，
-这一系列的博客将从这三个方面来学习设计模式，并做以记录。</p>
-<h3 id="创建型模式" tabindex="-1">创建型模式 <a class="header-anchor" href="#创建型模式" aria-label="Permalink to &quot;创建型模式&quot;">&ZeroWidthSpace;</a></h3>
-<ul>
-<li><a href="./creation-mode/factory-pattern.html">工厂模式</a></li>
-</ul>
-<h3 id="结构型模式" tabindex="-1">结构型模式 <a class="header-anchor" href="#结构型模式" aria-label="Permalink to &quot;结构型模式&quot;">&ZeroWidthSpace;</a></h3>
-<h3 id="行为型模式" tabindex="-1">行为型模式 <a class="header-anchor" href="#行为型模式" aria-label="Permalink to &quot;行为型模式&quot;">&ZeroWidthSpace;</a></h3>
-]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[设计模式七大原则]]></title>
@@ -6319,9 +6747,46 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
 ]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[重学 JAVA 设计模式]]></title>
+            <link>https://www.imufeng.cn/full-stack/java/design-patterns/</link>
+            <guid>https://www.imufeng.cn/full-stack/java/design-patterns/</guid>
+            <pubDate>Tue, 26 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[设计模式（Design Patterns），是一套被反复使用、多数人知晓的、经过分类的、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。]]></description>
+            <content:encoded><![CDATA[<h1 id="重学-java-设计模式" tabindex="-1">重学 JAVA 设计模式 <a class="header-anchor" href="#重学-java-设计模式" aria-label="Permalink to &quot;重学 JAVA 设计模式&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="简介" tabindex="-1">简介 <a class="header-anchor" href="#简介" aria-label="Permalink to &quot;简介&quot;">&ZeroWidthSpace;</a></h2>
+<p>为了尽量复用代码，降低代码的耦合度，基于面向对象编程（OOP）的设计模式应运而生。</p>
+<p>设计模式（Design Patterns）代表了最佳的实践，是一套被反复使用、多数人知晓的、经过分类的、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。</p>
+<h2 id="设计模式的原则" tabindex="-1">设计模式的原则 <a class="header-anchor" href="#设计模式的原则" aria-label="Permalink to &quot;设计模式的原则&quot;">&ZeroWidthSpace;</a></h2>
+<p>设计模式主要有以下原则：</p>
+<ul>
+<li><strong>开闭原则</strong></li>
+<li><strong>里氏替换原则</strong></li>
+<li><strong>依赖倒置原则</strong></li>
+<li><strong>接口隔离原则</strong></li>
+<li><strong>迪米特法则</strong></li>
+<li><strong>合成复用原则</strong></li>
+<li><strong>单一职责原则</strong></li>
+</ul>
+<p>设计模式的七大原则及实例详见： <a href="./principle.html">设计模式七大原则</a></p>
+<h2 id="设计模式的分类" tabindex="-1">设计模式的分类 <a class="header-anchor" href="#设计模式的分类" aria-label="Permalink to &quot;设计模式的分类&quot;">&ZeroWidthSpace;</a></h2>
+<p>设计模式主要分为三大类：<strong>创建型模式</strong>、<strong>结构型模式</strong>、<strong>行为型模式</strong>。受到<a href="https://www.liaoxuefeng.com/wiki/1252599548343744/1264742167474528" target="_blank" rel="noreferrer">廖雪峰老师的教程</a>启发，
+这一系列的博客将从这三个方面来学习设计模式，并做以记录。</p>
+<h3 id="创建型模式" tabindex="-1">创建型模式 <a class="header-anchor" href="#创建型模式" aria-label="Permalink to &quot;创建型模式&quot;">&ZeroWidthSpace;</a></h3>
+<ul>
+<li><a href="./creation-mode/factory-pattern.html">工厂模式</a></li>
+</ul>
+<h3 id="结构型模式" tabindex="-1">结构型模式 <a class="header-anchor" href="#结构型模式" aria-label="Permalink to &quot;结构型模式&quot;">&ZeroWidthSpace;</a></h3>
+<h3 id="行为型模式" tabindex="-1">行为型模式 <a class="header-anchor" href="#行为型模式" aria-label="Permalink to &quot;行为型模式&quot;">&ZeroWidthSpace;</a></h3>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[一、后端技术分享]]></title>
             <link>https://www.imufeng.cn/full-stack/</link>
             <guid>https://www.imufeng.cn/full-stack/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <description><![CDATA[一、后端技术分享
+ 二、前端技术分享
+ 三、系统运维交流]]></description>
             <content:encoded><![CDATA[<h2 id="一、后端技术分享" tabindex="-1">一、后端技术分享 <a class="header-anchor" href="#一、后端技术分享" aria-label="Permalink to &quot;一、后端技术分享&quot;">&ZeroWidthSpace;</a></h2>
 <h2 id="二、前端技术分享" tabindex="-1">二、前端技术分享 <a class="header-anchor" href="#二、前端技术分享" aria-label="Permalink to &quot;二、前端技术分享&quot;">&ZeroWidthSpace;</a></h2>
 <h2 id="三、系统运维交流" tabindex="-1">三、系统运维交流 <a class="header-anchor" href="#三、系统运维交流" aria-label="Permalink to &quot;三、系统运维交流&quot;">&ZeroWidthSpace;</a></h2>
@@ -6332,6 +6797,8 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
             <link>https://www.imufeng.cn/computer-basics/data-structure/</link>
             <guid>https://www.imufeng.cn/computer-basics/data-structure/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <description><![CDATA[算法和数据结构
+ 目录]]></description>
             <content:encoded><![CDATA[<h1 id="算法和数据结构" tabindex="-1">算法和数据结构 <a class="header-anchor" href="#算法和数据结构" aria-label="Permalink to &quot;算法和数据结构&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 ]]></content:encoded>
@@ -6341,6 +6808,8 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
             <link>https://www.imufeng.cn/computer-basics/network/</link>
             <guid>https://www.imufeng.cn/computer-basics/network/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <description><![CDATA[计算机网络
+ 目录]]></description>
             <content:encoded><![CDATA[<h1 id="计算机网络" tabindex="-1">计算机网络 <a class="header-anchor" href="#计算机网络" aria-label="Permalink to &quot;计算机网络&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 ]]></content:encoded>
@@ -6350,6 +6819,8 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
             <link>https://www.imufeng.cn/computer-basics/operating-system/</link>
             <guid>https://www.imufeng.cn/computer-basics/operating-system/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <description><![CDATA[操作系统
+ 目录]]></description>
             <content:encoded><![CDATA[<h1 id="操作系统" tabindex="-1">操作系统 <a class="header-anchor" href="#操作系统" aria-label="Permalink to &quot;操作系统&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 ]]></content:encoded>
@@ -6359,6 +6830,8 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
             <link>https://www.imufeng.cn/full-stack/database/</link>
             <guid>https://www.imufeng.cn/full-stack/database/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <description><![CDATA[数据库
+ 目录]]></description>
             <content:encoded><![CDATA[<h1 id="数据库" tabindex="-1">数据库 <a class="header-anchor" href="#数据库" aria-label="Permalink to &quot;数据库&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 ]]></content:encoded>
@@ -6368,6 +6841,10 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
             <link>https://www.imufeng.cn/full-stack/front-end/</link>
             <guid>https://www.imufeng.cn/full-stack/front-end/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <description><![CDATA[前端笔记
+ 目录
+ css布局篇
+- 浅学 Flex 流式布局]]></description>
             <content:encoded><![CDATA[<h1 id="前端笔记" tabindex="-1">前端笔记 <a class="header-anchor" href="#前端笔记" aria-label="Permalink to &quot;前端笔记&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="css布局篇" tabindex="-1">css布局篇 <a class="header-anchor" href="#css布局篇" aria-label="Permalink to &quot;css布局篇&quot;">&ZeroWidthSpace;</a></h3>
@@ -6381,6 +6858,14 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
             <link>https://www.imufeng.cn/full-stack/java/</link>
             <guid>https://www.imufeng.cn/full-stack/java/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <description><![CDATA[Java
+ 目录
+ 面向对象
+- 抽象类和抽象方法
+ 重学 JAVA 设计模式
+- 重学 JAVA 设计模式
+ JAVA 特性分享
+- Java8新特性详解]]></description>
             <content:encoded><![CDATA[<h1 id="java" tabindex="-1">Java <a class="header-anchor" href="#java" aria-label="Permalink to &quot;Java&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="面向对象" tabindex="-1">面向对象 <a class="header-anchor" href="#面向对象" aria-label="Permalink to &quot;面向对象&quot;">&ZeroWidthSpace;</a></h3>
@@ -6402,6 +6887,10 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
             <link>https://www.imufeng.cn/full-stack/other/</link>
             <guid>https://www.imufeng.cn/full-stack/other/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <description><![CDATA[其他
+ 目录
+- XPATH 学习笔记
+- Redis 自学笔记]]></description>
             <content:encoded><![CDATA[<h1 id="其他" tabindex="-1">其他 <a class="header-anchor" href="#其他" aria-label="Permalink to &quot;其他&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 <ul>
@@ -6415,6 +6904,8 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
             <link>https://www.imufeng.cn/full-stack/rust/</link>
             <guid>https://www.imufeng.cn/full-stack/rust/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <description><![CDATA[Rust
+ 目录]]></description>
             <content:encoded><![CDATA[<h1 id="rust" tabindex="-1">Rust <a class="header-anchor" href="#rust" aria-label="Permalink to &quot;Rust&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 ]]></content:encoded>
@@ -6440,6 +6931,8 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
             <link>https://www.imufeng.cn/notes/life-notes/</link>
             <guid>https://www.imufeng.cn/notes/life-notes/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <description><![CDATA[生活随笔
+ 目录]]></description>
             <content:encoded><![CDATA[<h1 id="生活随笔" tabindex="-1">生活随笔 <a class="header-anchor" href="#生活随笔" aria-label="Permalink to &quot;生活随笔&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 ]]></content:encoded>
@@ -6449,6 +6942,8 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
             <link>https://www.imufeng.cn/notes/reading-notes/</link>
             <guid>https://www.imufeng.cn/notes/reading-notes/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <description><![CDATA[读书笔记
+ 目录]]></description>
             <content:encoded><![CDATA[<h1 id="读书笔记" tabindex="-1">读书笔记 <a class="header-anchor" href="#读书笔记" aria-label="Permalink to &quot;读书笔记&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 ]]></content:encoded>
@@ -6458,6 +6953,8 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
             <link>https://www.imufeng.cn/notes/technology-weekly/</link>
             <guid>https://www.imufeng.cn/notes/technology-weekly/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <description><![CDATA[科技周报
+ 目录]]></description>
             <content:encoded><![CDATA[<h1 id="科技周报" tabindex="-1">科技周报 <a class="header-anchor" href="#科技周报" aria-label="Permalink to &quot;科技周报&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 ]]></content:encoded>
@@ -7391,7 +7888,7 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Java8新特性详解]]></title>
+            <title><![CDATA[Java8 新特性详解]]></title>
             <link>https://www.imufeng.cn/full-stack/java/characteristic/functional.html</link>
             <guid>https://www.imufeng.cn/full-stack/java/characteristic/functional.html</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
@@ -7604,6 +8101,7 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
 ]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[11-30 ]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2023/11.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2023/11.html</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
@@ -8288,9 +8786,13 @@ ScheduledThreadPoolExecutor。</p>
 ]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[12-31]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2023/12.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2023/12.html</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
+            <description><![CDATA[12-31
+ Spring Boot 如何配置多个数据源？
+SpringBoot 可以通过 `@ConfigurationProperties` 注解来配置多个数据源，该注解可以用在类上，也可以用在方]]></description>
             <content:encoded><![CDATA[<h2 id="_12-31" tabindex="-1">12-31 <a class="header-anchor" href="#_12-31" aria-label="Permalink to &quot;12-31&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="spring-boot-如何配置多个数据源" tabindex="-1">Spring Boot 如何配置多个数据源？ <a class="header-anchor" href="#spring-boot-如何配置多个数据源" aria-label="Permalink to &quot;Spring Boot 如何配置多个数据源？&quot;">&ZeroWidthSpace;</a></h3>
 <p>SpringBoot 可以通过 <code>@ConfigurationProperties</code> 注解来配置多个数据源，该注解可以用在类上，也可以用在方法上。</p>
@@ -8559,9 +9061,13 @@ ScheduledThreadPoolExecutor。</p>
 </div>]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[9-30]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2023/9.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2023/9.html</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
+            <description><![CDATA[9-30
+ Java中的重载和重写有什么区别？
+- 重载（Overloading）：在同一个类中，方法名相同但参数列表不同，可以有不同的返回类型。编译器根据方法参数的类型、个数、顺序来选择调用相应的方]]></description>
             <content:encoded><![CDATA[<h2 id="_9-30" tabindex="-1">9-30 <a class="header-anchor" href="#_9-30" aria-label="Permalink to &quot;9-30&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="java中的重载和重写有什么区别" tabindex="-1">Java中的重载和重写有什么区别？ <a class="header-anchor" href="#java中的重载和重写有什么区别" aria-label="Permalink to &quot;Java中的重载和重写有什么区别？&quot;">&ZeroWidthSpace;</a></h3>
 <ul>
@@ -8647,7 +9153,7 @@ ScheduledThreadPoolExecutor。</p>
             <title><![CDATA[每日一题 - 2023]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2023/</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2023/</guid>
-            <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
+            <pubDate>Fri, 15 Mar 2024 07:55:15 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，不限分类，欢迎留言监督。</p>
@@ -9052,52 +9558,41 @@ ScheduledThreadPoolExecutor。</p>
         <item>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/10.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/10.html</guid>
-            <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
+            <pubDate>Fri, 15 Mar 2024 07:55:15 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/11.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/11.html</guid>
-            <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
+            <pubDate>Fri, 15 Mar 2024 07:55:15 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/12.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/12.html</guid>
-            <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
+            <pubDate>Fri, 15 Mar 2024 07:55:15 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/7.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/7.html</guid>
-            <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
+            <pubDate>Fri, 15 Mar 2024 07:55:15 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/8.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/8.html</guid>
-            <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
+            <pubDate>Fri, 15 Mar 2024 07:55:15 GMT</pubDate>
         </item>
         <item>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/9.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/9.html</guid>
-            <pubDate>Fri, 15 Mar 2024 08:14:35 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Linux企业级运维]]></title>
-            <link>https://www.imufeng.cn/training/linux/</link>
-            <guid>https://www.imufeng.cn/training/linux/</guid>
-            <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="linux-企业级运维" tabindex="-1">Linux 企业级运维 <a class="header-anchor" href="#linux-企业级运维" aria-label="Permalink to &quot;Linux 企业级运维&quot;">&ZeroWidthSpace;</a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
-<ol>
-<li><a href="./acme-sh.html">使用 <code>acme.sh</code> 部署泛域名证书</a></li>
-<li><a href="./linux-lamp/">LAMP 架构的编译安装</a></li>
-<li><a href="./wordpress-by-docker-compose.html">WordPress 容器化部署</a></li>
-</ol>
-]]></content:encoded>
+            <pubDate>Fri, 15 Mar 2024 07:55:15 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[软件工具分享]]></title>
             <link>https://www.imufeng.cn/training/software/</link>
             <guid>https://www.imufeng.cn/training/software/</guid>
             <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
+            <description><![CDATA[软件工具分享
+ 目录
+1. Mysql for Windows 安装及初始化]]></description>
             <content:encoded><![CDATA[<h1 id="软件工具分享" tabindex="-1">软件工具分享 <a class="header-anchor" href="#软件工具分享" aria-label="Permalink to &quot;软件工具分享&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;">&ZeroWidthSpace;</a></h2>
 <ol>
@@ -9106,7 +9601,7 @@ ScheduledThreadPoolExecutor。</p>
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[MysqlforWindows安装及初始化]]></title>
+            <title><![CDATA[Mysql for Windows 安装及初始化]]></title>
             <link>https://www.imufeng.cn/training/software/mysql-for-win-install.html</link>
             <guid>https://www.imufeng.cn/training/software/mysql-for-win-install.html</guid>
             <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
@@ -9212,10 +9707,15 @@ ScheduledThreadPoolExecutor。</p>
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[第一步编译安装httpd服务器]]></title>
+            <title><![CDATA[第一步 编译安装httpd服务器]]></title>
             <link>https://www.imufeng.cn/training/linux/linux-lamp/first.html</link>
             <guid>https://www.imufeng.cn/training/linux/linux-lamp/first.html</guid>
             <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
+            <description><![CDATA[第一步 编译安装httpd服务器
+ 1、安装前准备
+解压apr apr-util pcre httpd expat包
+```
+[root@localhost app] tar -xvf apr-1.6]]></description>
             <content:encoded><![CDATA[<h1 id="第一步-编译安装httpd服务器" tabindex="-1">第一步 编译安装httpd服务器 <a class="header-anchor" href="#第一步-编译安装httpd服务器" aria-label="Permalink to &quot;第一步 编译安装httpd服务器&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_1、安装前准备" tabindex="-1">1、安装前准备 <a class="header-anchor" href="#_1、安装前准备" aria-label="Permalink to &quot;1、安装前准备&quot;">&ZeroWidthSpace;</a></h2>
 <p>解压apr apr-util pcre httpd expat包</p>
@@ -9443,25 +9943,15 @@ ScheduledThreadPoolExecutor。</p>
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[LAMP编译安装三部曲]]></title>
-            <link>https://www.imufeng.cn/training/linux/linux-lamp/</link>
-            <guid>https://www.imufeng.cn/training/linux/linux-lamp/</guid>
-            <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
-            <content:encoded><![CDATA[<h1 id="lamp-编译安装三部曲" tabindex="-1">LAMP 编译安装三部曲 <a class="header-anchor" href="#lamp-编译安装三部曲" aria-label="Permalink to &quot;LAMP 编译安装三部曲&quot;">&ZeroWidthSpace;</a></h1>
-<p>LAMP 是一种常用于搭建网站和应用程序的服务器架构，它由 Linux、Apache、MySQL（或MariaDB）、PHP 四个开源软件组成，也分别代表了操作系统、Web 服务器、数据库以及服务器端脚本语言。 与 LNMP 架构类似，区别在于使用的 Web 服务器组件。</p>
-<p>本教程将用三步带你完成 LAMP 架构的编译安装。</p>
-<ol>
-<li><a href="./first.html"> 第一步 编译安装 httpd 服务器 </a></li>
-<li><a href="./second.html"> 第二步 编译安装mariadb数据库环境</a></li>
-<li><a href="./third.html"> 第三步 编译安装PHP </a></li>
-</ol>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[第二步编译安装mariadb数据库环境]]></title>
+            <title><![CDATA[第二步 编译安装mariadb数据库环境]]></title>
             <link>https://www.imufeng.cn/training/linux/linux-lamp/second.html</link>
             <guid>https://www.imufeng.cn/training/linux/linux-lamp/second.html</guid>
             <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
+            <description><![CDATA[第二步 编译安装mariadb数据库环境
+ 1、Mariadb数据库概述
+Mariadb是开源的关系型数据库服务器软件
+- 目前由SUN公司开发和维护
+- 官方站点：https://mariadb.o]]></description>
             <content:encoded><![CDATA[<h1 id="第二步-编译安装mariadb数据库环境" tabindex="-1">第二步 编译安装mariadb数据库环境 <a class="header-anchor" href="#第二步-编译安装mariadb数据库环境" aria-label="Permalink to &quot;第二步 编译安装mariadb数据库环境&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_1、mariadb数据库概述" tabindex="-1">1、Mariadb数据库概述 <a class="header-anchor" href="#_1、mariadb数据库概述" aria-label="Permalink to &quot;1、Mariadb数据库概述&quot;">&ZeroWidthSpace;</a></h2>
 <p>Mariadb是开源的关系型数据库服务器软件</p>
@@ -9603,10 +10093,15 @@ ScheduledThreadPoolExecutor。</p>
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[第三步编译安装PHP]]></title>
+            <title><![CDATA[第三步 编译安装PHP]]></title>
             <link>https://www.imufeng.cn/training/linux/linux-lamp/third.html</link>
             <guid>https://www.imufeng.cn/training/linux/linux-lamp/third.html</guid>
             <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
+            <description><![CDATA[第三步 编译安装PHP
+ 1、安装前准备
+```
+编译安装libmcrypt
+[root@localhost app] tar -xvf /app/packages/libmcrypt-2.5.8.t]]></description>
             <content:encoded><![CDATA[<h1 id="第三步-编译安装php" tabindex="-1">第三步 编译安装PHP <a class="header-anchor" href="#第三步-编译安装php" aria-label="Permalink to &quot;第三步 编译安装PHP&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_1、安装前准备" tabindex="-1">1、安装前准备 <a class="header-anchor" href="#_1、安装前准备" aria-label="Permalink to &quot;1、安装前准备&quot;">&ZeroWidthSpace;</a></h2>
 <div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span>#编译安装libmcrypt</span></span>
@@ -9711,6 +10206,10 @@ ScheduledThreadPoolExecutor。</p>
             <link>https://www.imufeng.cn/about/</link>
             <guid>https://www.imufeng.cn/about/</guid>
             <pubDate>Mon, 09 Oct 2023 09:31:50 GMT</pubDate>
+            <description><![CDATA[关于本站
+::: tip 版权声明
+除特殊说明，本站文章皆为原创，著作权归作者所有。依据 CC BY-NC-SA 4.0  许可证进行授权。
+本站源码开源于 Github ，采用 GPLv3 开源协议]]></description>
             <content:encoded><![CDATA[<h1 id="关于本站" tabindex="-1">关于本站 <a class="header-anchor" href="#关于本站" aria-label="Permalink to &quot;关于本站&quot;">&ZeroWidthSpace;</a></h1>
 <div class="tip custom-block"><p class="custom-block-title">版权声明</p>
 <p>除特殊说明，本站文章皆为原创，著作权归作者所有。依据 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noreferrer">CC BY-NC-SA 4.0 </a> 许可证进行授权。</p>
