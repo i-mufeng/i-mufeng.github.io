@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Mon, 17 Jun 2024 13:12:26 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 17 Jun 2024 13:19:44 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -55,19 +55,7 @@ CSS 复习]]></description>
             <link>https://www.imufeng.cn/full-stack/front-end/review/css.html</link>
             <guid>https://www.imufeng.cn/full-stack/front-end/review/css.html</guid>
             <pubDate>Mon, 17 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[css复习
- 1、选择器
-`优先级`:
-1、!important；
-2、行内样式；
-3、ID选择器；
-4、类选择器；
-5、标签选择器；
-6、通配符选择器；
-7、浏览器的自定义属性和继承。
-
-&gt;
-]]></description>
+            <description><![CDATA[CSS对于设计者来说是一种非常灵活的工具，它必再把烦杂的样式定义编写在文档中，可以将所有有关文档的样式指定内容全部脱离出来，在行定义、在标题中定义，甚至作为外部样式文件供HTML调用。本文主要是对css在开发过程中较为常用以及易混淆的知识的复习。]]></description>
             <content:encoded><![CDATA[<h1 id="css复习" tabindex="-1">css复习 <a class="header-anchor" href="#css复习" aria-label="Permalink to &quot;css复习&quot;">&ZeroWidthSpace;</a></h1>
 <h2 id="_1、选择器" tabindex="-1">1、选择器 <a class="header-anchor" href="#_1、选择器" aria-label="Permalink to &quot;1、选择器&quot;">&ZeroWidthSpace;</a></h2>
 <p><code>优先级</code>:</p>
