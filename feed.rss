@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Mon, 17 Jun 2024 14:52:29 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 18 Jun 2024 08:43:10 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -18,15 +18,28 @@
             <title><![CDATA[每日一题 - 202406]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/6.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/6.html</guid>
-            <pubDate>Mon, 17 Jun 2024 14:51:19 GMT</pubDate>
+            <pubDate>Tue, 18 Jun 2024 08:41:58 GMT</pubDate>
             <description><![CDATA[每日一题 - 202406
- 6-17
- Vue 如何实现按需加载
- 方法一:`vue-router`配置`resolve` + `require`加载
-这种方式就是下一个组件生成一个JS文件
-路由配]]></description>
+ 6-18
+ 统计字符串中出现次数最多的字符及次数
+```javascript
+function getFrequentChar (str) {
+  const dict ]]></description>
             <content:encoded><![CDATA[<h1 id="每日一题-202406" tabindex="-1">每日一题 - 202406 <a class="header-anchor" href="#每日一题-202406" aria-label="Permalink to &quot;每日一题 - 202406&quot;">&ZeroWidthSpace;</a></h1>
-<h2 id="_6-17" tabindex="-1">6-17 <a class="header-anchor" href="#_6-17" aria-label="Permalink to &quot;6-17&quot;">&ZeroWidthSpace;</a></h2>
+<h2 id="_6-18" tabindex="-1">6-18 <a class="header-anchor" href="#_6-18" aria-label="Permalink to &quot;6-18&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="统计字符串中出现次数最多的字符及次数" tabindex="-1">统计字符串中出现次数最多的字符及次数 <a class="header-anchor" href="#统计字符串中出现次数最多的字符及次数" aria-label="Permalink to &quot;统计字符串中出现次数最多的字符及次数&quot;">&ZeroWidthSpace;</a></h3>
+<div class="language-javascript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki shiki-themes github-light github-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> getFrequentChar</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">str</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> dict</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {}</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  let</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> maxChar </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">''</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> char</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> of</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> str) {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    dict[char] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (dict[char] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">||</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (dict[char] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> maxChar[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]) {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      maxChar </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [char, dict[char]]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> maxChar</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><h2 id="_6-17" tabindex="-1">6-17 <a class="header-anchor" href="#_6-17" aria-label="Permalink to &quot;6-17&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="vue-如何实现按需加载" tabindex="-1">Vue 如何实现按需加载 <a class="header-anchor" href="#vue-如何实现按需加载" aria-label="Permalink to &quot;Vue 如何实现按需加载&quot;">&ZeroWidthSpace;</a></h3>
 <h4 id="方法一-vue-router配置resolve-require加载" tabindex="-1">方法一:<code>vue-router</code>配置<code>resolve</code> + <code>require</code>加载 <a class="header-anchor" href="#方法一-vue-router配置resolve-require加载" aria-label="Permalink to &quot;方法一:`vue-router`配置`resolve` + `require`加载&quot;">&ZeroWidthSpace;</a></h4>
 <p>这种方式就是下一个组件生成一个JS文件</p>
@@ -354,7 +367,7 @@ JAVA 语言通过字节码的方式在一定程度上解决了传统解释型语
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/</guid>
-            <pubDate>Mon, 17 Jun 2024 14:51:19 GMT</pubDate>
+            <pubDate>Tue, 18 Jun 2024 08:41:58 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -368,6 +381,10 @@ JAVA 语言通过字节码的方式在一定程度上解决了传统解释型语
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>06/18</td>
+<td><a href="./6.html#_6-18"> 统计字符串中出现次数最多的字符及次数</a></td>
+</tr>
 <tr>
 <td>06/17</td>
 <td><a href="./6.html#_6-17"> Vue 如何实现按需加载</a></td>
