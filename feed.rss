@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Sun, 23 Jun 2024 14:28:41 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 24 Jun 2024 13:15:17 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -18,16 +18,21 @@
             <title><![CDATA[每日一题 - 202406]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/6.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/6.html</guid>
-            <pubDate>Sun, 23 Jun 2024 14:24:23 GMT</pubDate>
+            <pubDate>Mon, 24 Jun 2024 13:14:07 GMT</pubDate>
             <description><![CDATA[每日一题 - 202406
- 6-23
- JS常用的十个高阶函数
-
-&gt;
-&gt; 简单来说，高阶函数是一个函数，它接收函数作为参数或将函数作为输出返回。
-1.  map
-- `map()`返回一]]></description>
+ 6-24
+ 什么是限流？常见的限流算法有哪些？
+限流是一种控制流量的技术，保护系统免受突发流量的影响。基本原理是控制请求的速率或数量，确保系统在可承受的范围内运行。
+常见]]></description>
             <content:encoded><![CDATA[<h1 id="每日一题-202406" tabindex="-1">每日一题 - 202406 <a class="header-anchor" href="#每日一题-202406" aria-label="Permalink to &quot;每日一题 - 202406&quot;">&ZeroWidthSpace;</a></h1>
+<h2 id="_6-24" tabindex="-1">6-24 <a class="header-anchor" href="#_6-24" aria-label="Permalink to &quot;6-24&quot;">&ZeroWidthSpace;</a></h2>
+<h3 id="什么是限流-常见的限流算法有哪些" tabindex="-1">什么是限流？常见的限流算法有哪些？ <a class="header-anchor" href="#什么是限流-常见的限流算法有哪些" aria-label="Permalink to &quot;什么是限流？常见的限流算法有哪些？&quot;">&ZeroWidthSpace;</a></h3>
+<p>限流是一种控制流量的技术，保护系统免受突发流量的影响。基本原理是控制请求的速率或数量，确保系统在可承受的范围内运行。</p>
+<p>常见的限流算法有：</p>
+<p>（1）漏桶算法：系统请求先进入漏桶，再从漏桶中逐一取出请求执行，控制漏桶的流量。</p>
+<p>（2）令牌桶算法：系统请求会得到一个令牌，从令牌桶中取出一个令牌执行，控制令牌桶中令牌的数量。</p>
+<p>（3）计数器算法：系统请求被计数，通过比较当前请求数与限流阈值来判断是否限流。</p>
+<p>（4）滑动窗口：基于一个固定大小的时间窗口，允许在该时间窗口内的请求数不超过设定的阈值。这个时间窗口随着时间的推移不断滑动，以适应不同时间段内的请求流量。</p>
 <h2 id="_6-23" tabindex="-1">6-23 <a class="header-anchor" href="#_6-23" aria-label="Permalink to &quot;6-23&quot;">&ZeroWidthSpace;</a></h2>
 <h3 id="js常用的十个高阶函数" tabindex="-1">JS常用的十个高阶函数 <a class="header-anchor" href="#js常用的十个高阶函数" aria-label="Permalink to &quot;JS常用的十个高阶函数&quot;">&ZeroWidthSpace;</a></h3>
 <blockquote>
@@ -798,7 +803,7 @@ JAVA 语言通过字节码的方式在一定程度上解决了传统解释型语
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2024/</guid>
-            <pubDate>Sun, 23 Jun 2024 14:20:22 GMT</pubDate>
+            <pubDate>Mon, 24 Jun 2024 13:14:07 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
 <p>每日一题从 <code>2023年09月27日</code> 开始记录，2024年的在这里，之前的请<a href="./../">点击查看</a>。</p>
@@ -812,6 +817,10 @@ JAVA 语言通过字节码的方式在一定程度上解决了传统解释型语
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>06/24</td>
+<td><a href="./6.html#_6-24"> 什么是限流？常见的限流算法有哪些？</a></td>
+</tr>
 <tr>
 <td>06/23</td>
 <td><a href="./6.html#_6-23"> JS 常用的十个高阶函数</a></td>
