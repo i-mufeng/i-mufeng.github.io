@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Mon, 26 Aug 2024 01:26:32 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 23 Oct 2024 09:25:18 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -14,6 +14,178 @@
             <link>https://www.imufeng.cn</link>
         </image>
         <copyright>Mblog © 2021-2024 Created by 沐风</copyright>
+        <item>
+            <title><![CDATA[第一章 环境准备]]></title>
+            <link>https://www.imufeng.cn/training/linux/linux-cluster/1-preparations.html</link>
+            <guid>https://www.imufeng.cn/training/linux/linux-cluster/1-preparations.html</guid>
+            <pubDate>Tue, 15 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[本系列将从 Linux 企业级运维的角度出发，详细介绍 Linux 操作系统下 Nginx + JAVA + MYSQL + Redis + Minio 的安装部署，主要使用编译安装。]]></description>
+            <content:encoded><![CDATA[<h1 id="第一章-环境准备" tabindex="-1">第一章 环境准备 <a class="header-anchor" href="#第一章-环境准备" aria-label="Permalink to &quot;第一章 环境准备&quot;"></a></h1>
+<h2 id="一、分布式架构与微服务" tabindex="-1">一、分布式架构与微服务 <a class="header-anchor" href="#一、分布式架构与微服务" aria-label="Permalink to &quot;一、分布式架构与微服务&quot;"></a></h2>
+<p>在中小型软件系统架构中，单一服务器通常能够满足大部分需求，甚至可能显得过剩。因此，云厂商推出了弹性云服务器（ECS），它可以让开发团队能够根据实际需求动态调整资源配置，从而降低成本并提高系统的可用性。对于较短时间内的访问量激增，可以临时增加服务器配置来应对。但随着业务的不断发展，通过简单的增加服务器配置已经难以应对不断增加的用户请求和数据量，这时候就出现了分布式系统架构。</p>
+<p>分布式架构是指将系统的各个组件和服务分布在多台独立的计算机节点上（通常是服务器），他们之间通过网络进行通信和协作，它也被称为分布式计算或分布式数据库，并依靠不同的节点通过公共网络进行通信和同步。这些节点通常代表独立的物理硬件设备，但也可代表单独的软件进程或其他递归封装的系统。常见的分布式架构包括微服务架构、分布式数据库系统、分布式存储系统等。</p>
+<p>分布式架构的特点如下:</p>
+<p><strong>可扩展性</strong>：随着用户和数据量的增加，分布式系统可以通过添加更多节点来扩展处理能力，而不是依赖单一机器。</p>
+<p><strong>高可用性</strong>：分布式系统可以通过冗余和故障转移机制提高系统的可用性，即使某个节点发生故障，其他节点仍然可以继续提供服务。</p>
+<p><strong>负载均衡</strong>：通过将请求分配到多个节点，分布式系统可以更均衡地处理负载，避免单个节点的过载。</p>
+<p><strong>地理分布</strong>：分布式系统可以在多个地理位置部署，降低延迟，提高用户访问速度和体验。</p>
+<p><strong>资源利用</strong>：可以有效利用不同节点的计算和存储资源，提高整体资源利用率。</p>
+<p><strong>数据处理</strong>：对于大规模数据处理任务，分布式系统能够并行处理，提高效率。</p>
+<p>微服务架构是一种依赖于多个可独立部署服务的架构方法。这些服务各自拥有独立的业务逻辑和数据库，甚至可以使用不同的底层操作系统和运行环境，专注于实现特定的功能。每个服务都可以独立进行更新、测试、部署和扩展，从而提高了系统的灵活性和可维护性。微服务架构将特定领域的主要业务问题拆解为多个独立的代码库，使得开发团队能够更高效地管理和优化每个服务。这种架构的优势在于，它促进了团队的自治，使不同团队可以并行开发各自的服务而不互相干扰。同时，微服务架构支持技术多样性，团队可以选择最适合他们的工具和框架来实现服务，进一步提升了开发效率。</p>
+<p>系统架构经历了从最初的单体架构到服务导向架构（SOA），再到如今的微服务架构，甚至未来的无服务架构，这一过程日益成熟。由于微服务架构的显著优势，许多互联网巨头纷纷转型为微服务架构。例如，阿里等云服务巨头已基本完成了微服务化，推动了微服务的快速发展。在这个云时代，微服务架构已成为云计算的基础设施，赋予企业更高的灵活性和可扩展性。展望未来，微服务架构将继续演进，结合容器化和自动化技术，使得服务的创建、部署和管理变得更加高效。无论是提升开发速度，还是优化资源使用，微服务架构都将为企业在不断变化的市场中提供强有力的支持。</p>
+<h2 id="二、环境说明" tabindex="-1">二、环境说明 <a class="header-anchor" href="#二、环境说明" aria-label="Permalink to &quot;二、环境说明&quot;"></a></h2>
+<p>在之前 Hadoop 大数据系列教程中，我们讨论了 Hadoop 大数据集群的搭建与部署。但是当时只是浮于表面，在这个系列中，我会用更新的技术，更深的深度，并面向当前企业级开发中真正需要的技术，共同讨论分布式大数据和微服务架构。</p>
+<p>我们将使用三台 Vmware 环境下的 <code>AlmaLinux9.4</code> 操作系统作为演示环境，Hadoop 官方也说明 3.4.x版本不再支持 jdk8，所以 JDK 版本我们选择更新且可以免费商用的 JDK17。</p>
+<p>教程中如遇到 <code>mufeng.dev</code>、<code>imufeng.cn</code> 及其子域名均为博主自有域名。</p>
+<ul>
+<li><strong>操作系统：</strong> AlmaLinux Minimal 安装</li>
+<li><strong>镜像下载：</strong> AlmaLinux OS 9.4 Minimal ISO，推荐到<a href="https://mirrors.aliyun.com/almalinux/9.4/isos/ppc64le/AlmaLinux-9.4-ppc64le-minimal.iso" target="_blank" rel="noreferrer">阿里云镜像站</a>下载</li>
+<li><strong>虚拟化平台：</strong> Vmware Workstation Pro 17</li>
+<li><strong>架构：</strong> 使用三台虚拟机，Master 以及 Node01、Node02</li>
+<li><strong>网络：</strong> 使用 NAT 地址转换，进入系统后配置固定 IP</li>
+</ul>
+<table tabindex="0">
+<thead>
+<tr>
+<th>名称</th>
+<th>核心</th>
+<th>内存</th>
+<th>域名</th>
+<th>IP</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Master</td>
+<td>4c</td>
+<td>8G</td>
+<td>master.mufeng.dev</td>
+<td>192.168.66.66</td>
+<td>主节点</td>
+</tr>
+<tr>
+<td>Node01</td>
+<td>2c</td>
+<td>4G</td>
+<td>node01.mufeng.dev</td>
+<td>192.168.66.88</td>
+<td>从节点1</td>
+</tr>
+<tr>
+<td>Node02</td>
+<td>2c</td>
+<td>4G</td>
+<td>node02.mufeng.dev</td>
+<td>192.168.66.99</td>
+<td>从节点2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="三、环境准备" tabindex="-1">三、环境准备 <a class="header-anchor" href="#三、环境准备" aria-label="Permalink to &quot;三、环境准备&quot;"></a></h2>
+<h3 id="_3-1-系统安装" tabindex="-1">3.1 系统安装 <a class="header-anchor" href="#_3-1-系统安装" aria-label="Permalink to &quot;3.1 系统安装&quot;"></a></h3>
+<p>先创建 Master，配置完成后使用虚拟机克隆拷贝 Node01、Node02，虚拟机创建过程略。</p>
+<p><img src="https://cdn.imufeng.cn/mblog/d9afae878d9e1af1432bd71b7de6cdef.png" alt="image-20241022143050398"></p>
+<p><img src="https://cdn.imufeng.cn/mblog/8617fba77612aca4baeaf32c7f5bb9cf.png" alt="image-20241022143201387"></p>
+<p>开启虚拟机，选择 Install AlmaLinux 9.4，使用最小化安装。</p>
+<p><img src="https://cdn.imufeng.cn/mblog/2b74227a1fbd3799fbf7464a93830d16.png" alt="image-20241022143627620"></p>
+<p>语言使用英文，软件源配置阿里镜像站。软件源配置如下：</p>
+<p><img src="https://cdn.imufeng.cn/mblog/636034294b8b4e682d41c90130907bd1.png" alt="image-20241022144429325"></p>
+<p>配置完成并下载元数据后，选择 Minimal Install.</p>
+<p>分区选择手动分区，此处仅供参考，分配如下：</p>
+<p><img src="https://cdn.imufeng.cn/mblog/09cba637dee9d4f9c2486e72a6400685.png" alt="image-20241022144834200"></p>
+<p>点击开始安装，稍等片刻，即可成功安装，点击重启会自动进入操作系统。</p>
+<p><img src="https://cdn.imufeng.cn/mblog/b415834430090ff746a5a5fd1d50bb85.png" alt="image-20241022145338458"></p>
+<h3 id="_3-2-安装基础软件" tabindex="-1">3.2 安装基础软件 <a class="header-anchor" href="#_3-2-安装基础软件" aria-label="Permalink to &quot;3.2 安装基础软件&quot;"></a></h3>
+<p>安装 vim 以及 bash-completion（TAB 命令提示）</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">yum</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> vim</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> bash-completion</span></span></code></pre>
+</div><h3 id="_3-3-配置静态-ip" tabindex="-1">3.3 配置静态 IP <a class="header-anchor" href="#_3-3-配置静态-ip" aria-label="Permalink to &quot;3.3 配置静态 IP&quot;"></a></h3>
+<p>Redhat9 以上使用 NetworkManager 进行网络管理，配置文件位于 <code>/etc/NetworkManager</code> ，推荐使用 <code>nmcli</code> 进行配置。</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nmcli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> con</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> down</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ens160</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nmcli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> conection</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  add</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> if-name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ens160</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> con-name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mufeng</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv4.method</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> manual</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv4.address</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 192.168.66.66/24</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv4.dns</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 192.168.66.2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv4.gateway</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 192.168.66.2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv6.method</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> disabled</span></span></code></pre>
+</div><h3 id="_3-4-配置ssh" tabindex="-1">3.4 配置ssh <a class="header-anchor" href="#_3-4-配置ssh" aria-label="Permalink to &quot;3.4 配置ssh&quot;"></a></h3>
+<p>修改 ssh 配置文件 <code>/etc/ssh/sshd_config</code>，允许 ROOT 用户访问</p>
+<div class="language-ini vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ini</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">PermitRootLogin yes</span></span></code></pre>
+</div><p>重启 ssh 服务</p>
+<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>systemctl restart sshd</span></span></code></pre>
+</div><h3 id="_3-5-配置-hosts" tabindex="-1">3.5 配置 hosts <a class="header-anchor" href="#_3-5-配置-hosts" aria-label="Permalink to &quot;3.5 配置 hosts&quot;"></a></h3>
+<div class="language-ini vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ini</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># vim /etc/hosts</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">192.168.66.66 master.mufeng.dev</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">192.168.66.88 node01.mufeng.dev</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">192.168.66.99 node02.mufeng.dev</span></span></code></pre>
+</div><h3 id="_3-6-克隆虚拟机" tabindex="-1">3.6 克隆虚拟机 <a class="header-anchor" href="#_3-6-克隆虚拟机" aria-label="Permalink to &quot;3.6 克隆虚拟机&quot;"></a></h3>
+<blockquote>
+<p>建议关机后创建快照，方便误操作后恢复。</p>
+</blockquote>
+<p>克隆两台虚拟机，命名为 node01、node02，注意使用完整克隆</p>
+<p>克隆后需要调整虚拟机配置、hostname 等等，此处不再赘述。</p>
+<p>配置网络：</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nmcli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> con</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mod</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mufeng</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv4.address</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 192.168.66.88/24</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nmcli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> con</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> down</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mufeng</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nmcli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> con</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> up</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mufeng</span></span></code></pre>
+</div><p>配置hostname：</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">hostnamectl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> set-hostname</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> node01.mufeng.dev</span></span></code></pre>
+</div><p><img src="https://cdn.imufeng.cn/mblog/45f439fdfb7aaa10a98427049c55b2a0.png" alt="image-20241023102117902"></p>
+<p><img src="https://cdn.imufeng.cn/mblog/a722f8e2ab807b809dd4a9e2580938e7.png" alt="image-20241023102615127"></p>
+<h3 id="_3-7-ssh-连接" tabindex="-1">3.7 SSH 连接 <a class="header-anchor" href="#_3-7-ssh-连接" aria-label="Permalink to &quot;3.7 SSH 连接&quot;"></a></h3>
+<p>使用 Termius等连接工具，推荐 Termius ，它可以同时管理三个连接。</p>
+<p><img src="https://cdn.imufeng.cn/mblog/d4e75714b004a94eb7700d1f99cb494e.png" alt="image-20241023104054797"></p>
+<h3 id="_3-8-配置-ssh-免密登录" tabindex="-1">3.8 配置 ssh 免密登录 <a class="header-anchor" href="#_3-8-配置-ssh-免密登录" aria-label="Permalink to &quot;3.8 配置 ssh 免密登录&quot;"></a></h3>
+<p>在三台虚拟机分别执行：</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-keygen</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rsa</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">					# 生成密钥文件</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-copy-id</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> master.mufeng.dev</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">		# 配置免密登录</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-copy-id</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> node01.mufeng.dev</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-copy-id</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> node02.mufeng.dev</span></span></code></pre>
+</div><blockquote>
+<p>注意：此处 ssh-copy-id 自身是必要的操作。</p>
+</blockquote>
+<p><img src="https://cdn.imufeng.cn/mblog/3150827bfb08850d640b5d97777dd464.png" alt="image-20241023104706154"></p>
+<p>至此，三台虚拟机集群基础就搭建完成了。</p>
+<h3 id="_3-9-安装jdk17" tabindex="-1">3.9 安装JDK17 <a class="header-anchor" href="#_3-9-安装jdk17" aria-label="Permalink to &quot;3.9 安装JDK17&quot;"></a></h3>
+<p>jdk17官网下载地址：<a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html" target="_blank" rel="noreferrer">Java Archive Downloads - Java SE 17</a></p>
+<p>选择 X64 的压缩包下载即可，Linux x64 Compressed Archive。</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">cd</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /opt/</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -O</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://download.oracle.com/java/17/archive/jdk-17.0.12_linux-x64_bin.tar.gz</span></span></code></pre>
+</div><p>解压</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">tar</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -zxf</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> jdk-17.0.12_linux-x64_bin.tar.gz</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -C</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /usr/local/</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">cd</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /usr/local/jdk-17.0.12/</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">./bin/java</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -version</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">java</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> version</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "17.0.12"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 2024-07-16</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> LTS</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Java(TM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) SE Runtime Environment (</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">build</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 17.0.12+8-LTS-286</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Java</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> HotSpot</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">TM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">64-Bit</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> Server</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> VM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (build </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">17.0.12+8-LTS-286,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mixed</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mode,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> sharing</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span></code></pre>
+</div><p>配置环境变量</p>
+<p>直接修改 <code>/etc/profile</code> 文件，使环境变量全局全用户生效。</p>
+<div class="language-ini vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ini</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">### Create By Mufeng</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">export </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">JAVA_HOME</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=/usr/local/jdk-17.0.12/</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">export </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">PATH</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=$PATH:$JAVA_HOME/bin/</span></span></code></pre>
+</div><p>使改动生效</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">.</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/profile</span></span></code></pre>
+</div><p>JDK17 安装完成。</p>
+<h2 id="参考内容" tabindex="-1">参考内容 <a class="header-anchor" href="#参考内容" aria-label="Permalink to &quot;参考内容&quot;"></a></h2>
+<ul>
+<li><a href="https://www.atlassian.com/zh/microservices/microservices-architecture/distributed-architecture" target="_blank" rel="noreferrer">什么是分布式系统？ | Atlassian</a></li>
+<li><a href="https://icyfenix.cn/" target="_blank" rel="noreferrer">凤凰架构：构建可靠的大型分布式系统 | 凤凰架构</a></li>
+<li><a href="https://www.cnblogs.com/aliware/p/17095384.html" target="_blank" rel="noreferrer">云原生微服务技术趋势解读 - 阿里巴巴中间件 - 博客园</a></li>
+</ul>
+]]></content:encoded>
+            <enclosure url="https://cdn.imufeng.cn/mblog/d9afae878d9e1af1432bd71b7de6cdef.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Linux 分布式大数据及微服务架构搭建和部署]]></title>
+            <link>https://www.imufeng.cn/training/linux/linux-cluster/</link>
+            <guid>https://www.imufeng.cn/training/linux/linux-cluster/</guid>
+            <pubDate>Tue, 15 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[我们将使用三台 Vmware 环境下的 AlmaLinux9.4 操作系统作为演示环境，讨论分布式大数据和微服务架构的搭建和部署，包括 Hadoop、Zookeeper、Kubernetes等技术。]]></description>
+            <content:encoded><![CDATA[<h1 id="linux-分布式大数据及微服务架构搭建和部署" tabindex="-1">Linux 分布式大数据及微服务架构搭建和部署 <a class="header-anchor" href="#linux-分布式大数据及微服务架构搭建和部署" aria-label="Permalink to &quot;Linux 分布式大数据及微服务架构搭建和部署&quot;"></a></h1>
+<p>在之前 Hadoop 大数据系列教程中，我们讨论了 Hadoop 大数据集群的搭建与部署。但是当时只是浮于表面，在这个系列中，我会用更新的技术，更深的深度，并面向当前企业级开发中真正需要的技术，共同讨论分布式大数据和微服务架构。</p>
+<p>我们将使用三台 Vmware 环境下的 AlmaLinux9.4 操作系统作为演示环境，Hadoop 官方也说明 3.4.x版本不再支持 jdk8，所以 JDK 版本我们选择更新且可以免费商用的 JDK17。</p>
+<h3 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h3>
+<ul>
+<li><a href="./1-preparations.html">第一章 环境准备</a></li>
+</ul>
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Java8 新特性详解]]></title>
             <link>https://www.imufeng.cn/full-stack/java/characteristic/functional.html</link>
@@ -166,6 +338,20 @@
 <h3 id="方法引用" tabindex="-1">方法引用 <a class="header-anchor" href="#方法引用" aria-label="Permalink to &quot;方法引用&quot;"></a></h3>
 <p><code>类名/对象名::方法名</code></p>
 ]]></content:encoded>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/factory-pattern.html</link>
+            <guid>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/factory-pattern.html</guid>
+            <pubDate>Mon, 26 Aug 2024 01:17:57 GMT</pubDate>
+            <description><![CDATA[设计模式（Design Patterns），是一套被反复使用、多数人知晓的、经过分类的、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。]]></description>
+            <content:encoded><![CDATA[<h1 id="" tabindex="-1"> <a class="header-anchor" href="#" aria-label="Permalink to &quot;&quot;"></a></h1>
+]]></content:encoded>
+        </item>
+        <item>
+            <link>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/singleton.html</link>
+            <guid>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/singleton.html</guid>
+            <pubDate>Mon, 26 Aug 2024 01:17:57 GMT</pubDate>
+            <description><![CDATA[在一个较为复杂的继承链中，祖先类更具有一般性，作为派生其他类的基类而不糊将其作为用来构造实例。]]></description>
         </item>
         <item>
             <title><![CDATA[设计模式七大原则]]></title>
@@ -1321,20 +1507,6 @@ stringJoiner：
 </div>]]></content:encoded>
         </item>
         <item>
-            <link>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/factory-pattern.html</link>
-            <guid>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/factory-pattern.html</guid>
-            <pubDate>Mon, 26 Aug 2024 01:17:57 GMT</pubDate>
-            <description><![CDATA[设计模式（Design Patterns），是一套被反复使用、多数人知晓的、经过分类的、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。]]></description>
-            <content:encoded><![CDATA[<h1 id="" tabindex="-1"> <a class="header-anchor" href="#" aria-label="Permalink to &quot;&quot;"></a></h1>
-]]></content:encoded>
-        </item>
-        <item>
-            <link>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/singleton.html</link>
-            <guid>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/singleton.html</guid>
-            <pubDate>Mon, 26 Aug 2024 01:17:57 GMT</pubDate>
-            <description><![CDATA[在一个较为复杂的继承链中，祖先类更具有一般性，作为派生其他类的基类而不糊将其作为用来构造实例。]]></description>
-        </item>
-        <item>
             <title><![CDATA[10-31]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2023/10.html</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2023/10.html</guid>
@@ -2471,7 +2643,7 @@ yes，即后端运行，如果为 no，则会将日志打印到控制台。</p>
 <span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ((</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">typeof</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">===</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'string'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">&#x26;&#x26;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">^</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">[0-9]</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">+$</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">test</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(time))) {</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> parseInt</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(time)</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">else</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">typeof</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">===</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'string'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> time.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">replace</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> RegExp</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#032F62;--shiki-dark:#DBEDFF">-</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">gm</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">), </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'/'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">).</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">replace</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'T'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">' '</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">).</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">replace</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> RegExp</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;--shiki-light-font-weight:bold;--shiki-dark-font-weight:bold">\.</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">[\d]</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">{3}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">gm</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">), </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">''</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> time.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">replace</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> RegExp</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#032F62;--shiki-dark:#DBEDFF">-</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">gm</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">), </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'/'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">).</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">replace</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'T'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">' '</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">).</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">replace</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> RegExp</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#22863A;--shiki-light-font-weight:bold;--shiki-dark:#85E89D;--shiki-dark-font-weight:bold">\.</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">[\d]</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">{3}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">gm</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">), </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">''</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
 <span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ((</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">typeof</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">===</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'number'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">&#x26;&#x26;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (time.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">toString</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">().</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">length</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ===</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 10</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)) {</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">*</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1000</span></span>
@@ -2908,7 +3080,7 @@ yes，即后端运行，如果为 no，则会将日志打印到控制台。</p>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> decToBinary</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">num</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // 1.5</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  const</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">fraction</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> String</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(num).</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">split</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#032F62;--shiki-dark:#DBEDFF">(?=</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;--shiki-light-font-weight:bold;--shiki-dark-font-weight:bold">\.</span><span style="--shiki-light:#032F62;--shiki-dark:#DBEDFF">)</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">).</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">map</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">((</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">x</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">i</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  const</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">int</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">fraction</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> String</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(num).</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">split</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#032F62;--shiki-dark:#DBEDFF">(?=</span><span style="--shiki-light:#22863A;--shiki-light-font-weight:bold;--shiki-dark:#85E89D;--shiki-dark-font-weight:bold">\.</span><span style="--shiki-light:#032F62;--shiki-dark:#DBEDFF">)</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">).</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">map</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">((</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">x</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">i</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
 <span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">===</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ?</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> integerToBin</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(x) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> fractionalToBin</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(x)</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  })</span></span>
 <span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [int, fraction]</span></span>
@@ -5283,7 +5455,7 @@ Vue 实例有一个完整的生命周期，也就是从`开始创建、初始化
 <p><strong>防抖</strong>：</p>
 <div class="language-javascript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">template</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">input</span><span style="--shiki-light:#B31D28;--shiki-dark:#FDAEB7;--shiki-light-font-style:italic;--shiki-dark-font-style:italic"> @keyup="handleChange"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> v-model</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"inputVal"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">input</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic"> @keyup="handleChange"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> v-model</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"inputVal"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">div</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">template</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">script</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
@@ -8375,19 +8547,6 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[一、后端技术分享]]></title>
-            <link>https://www.imufeng.cn/full-stack/</link>
-            <guid>https://www.imufeng.cn/full-stack/</guid>
-            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
-            <description><![CDATA[一、后端技术分享
- 二、前端技术分享
- 三、系统运维交流]]></description>
-            <content:encoded><![CDATA[<h2 id="一、后端技术分享" tabindex="-1">一、后端技术分享 <a class="header-anchor" href="#一、后端技术分享" aria-label="Permalink to &quot;一、后端技术分享&quot;"></a></h2>
-<h2 id="二、前端技术分享" tabindex="-1">二、前端技术分享 <a class="header-anchor" href="#二、前端技术分享" aria-label="Permalink to &quot;二、前端技术分享&quot;"></a></h2>
-<h2 id="三、系统运维交流" tabindex="-1">三、系统运维交流 <a class="header-anchor" href="#三、系统运维交流" aria-label="Permalink to &quot;三、系统运维交流&quot;"></a></h2>
-]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[算法和数据结构]]></title>
             <link>https://www.imufeng.cn/computer-basics/data-structure/</link>
             <guid>https://www.imufeng.cn/computer-basics/data-structure/</guid>
@@ -8429,6 +8588,19 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
  目录]]></description>
             <content:encoded><![CDATA[<h1 id="数据库" tabindex="-1">数据库 <a class="header-anchor" href="#数据库" aria-label="Permalink to &quot;数据库&quot;"></a></h1>
 <h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[一、后端技术分享]]></title>
+            <link>https://www.imufeng.cn/full-stack/</link>
+            <guid>https://www.imufeng.cn/full-stack/</guid>
+            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
+            <description><![CDATA[一、后端技术分享
+ 二、前端技术分享
+ 三、系统运维交流]]></description>
+            <content:encoded><![CDATA[<h2 id="一、后端技术分享" tabindex="-1">一、后端技术分享 <a class="header-anchor" href="#一、后端技术分享" aria-label="Permalink to &quot;一、后端技术分享&quot;"></a></h2>
+<h2 id="二、前端技术分享" tabindex="-1">二、前端技术分享 <a class="header-anchor" href="#二、前端技术分享" aria-label="Permalink to &quot;二、前端技术分享&quot;"></a></h2>
+<h2 id="三、系统运维交流" tabindex="-1">三、系统运维交流 <a class="header-anchor" href="#三、系统运维交流" aria-label="Permalink to &quot;三、系统运维交流&quot;"></a></h2>
 ]]></content:encoded>
         </item>
         <item>
@@ -9186,284 +9358,6 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
 <p>下面的例子选取价格高于 35 的所有 title 节点：</p>
 <div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>/bookstore/book[price>35]/title</span></span></code></pre>
 </div>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[泛域名证书申请以及部署]]></title>
-            <link>https://www.imufeng.cn/training/linux/acme-sh.html</link>
-            <guid>https://www.imufeng.cn/training/linux/acme-sh.html</guid>
-            <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
-            <description><![CDATA[使用 acme.sh 部署 Let's Encrypt 泛域名证书。]]></description>
-            <content:encoded><![CDATA[<h1 id="泛域名证书申请以及部署" tabindex="-1">泛域名证书申请以及部署 <a class="header-anchor" href="#泛域名证书申请以及部署" aria-label="Permalink to &quot;泛域名证书申请以及部署&quot;"></a></h1>
-<blockquote>
-<p>由于目前所有的域名服务商对于免费CA证书仅提供由<code>digicert</code>机构颁发的，只允许有20个子域名且不支持泛子域名。故使用 <code>Let's Encrypt</code> 的SSL证书</p>
-</blockquote>
-<p>Let’s Encrypt 是一个证书颁发机构，向 Let’s Encrypt 申请证书是免费的。Let's Encrypt 支持泛域名证书，不需要为每个子域名单独申请证书。</p>
-<h2 id="一、acme-sh部署工具" tabindex="-1">一、<code>acme.sh</code>部署工具 <a class="header-anchor" href="#一、acme-sh部署工具" aria-label="Permalink to &quot;一、`acme.sh`部署工具&quot;"></a></h2>
-<p>根据 <code>acme.sh</code> [中文说明](<a href="https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E" target="_blank" rel="noreferrer">说明 · acmesh-official/acme.sh Wiki (github.com)</a>)，<code>acme.sh</code> 实现了 <code>acme</code> 协议, 可以从 <code>let‘s encrypt</code> 生成免费的证书。</p>
-<ol>
-<li>
-<p>其安装只需要执行以下命令，所有用户均可安装：</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://get.acme.sh</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> email=my@example.com</span></span></code></pre>
-</div></li>
-<li>
-<p>该工具将会安装在 <code>~/.acme.sh/</code>  目录下。</p>
-</li>
-</ol>
-<h2 id="二、生成证书" tabindex="-1">二、生成证书 <a class="header-anchor" href="#二、生成证书" aria-label="Permalink to &quot;二、生成证书&quot;"></a></h2>
-<p><code>acme.sh</code> 实现了 <strong><code>acme</code></strong> 协议支持的所有验证协议. 一般有两种方式验证: http 和 dns 验证.</p>
-<h3 id="_2-1-http-方式" tabindex="-1">2.1 http 方式 <a class="header-anchor" href="#_2-1-http-方式" aria-label="Permalink to &quot;2.1 http 方式&quot;"></a></h3>
-<p>http方式需要在该网站根目录放置一个文件来验证域名所有权。</p>
-<p>可以执行以下命令生成：</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> www.mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --webroot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /home/wwwroot/mydomain.com/</span></span></code></pre>
-</div><p>如果你使用apache或者nginx服务，执行以下命令会自动识别并完成验证，完成后还将为你删除文件，做到用户无感验证。</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --apache/nginx</span></span></code></pre>
-</div><p>如果你的服务器80端口是空闲的，<code>acme.sh</code>还将自动配置一个webserver，监听80端口并自动完成配置。</p>
-<h3 id="_2-2-dns-方式" tabindex="-1">2.2 DNS 方式 <a class="header-anchor" href="#_2-2-dns-方式" aria-label="Permalink to &quot;2.2 DNS 方式&quot;"></a></h3>
-<p>DNS方式只需要在配置DNS解析记录即可，且TXT的解析记录对你的服务不会产生影响。</p>
-<p>执行以下命令，按照提示配置DNS解析记录即可：</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
-<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --yes-I-know-dns-manual-mode-enough-go-ahead-please</span></span></code></pre>
-</div><p>解析完成后，执行以下命令来完成验证并重新生成证书：</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --renew</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
-<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --yes-I-know-dns-manual-mode-enough-go-ahead-please</span></span></code></pre>
-</div><blockquote>
-<p>注意：若没有配置Automatic DNS API，该方法将无法自动更新你的域名证书。</p>
-</blockquote>
-<h3 id="_2-3-dns进阶版" tabindex="-1">2.3 DNS进阶版 <a class="header-anchor" href="#_2-3-dns进阶版" aria-label="Permalink to &quot;2.3 DNS进阶版&quot;"></a></h3>
-<p>DNS方式还支持使用域名解析商提供的接口自动进行配置。以阿里云为例：</p>
-<p>首先将阿里云的阿里云 API 的密钥以以下格式配置到环境变量：</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 腾讯云dnspod</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> DP_Id</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"XXXXXXXXXX"</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> DP_Key</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"XXXXXXXXXX"</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 阿里云</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Ali_Key</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"XXXXXXXXXX"</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Ali_Secret</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"XXXXXXXXXX“</span></span></code></pre>
-</div><p>然后就可以通过以下命令生成证书：</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 腾讯云</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dns_dp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.example.com</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 阿里云</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dns_ali</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.example.com</span></span></code></pre>
-</div><h2 id="三、安装配置证书" tabindex="-1">三、安装配置证书 <a class="header-anchor" href="#三、安装配置证书" aria-label="Permalink to &quot;三、安装配置证书&quot;"></a></h2>
-<p>此处以Podman Nginx容器配置证书举例。</p>
-<h3 id="_3-1-生成nginx配置" tabindex="-1">3.1 生成Nginx配置 <a class="header-anchor" href="#_3-1-生成nginx配置" aria-label="Permalink to &quot;3.1 生成Nginx配置&quot;"></a></h3>
-<p>NGINX配置文件可以使用[NGINXCONF.IO](<a href="https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN" target="_blank" rel="noreferrer">NGINXConfig | DigitalOcean</a>)配置。页面为中文且较为友好。</p>
-<h3 id="_3-2-生成-dhparam-pem" tabindex="-1">3.2 生成 dhparam.pem <a class="header-anchor" href="#_3-2-生成-dhparam-pem" aria-label="Permalink to &quot;3.2 生成 dhparam.pem&quot;"></a></h3>
-<p>openssl dhparam用于生成和管理dh文件。dh(Diffie-Hellman)是著名的密钥交换协议，或称为密钥协商协议，它可以保证通信双方安全地交换密钥。但注意，它不是加密算法，所以不提供加密功能，仅仅只是保护密钥交换的过程。在openvpn中就使用了该交换协议。</p>
-<p>执行以下命令即可生成：</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">openssl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dhparam</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -out</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ~/dhparam.pem</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2048</span></span></code></pre>
-</div><p>如果你使用上面提供的NGINXCONFIG.IO生成了配置文件，此处配置在nginx.conf文件中：</p>
-<div class="language-ini vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ini</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Diffie-Hellman parameter for DHE ciphersuites                                         </span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">ssl_dhparam /etc/nginx/dhparam.pem</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">;</span></span></code></pre>
-</div><h3 id="_3-3-自动更新证书" tabindex="-1">3.3 自动更新证书 <a class="header-anchor" href="#_3-3-自动更新证书" aria-label="Permalink to &quot;3.3 自动更新证书&quot;"></a></h3>
-<p>以下为podman Nginx容器自动更新证书的命令：</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">~</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/.acme.sh/acme.sh --install-cert </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\ </span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">-d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \ </span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">--key-file</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/nginx/ssl/example.com.key</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \ </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">#</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 私钥地址</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">--fullchain-file</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/nginx/ssl/example.com.cer</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  \ </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">#</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 公钥地址</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">--reloadcmd</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "podman exec -it nginx nginx force-reload"</span></span></code></pre>
-</div><blockquote>
-<p>注意：<code>nginx reload</code> 命令并不会更新证书，需要使用 <code>nginx force-reload</code></p>
-</blockquote>
-<h2 id="四、查看已安装证书信息" tabindex="-1">四、查看已安装证书信息 <a class="header-anchor" href="#四、查看已安装证书信息" aria-label="Permalink to &quot;四、查看已安装证书信息&quot;"></a></h2>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --info</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 会输出如下内容：</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">DOMAIN_CONF</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/root/.acme.sh/example.com/example.com.conf</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_Domain</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">example.com</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_Alt</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">no</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_Webroot</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">dns_ali</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_PreHook</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_PostHook</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RenewHook</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_API</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">https://acme-v02.api.letsencrypt.org/directory</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_Keylength</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_OrderFinalize</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">https://acme-v02.api.letsencrypt.org/acme/finalize/23xxxx150/781xxxx4310</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_LinkOrder</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">https://acme-v02.api.letsencrypt.org/acme/order/233xxx150/781xxxx4310</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_LinkCert</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">https://acme-v02.api.letsencrypt.org/acme/cert/04cbd28xxxxxx349ecaea8d07</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_CertCreateTime</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">1649358725</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_CertCreateTimeStr</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Thu</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Apr</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  7</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 19:12:05</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> UTC</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2022</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_NextRenewTimeStr</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Mon</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Jun</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  6</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 19:12:05</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> UTC</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2022</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_NextRenewTime</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">1654456325</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RealCertPath</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RealCACertPath</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RealKeyPath</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/etc/acme/example.com/privkey.pem</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_ReloadCmd</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">service</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> nginx</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> force-reload</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RealFullChainPath</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/etc/acme/example.com/chain.pem</span></span></code></pre>
-</div><h2 id="五、更新证书" tabindex="-1">五、更新证书 <a class="header-anchor" href="#五、更新证书" aria-label="Permalink to &quot;五、更新证书&quot;"></a></h2>
-<p>目前证书在 60 天以后会自动更新，使用crontab 工具。无需任何操作。</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">crontab</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -l</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">56</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "/root/.acme.sh"/acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --cron</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --home</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "/root/.acme.sh"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /dev/null</span></span></code></pre>
-</div><h2 id="六、修改reloadcmd" tabindex="-1">六、修改ReloadCmd <a class="header-anchor" href="#六、修改reloadcmd" aria-label="Permalink to &quot;六、修改ReloadCmd&quot;"></a></h2>
-<p>根据官网的说法，不建议直接修改<code>example.conf</code>文件来达到修改ReloadCmd的目的，且目前修改<code>ReloadCmd</code>没有专门的命令，可以通过重新安装证书来修改。</p>
-<h2 id="七、更新-acme-sh" tabindex="-1">七、更新 acme.sh <a class="header-anchor" href="#七、更新-acme-sh" aria-label="Permalink to &quot;七、更新 acme.sh&quot;"></a></h2>
-<p>升级 acme.sh 到最新版 :</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --upgrade</span></span></code></pre>
-</div><p>如果你不想手动升级, 可以开启自动升级:</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --upgrade</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --auto-upgrade</span></span></code></pre>
-</div><p>之后, acme.sh 就会自动保持更新了.</p>
-<p>你也可以随时关闭自动更新:</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --upgrade</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --auto-upgrade</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  0</span></span></code></pre>
-</div><h2 id="参考链接" tabindex="-1">参考链接 <a class="header-anchor" href="#参考链接" aria-label="Permalink to &quot;参考链接&quot;"></a></h2>
-<ul>
-<li>
-<p><a href="https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E" target="_blank" rel="noreferrer">acme.sh中文文档  (github.com)</a></p>
-</li>
-<li>
-<p><a href="https://zhuanlan.zhihu.com/p/445852299" target="_blank" rel="noreferrer">Let's Encrypt SSL 泛域名证书申请和配置 - 知乎 (zhihu.com)</a></p>
-</li>
-<li>
-<p><a href="https://github.com/acmesh-official/acme.sh/issues/1439" target="_blank" rel="noreferrer">acme.sh · Issue #1439 · (github.com)</a></p>
-</li>
-<li>
-<p><a href="https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN" target="_blank" rel="noreferrer">NGINXConfig | DigitalOcean</a></p>
-</li>
-<li>
-<p><a href="https://www.cnblogs.com/f-ck-need-u/p/7103791.html" target="_blank" rel="noreferrer">openssl dhparam(密钥交换) - 骏马金龙 - 博客园 (cnblogs.com)</a></p>
-</li>
-</ul>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[基于DockerCompose的WordPress环境部署（附配置优化）]]></title>
-            <link>https://www.imufeng.cn/training/linux/wordpress-by-docker-compose.html</link>
-            <guid>https://www.imufeng.cn/training/linux/wordpress-by-docker-compose.html</guid>
-            <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
-            <description><![CDATA[本文将带你快速了解 docker compose 安装部署 WordPress。]]></description>
-            <content:encoded><![CDATA[<h1 id="基于dockercompose的wordpress环境部署-附配置优化" tabindex="-1">基于DockerCompose的WordPress环境部署（附配置优化） <a class="header-anchor" href="#基于dockercompose的wordpress环境部署-附配置优化" aria-label="Permalink to &quot;基于DockerCompose的WordPress环境部署（附配置优化）&quot;"></a></h1>
-<blockquote>
-<p>观前提醒：通过本文安装<code>WordPress</code>，需要你有一定的Linux基础，并且安装了最新版的<code>Docker</code>。</p>
-</blockquote>
-<h2 id="一、为什么是dockercompose" tabindex="-1">一、为什么是DockerCompose <a class="header-anchor" href="#一、为什么是dockercompose" aria-label="Permalink to &quot;一、为什么是DockerCompose&quot;"></a></h2>
-<p>回答：<strong>因为懒</strong></p>
-<p>之前在跟其他人沟通的时候，看到我使用Docker Compose部署 WordPress，都有些嗤之以鼻，觉得没有必要,也不够高大上。但是问他们用什么？其实很多都是第三方托管，或者干脆自己从零搭建环境，而像我这种对Linux环境稍微有点了解，并且做过一些LAMP/LNMP架构定制化编译安装的，也并不认为靠第三方托管的方式有多么便携又高大上，或者编译安装一套LNMP架构有多么优雅。</p>
-<h2 id="二、怎么用dockercompose" tabindex="-1">二、怎么用DockerCompose <a class="header-anchor" href="#二、怎么用dockercompose" aria-label="Permalink to &quot;二、怎么用DockerCompose&quot;"></a></h2>
-<p>Docker的使用已经成为运维人员的必修课，而使用Docker能够极大地简化环境部署，减少大部分重复性的手动操作。这里先介绍DockerCompose搭建环境的一个基本流程，至于Docker的安装那些，也比较简单，我后边慢慢写。</p>
-<blockquote>
-<p>顺便说一下，现在Docker已经自带<code>compose</code>了，不需要单独安装 <code>docker-compose</code></p>
-</blockquote>
-<p>DockerCompose部署环境只需要一个文件，<code>docker-compose.yaml</code> 所有的配置都在这个文件中。DockerCompose常用命令如下：</p>
-<table tabindex="0">
-<thead>
-<tr>
-<th>命令</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>docker compose up &lt;-d&gt;</td>
-<td>启动yaml文件中定义的所有服务。<br />-d表示后台启动</td>
-</tr>
-<tr>
-<td>docker compose down</td>
-<td>停止并删除所有容器</td>
-</tr>
-<tr>
-<td>docker compose ps</td>
-<td>查看服务运行状态</td>
-</tr>
-<tr>
-<td>docker compose restart</td>
-<td>重新启动所有服务</td>
-</tr>
-<tr>
-<td>docker compose logs</td>
-<td>查看所有日志</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>上述命令在后边跟上yaml文件中定义的ServiceName，则可以操作单独的服务</p>
-</blockquote>
-<h2 id="三、开始部署" tabindex="-1">三、开始部署 <a class="header-anchor" href="#三、开始部署" aria-label="Permalink to &quot;三、开始部署&quot;"></a></h2>
-<h3 id="_3-1-yaml文件示例" tabindex="-1">3.1 YAML文件示例 <a class="header-anchor" href="#_3-1-yaml文件示例" aria-label="Permalink to &quot;3.1 YAML文件示例&quot;"></a></h3>
-<blockquote>
-<p>YAML文件需要放在特定的文件夹，最好单独建立文件夹，容器启动时会以当前<code>目录的名称-服务名称-序号</code>命名。</p>
-</blockquote>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">mkdir</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ~/wordpress</span></span>
-<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">cd</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ~/wordpress</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">vim</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> docker-compose.yaml</span></span></code></pre>
-</div><div class="language-yaml vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">yaml</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">version</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'3.3'</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 服务</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">services</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # 数据库服务</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  db</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">mysql:5.7</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    volumes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">./db_data:/var/lib/mysql</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    restart</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">always</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    environment</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      MYSQL_ROOT_PASSWORD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">wordpress</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      MYSQL_DATABASE</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">wordpress</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      MYSQL_USER</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">wordpress</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      MYSQL_PASSWORD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">wordpress</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Redis缓存服务</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  cache</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">redis:latest</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    restart</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">always</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    ports</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">6379</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # WordPress服务</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  wordpress</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    depends_on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">db</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">cache</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">wordpress:php8.2</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    ports</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"8080:80"</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    restart</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">always</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    environment</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      WORDPRESS_DB_HOST</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">db:3306</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      WORDPRESS_DB_USER</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">wordpress</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      WORDPRESS_DB_PASSWORD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">wordpress</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      WORDPRESS_DB_NAME</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">wordpress</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    volumes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">./wp_data:/var/www/html</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">./php_config/php.ini-production:/usr/local/etc/php/php.ini-production</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 网络划分</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">networks</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    wordpress</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        driver</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">bridge</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        external</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        ipam</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">            config</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">subnet</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">10.10.1.0/24</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">gateway</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">10.10.1.10</span></span></code></pre>
-</div><p>在上面的示例中，规定了当前 <code>docker-compose.yaml</code>遵循3.3版本规范，共涉及三个服务：数据库、缓存以及WordPress。并使用了三个卷，将数据库文件、WordPress服务文件以及PHP配置文件挂载到本地。</p>
-<p>在该文件编写完成后，可以在当前目录使用 <code>docker compose up</code> 命令安装，首次安装需要下载镜像，会比较慢，之后再安装则不需要。</p>
-<p>安装完之后，你就可以在使用<code>ip:8080</code>的方式访问你的 WordPress 站点了。如果你需要配置域名访问，在Nginx中添加如下配置后再去安装你的 WordPress 。</p>
-<blockquote>
-<p>你需要将 <code>blog-wp.imufeng.cn</code> 替换为你自己的域名。至于泛域名证书的配置参见我的其他博客。</p>
-</blockquote>
-<div class="language-nginx vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">nginx</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    listen </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">             443</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ssl http2;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    listen </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">             [::]:443 ssl http2;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server_name </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        blog-wp.imufeng.cn;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # SSL</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_certificate </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    /etc/nginx/ssl/imufeng.cn.cer;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_certificate_key </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/etc/nginx/ssl/imufeng.cn.key;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # security</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    include </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            nginxconfig.io/security.conf;</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # logging</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    access_log </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">         /var/log/nginx/blog-wp.imufeng.cn.log combined buffer=512k flush=5m;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    error_log </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          /var/log/nginx/blog-wp.imufeng.error.log </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">error</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    location</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> / </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_pass </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">http://127.0.0.1:8080/;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Host $host;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Real-IP $remote_addr;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Forwarded-For $proxy_add_x_forwarded_for;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Forwarded-Proto $scheme;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        add_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Content-Security-Policy </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"default-src 'self' 'unsafe-inline' 'unsafe-eval' https: ws: wss: data: blob:"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
-</div><p>至此，一个简单的WordPress就搭建完成了。</p>
-]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[11-30 ]]></title>
@@ -10509,6 +10403,284 @@ SpringBoot 可以通过 `@ConfigurationProperties` 注解来配置多个数据�
 ]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[泛域名证书申请以及部署]]></title>
+            <link>https://www.imufeng.cn/training/linux/acme-sh.html</link>
+            <guid>https://www.imufeng.cn/training/linux/acme-sh.html</guid>
+            <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
+            <description><![CDATA[使用 acme.sh 部署 Let's Encrypt 泛域名证书。]]></description>
+            <content:encoded><![CDATA[<h1 id="泛域名证书申请以及部署" tabindex="-1">泛域名证书申请以及部署 <a class="header-anchor" href="#泛域名证书申请以及部署" aria-label="Permalink to &quot;泛域名证书申请以及部署&quot;"></a></h1>
+<blockquote>
+<p>由于目前所有的域名服务商对于免费CA证书仅提供由<code>digicert</code>机构颁发的，只允许有20个子域名且不支持泛子域名。故使用 <code>Let's Encrypt</code> 的SSL证书</p>
+</blockquote>
+<p>Let’s Encrypt 是一个证书颁发机构，向 Let’s Encrypt 申请证书是免费的。Let's Encrypt 支持泛域名证书，不需要为每个子域名单独申请证书。</p>
+<h2 id="一、acme-sh部署工具" tabindex="-1">一、<code>acme.sh</code>部署工具 <a class="header-anchor" href="#一、acme-sh部署工具" aria-label="Permalink to &quot;一、`acme.sh`部署工具&quot;"></a></h2>
+<p>根据 <code>acme.sh</code> [中文说明](<a href="https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E" target="_blank" rel="noreferrer">说明 · acmesh-official/acme.sh Wiki (github.com)</a>)，<code>acme.sh</code> 实现了 <code>acme</code> 协议, 可以从 <code>let‘s encrypt</code> 生成免费的证书。</p>
+<ol>
+<li>
+<p>其安装只需要执行以下命令，所有用户均可安装：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://get.acme.sh</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> email=my@example.com</span></span></code></pre>
+</div></li>
+<li>
+<p>该工具将会安装在 <code>~/.acme.sh/</code>  目录下。</p>
+</li>
+</ol>
+<h2 id="二、生成证书" tabindex="-1">二、生成证书 <a class="header-anchor" href="#二、生成证书" aria-label="Permalink to &quot;二、生成证书&quot;"></a></h2>
+<p><code>acme.sh</code> 实现了 <strong><code>acme</code></strong> 协议支持的所有验证协议. 一般有两种方式验证: http 和 dns 验证.</p>
+<h3 id="_2-1-http-方式" tabindex="-1">2.1 http 方式 <a class="header-anchor" href="#_2-1-http-方式" aria-label="Permalink to &quot;2.1 http 方式&quot;"></a></h3>
+<p>http方式需要在该网站根目录放置一个文件来验证域名所有权。</p>
+<p>可以执行以下命令生成：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> www.mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --webroot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /home/wwwroot/mydomain.com/</span></span></code></pre>
+</div><p>如果你使用apache或者nginx服务，执行以下命令会自动识别并完成验证，完成后还将为你删除文件，做到用户无感验证。</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --apache/nginx</span></span></code></pre>
+</div><p>如果你的服务器80端口是空闲的，<code>acme.sh</code>还将自动配置一个webserver，监听80端口并自动完成配置。</p>
+<h3 id="_2-2-dns-方式" tabindex="-1">2.2 DNS 方式 <a class="header-anchor" href="#_2-2-dns-方式" aria-label="Permalink to &quot;2.2 DNS 方式&quot;"></a></h3>
+<p>DNS方式只需要在配置DNS解析记录即可，且TXT的解析记录对你的服务不会产生影响。</p>
+<p>执行以下命令，按照提示配置DNS解析记录即可：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --yes-I-know-dns-manual-mode-enough-go-ahead-please</span></span></code></pre>
+</div><p>解析完成后，执行以下命令来完成验证并重新生成证书：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --renew</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --yes-I-know-dns-manual-mode-enough-go-ahead-please</span></span></code></pre>
+</div><blockquote>
+<p>注意：若没有配置Automatic DNS API，该方法将无法自动更新你的域名证书。</p>
+</blockquote>
+<h3 id="_2-3-dns进阶版" tabindex="-1">2.3 DNS进阶版 <a class="header-anchor" href="#_2-3-dns进阶版" aria-label="Permalink to &quot;2.3 DNS进阶版&quot;"></a></h3>
+<p>DNS方式还支持使用域名解析商提供的接口自动进行配置。以阿里云为例：</p>
+<p>首先将阿里云的阿里云 API 的密钥以以下格式配置到环境变量：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 腾讯云dnspod</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> DP_Id</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"XXXXXXXXXX"</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> DP_Key</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"XXXXXXXXXX"</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 阿里云</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Ali_Key</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"XXXXXXXXXX"</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Ali_Secret</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"XXXXXXXXXX“</span></span></code></pre>
+</div><p>然后就可以通过以下命令生成证书：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 腾讯云</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dns_dp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.example.com</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 阿里云</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dns_ali</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.example.com</span></span></code></pre>
+</div><h2 id="三、安装配置证书" tabindex="-1">三、安装配置证书 <a class="header-anchor" href="#三、安装配置证书" aria-label="Permalink to &quot;三、安装配置证书&quot;"></a></h2>
+<p>此处以Podman Nginx容器配置证书举例。</p>
+<h3 id="_3-1-生成nginx配置" tabindex="-1">3.1 生成Nginx配置 <a class="header-anchor" href="#_3-1-生成nginx配置" aria-label="Permalink to &quot;3.1 生成Nginx配置&quot;"></a></h3>
+<p>NGINX配置文件可以使用[NGINXCONF.IO](<a href="https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN" target="_blank" rel="noreferrer">NGINXConfig | DigitalOcean</a>)配置。页面为中文且较为友好。</p>
+<h3 id="_3-2-生成-dhparam-pem" tabindex="-1">3.2 生成 dhparam.pem <a class="header-anchor" href="#_3-2-生成-dhparam-pem" aria-label="Permalink to &quot;3.2 生成 dhparam.pem&quot;"></a></h3>
+<p>openssl dhparam用于生成和管理dh文件。dh(Diffie-Hellman)是著名的密钥交换协议，或称为密钥协商协议，它可以保证通信双方安全地交换密钥。但注意，它不是加密算法，所以不提供加密功能，仅仅只是保护密钥交换的过程。在openvpn中就使用了该交换协议。</p>
+<p>执行以下命令即可生成：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">openssl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dhparam</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -out</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ~/dhparam.pem</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2048</span></span></code></pre>
+</div><p>如果你使用上面提供的NGINXCONFIG.IO生成了配置文件，此处配置在nginx.conf文件中：</p>
+<div class="language-ini vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ini</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Diffie-Hellman parameter for DHE ciphersuites                                         </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">ssl_dhparam /etc/nginx/dhparam.pem</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">;</span></span></code></pre>
+</div><h3 id="_3-3-自动更新证书" tabindex="-1">3.3 自动更新证书 <a class="header-anchor" href="#_3-3-自动更新证书" aria-label="Permalink to &quot;3.3 自动更新证书&quot;"></a></h3>
+<p>以下为podman Nginx容器自动更新证书的命令：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">~</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/.acme.sh/acme.sh --install-cert </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\ </span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">-d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \ </span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">--key-file</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/nginx/ssl/example.com.key</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \ </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">#</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 私钥地址</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">--fullchain-file</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/nginx/ssl/example.com.cer</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  \ </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">#</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 公钥地址</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">--reloadcmd</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "podman exec -it nginx nginx force-reload"</span></span></code></pre>
+</div><blockquote>
+<p>注意：<code>nginx reload</code> 命令并不会更新证书，需要使用 <code>nginx force-reload</code></p>
+</blockquote>
+<h2 id="四、查看已安装证书信息" tabindex="-1">四、查看已安装证书信息 <a class="header-anchor" href="#四、查看已安装证书信息" aria-label="Permalink to &quot;四、查看已安装证书信息&quot;"></a></h2>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --info</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 会输出如下内容：</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">DOMAIN_CONF</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/root/.acme.sh/example.com/example.com.conf</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_Domain</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">example.com</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_Alt</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">no</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_Webroot</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">dns_ali</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_PreHook</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_PostHook</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RenewHook</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_API</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">https://acme-v02.api.letsencrypt.org/directory</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_Keylength</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_OrderFinalize</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">https://acme-v02.api.letsencrypt.org/acme/finalize/23xxxx150/781xxxx4310</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_LinkOrder</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">https://acme-v02.api.letsencrypt.org/acme/order/233xxx150/781xxxx4310</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_LinkCert</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">https://acme-v02.api.letsencrypt.org/acme/cert/04cbd28xxxxxx349ecaea8d07</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_CertCreateTime</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">1649358725</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_CertCreateTimeStr</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Thu</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Apr</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  7</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 19:12:05</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> UTC</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2022</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_NextRenewTimeStr</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Mon</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Jun</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  6</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 19:12:05</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> UTC</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2022</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_NextRenewTime</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">1654456325</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RealCertPath</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RealCACertPath</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RealKeyPath</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/etc/acme/example.com/privkey.pem</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_ReloadCmd</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">service</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> nginx</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> force-reload</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RealFullChainPath</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/etc/acme/example.com/chain.pem</span></span></code></pre>
+</div><h2 id="五、更新证书" tabindex="-1">五、更新证书 <a class="header-anchor" href="#五、更新证书" aria-label="Permalink to &quot;五、更新证书&quot;"></a></h2>
+<p>目前证书在 60 天以后会自动更新，使用crontab 工具。无需任何操作。</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">crontab</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -l</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">56</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "/root/.acme.sh"/acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --cron</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --home</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "/root/.acme.sh"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /dev/null</span></span></code></pre>
+</div><h2 id="六、修改reloadcmd" tabindex="-1">六、修改ReloadCmd <a class="header-anchor" href="#六、修改reloadcmd" aria-label="Permalink to &quot;六、修改ReloadCmd&quot;"></a></h2>
+<p>根据官网的说法，不建议直接修改<code>example.conf</code>文件来达到修改ReloadCmd的目的，且目前修改<code>ReloadCmd</code>没有专门的命令，可以通过重新安装证书来修改。</p>
+<h2 id="七、更新-acme-sh" tabindex="-1">七、更新 acme.sh <a class="header-anchor" href="#七、更新-acme-sh" aria-label="Permalink to &quot;七、更新 acme.sh&quot;"></a></h2>
+<p>升级 acme.sh 到最新版 :</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --upgrade</span></span></code></pre>
+</div><p>如果你不想手动升级, 可以开启自动升级:</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --upgrade</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --auto-upgrade</span></span></code></pre>
+</div><p>之后, acme.sh 就会自动保持更新了.</p>
+<p>你也可以随时关闭自动更新:</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --upgrade</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --auto-upgrade</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  0</span></span></code></pre>
+</div><h2 id="参考链接" tabindex="-1">参考链接 <a class="header-anchor" href="#参考链接" aria-label="Permalink to &quot;参考链接&quot;"></a></h2>
+<ul>
+<li>
+<p><a href="https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E" target="_blank" rel="noreferrer">acme.sh中文文档  (github.com)</a></p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/445852299" target="_blank" rel="noreferrer">Let's Encrypt SSL 泛域名证书申请和配置 - 知乎 (zhihu.com)</a></p>
+</li>
+<li>
+<p><a href="https://github.com/acmesh-official/acme.sh/issues/1439" target="_blank" rel="noreferrer">acme.sh · Issue #1439 · (github.com)</a></p>
+</li>
+<li>
+<p><a href="https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN" target="_blank" rel="noreferrer">NGINXConfig | DigitalOcean</a></p>
+</li>
+<li>
+<p><a href="https://www.cnblogs.com/f-ck-need-u/p/7103791.html" target="_blank" rel="noreferrer">openssl dhparam(密钥交换) - 骏马金龙 - 博客园 (cnblogs.com)</a></p>
+</li>
+</ul>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[基于DockerCompose的WordPress环境部署（附配置优化）]]></title>
+            <link>https://www.imufeng.cn/training/linux/wordpress-by-docker-compose.html</link>
+            <guid>https://www.imufeng.cn/training/linux/wordpress-by-docker-compose.html</guid>
+            <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
+            <description><![CDATA[本文将带你快速了解 docker compose 安装部署 WordPress。]]></description>
+            <content:encoded><![CDATA[<h1 id="基于dockercompose的wordpress环境部署-附配置优化" tabindex="-1">基于DockerCompose的WordPress环境部署（附配置优化） <a class="header-anchor" href="#基于dockercompose的wordpress环境部署-附配置优化" aria-label="Permalink to &quot;基于DockerCompose的WordPress环境部署（附配置优化）&quot;"></a></h1>
+<blockquote>
+<p>观前提醒：通过本文安装<code>WordPress</code>，需要你有一定的Linux基础，并且安装了最新版的<code>Docker</code>。</p>
+</blockquote>
+<h2 id="一、为什么是dockercompose" tabindex="-1">一、为什么是DockerCompose <a class="header-anchor" href="#一、为什么是dockercompose" aria-label="Permalink to &quot;一、为什么是DockerCompose&quot;"></a></h2>
+<p>回答：<strong>因为懒</strong></p>
+<p>之前在跟其他人沟通的时候，看到我使用Docker Compose部署 WordPress，都有些嗤之以鼻，觉得没有必要,也不够高大上。但是问他们用什么？其实很多都是第三方托管，或者干脆自己从零搭建环境，而像我这种对Linux环境稍微有点了解，并且做过一些LAMP/LNMP架构定制化编译安装的，也并不认为靠第三方托管的方式有多么便携又高大上，或者编译安装一套LNMP架构有多么优雅。</p>
+<h2 id="二、怎么用dockercompose" tabindex="-1">二、怎么用DockerCompose <a class="header-anchor" href="#二、怎么用dockercompose" aria-label="Permalink to &quot;二、怎么用DockerCompose&quot;"></a></h2>
+<p>Docker的使用已经成为运维人员的必修课，而使用Docker能够极大地简化环境部署，减少大部分重复性的手动操作。这里先介绍DockerCompose搭建环境的一个基本流程，至于Docker的安装那些，也比较简单，我后边慢慢写。</p>
+<blockquote>
+<p>顺便说一下，现在Docker已经自带<code>compose</code>了，不需要单独安装 <code>docker-compose</code></p>
+</blockquote>
+<p>DockerCompose部署环境只需要一个文件，<code>docker-compose.yaml</code> 所有的配置都在这个文件中。DockerCompose常用命令如下：</p>
+<table tabindex="0">
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>docker compose up &lt;-d&gt;</td>
+<td>启动yaml文件中定义的所有服务。<br />-d表示后台启动</td>
+</tr>
+<tr>
+<td>docker compose down</td>
+<td>停止并删除所有容器</td>
+</tr>
+<tr>
+<td>docker compose ps</td>
+<td>查看服务运行状态</td>
+</tr>
+<tr>
+<td>docker compose restart</td>
+<td>重新启动所有服务</td>
+</tr>
+<tr>
+<td>docker compose logs</td>
+<td>查看所有日志</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>上述命令在后边跟上yaml文件中定义的ServiceName，则可以操作单独的服务</p>
+</blockquote>
+<h2 id="三、开始部署" tabindex="-1">三、开始部署 <a class="header-anchor" href="#三、开始部署" aria-label="Permalink to &quot;三、开始部署&quot;"></a></h2>
+<h3 id="_3-1-yaml文件示例" tabindex="-1">3.1 YAML文件示例 <a class="header-anchor" href="#_3-1-yaml文件示例" aria-label="Permalink to &quot;3.1 YAML文件示例&quot;"></a></h3>
+<blockquote>
+<p>YAML文件需要放在特定的文件夹，最好单独建立文件夹，容器启动时会以当前<code>目录的名称-服务名称-序号</code>命名。</p>
+</blockquote>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">mkdir</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ~/wordpress</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">cd</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ~/wordpress</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">vim</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> docker-compose.yaml</span></span></code></pre>
+</div><div class="language-yaml vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">yaml</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">version</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'3.3'</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 服务</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">services</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # 数据库服务</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  db</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">mysql:5.7</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    volumes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">./db_data:/var/lib/mysql</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    restart</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">always</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    environment</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      MYSQL_ROOT_PASSWORD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">wordpress</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      MYSQL_DATABASE</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">wordpress</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      MYSQL_USER</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">wordpress</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      MYSQL_PASSWORD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">wordpress</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Redis缓存服务</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  cache</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">redis:latest</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    restart</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">always</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    ports</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">6379</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # WordPress服务</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  wordpress</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    depends_on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">db</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">cache</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">wordpress:php8.2</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    ports</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"8080:80"</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    restart</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">always</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    environment</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      WORDPRESS_DB_HOST</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">db:3306</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      WORDPRESS_DB_USER</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">wordpress</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      WORDPRESS_DB_PASSWORD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">wordpress</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      WORDPRESS_DB_NAME</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">wordpress</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    volumes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">./wp_data:/var/www/html</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">./php_config/php.ini-production:/usr/local/etc/php/php.ini-production</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 网络划分</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">networks</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    wordpress</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        driver</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">bridge</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        external</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        ipam</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">            config</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">subnet</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">10.10.1.0/24</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">gateway</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">10.10.1.10</span></span></code></pre>
+</div><p>在上面的示例中，规定了当前 <code>docker-compose.yaml</code>遵循3.3版本规范，共涉及三个服务：数据库、缓存以及WordPress。并使用了三个卷，将数据库文件、WordPress服务文件以及PHP配置文件挂载到本地。</p>
+<p>在该文件编写完成后，可以在当前目录使用 <code>docker compose up</code> 命令安装，首次安装需要下载镜像，会比较慢，之后再安装则不需要。</p>
+<p>安装完之后，你就可以在使用<code>ip:8080</code>的方式访问你的 WordPress 站点了。如果你需要配置域名访问，在Nginx中添加如下配置后再去安装你的 WordPress 。</p>
+<blockquote>
+<p>你需要将 <code>blog-wp.imufeng.cn</code> 替换为你自己的域名。至于泛域名证书的配置参见我的其他博客。</p>
+</blockquote>
+<div class="language-nginx vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">nginx</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    listen </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">             443</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ssl http2;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    listen </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">             [::]:443 ssl http2;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server_name </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        blog-wp.imufeng.cn;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # SSL</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_certificate </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    /etc/nginx/ssl/imufeng.cn.cer;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_certificate_key </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/etc/nginx/ssl/imufeng.cn.key;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # security</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    include </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            nginxconfig.io/security.conf;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # logging</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    access_log </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">         /var/log/nginx/blog-wp.imufeng.cn.log combined buffer=512k flush=5m;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    error_log </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          /var/log/nginx/blog-wp.imufeng.error.log </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">error</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    location</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> / </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_pass </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">http://127.0.0.1:8080/;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Host $host;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Real-IP $remote_addr;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Forwarded-For $proxy_add_x_forwarded_for;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Forwarded-Proto $scheme;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        add_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Content-Security-Policy </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"default-src 'self' 'unsafe-inline' 'unsafe-eval' https: ws: wss: data: blob:"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><p>至此，一个简单的WordPress就搭建完成了。</p>
+]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[每日一题 - 2023]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2023/</link>
             <guid>https://www.imufeng.cn/interview/question-by-day/2023/</guid>
@@ -10912,127 +11084,6 @@ SpringBoot 可以通过 `@ConfigurationProperties` 注解来配置多个数据�
 </tr>
 </tbody>
 </table>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[软件工具分享]]></title>
-            <link>https://www.imufeng.cn/training/software/</link>
-            <guid>https://www.imufeng.cn/training/software/</guid>
-            <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
-            <description><![CDATA[软件工具分享
- 目录
-1. Mysql for Windows 安装及初始化]]></description>
-            <content:encoded><![CDATA[<h1 id="软件工具分享" tabindex="-1">软件工具分享 <a class="header-anchor" href="#软件工具分享" aria-label="Permalink to &quot;软件工具分享&quot;"></a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
-<ol>
-<li><a href="./mysql-for-win-install.html">Mysql for Windows 安装及初始化</a></li>
-</ol>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Mysql for Windows 安装及初始化]]></title>
-            <link>https://www.imufeng.cn/training/software/mysql-for-win-install.html</link>
-            <guid>https://www.imufeng.cn/training/software/mysql-for-win-install.html</guid>
-            <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
-            <description><![CDATA[Mysql for Windows 安装及初始化。]]></description>
-            <content:encoded><![CDATA[<h1 id="mysql-for-windows-安装及初始化" tabindex="-1">Mysql for Windows 安装及初始化 <a class="header-anchor" href="#mysql-for-windows-安装及初始化" aria-label="Permalink to &quot;Mysql for Windows 安装及初始化&quot;"></a></h1>
-<h2 id="一、简介" tabindex="-1">一、简介 <a class="header-anchor" href="#一、简介" aria-label="Permalink to &quot;一、简介&quot;"></a></h2>
-<p>Windows 安装 Mysql 主要还是为了本地调试的方便。8.x 的版本和 5.7 的版本安装过程大差不差，这里以 8.0.35（8.2版本发布前的最新版）举例。</p>
-<h2 id="二、下载安装" tabindex="-1">二、下载安装 <a class="header-anchor" href="#二、下载安装" aria-label="Permalink to &quot;二、下载安装&quot;"></a></h2>
-<p>Windows 端 Mysql 只需要在 <a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noreferrer">MySQL :: Download MySQL Community Server</a> 页面选择对应版本下载 mysql-xxx-winx64.zip，该压缩包为编译后文件，并非源码， 可以直接运行。</p>
-<p>目录结构如下：</p>
-<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>Directory: D:\Element\mysql-8.0.35</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>Mode                 LastWriteTime         Length Name</span></span>
-<span class="line"><span>----                 -------------         ------ ----</span></span>
-<span class="line"><span>da---            2024/1/4    15:00                bin</span></span>
-<span class="line"><span>da---            2024/1/4    15:00                docs</span></span>
-<span class="line"><span>da---            2024/1/4    15:00                include</span></span>
-<span class="line"><span>da---            2024/1/4    15:00                lib</span></span>
-<span class="line"><span>da---            2024/1/4    15:00                share</span></span>
-<span class="line"><span>-a---          2023/10/12    19:45         279355 LICENSE</span></span>
-<span class="line"><span>-a---          2023/10/12    19:45            666 README</span></span></code></pre>
-</div><h2 id="四、配置" tabindex="-1">四、配置 <a class="header-anchor" href="#四、配置" aria-label="Permalink to &quot;四、配置&quot;"></a></h2>
-<h3 id="配置环境变量" tabindex="-1">配置环境变量 <a class="header-anchor" href="#配置环境变量" aria-label="Permalink to &quot;配置环境变量&quot;"></a></h3>
-<p>为方便 Mysql 服务的使用和管理，可以在 PATH 中加入 Mysql 的 bin 目录。</p>
-<h3 id="修改配置文件" tabindex="-1">修改配置文件 <a class="header-anchor" href="#修改配置文件" aria-label="Permalink to &quot;修改配置文件&quot;"></a></h3>
-<p>Mysql 配置默认读取自安装目录下 <code>my.ini</code>，如没有需要创建一个，Mysql 默认有一套配置，如端口默认为 3306 等，<code>my.ini</code> 并非必须，只需要在其中写明需要的配置即可，如下：</p>
-<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>[mysqld]</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>lower_case_table_names=2</span></span></code></pre>
-</div><blockquote>
-<p>注意：此处 lower_case_table_names 有三种取值：</p>
-<ul>
-<li>0：表示表名区分大小写。</li>
-<li>1：表示将表名转换为小写，但在比较时仍然区分大小写。</li>
-<li>2：表示将表名转换为小写，并且在比较时也不区分大小写。</li>
-</ul>
-</blockquote>
-<h3 id="初始化" tabindex="-1">初始化 <a class="header-anchor" href="#初始化" aria-label="Permalink to &quot;初始化&quot;"></a></h3>
-<p>初始化 Mysql 需要管理员权限，需要管理员权限运行 Powershell 或 CMD。执行 <code>mysqld --initialize  --console</code> 既可初始化并在控制台显示密码。</p>
-<p><code>Mysqld</code> 服务初始化过程如下：</p>
-<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>PS D:\Element\mysql-8.0.35> ./bin/mysqld --initialize  --console</span></span>
-<span class="line"><span>2024-01-04T07:08:20.705336Z 0 [System] [MY-013169] [Server] D:\Element\mysql-8.0.35\bin\mysqld.exe (mysqld 8.0.35) initializing of server in progress as process 3008</span></span>
-<span class="line"><span>2024-01-04T07:08:20.730739Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.</span></span>
-<span class="line"><span>2024-01-04T07:08:21.033652Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.</span></span>
-<span class="line"><span>2024-01-04T07:08:22.291288Z 6 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: /YlA-/3M_yny</span></span></code></pre>
-</div><p>初始化完成后，会在 Mysql 安装目录生成一个 <code>data</code> 目录，即为 Mysql 数据存储目录。初始化日志最后一行显示的即为初始化的随机密码，权限为 <code>root@localhost</code>。</p>
-<h3 id="安装服务" tabindex="-1">安装服务 <a class="header-anchor" href="#安装服务" aria-label="Permalink to &quot;安装服务&quot;"></a></h3>
-<p>运行 <code>mysqld install</code> 即可在 Windows 系统中安装 Mysql 服务。</p>
-<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>PS D:\Element\mysql-8.0.35> .\bin\mysqld install</span></span>
-<span class="line"><span>Service successfully installed.</span></span></code></pre>
-</div><h3 id="启动服务" tabindex="-1">启动服务 <a class="header-anchor" href="#启动服务" aria-label="Permalink to &quot;启动服务&quot;"></a></h3>
-<p>可以使用 <code>net start mysql</code> 命令启动 Mysql 服务，如出现如下内容，即为启动成功：</p>
-<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>PS C:\Users\mufeng> net start mysql</span></span>
-<span class="line"><span>MySQL 服务正在启动 .</span></span>
-<span class="line"><span>MySQL 服务已经启动成功。</span></span></code></pre>
-</div><h3 id="测试" tabindex="-1">测试 <a class="header-anchor" href="#测试" aria-label="Permalink to &quot;测试&quot;"></a></h3>
-<p>服务启动之后，即可连接 Mysql：</p>
-<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>PS C:\Users\mufeng> mysql -uroot -p</span></span>
-<span class="line"><span>Enter password: ************</span></span>
-<span class="line"><span>Welcome to the MySQL monitor.  Commands end with ; or \g.</span></span>
-<span class="line"><span>Your MySQL connection id is 8</span></span>
-<span class="line"><span>Server version: 8.0.35</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>Copyright (c) 2000, 2023, Oracle and/or its affiliates.</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>Oracle is a registered trademark of Oracle Corporation and/or its</span></span>
-<span class="line"><span>affiliates. Other names may be trademarks of their respective</span></span>
-<span class="line"><span>owners.</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>mysql></span></span></code></pre>
-</div><h3 id="修改-mysql-默认密码" tabindex="-1">修改 Mysql 默认密码 <a class="header-anchor" href="#修改-mysql-默认密码" aria-label="Permalink to &quot;修改 Mysql 默认密码&quot;"></a></h3>
-<p>Mysql 权限管理是基于 <code>域 + 用户 + 权限</code> 的方式，本地对安全性要求不高，此处修改 root 用户随处可以登录。</p>
-<p>如下：</p>
-<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';</span></span>
-<span class="line"><span>Query OK, 0 rows affected (0.01 sec)</span></span>
-<span class="line"><span>mysql> use mysql;</span></span>
-<span class="line"><span>Database changed</span></span>
-<span class="line"><span>mysql> update user set host = '%' where host = 'localhost' and user = 'root';</span></span>
-<span class="line"><span>Query OK, 1 row affected (0.00 sec)</span></span>
-<span class="line"><span>Rows matched: 1  Changed: 1  Warnings: 0</span></span></code></pre>
-</div><p>测试：</p>
-<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>PS C:\Users\mufeng> mysql -uroot -proot</span></span>
-<span class="line"><span>mysql: [Warning] Using a password on the command line interface can be insecure.</span></span>
-<span class="line"><span>Welcome to the MySQL monitor.  Commands end with ; or \g.</span></span>
-<span class="line"><span>Your MySQL connection id is 10</span></span>
-<span class="line"><span>Server version: 8.0.35 MySQL Community Server - GPL</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>Copyright (c) 2000, 2023, Oracle and/or its affiliates.</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>Oracle is a registered trademark of Oracle Corporation and/or its</span></span>
-<span class="line"><span>affiliates. Other names may be trademarks of their respective</span></span>
-<span class="line"><span>owners.</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>mysql></span></span></code></pre>
-</div><p>登录成功！至此，Mysql For Windows 安装完成。</p>
-<h2 id="五、其他" tabindex="-1">五、其他 <a class="header-anchor" href="#五、其他" aria-label="Permalink to &quot;五、其他&quot;"></a></h2>
-<h3 id="mysql-服务无法启动" tabindex="-1">Mysql 服务无法启动 <a class="header-anchor" href="#mysql-服务无法启动" aria-label="Permalink to &quot;Mysql 服务无法启动&quot;"></a></h3>
-<p>Mysql 初始化顺序为先修改配置文件，再初始化，如果先初始化，然后修改了诸如忽略大小写等与现有数据冲突的配置，可能会造成无法启动。</p>
 ]]></content:encoded>
         </item>
         <item>
@@ -11528,6 +11579,127 @@ Mariadb是开源的关系型数据库服务器软件
 <p>注：构建服务所需的包可在<a href="https://download.csdn.net/download/qq_45417634/13208956" target="_blank" rel="noreferrer">server_source_2020.iso </a>请自行下载，您也可以在所需安装包官网下载
 本地源配置、防火墙、selinux等是linux较为基础的内容，不再赘述。
 本文均为原创，如需与博主交流可email至mufeng.yu@qq.com</p>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[软件工具分享]]></title>
+            <link>https://www.imufeng.cn/training/software/</link>
+            <guid>https://www.imufeng.cn/training/software/</guid>
+            <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
+            <description><![CDATA[软件工具分享
+ 目录
+1. Mysql for Windows 安装及初始化]]></description>
+            <content:encoded><![CDATA[<h1 id="软件工具分享" tabindex="-1">软件工具分享 <a class="header-anchor" href="#软件工具分享" aria-label="Permalink to &quot;软件工具分享&quot;"></a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
+<ol>
+<li><a href="./mysql-for-win-install.html">Mysql for Windows 安装及初始化</a></li>
+</ol>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Mysql for Windows 安装及初始化]]></title>
+            <link>https://www.imufeng.cn/training/software/mysql-for-win-install.html</link>
+            <guid>https://www.imufeng.cn/training/software/mysql-for-win-install.html</guid>
+            <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
+            <description><![CDATA[Mysql for Windows 安装及初始化。]]></description>
+            <content:encoded><![CDATA[<h1 id="mysql-for-windows-安装及初始化" tabindex="-1">Mysql for Windows 安装及初始化 <a class="header-anchor" href="#mysql-for-windows-安装及初始化" aria-label="Permalink to &quot;Mysql for Windows 安装及初始化&quot;"></a></h1>
+<h2 id="一、简介" tabindex="-1">一、简介 <a class="header-anchor" href="#一、简介" aria-label="Permalink to &quot;一、简介&quot;"></a></h2>
+<p>Windows 安装 Mysql 主要还是为了本地调试的方便。8.x 的版本和 5.7 的版本安装过程大差不差，这里以 8.0.35（8.2版本发布前的最新版）举例。</p>
+<h2 id="二、下载安装" tabindex="-1">二、下载安装 <a class="header-anchor" href="#二、下载安装" aria-label="Permalink to &quot;二、下载安装&quot;"></a></h2>
+<p>Windows 端 Mysql 只需要在 <a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noreferrer">MySQL :: Download MySQL Community Server</a> 页面选择对应版本下载 mysql-xxx-winx64.zip，该压缩包为编译后文件，并非源码， 可以直接运行。</p>
+<p>目录结构如下：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>Directory: D:\Element\mysql-8.0.35</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Mode                 LastWriteTime         Length Name</span></span>
+<span class="line"><span>----                 -------------         ------ ----</span></span>
+<span class="line"><span>da---            2024/1/4    15:00                bin</span></span>
+<span class="line"><span>da---            2024/1/4    15:00                docs</span></span>
+<span class="line"><span>da---            2024/1/4    15:00                include</span></span>
+<span class="line"><span>da---            2024/1/4    15:00                lib</span></span>
+<span class="line"><span>da---            2024/1/4    15:00                share</span></span>
+<span class="line"><span>-a---          2023/10/12    19:45         279355 LICENSE</span></span>
+<span class="line"><span>-a---          2023/10/12    19:45            666 README</span></span></code></pre>
+</div><h2 id="四、配置" tabindex="-1">四、配置 <a class="header-anchor" href="#四、配置" aria-label="Permalink to &quot;四、配置&quot;"></a></h2>
+<h3 id="配置环境变量" tabindex="-1">配置环境变量 <a class="header-anchor" href="#配置环境变量" aria-label="Permalink to &quot;配置环境变量&quot;"></a></h3>
+<p>为方便 Mysql 服务的使用和管理，可以在 PATH 中加入 Mysql 的 bin 目录。</p>
+<h3 id="修改配置文件" tabindex="-1">修改配置文件 <a class="header-anchor" href="#修改配置文件" aria-label="Permalink to &quot;修改配置文件&quot;"></a></h3>
+<p>Mysql 配置默认读取自安装目录下 <code>my.ini</code>，如没有需要创建一个，Mysql 默认有一套配置，如端口默认为 3306 等，<code>my.ini</code> 并非必须，只需要在其中写明需要的配置即可，如下：</p>
+<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>[mysqld]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>lower_case_table_names=2</span></span></code></pre>
+</div><blockquote>
+<p>注意：此处 lower_case_table_names 有三种取值：</p>
+<ul>
+<li>0：表示表名区分大小写。</li>
+<li>1：表示将表名转换为小写，但在比较时仍然区分大小写。</li>
+<li>2：表示将表名转换为小写，并且在比较时也不区分大小写。</li>
+</ul>
+</blockquote>
+<h3 id="初始化" tabindex="-1">初始化 <a class="header-anchor" href="#初始化" aria-label="Permalink to &quot;初始化&quot;"></a></h3>
+<p>初始化 Mysql 需要管理员权限，需要管理员权限运行 Powershell 或 CMD。执行 <code>mysqld --initialize  --console</code> 既可初始化并在控制台显示密码。</p>
+<p><code>Mysqld</code> 服务初始化过程如下：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>PS D:\Element\mysql-8.0.35> ./bin/mysqld --initialize  --console</span></span>
+<span class="line"><span>2024-01-04T07:08:20.705336Z 0 [System] [MY-013169] [Server] D:\Element\mysql-8.0.35\bin\mysqld.exe (mysqld 8.0.35) initializing of server in progress as process 3008</span></span>
+<span class="line"><span>2024-01-04T07:08:20.730739Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.</span></span>
+<span class="line"><span>2024-01-04T07:08:21.033652Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.</span></span>
+<span class="line"><span>2024-01-04T07:08:22.291288Z 6 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: /YlA-/3M_yny</span></span></code></pre>
+</div><p>初始化完成后，会在 Mysql 安装目录生成一个 <code>data</code> 目录，即为 Mysql 数据存储目录。初始化日志最后一行显示的即为初始化的随机密码，权限为 <code>root@localhost</code>。</p>
+<h3 id="安装服务" tabindex="-1">安装服务 <a class="header-anchor" href="#安装服务" aria-label="Permalink to &quot;安装服务&quot;"></a></h3>
+<p>运行 <code>mysqld install</code> 即可在 Windows 系统中安装 Mysql 服务。</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>PS D:\Element\mysql-8.0.35> .\bin\mysqld install</span></span>
+<span class="line"><span>Service successfully installed.</span></span></code></pre>
+</div><h3 id="启动服务" tabindex="-1">启动服务 <a class="header-anchor" href="#启动服务" aria-label="Permalink to &quot;启动服务&quot;"></a></h3>
+<p>可以使用 <code>net start mysql</code> 命令启动 Mysql 服务，如出现如下内容，即为启动成功：</p>
+<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>PS C:\Users\mufeng> net start mysql</span></span>
+<span class="line"><span>MySQL 服务正在启动 .</span></span>
+<span class="line"><span>MySQL 服务已经启动成功。</span></span></code></pre>
+</div><h3 id="测试" tabindex="-1">测试 <a class="header-anchor" href="#测试" aria-label="Permalink to &quot;测试&quot;"></a></h3>
+<p>服务启动之后，即可连接 Mysql：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>PS C:\Users\mufeng> mysql -uroot -p</span></span>
+<span class="line"><span>Enter password: ************</span></span>
+<span class="line"><span>Welcome to the MySQL monitor.  Commands end with ; or \g.</span></span>
+<span class="line"><span>Your MySQL connection id is 8</span></span>
+<span class="line"><span>Server version: 8.0.35</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Copyright (c) 2000, 2023, Oracle and/or its affiliates.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Oracle is a registered trademark of Oracle Corporation and/or its</span></span>
+<span class="line"><span>affiliates. Other names may be trademarks of their respective</span></span>
+<span class="line"><span>owners.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>mysql></span></span></code></pre>
+</div><h3 id="修改-mysql-默认密码" tabindex="-1">修改 Mysql 默认密码 <a class="header-anchor" href="#修改-mysql-默认密码" aria-label="Permalink to &quot;修改 Mysql 默认密码&quot;"></a></h3>
+<p>Mysql 权限管理是基于 <code>域 + 用户 + 权限</code> 的方式，本地对安全性要求不高，此处修改 root 用户随处可以登录。</p>
+<p>如下：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';</span></span>
+<span class="line"><span>Query OK, 0 rows affected (0.01 sec)</span></span>
+<span class="line"><span>mysql> use mysql;</span></span>
+<span class="line"><span>Database changed</span></span>
+<span class="line"><span>mysql> update user set host = '%' where host = 'localhost' and user = 'root';</span></span>
+<span class="line"><span>Query OK, 1 row affected (0.00 sec)</span></span>
+<span class="line"><span>Rows matched: 1  Changed: 1  Warnings: 0</span></span></code></pre>
+</div><p>测试：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>PS C:\Users\mufeng> mysql -uroot -proot</span></span>
+<span class="line"><span>mysql: [Warning] Using a password on the command line interface can be insecure.</span></span>
+<span class="line"><span>Welcome to the MySQL monitor.  Commands end with ; or \g.</span></span>
+<span class="line"><span>Your MySQL connection id is 10</span></span>
+<span class="line"><span>Server version: 8.0.35 MySQL Community Server - GPL</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Copyright (c) 2000, 2023, Oracle and/or its affiliates.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Oracle is a registered trademark of Oracle Corporation and/or its</span></span>
+<span class="line"><span>affiliates. Other names may be trademarks of their respective</span></span>
+<span class="line"><span>owners.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>mysql></span></span></code></pre>
+</div><p>登录成功！至此，Mysql For Windows 安装完成。</p>
+<h2 id="五、其他" tabindex="-1">五、其他 <a class="header-anchor" href="#五、其他" aria-label="Permalink to &quot;五、其他&quot;"></a></h2>
+<h3 id="mysql-服务无法启动" tabindex="-1">Mysql 服务无法启动 <a class="header-anchor" href="#mysql-服务无法启动" aria-label="Permalink to &quot;Mysql 服务无法启动&quot;"></a></h3>
+<p>Mysql 初始化顺序为先修改配置文件，再初始化，如果先初始化，然后修改了诸如忽略大小写等与现有数据冲突的配置，可能会造成无法启动。</p>
 ]]></content:encoded>
         </item>
         <item>
