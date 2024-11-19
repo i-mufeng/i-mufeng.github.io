@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Sat, 16 Nov 2024 09:56:46 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 19 Nov 2024 09:10:33 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -20,41 +20,10 @@
             <pubDate>Sat, 16 Nov 2024 09:54:07 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[分布式集群部署 概述]]></title>
-            <link>https://www.imufeng.cn/training/linux/linux-cluster/overview.html</link>
-            <guid>https://www.imufeng.cn/training/linux/linux-cluster/overview.html</guid>
-            <pubDate>Fri, 15 Nov 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[第一章 概述
-
-&gt; Other Hadoop-related projects at Apache include:
-&gt; - Ambari™: A web-based tool for p]]></description>
-            <content:encoded><![CDATA[<h1 id="第一章-概述" tabindex="-1">第一章 概述 <a class="header-anchor" href="#第一章-概述" aria-label="Permalink to &quot;第一章 概述&quot;"></a></h1>
-<blockquote>
-<h2 id="hadoop相关项目" tabindex="-1">Hadoop相关项目 <a class="header-anchor" href="#hadoop相关项目" aria-label="Permalink to &quot;Hadoop相关项目&quot;"></a></h2>
-<p>Other Hadoop-related projects at Apache include:</p>
-<ul>
-<li><a href="https://ambari.apache.org/" target="_blank" rel="noreferrer"><strong>Ambari™</strong></a>: A web-based tool for provisioning, managing, and monitoring Apache Hadoop clusters which includes support for Hadoop HDFS, Hadoop MapReduce, Hive, HCatalog, HBase, ZooKeeper, Oozie, Pig and Sqoop. Ambari also provides a dashboard for viewing cluster health such as heatmaps and ability to view MapReduce, Pig and Hive applications visually alongwith features to diagnose their performance characteristics in a user-friendly manner.</li>
-<li><a href="https://avro.apache.org/" target="_blank" rel="noreferrer"><strong>Avro™</strong></a>: A data serialization system.</li>
-<li><a href="https://cassandra.apache.org/" target="_blank" rel="noreferrer"><strong>Cassandra™</strong></a>: A scalable multi-master database with no single points of failure.</li>
-<li><a href="https://chukwa.apache.org/" target="_blank" rel="noreferrer"><strong>Chukwa™</strong></a>: A data collection system for managing large distributed systems.</li>
-<li><a href="https://hbase.apache.org/" target="_blank" rel="noreferrer"><strong>HBase™</strong></a>: A scalable, distributed database that supports structured data storage for large tables.</li>
-<li><a href="https://hive.apache.org/" target="_blank" rel="noreferrer"><strong>Hive™</strong></a>: A data warehouse infrastructure that provides data summarization and ad hoc querying.</li>
-<li><a href="https://mahout.apache.org/" target="_blank" rel="noreferrer"><strong>Mahout™</strong></a>: A Scalable machine learning and data mining library.</li>
-<li><a href="https://ozone.apache.org/" target="_blank" rel="noreferrer"><strong>Ozone™</strong></a>: A scalable, redundant, and distributed object store for Hadoop.</li>
-<li><a href="https://pig.apache.org/" target="_blank" rel="noreferrer"><strong>Pig™</strong></a>: A high-level data-flow language and execution framework for parallel computation.</li>
-<li><a href="https://spark.apache.org/" target="_blank" rel="noreferrer"><strong>Spark™</strong></a>: A fast and general compute engine for Hadoop data. Spark provides a simple and expressive programming model that supports a wide range of applications, including ETL, machine learning, stream processing, and graph computation.</li>
-<li><a href="https://submarine.apache.org/" target="_blank" rel="noreferrer"><strong>Submarine</strong></a>: A unified AI platform which allows engineers and data scientists to run Machine Learning and Deep Learning workload in distributed cluster.</li>
-<li><a href="https://tez.apache.org/" target="_blank" rel="noreferrer"><strong>Tez™</strong></a>: A generalized data-flow programming framework, built on Hadoop YARN, which provides a powerful and flexible engine to execute an arbitrary DAG of tasks to process data for both batch and interactive use-cases. Tez is being adopted by Hive™, Pig™ and other frameworks in the Hadoop ecosystem, and also by other commercial software (e.g. ETL tools), to replace Hadoop™ MapReduce as the underlying execution engine.</li>
-<li><a href="https://zookeeper.apache.org/" target="_blank" rel="noreferrer"><strong>ZooKeeper™</strong></a>: A high-performance coordination service for distributed applications.</li>
-</ul>
-</blockquote>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Hadoop 分布式数据库集群部署]]></title>
-            <link>https://www.imufeng.cn/training/linux/linux-cluster/hadoop.html</link>
-            <guid>https://www.imufeng.cn/training/linux/linux-cluster/hadoop.html</guid>
-            <pubDate>Sat, 19 Oct 2024 00:00:00 GMT</pubDate>
+            <title><![CDATA[第三章 Hadoop集群部署]]></title>
+            <link>https://www.imufeng.cn/training/linux/hadoop-cluster/hadoop-install.html</link>
+            <guid>https://www.imufeng.cn/training/linux/hadoop-cluster/hadoop-install.html</guid>
+            <pubDate>Mon, 28 Oct 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[本文将介绍 Hadoop 分布式数据库并五台服务器上部署和搭建 Hadoop 集群，包含 HDFS、YARN、MapReduce 的基本配置。]]></description>
             <content:encoded><![CDATA[<h1 id="hadoop-分布式数据库集群部署" tabindex="-1">Hadoop 分布式数据库集群部署 <a class="header-anchor" href="#hadoop-分布式数据库集群部署" aria-label="Permalink to &quot;Hadoop 分布式数据库集群部署&quot;"></a></h1>
 <h2 id="一、简介" tabindex="-1">一、简介 <a class="header-anchor" href="#一、简介" aria-label="Permalink to &quot;一、简介&quot;"></a></h2>
@@ -357,44 +326,43 @@
             <enclosure url="https://cdn.imufeng.cn/mblog/202411161444264.png" length="0" type="image/png"/>
         </item>
         <item>
-            <title><![CDATA[Linux 分布式大数据及微服务架构搭建和部署]]></title>
-            <link>https://www.imufeng.cn/training/linux/linux-cluster/</link>
-            <guid>https://www.imufeng.cn/training/linux/linux-cluster/</guid>
-            <pubDate>Tue, 15 Oct 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[我们将使用五台 Vmware 环境下的 AlmaLinux9.4 操作系统作为演示环境，讨论分布式大数据和微服务架构的搭建和部署，包括 Hadoop、Zookeeper、Kubernetes等技术。]]></description>
-            <content:encoded><![CDATA[<h1 id="linux-分布式大数据及微服务架构搭建和部署" tabindex="-1">Linux 分布式大数据及微服务架构搭建和部署 <a class="header-anchor" href="#linux-分布式大数据及微服务架构搭建和部署" aria-label="Permalink to &quot;Linux 分布式大数据及微服务架构搭建和部署&quot;"></a></h1>
-<h3 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h3>
+            <title><![CDATA[第二章 分布式环境准备]]></title>
+            <link>https://www.imufeng.cn/training/linux/hadoop-cluster/preparations.html</link>
+            <guid>https://www.imufeng.cn/training/linux/hadoop-cluster/preparations.html</guid>
+            <pubDate>Fri, 25 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+# 第二章 分布式环境准备
+
+
+
+在这个系列中，我们将使用五台 Vmware 环境下的 `AlmaLinux9.4` 操作系统作为演示环境，搭建一个功能完备的分布式的大数据集群，详细讲解各个组件的安装、配置以及优化。整个过程将从基础环境的准备开始，包括操作系统的网络配置、主机名设置、时间同步等关键步骤，然后逐步搭建和集成分布式系统的核心组件，如 HDFS、YARN、Hive 和 Spark 等。
+
+AlmaLinux 是由开源社区维护的 RHEL 发行版，专注于长期稳定版，是 Centos 比较好的替代品，可以完全取代 CentOS 稳定版本，软件方面无须进行任何一行代码的修改，迁移过程相当简单。在 Centos 停止维护之后，我们有很多生产环境都逐步迁移到了 AlmaLinux 并取得了不错的效果，所以我们的操作系统选择 AlmaLinux。
+
+系统
+
+详细说明如下：
+
+- **操作系统：** AlmaLinux9.4 Minimal 安装
+- **虚拟化平台：** Vmware Workstation Pro 17
+- **架构：** 使用五台虚拟机，两台 Master 以及以及三台 Node 节点
+- **网络通信** 使用 Vmware 提供的 NAT 子网，配置静态 IP
+- **SSH 工具：** Termius（支持同时操作多台服务器）
+
+| 名称       | 核心 | 内存 | 域名                    | IP             | 说明   |
+|]]></description>
+            <content:encoded><![CDATA[<h1 id="第二章-分布式环境准备" tabindex="-1">第二章 分布式环境准备 <a class="header-anchor" href="#第二章-分布式环境准备" aria-label="Permalink to &quot;第二章 分布式环境准备&quot;"></a></h1>
+<p>在这个系列中，我们将使用五台 Vmware 环境下的 <code>AlmaLinux9.4</code> 操作系统作为演示环境，搭建一个功能完备的分布式的大数据集群，详细讲解各个组件的安装、配置以及优化。整个过程将从基础环境的准备开始，包括操作系统的网络配置、主机名设置、时间同步等关键步骤，然后逐步搭建和集成分布式系统的核心组件，如 HDFS、YARN、Hive 和 Spark 等。</p>
+<p>AlmaLinux 是由开源社区维护的 RHEL 发行版，专注于长期稳定版，是 Centos 比较好的替代品，可以完全取代 CentOS 稳定版本，软件方面无须进行任何一行代码的修改，迁移过程相当简单。在 Centos 停止维护之后，我们有很多生产环境都逐步迁移到了 AlmaLinux 并取得了不错的效果，所以我们的操作系统选择 AlmaLinux。</p>
+<p>系统</p>
+<p>详细说明如下：</p>
 <ul>
-<li><a href="./overview.html">第一章 概述</a></li>
-<li><a href="./preparations.html">第二章 环境准备</a></li>
-<li><a href="./hadoop.html">第三章 Hadoop 集群部署</a></li>
-</ul>
-]]></content:encoded>
-            <enclosure url="https://cdn.imufeng.cn/mblog/202411161415899.jpg" length="0" type="image/jpg"/>
-        </item>
-        <item>
-            <title><![CDATA[分布式集群部署 环境准备]]></title>
-            <link>https://www.imufeng.cn/training/linux/linux-cluster/preparations.html</link>
-            <guid>https://www.imufeng.cn/training/linux/linux-cluster/preparations.html</guid>
-            <pubDate>Tue, 15 Oct 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[本系列将从 Linux 企业级运维的角度出发，详细介绍 Linux 操作系统下 Nginx + JAVA + MYSQL + Redis + Minio 的安装部署，主要使用编译安装。]]></description>
-            <content:encoded><![CDATA[<h1 id="环境准备" tabindex="-1">环境准备 <a class="header-anchor" href="#环境准备" aria-label="Permalink to &quot;环境准备&quot;"></a></h1>
-<h2 id="一、分布式架构与微服务" tabindex="-1">一、分布式架构与微服务 <a class="header-anchor" href="#一、分布式架构与微服务" aria-label="Permalink to &quot;一、分布式架构与微服务&quot;"></a></h2>
-<p>在中小型软件系统架构中，单一服务器通常能够满足大部分需求，甚至可能显得过剩。因此，云厂商推出了弹性云服务器（ECS），它可以让开发团队能够根据实际需求动态调整资源配置，从而降低成本并提高系统的可用性。对于较短时间内的访问量激增，可以临时增加服务器配置来应对。但随着业务的不断发展，通过简单的增加服务器配置已经难以应对不断增加的用户请求和数据量，这时候就出现了分布式系统架构。</p>
-<p>分布式架构是指将系统的各个组件和服务分布在多台独立的计算机节点上（通常是服务器），他们之间通过网络进行通信和协作，它也被称为分布式计算或分布式数据库，并依靠不同的节点通过公共网络进行通信和同步。这些节点通常代表独立的物理硬件设备，但也可代表单独的软件进程或其他递归封装的系统。常见的分布式架构包括微服务架构、分布式数据库系统、分布式存储系统等。</p>
-<p>微服务架构是一种依赖于多个可独立部署服务的架构方法。这些服务各自拥有独立的业务逻辑和数据库，甚至可以使用不同的底层操作系统和运行环境，专注于实现特定的功能。每个服务都可以独立进行更新、测试、部署和扩展，从而提高了系统的灵活性和可维护性。微服务架构将特定领域的主要业务问题拆解为多个独立的代码库，使得开发团队能够更高效地管理和优化每个服务。这种架构的优势在于，它促进了团队的自治，使不同团队可以并行开发各自的服务而不互相干扰。同时，微服务架构支持技术多样性，团队可以选择最适合他们的工具和框架来实现服务，进一步提升了开发效率。</p>
-<p>系统架构经历从最初的单体架构到服务导向架构（SOA），再到如今的微服务架构，甚至未来的无服务架构，这一过程日益成熟。由于微服务架构的显著优势，许多互联网巨头纷纷转型为微服务架构。例如，阿里等云服务巨头已基本完成了微服务化，推动了微服务的快速发展。在这个云时代，微服务架构已成为云计算的基础设施，赋予企业更高的灵活性和可扩展性。展望未来，微服务架构将继续演进，结合容器化和自动化技术，使得服务的创建、部署和管理变得更加高效。无论是提升开发速度，还是优化资源使用，微服务架构都将为企业在不断变化的市场中提供强有力的支持。</p>
-<h2 id="二、环境说明" tabindex="-1">二、环境说明 <a class="header-anchor" href="#二、环境说明" aria-label="Permalink to &quot;二、环境说明&quot;"></a></h2>
-<p>我们将使用五台 Vmware 环境下的 <code>AlmaLinux9.4</code> 操作系统作为演示环境，安装 Hadoop 大数据全家桶：Hadoop + Zookeeper + Hbase + Hive + Sqoop，你可以选择其他的虚拟化平台，或者元服务器都是可行的。</p>
-<ul>
-<li><strong>操作系统：</strong> AlmaLinux Minimal 安装</li>
-<li><strong>镜像下载：</strong> AlmaLinux OS 9.4 Minimal ISO，点击链接可直接<a href="https://mirrors.aliyun.com/almalinux/9.4/isos/ppc64le/AlmaLinux-9.4-ppc64le-minimal.iso" target="_blank" rel="noreferrer">使用阿里云镜像站下载</a>。</li>
+<li><strong>操作系统：</strong> AlmaLinux9.4 Minimal 安装</li>
 <li><strong>虚拟化平台：</strong> Vmware Workstation Pro 17</li>
-<li><strong>架构：</strong> 使用三台虚拟机，Master 以及 Node01、Node02</li>
-<li><strong>网络：</strong> 使用 NAT 地址转换，进入系统后配置固定 IP</li>
+<li><strong>架构：</strong> 使用五台虚拟机，两台 Master 以及以及三台 Node 节点</li>
+<li><strong>网络通信</strong> 使用 Vmware 提供的 NAT 子网，配置静态 IP</li>
 <li><strong>SSH 工具：</strong> Termius（支持同时操作多台服务器）</li>
 </ul>
-<p>各节点详细信息如下：</p>
 <table tabindex="0">
 <thead>
 <tr>
@@ -451,7 +419,7 @@
 </table>
 <h2 id="三、环境准备" tabindex="-1">三、环境准备 <a class="header-anchor" href="#三、环境准备" aria-label="Permalink to &quot;三、环境准备&quot;"></a></h2>
 <h3 id="_3-1-系统安装" tabindex="-1">3.1 系统安装 <a class="header-anchor" href="#_3-1-系统安装" aria-label="Permalink to &quot;3.1 系统安装&quot;"></a></h3>
-<p>先创建 Master01，配置完成后使用虚拟机克隆拷贝其他四台虚拟机 Master02、Node01、Node02、Node03，虚拟机创建过程略。</p>
+<p>先创建 Master01，配置完成后使用虚拟机克隆拷贝其他四台虚拟机 Master02、Node01、Node02、Node03。</p>
 <p>开启虚拟机，选择 Install AlmaLinux 9.4，使用最小化安装。</p>
 <p><img src="https://cdn.imufeng.cn/mblog/2b74227a1fbd3799fbf7464a93830d16.png" alt="image-20241022143627620"></p>
 <p>语言使用英文，软件源配置阿里镜像站。软件源配置如下：</p>
@@ -604,6 +572,115 @@
 </ul>
 ]]></content:encoded>
             <enclosure url="https://cdn.imufeng.cn/mblog/2b74227a1fbd3799fbf7464a93830d16.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[第一章 Hadoop 分布式大数据系统概述]]></title>
+            <link>https://www.imufeng.cn/training/linux/hadoop-cluster/overview.html</link>
+            <guid>https://www.imufeng.cn/training/linux/hadoop-cluster/overview.html</guid>
+            <pubDate>Fri, 18 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[第一章 Hadoop 分布式大数据系统概述
+ 一、分布式系统架构
+分布式系统是一种通过多个独立节点协作完成任务的系统架构。是指将系统的各个组件和服务分布在多台独立的计算机节点上（通常是服务器），他们之]]></description>
+            <content:encoded><![CDATA[<h1 id="第一章-hadoop-分布式大数据系统概述" tabindex="-1">第一章 Hadoop 分布式大数据系统概述 <a class="header-anchor" href="#第一章-hadoop-分布式大数据系统概述" aria-label="Permalink to &quot;第一章 Hadoop 分布式大数据系统概述&quot;"></a></h1>
+<h2 id="一、分布式系统架构" tabindex="-1">一、分布式系统架构 <a class="header-anchor" href="#一、分布式系统架构" aria-label="Permalink to &quot;一、分布式系统架构&quot;"></a></h2>
+<p>分布式系统是一种通过多个独立节点协作完成任务的系统架构。是指将系统的各个组件和服务分布在多台独立的计算机节点上（通常是服务器），他们之间通过网络进行通信和协作，它也被称为分布式计算或分布式数据库，并依靠不同的节点通过公共网络进行通信和同步。这些节点通常代表独立的物理硬件设备，但也可代表单独的软件进程或其他递归封装的系统。常见的分布式架构包括微服务架构、分布式数据库系统、分布式存储系统等。</p>
+<p>在分布式系统中，各节点之间的通信和协调是关键。每个节点可以看作是一个独立的计算单元，既能完成独立任务，也可以通过网络共享信息和资源。节点间的通信通常通过远程过程调用（RPC）或消息队列等机制实现。然而，由于网络的不可靠性和延迟问题，如何保证节点之间的一致性和数据完整性是分布式系统设计中的重要挑战。</p>
+<p>现代分布式系统的应用范围十分广泛。以 HDFS（Hadoop Distributed File System）为代表的分布式存储系统，能够高效存储和管理海量数据；以 MapReduce 为基础的分布式计算模型，支持复杂数据的并行处理；而像 ZooKeeper 这样的分布式协调服务，则为节点间的同步和元数据管理提供了有力支持。此外，分布式数据库、分布式缓存和分布式消息队列等技术也广泛应用于互联网、电商和金融等行业。</p>
+<p>在云计算和大数据时代，分布式系统的优势更加突出。云计算通过虚拟化技术抽象物理资源，使分布式系统能够更加灵活地部署和管理。大数据处理框架如 Hadoop 和 Spark，利用分布式架构实现了大规模数据的存储和分析，极大地提升了数据驱动业务的能力。分布式系统还在人工智能领域扮演重要角色，支持大规模模型的分布式训练和推理。</p>
+<p>未来，分布式系统将继续推动信息技术的发展。在物联网、边缘计算和区块链等新兴领域，分布式架构正在为复杂的计算场景提供解决方案。通过不断优化和创新，分布式系统将在处理更大规模的数据、更复杂的计算任务方面展现出更强的能力，为数字化社会的发展提供强有力的技术支撑。</p>
+<h2 id="二、hadoop-概述" tabindex="-1">二、Hadoop 概述 <a class="header-anchor" href="#二、hadoop-概述" aria-label="Permalink to &quot;二、Hadoop 概述&quot;"></a></h2>
+<p>Apache Hadoop 是 Apache 软件基金会下的一个开源数据库框架，以其开发者 <strong>Cutting</strong> 儿子的黄色玩具大象 Hadoop 命名。Hadoop 可以编写和运行分布式应用，处理 GB 到 PB 级别的数据。通常来讲，Hadoop 可以指 Hadoop 数据库框架，也可以指基于 Hadoop 的一系列分布式计算平台，包括 HDFS、Zookeeper、MapReduce、HBASE、Hive等等。</p>
+<h3 id="hadoop-数据库框架" tabindex="-1">Hadoop 数据库框架 <a class="header-anchor" href="#hadoop-数据库框架" aria-label="Permalink to &quot;Hadoop 数据库框架&quot;"></a></h3>
+<p>Hadoop 分布式文件系统（Hadoop Distributed File System (HDFS）是 Hadoop 生态的核心，是 Hadoop 的存储层，区别于传统的运行在磁盘的文件系统，它将数据分布式的存储在多个服务器节点上。并对其进行备份，这保证了数据的高可用性和高容错性。</p>
+<p>MapReduce 是 Hadoop 的计算框架，用于并行计算和处理大规模数据。MapReduce 能够将输入的数据切分成小块， 并交给不同的节点进行处理，最终将结果进行合并。</p>
+<p>Yarn 用于资源管理和作业调度。YARN 的基本思想是将资源管理和任务调度/监控的功能拆分为单独的守护进程，拥有一个全局资源管理器 ResourceManager（RM）以及每个应用程序的主控 ApplicationMaster （AM）。他们共同组成 Hadoop 的数据计算框架。</p>
+<p>Hadoop 采用 Master/Slave 架构，一个 Hadoop 集群可能会有成百上千的服务器组成，包括一个 NameNode（中心服务器） 和 一定数目的 DataNode（从节点）组成。NameNode 负责管理文件系统的命名空间（namespace）以及客户端对文件的访问。Datanode 负责管理它所在节点的存储。HDFS 暴露了文件系统的命名空间，用户能够以文件的形式在上面存储数据。从内部看，一个文件其实被分成一个或多个数据块，这些块存储在一组 Datanode 上。 Namenode 执行文件系统的名字空间操作，比如打开、关闭、重命名文件或目录。它也负责确定数据块到具体Datanode 节点的映射。Datanode 负责处理文件系统客户端的读写请求。在 Namenode 的统一调度下进行数据块的创建、删除和复制。</p>
+<p>Namenode 负责维护文件系统的名字空间，任何对文件系统名字空间或属性的修改都将被 Namenode 记录下来。应用程序可以设置 HDFS 保存的文件的副本数目。文件副本的数目称为文件的副本系数，这个信息也是由 Namenode 保存的。</p>
+<h3 id="hadoop-分布式计算平台" tabindex="-1">Hadoop 分布式计算平台 <a class="header-anchor" href="#hadoop-分布式计算平台" aria-label="Permalink to &quot;Hadoop 分布式计算平台&quot;"></a></h3>
+<p>Hadoop 官网列出了相关的项目如下，这些软件平台一同组组成了 Hadoop 分布式大数据集群生态，我们会在后续的内容中单独讨论这些工具。</p>
+<ul>
+<li>
+<p>Ambari™：Hadoop 集群管理工具
+Ambari 是一个基于 Web 的工具，专门用于配置、管理和监控 Apache Hadoop 集群。它支持 Hadoop HDFS、MapReduce、Hive、HCatalog、HBase、ZooKeeper、Oozie、Pig 和 Sqoop 等组件。此外，Ambari 提供直观的仪表盘，可以通过热力图查看集群健康状态，还能以可视化方式查看和诊断 MapReduce、Pig 和 Hive 应用的性能特征，操作简便且用户友好。</p>
+</li>
+<li>
+<p>Avro™：数据序列化系统
+Avro 是一个高效的数据序列化系统，支持将数据序列化为紧凑格式，便于存储和传输。</p>
+</li>
+<li>
+<p>Cassandra™：高可扩展分布式数据库
+Cassandra 是一款高度可扩展的多主节点数据库，没有单点故障风险，适用于分布式数据存储场景。</p>
+</li>
+<li>
+<p>Chukwa™：分布式系统数据采集工具
+Chukwa 是一个用于收集和管理大规模分布式系统数据的工具，帮助简化数据收集和分析。</p>
+</li>
+<li>
+<p>HBase™：分布式表格数据库
+HBase 是一个支持大规模表格数据存储的分布式数据库，能够高效存储和查询结构化数据，特别适用于海量数据场景。</p>
+</li>
+<li>
+<p>Hive™：数据仓库基础设施
+Hive 是一个数据仓库框架，提供数据汇总和临时查询功能，适合大数据的批量分析和查询需求。</p>
+</li>
+<li>
+<p>Mahout™：机器学习与数据挖掘库
+Mahout 是一个可扩展的机器学习和数据挖掘库，支持构建推荐系统、分类器、聚类等机器学习模型。</p>
+</li>
+<li>
+<p>Ozone™：分布式对象存储系统
+Ozone 是一个针对 Hadoop 设计的可扩展、冗余且分布式的对象存储系统，适合存储海量非结构化数据。</p>
+</li>
+<li>
+<p>Pig™：高层次数据流语言
+Pig 是一种高层次的数据流语言和执行框架，支持并行计算，能够简化复杂的大数据处理任务。</p>
+</li>
+<li>
+<p>Spark™：快速通用计算引擎
+Spark 是一个高效的通用计算引擎，专为处理 Hadoop 数据而设计。它提供简单灵活的编程模型，支持多种应用场景，包括 ETL（提取、转换、加载）、机器学习、流处理和图计算。</p>
+</li>
+<li>
+<p>Submarine：统一的人工智能平台
+Submarine 是一个统一的 AI 平台，允许工程师和数据科学家在分布式集群中运行机器学习和深度学习任务。</p>
+</li>
+<li>
+<p>Tez™：通用数据流编程框架
+Tez 是一个通用数据流编程框架，基于 Hadoop YARN 构建。它提供了灵活的引擎，用于执行任意任务的有向无环图（DAG），支持批处理和交互式场景。Tez 已被 Hive 和 Pig 等 Hadoop 生态系统中的框架，以及其他商业软件（如 ETL 工具）采用，用以替代 Hadoop MapReduce 作为底层执行引擎。</p>
+</li>
+<li>
+<p>ZooKeeper™：分布式协调服务
+ZooKeeper 是一个高性能的分布式协调服务，提供分布式应用所需的集中式管理功能，如配置管理、分布式锁和命名服务。</p>
+<h2 id="参考内容" tabindex="-1">参考内容 <a class="header-anchor" href="#参考内容" aria-label="Permalink to &quot;参考内容&quot;"></a></h2>
+</li>
+<li>
+<p><a href="https://hadoop.apache.org/" target="_blank" rel="noreferrer">Hadoop 官网 | Apache Hadoop</a></p>
+</li>
+<li>
+<p><a href="https://www.atlassian.com/zh/microservices/microservices-architecture/distributed-architecture" target="_blank" rel="noreferrer">什么是分布式系统？ | Atlassian</a></p>
+</li>
+<li>
+<p><a href="https://icyfenix.cn/introduction/about-me.html" target="_blank" rel="noreferrer">周志明.凤凰架构-构建可靠的大型分布式系统</a></p>
+</li>
+</ul>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[【大数据系列】 Hadoop 分布式大数据集群部署]]></title>
+            <link>https://www.imufeng.cn/training/linux/hadoop-cluster/</link>
+            <guid>https://www.imufeng.cn/training/linux/hadoop-cluster/</guid>
+            <pubDate>Tue, 15 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[我们将使用五台 Vmware 环境下的 AlmaLinux9.4 操作系统作为演示环境，讨论分布式大数据和微服务架构的搭建和部署，包括 Hadoop、Zookeeper、Kubernetes等技术。]]></description>
+            <content:encoded><![CDATA[<h1 id="hadoop-分布式大数据集群部署" tabindex="-1">Hadoop 分布式大数据集群部署 <a class="header-anchor" href="#hadoop-分布式大数据集群部署" aria-label="Permalink to &quot;Hadoop 分布式大数据集群部署&quot;"></a></h1>
+<p>我们将使用五台 Vmware 环境下的 AlmaLinux9.4 操作系统作为演示环境，讨论分布式大数据和微服务架构的搭建和部署，包括 Hadoop、Zookeeper等。</p>
+<p><img src="https://cdn.imufeng.cn/mblog/202411161415899.jpg" alt=""></p>
+<h3 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h3>
+<ul>
+<li><a href="./overview.html">第一章 分布式大数据及微服务架构概述</a></li>
+<li><a href="./preparations.html">第二章 分布式环境准备</a></li>
+<li><a href="./hadoop-install.html">第三章 Hadoop 集群部署</a></li>
+</ul>
+]]></content:encoded>
+            <enclosure url="https://cdn.imufeng.cn/mblog/202411161415899.jpg" length="0" type="image/jpg"/>
         </item>
         <item>
             <title><![CDATA[Java8 新特性详解]]></title>
@@ -10822,144 +10899,6 @@ SpringBoot 可以通过 `@ConfigurationProperties` 注解来配置多个数据�
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[泛域名证书申请以及部署]]></title>
-            <link>https://www.imufeng.cn/training/linux/acme-sh.html</link>
-            <guid>https://www.imufeng.cn/training/linux/acme-sh.html</guid>
-            <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
-            <description><![CDATA[使用 acme.sh 部署 Let's Encrypt 泛域名证书。]]></description>
-            <content:encoded><![CDATA[<h1 id="泛域名证书申请以及部署" tabindex="-1">泛域名证书申请以及部署 <a class="header-anchor" href="#泛域名证书申请以及部署" aria-label="Permalink to &quot;泛域名证书申请以及部署&quot;"></a></h1>
-<blockquote>
-<p>由于目前所有的域名服务商对于免费CA证书仅提供由<code>digicert</code>机构颁发的，只允许有20个子域名且不支持泛子域名。故使用 <code>Let's Encrypt</code> 的SSL证书</p>
-</blockquote>
-<p>Let’s Encrypt 是一个证书颁发机构，向 Let’s Encrypt 申请证书是免费的。Let's Encrypt 支持泛域名证书，不需要为每个子域名单独申请证书。</p>
-<h2 id="一、acme-sh部署工具" tabindex="-1">一、<code>acme.sh</code>部署工具 <a class="header-anchor" href="#一、acme-sh部署工具" aria-label="Permalink to &quot;一、`acme.sh`部署工具&quot;"></a></h2>
-<p>根据 <code>acme.sh</code> [中文说明](<a href="https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E" target="_blank" rel="noreferrer">说明 · acmesh-official/acme.sh Wiki (github.com)</a>)，<code>acme.sh</code> 实现了 <code>acme</code> 协议, 可以从 <code>let‘s encrypt</code> 生成免费的证书。</p>
-<ol>
-<li>
-<p>其安装只需要执行以下命令，所有用户均可安装：</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://get.acme.sh</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> email=my@example.com</span></span></code></pre>
-</div></li>
-<li>
-<p>该工具将会安装在 <code>~/.acme.sh/</code>  目录下。</p>
-</li>
-</ol>
-<h2 id="二、生成证书" tabindex="-1">二、生成证书 <a class="header-anchor" href="#二、生成证书" aria-label="Permalink to &quot;二、生成证书&quot;"></a></h2>
-<p><code>acme.sh</code> 实现了 <strong><code>acme</code></strong> 协议支持的所有验证协议. 一般有两种方式验证: http 和 dns 验证.</p>
-<h3 id="_2-1-http-方式" tabindex="-1">2.1 http 方式 <a class="header-anchor" href="#_2-1-http-方式" aria-label="Permalink to &quot;2.1 http 方式&quot;"></a></h3>
-<p>http方式需要在该网站根目录放置一个文件来验证域名所有权。</p>
-<p>可以执行以下命令生成：</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> www.mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --webroot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /home/wwwroot/mydomain.com/</span></span></code></pre>
-</div><p>如果你使用apache或者nginx服务，执行以下命令会自动识别并完成验证，完成后还将为你删除文件，做到用户无感验证。</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --apache/nginx</span></span></code></pre>
-</div><p>如果你的服务器80端口是空闲的，<code>acme.sh</code>还将自动配置一个webserver，监听80端口并自动完成配置。</p>
-<h3 id="_2-2-dns-方式" tabindex="-1">2.2 DNS 方式 <a class="header-anchor" href="#_2-2-dns-方式" aria-label="Permalink to &quot;2.2 DNS 方式&quot;"></a></h3>
-<p>DNS方式只需要在配置DNS解析记录即可，且TXT的解析记录对你的服务不会产生影响。</p>
-<p>执行以下命令，按照提示配置DNS解析记录即可：</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
-<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --yes-I-know-dns-manual-mode-enough-go-ahead-please</span></span></code></pre>
-</div><p>解析完成后，执行以下命令来完成验证并重新生成证书：</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --renew</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
-<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --yes-I-know-dns-manual-mode-enough-go-ahead-please</span></span></code></pre>
-</div><blockquote>
-<p>注意：若没有配置Automatic DNS API，该方法将无法自动更新你的域名证书。</p>
-</blockquote>
-<h3 id="_2-3-dns进阶版" tabindex="-1">2.3 DNS进阶版 <a class="header-anchor" href="#_2-3-dns进阶版" aria-label="Permalink to &quot;2.3 DNS进阶版&quot;"></a></h3>
-<p>DNS方式还支持使用域名解析商提供的接口自动进行配置。以阿里云为例：</p>
-<p>首先将阿里云的阿里云 API 的密钥以以下格式配置到环境变量：</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 腾讯云dnspod</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> DP_Id</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"XXXXXXXXXX"</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> DP_Key</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"XXXXXXXXXX"</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 阿里云</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Ali_Key</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"XXXXXXXXXX"</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Ali_Secret</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"XXXXXXXXXX“</span></span></code></pre>
-</div><p>然后就可以通过以下命令生成证书：</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 腾讯云</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dns_dp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.example.com</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 阿里云</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dns_ali</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.example.com</span></span></code></pre>
-</div><h2 id="三、安装配置证书" tabindex="-1">三、安装配置证书 <a class="header-anchor" href="#三、安装配置证书" aria-label="Permalink to &quot;三、安装配置证书&quot;"></a></h2>
-<p>此处以Podman Nginx容器配置证书举例。</p>
-<h3 id="_3-1-生成nginx配置" tabindex="-1">3.1 生成Nginx配置 <a class="header-anchor" href="#_3-1-生成nginx配置" aria-label="Permalink to &quot;3.1 生成Nginx配置&quot;"></a></h3>
-<p>NGINX配置文件可以使用[NGINXCONF.IO](<a href="https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN" target="_blank" rel="noreferrer">NGINXConfig | DigitalOcean</a>)配置。页面为中文且较为友好。</p>
-<h3 id="_3-2-生成-dhparam-pem" tabindex="-1">3.2 生成 dhparam.pem <a class="header-anchor" href="#_3-2-生成-dhparam-pem" aria-label="Permalink to &quot;3.2 生成 dhparam.pem&quot;"></a></h3>
-<p>openssl dhparam用于生成和管理dh文件。dh(Diffie-Hellman)是著名的密钥交换协议，或称为密钥协商协议，它可以保证通信双方安全地交换密钥。但注意，它不是加密算法，所以不提供加密功能，仅仅只是保护密钥交换的过程。在openvpn中就使用了该交换协议。</p>
-<p>执行以下命令即可生成：</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">openssl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dhparam</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -out</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ~/dhparam.pem</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2048</span></span></code></pre>
-</div><p>如果你使用上面提供的NGINXCONFIG.IO生成了配置文件，此处配置在nginx.conf文件中：</p>
-<div class="language-ini vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ini</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Diffie-Hellman parameter for DHE ciphersuites                                         </span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">ssl_dhparam /etc/nginx/dhparam.pem</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">;</span></span></code></pre>
-</div><h3 id="_3-3-自动更新证书" tabindex="-1">3.3 自动更新证书 <a class="header-anchor" href="#_3-3-自动更新证书" aria-label="Permalink to &quot;3.3 自动更新证书&quot;"></a></h3>
-<p>以下为podman Nginx容器自动更新证书的命令：</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">~</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/.acme.sh/acme.sh --install-cert </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\ </span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">-d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \ </span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">--key-file</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/nginx/ssl/example.com.key</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \ </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">#</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 私钥地址</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">--fullchain-file</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/nginx/ssl/example.com.cer</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  \ </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">#</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 公钥地址</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">--reloadcmd</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "podman exec -it nginx nginx force-reload"</span></span></code></pre>
-</div><blockquote>
-<p>注意：<code>nginx reload</code> 命令并不会更新证书，需要使用 <code>nginx force-reload</code></p>
-</blockquote>
-<h2 id="四、查看已安装证书信息" tabindex="-1">四、查看已安装证书信息 <a class="header-anchor" href="#四、查看已安装证书信息" aria-label="Permalink to &quot;四、查看已安装证书信息&quot;"></a></h2>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --info</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 会输出如下内容：</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">DOMAIN_CONF</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/root/.acme.sh/example.com/example.com.conf</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_Domain</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">example.com</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_Alt</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">no</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_Webroot</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">dns_ali</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_PreHook</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_PostHook</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RenewHook</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_API</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">https://acme-v02.api.letsencrypt.org/directory</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_Keylength</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_OrderFinalize</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">https://acme-v02.api.letsencrypt.org/acme/finalize/23xxxx150/781xxxx4310</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_LinkOrder</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">https://acme-v02.api.letsencrypt.org/acme/order/233xxx150/781xxxx4310</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_LinkCert</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">https://acme-v02.api.letsencrypt.org/acme/cert/04cbd28xxxxxx349ecaea8d07</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_CertCreateTime</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">1649358725</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_CertCreateTimeStr</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Thu</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Apr</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  7</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 19:12:05</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> UTC</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2022</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_NextRenewTimeStr</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Mon</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Jun</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  6</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 19:12:05</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> UTC</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2022</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_NextRenewTime</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">1654456325</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RealCertPath</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RealCACertPath</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RealKeyPath</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/etc/acme/example.com/privkey.pem</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_ReloadCmd</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">service</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> nginx</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> force-reload</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RealFullChainPath</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/etc/acme/example.com/chain.pem</span></span></code></pre>
-</div><h2 id="五、更新证书" tabindex="-1">五、更新证书 <a class="header-anchor" href="#五、更新证书" aria-label="Permalink to &quot;五、更新证书&quot;"></a></h2>
-<p>目前证书在 60 天以后会自动更新，使用crontab 工具。无需任何操作。</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">crontab</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -l</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">56</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "/root/.acme.sh"/acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --cron</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --home</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "/root/.acme.sh"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /dev/null</span></span></code></pre>
-</div><h2 id="六、修改reloadcmd" tabindex="-1">六、修改ReloadCmd <a class="header-anchor" href="#六、修改reloadcmd" aria-label="Permalink to &quot;六、修改ReloadCmd&quot;"></a></h2>
-<p>根据官网的说法，不建议直接修改<code>example.conf</code>文件来达到修改ReloadCmd的目的，且目前修改<code>ReloadCmd</code>没有专门的命令，可以通过重新安装证书来修改。</p>
-<h2 id="七、更新-acme-sh" tabindex="-1">七、更新 acme.sh <a class="header-anchor" href="#七、更新-acme-sh" aria-label="Permalink to &quot;七、更新 acme.sh&quot;"></a></h2>
-<p>升级 acme.sh 到最新版 :</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --upgrade</span></span></code></pre>
-</div><p>如果你不想手动升级, 可以开启自动升级:</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --upgrade</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --auto-upgrade</span></span></code></pre>
-</div><p>之后, acme.sh 就会自动保持更新了.</p>
-<p>你也可以随时关闭自动更新:</p>
-<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --upgrade</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --auto-upgrade</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  0</span></span></code></pre>
-</div><h2 id="参考链接" tabindex="-1">参考链接 <a class="header-anchor" href="#参考链接" aria-label="Permalink to &quot;参考链接&quot;"></a></h2>
-<ul>
-<li>
-<p><a href="https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E" target="_blank" rel="noreferrer">acme.sh中文文档  (github.com)</a></p>
-</li>
-<li>
-<p><a href="https://zhuanlan.zhihu.com/p/445852299" target="_blank" rel="noreferrer">Let's Encrypt SSL 泛域名证书申请和配置 - 知乎 (zhihu.com)</a></p>
-</li>
-<li>
-<p><a href="https://github.com/acmesh-official/acme.sh/issues/1439" target="_blank" rel="noreferrer">acme.sh · Issue #1439 · (github.com)</a></p>
-</li>
-<li>
-<p><a href="https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN" target="_blank" rel="noreferrer">NGINXConfig | DigitalOcean</a></p>
-</li>
-<li>
-<p><a href="https://www.cnblogs.com/f-ck-need-u/p/7103791.html" target="_blank" rel="noreferrer">openssl dhparam(密钥交换) - 骏马金龙 - 博客园 (cnblogs.com)</a></p>
-</li>
-</ul>
-]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[基于DockerCompose的WordPress环境部署（附配置优化）]]></title>
             <link>https://www.imufeng.cn/training/linux/wordpress-by-docker-compose.html</link>
             <guid>https://www.imufeng.cn/training/linux/wordpress-by-docker-compose.html</guid>
@@ -13021,6 +12960,144 @@ Mariadb是开源的关系型数据库服务器软件
 </tr>
 </tbody>
 </table>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[泛域名证书申请以及部署]]></title>
+            <link>https://www.imufeng.cn/training/linux/acme-sh.html</link>
+            <guid>https://www.imufeng.cn/training/linux/acme-sh.html</guid>
+            <pubDate>Fri, 25 Mar 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[使用 acme.sh 部署 Let's Encrypt 泛域名证书。]]></description>
+            <content:encoded><![CDATA[<h1 id="泛域名证书申请以及部署" tabindex="-1">泛域名证书申请以及部署 <a class="header-anchor" href="#泛域名证书申请以及部署" aria-label="Permalink to &quot;泛域名证书申请以及部署&quot;"></a></h1>
+<blockquote>
+<p>由于目前所有的域名服务商对于免费CA证书仅提供由<code>digicert</code>机构颁发的，只允许有20个子域名且不支持泛子域名。故使用 <code>Let's Encrypt</code> 的SSL证书</p>
+</blockquote>
+<p>Let’s Encrypt 是一个证书颁发机构，向 Let’s Encrypt 申请证书是免费的。Let's Encrypt 支持泛域名证书，不需要为每个子域名单独申请证书。</p>
+<h2 id="一、acme-sh部署工具" tabindex="-1">一、<code>acme.sh</code>部署工具 <a class="header-anchor" href="#一、acme-sh部署工具" aria-label="Permalink to &quot;一、`acme.sh`部署工具&quot;"></a></h2>
+<p>根据 <code>acme.sh</code> [中文说明](<a href="https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E" target="_blank" rel="noreferrer">说明 · acmesh-official/acme.sh Wiki (github.com)</a>)，<code>acme.sh</code> 实现了 <code>acme</code> 协议, 可以从 <code>let‘s encrypt</code> 生成免费的证书。</p>
+<ol>
+<li>
+<p>其安装只需要执行以下命令，所有用户均可安装：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://get.acme.sh</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> email=my@example.com</span></span></code></pre>
+</div></li>
+<li>
+<p>该工具将会安装在 <code>~/.acme.sh/</code>  目录下。</p>
+</li>
+</ol>
+<h2 id="二、生成证书" tabindex="-1">二、生成证书 <a class="header-anchor" href="#二、生成证书" aria-label="Permalink to &quot;二、生成证书&quot;"></a></h2>
+<p><code>acme.sh</code> 实现了 <strong><code>acme</code></strong> 协议支持的所有验证协议. 一般有两种方式验证: http 和 dns 验证.</p>
+<h3 id="_2-1-http-方式" tabindex="-1">2.1 http 方式 <a class="header-anchor" href="#_2-1-http-方式" aria-label="Permalink to &quot;2.1 http 方式&quot;"></a></h3>
+<p>http方式需要在该网站根目录放置一个文件来验证域名所有权。</p>
+<p>可以执行以下命令生成：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> www.mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --webroot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /home/wwwroot/mydomain.com/</span></span></code></pre>
+</div><p>如果你使用apache或者nginx服务，执行以下命令会自动识别并完成验证，完成后还将为你删除文件，做到用户无感验证。</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --apache/nginx</span></span></code></pre>
+</div><p>如果你的服务器80端口是空闲的，<code>acme.sh</code>还将自动配置一个webserver，监听80端口并自动完成配置。</p>
+<h3 id="_2-2-dns-方式" tabindex="-1">2.2 DNS 方式 <a class="header-anchor" href="#_2-2-dns-方式" aria-label="Permalink to &quot;2.2 DNS 方式&quot;"></a></h3>
+<p>DNS方式只需要在配置DNS解析记录即可，且TXT的解析记录对你的服务不会产生影响。</p>
+<p>执行以下命令，按照提示配置DNS解析记录即可：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --yes-I-know-dns-manual-mode-enough-go-ahead-please</span></span></code></pre>
+</div><p>解析完成后，执行以下命令来完成验证并重新生成证书：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --renew</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mydomain.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --yes-I-know-dns-manual-mode-enough-go-ahead-please</span></span></code></pre>
+</div><blockquote>
+<p>注意：若没有配置Automatic DNS API，该方法将无法自动更新你的域名证书。</p>
+</blockquote>
+<h3 id="_2-3-dns进阶版" tabindex="-1">2.3 DNS进阶版 <a class="header-anchor" href="#_2-3-dns进阶版" aria-label="Permalink to &quot;2.3 DNS进阶版&quot;"></a></h3>
+<p>DNS方式还支持使用域名解析商提供的接口自动进行配置。以阿里云为例：</p>
+<p>首先将阿里云的阿里云 API 的密钥以以下格式配置到环境变量：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 腾讯云dnspod</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> DP_Id</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"XXXXXXXXXX"</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> DP_Key</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"XXXXXXXXXX"</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 阿里云</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Ali_Key</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"XXXXXXXXXX"</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> Ali_Secret</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"XXXXXXXXXX“</span></span></code></pre>
+</div><p>然后就可以通过以下命令生成证书：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 腾讯云</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dns_dp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.example.com</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 阿里云</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --issue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dns_ali</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.example.com</span></span></code></pre>
+</div><h2 id="三、安装配置证书" tabindex="-1">三、安装配置证书 <a class="header-anchor" href="#三、安装配置证书" aria-label="Permalink to &quot;三、安装配置证书&quot;"></a></h2>
+<p>此处以Podman Nginx容器配置证书举例。</p>
+<h3 id="_3-1-生成nginx配置" tabindex="-1">3.1 生成Nginx配置 <a class="header-anchor" href="#_3-1-生成nginx配置" aria-label="Permalink to &quot;3.1 生成Nginx配置&quot;"></a></h3>
+<p>NGINX配置文件可以使用[NGINXCONF.IO](<a href="https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN" target="_blank" rel="noreferrer">NGINXConfig | DigitalOcean</a>)配置。页面为中文且较为友好。</p>
+<h3 id="_3-2-生成-dhparam-pem" tabindex="-1">3.2 生成 dhparam.pem <a class="header-anchor" href="#_3-2-生成-dhparam-pem" aria-label="Permalink to &quot;3.2 生成 dhparam.pem&quot;"></a></h3>
+<p>openssl dhparam用于生成和管理dh文件。dh(Diffie-Hellman)是著名的密钥交换协议，或称为密钥协商协议，它可以保证通信双方安全地交换密钥。但注意，它不是加密算法，所以不提供加密功能，仅仅只是保护密钥交换的过程。在openvpn中就使用了该交换协议。</p>
+<p>执行以下命令即可生成：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">openssl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dhparam</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -out</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ~/dhparam.pem</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2048</span></span></code></pre>
+</div><p>如果你使用上面提供的NGINXCONFIG.IO生成了配置文件，此处配置在nginx.conf文件中：</p>
+<div class="language-ini vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ini</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Diffie-Hellman parameter for DHE ciphersuites                                         </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">ssl_dhparam /etc/nginx/dhparam.pem</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">;</span></span></code></pre>
+</div><h3 id="_3-3-自动更新证书" tabindex="-1">3.3 自动更新证书 <a class="header-anchor" href="#_3-3-自动更新证书" aria-label="Permalink to &quot;3.3 自动更新证书&quot;"></a></h3>
+<p>以下为podman Nginx容器自动更新证书的命令：</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">~</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/.acme.sh/acme.sh --install-cert </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\ </span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">-d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \ </span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">--key-file</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/nginx/ssl/example.com.key</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \ </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">#</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 私钥地址</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">--fullchain-file</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/nginx/ssl/example.com.cer</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  \ </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">#</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 公钥地址</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">--reloadcmd</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "podman exec -it nginx nginx force-reload"</span></span></code></pre>
+</div><blockquote>
+<p>注意：<code>nginx reload</code> 命令并不会更新证书，需要使用 <code>nginx force-reload</code></p>
+</blockquote>
+<h2 id="四、查看已安装证书信息" tabindex="-1">四、查看已安装证书信息 <a class="header-anchor" href="#四、查看已安装证书信息" aria-label="Permalink to &quot;四、查看已安装证书信息&quot;"></a></h2>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --info</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 会输出如下内容：</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">DOMAIN_CONF</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/root/.acme.sh/example.com/example.com.conf</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_Domain</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">example.com</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_Alt</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">no</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_Webroot</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">dns_ali</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_PreHook</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_PostHook</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RenewHook</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_API</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">https://acme-v02.api.letsencrypt.org/directory</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_Keylength</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_OrderFinalize</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">https://acme-v02.api.letsencrypt.org/acme/finalize/23xxxx150/781xxxx4310</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_LinkOrder</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">https://acme-v02.api.letsencrypt.org/acme/order/233xxx150/781xxxx4310</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_LinkCert</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">https://acme-v02.api.letsencrypt.org/acme/cert/04cbd28xxxxxx349ecaea8d07</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_CertCreateTime</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">1649358725</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_CertCreateTimeStr</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Thu</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Apr</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  7</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 19:12:05</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> UTC</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2022</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_NextRenewTimeStr</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Mon</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Jun</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  6</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 19:12:05</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> UTC</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2022</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_NextRenewTime</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">1654456325</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RealCertPath</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RealCACertPath</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RealKeyPath</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/etc/acme/example.com/privkey.pem</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_ReloadCmd</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">service</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> nginx</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> force-reload</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Le_RealFullChainPath</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/etc/acme/example.com/chain.pem</span></span></code></pre>
+</div><h2 id="五、更新证书" tabindex="-1">五、更新证书 <a class="header-anchor" href="#五、更新证书" aria-label="Permalink to &quot;五、更新证书&quot;"></a></h2>
+<p>目前证书在 60 天以后会自动更新，使用crontab 工具。无需任何操作。</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">crontab</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -l</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">56</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "/root/.acme.sh"/acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --cron</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --home</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "/root/.acme.sh"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /dev/null</span></span></code></pre>
+</div><h2 id="六、修改reloadcmd" tabindex="-1">六、修改ReloadCmd <a class="header-anchor" href="#六、修改reloadcmd" aria-label="Permalink to &quot;六、修改ReloadCmd&quot;"></a></h2>
+<p>根据官网的说法，不建议直接修改<code>example.conf</code>文件来达到修改ReloadCmd的目的，且目前修改<code>ReloadCmd</code>没有专门的命令，可以通过重新安装证书来修改。</p>
+<h2 id="七、更新-acme-sh" tabindex="-1">七、更新 acme.sh <a class="header-anchor" href="#七、更新-acme-sh" aria-label="Permalink to &quot;七、更新 acme.sh&quot;"></a></h2>
+<p>升级 acme.sh 到最新版 :</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --upgrade</span></span></code></pre>
+</div><p>如果你不想手动升级, 可以开启自动升级:</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --upgrade</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --auto-upgrade</span></span></code></pre>
+</div><p>之后, acme.sh 就会自动保持更新了.</p>
+<p>你也可以随时关闭自动更新:</p>
+<div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">acme.sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --upgrade</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --auto-upgrade</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  0</span></span></code></pre>
+</div><h2 id="参考链接" tabindex="-1">参考链接 <a class="header-anchor" href="#参考链接" aria-label="Permalink to &quot;参考链接&quot;"></a></h2>
+<ul>
+<li>
+<p><a href="https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E" target="_blank" rel="noreferrer">acme.sh中文文档  (github.com)</a></p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/445852299" target="_blank" rel="noreferrer">Let's Encrypt SSL 泛域名证书申请和配置 - 知乎 (zhihu.com)</a></p>
+</li>
+<li>
+<p><a href="https://github.com/acmesh-official/acme.sh/issues/1439" target="_blank" rel="noreferrer">acme.sh · Issue #1439 · (github.com)</a></p>
+</li>
+<li>
+<p><a href="https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN" target="_blank" rel="noreferrer">NGINXConfig | DigitalOcean</a></p>
+</li>
+<li>
+<p><a href="https://www.cnblogs.com/f-ck-need-u/p/7103791.html" target="_blank" rel="noreferrer">openssl dhparam(密钥交换) - 骏马金龙 - 博客园 (cnblogs.com)</a></p>
+</li>
+</ul>
 ]]></content:encoded>
         </item>
     </channel>
