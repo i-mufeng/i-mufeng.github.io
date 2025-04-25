@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Fri, 25 Apr 2025 09:11:41 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 25 Apr 2025 09:14:59 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -277,6 +277,7 @@
 <p>挂载文件后，我们可以使用 <code>blkid</code> 命令查看磁盘对应 id。</p>
 <p>编辑该文件后，执行 <code>mount -a</code> 即可将该文件规定的挂载点重新挂载。</p>
 <h2 id="二、开始操作" tabindex="-1">二、开始操作 <a class="header-anchor" href="#二、开始操作" aria-label="Permalink to &quot;二、开始操作&quot;"></a></h2>
+<h3 id="_2-1-分区操作" tabindex="-1">2.1 分区操作 <a class="header-anchor" href="#_2-1-分区操作" aria-label="Permalink to &quot;2.1 分区操作&quot;"></a></h3>
 <ol>
 <li>
 <p>使用 parted 进行分区操作。</p>
@@ -312,8 +313,8 @@
 <div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>(parted) quit                                                             </span></span>
 <span class="line"><span>Information: You may need to update /etc/fstab.</span></span></code></pre>
 </div></li>
-<li>
-<p>开始分区</p>
+</ol>
+<h3 id="_2-2-分区格式化" tabindex="-1">2.2 分区格式化 <a class="header-anchor" href="#_2-2-分区格式化" aria-label="Permalink to &quot;2.2 分区格式化&quot;"></a></h3>
 <div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>[root@mufeng mufeng]# mkfs.xfs /dev/vdb1 </span></span>
 <span class="line"><span>meta-data=/dev/vdb1              isize=512    agcount=4, agsize=19660736 blks</span></span>
 <span class="line"><span>         =                       sectsz=512   attr=2, projid32bit=1</span></span>
@@ -338,7 +339,8 @@
 <span class="line"><span>         =                       sectsz=512   sunit=0 blks, lazy-count=1</span></span>
 <span class="line"><span>realtime =none                   extsz=4096   blocks=0, rtextents=0</span></span>
 <span class="line"><span>Discarding blocks...Done.</span></span></code></pre>
-</div></li>
+</div><h3 id="_2-3-挂载" tabindex="-1">2.3 挂载 <a class="header-anchor" href="#_2-3-挂载" aria-label="Permalink to &quot;2.3 挂载&quot;"></a></h3>
+<ol>
 <li>
 <p>挂载</p>
 <p>创建挂载点：批量创建</p>
@@ -371,8 +373,8 @@
 <p>执行挂载</p>
 <div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>[root@mufeng mufeng]# mount -a</span></span></code></pre>
 </div></li>
-<li>
-<p>查看结果</p>
+</ol>
+<h3 id="_2-4-查看结果" tabindex="-1">2.4 查看结果 <a class="header-anchor" href="#_2-4-查看结果" aria-label="Permalink to &quot;2.4 查看结果&quot;"></a></h3>
 <div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>[root@mufeng mufeng]# lsblk</span></span>
 <span class="line"><span>NAME               MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS</span></span>
 <span class="line"><span>sr0                 11:0    1    2G  0 rom  </span></span>
@@ -384,9 +386,7 @@
 <span class="line"><span>vdb                252:16   0 1000G  0 disk </span></span>
 <span class="line"><span>├─vdb1             252:17   0  300G  0 part /mufeng/service</span></span>
 <span class="line"><span>└─vdb2             252:18   0  700G  0 part /mufeng/data</span></span></code></pre>
-</div></li>
-</ol>
-<p>至此，该磁盘的新建以及分区挂载操作完成！</p>
+</div><p>至此，该磁盘的新建以及分区挂载操作完成！</p>
 ]]></content:encoded>
         </item>
         <item>
