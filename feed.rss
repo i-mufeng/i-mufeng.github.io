@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Fri, 25 Apr 2025 09:17:15 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 25 Apr 2025 09:44:03 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -387,6 +387,7 @@
 <span class="line"><span>└─vdb2             252:18   0  700G  0 part /mufeng/data</span></span></code></pre>
 </div><p>至此，该磁盘的新建以及分区挂载操作完成！</p>
 ]]></content:encoded>
+            <enclosure url="https://cdn.imufeng.cn/mblog/2025/disk-management.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Linux 企业级运维]]></title>
