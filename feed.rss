@@ -2,22 +2,270 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Mblog - 沐风的个人博客</title>
-        <link>https://www.imufeng.cn</link>
+        <link>https://www.imufeng.cn/</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Wed, 20 Aug 2025 12:54:52 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 09 Mar 2026 09:12:59 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
         <image>
             <title>Mblog - 沐风的个人博客</title>
             <url>https://www.imufeng.cn/logo.svg</url>
-            <link>https://www.imufeng.cn</link>
+            <link>https://www.imufeng.cn/</link>
         </image>
         <copyright>Mblog © 2021-2025 Created by 沐风</copyright>
         <item>
+            <title><![CDATA[科技周报 - 2024_50]]></title>
+            <link>https://www.imufeng.cn/notes/technology-weekly/2024/2024-50.html</link>
+            <guid isPermaLink="false">https://www.imufeng.cn/notes/technology-weekly/2024/2024-50.html</guid>
+            <pubDate>Mon, 09 Mar 2026 09:12:21 GMT</pubDate>
+            <description><![CDATA[科技周报 - 2024_50
+ 技术资讯
+ Spring Boot 3.4 已正式发布
+ 开源推荐]]></description>
+            <content:encoded><![CDATA[<h1 id="科技周报-2024-50" tabindex="-1">科技周报 - 2024_50 <a class="header-anchor" href="#科技周报-2024-50" aria-label="Permalink to &quot;科技周报 - 2024_50&quot;"></a></h1>
+<h2 id="技术资讯" tabindex="-1">技术资讯 <a class="header-anchor" href="#技术资讯" aria-label="Permalink to &quot;技术资讯&quot;"></a></h2>
+<h3 id="spring-boot-3-4-已正式发布" tabindex="-1">Spring Boot 3.4 已正式发布 <a class="header-anchor" href="#spring-boot-3-4-已正式发布" aria-label="Permalink to &quot;Spring Boot 3.4 已正式发布&quot;"></a></h3>
+<h2 id="开源推荐" tabindex="-1">开源推荐 <a class="header-anchor" href="#开源推荐" aria-label="Permalink to &quot;开源推荐&quot;"></a></h2>
+<h3 id="" tabindex="-1"> <a class="header-anchor" href="#" aria-label="Permalink to &quot;&quot;"></a></h3>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[科技周报]]></title>
+            <link>https://www.imufeng.cn/notes/technology-weekly/</link>
+            <guid isPermaLink="false">https://www.imufeng.cn/notes/technology-weekly/</guid>
+            <pubDate>Mon, 09 Mar 2026 09:12:21 GMT</pubDate>
+            <description><![CDATA[科技周报
+ 目录
+2024-50]]></description>
+            <content:encoded><![CDATA[<h1 id="科技周报" tabindex="-1">科技周报 <a class="header-anchor" href="#科技周报" aria-label="Permalink to &quot;科技周报&quot;"></a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
+<p><a href="./2024/2024-50.html">2024-50</a></p>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Linux 工具分享]]></title>
+            <link>https://www.imufeng.cn/training/linux/muffin-tools/</link>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/muffin-tools/</guid>
+            <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Linux 运维工具分享，包括开源的或者博主自己做的一些。]]></description>
+            <content:encoded><![CDATA[<h1 id="linux-工具分享" tabindex="-1">Linux 工具分享 <a class="header-anchor" href="#linux-工具分享" aria-label="Permalink to &quot;Linux 工具分享&quot;"></a></h1>
+<p>这里会分享一些 Linux 运维相关的工具。</p>
+<ul>
+<li><a href="./muffin-sync.html">分布式集群文件批量同步工具</a></li>
+</ul>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[分布式集群文件批量同步工具]]></title>
+            <link>https://www.imufeng.cn/training/linux/muffin-tools/muffin-sync.html</link>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/muffin-tools/muffin-sync.html</guid>
+            <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[基于 async 快速实现分布式集群中配置文件同步的问题，如快速同步 Hadoop 配置到其他节点。]]></description>
+            <content:encoded><![CDATA[<h1 id="分布式集群文件批量同步工具" tabindex="-1">分布式集群文件批量同步工具 <a class="header-anchor" href="#分布式集群文件批量同步工具" aria-label="Permalink to &quot;分布式集群文件批量同步工具&quot;"></a></h1>
+<p>为了解决分布式集群中文件同步的问题，如快速同步 Hadoop 配置到其他节点，我们开发了一款名为&quot;分布式集群文件批量同步工具&quot;的工具。该工具旨在帮助用户高效地管理和同步大量数据在多个节点之间。</p>
+<p>该工具基于 async，使用 FishShell 的 function，可以快速将文件改动同步到多个节点，支持文件同步、路径同步。</p>
+<h3 id="使用方法" tabindex="-1">使用方法 <a class="header-anchor" href="#使用方法" aria-label="Permalink to &quot;使用方法&quot;"></a></h3>
+<p>该脚本可以接受0-2个参数，可以直接传入文件名：</p>
+<ul>
+<li>不传入参数：直接同步当前路径到所有其他节点，目标节点路径与传入路径的绝对路径一致。。</li>
+<li>一个参数：同步指定参数路径到所有节点，目标节点路径与传入路径的绝对路径一致。</li>
+<li>两个参数：同步第一个参数路径到所有其他节点的第二个参数路径。</li>
+</ul>
+<p>示例如下：</p>
+<p><img src="https://cdn.imufeng.cn/mblog/image-20260309161417856.png" alt="image-20260309161417856"></p>
+<p><img src="https://cdn.imufeng.cn/mblog/image-20260309161441905.png" alt="image-20260309161441905"></p>
+<h3 id="安装" tabindex="-1">安装 <a class="header-anchor" href="#安装" aria-label="Permalink to &quot;安装&quot;"></a></h3>
+<p>需要在  <code>~/.config/</code> 下新建一个 <code>nodes</code> 文件，写入需要同步的节点（需要与 hostname 保持一致）：</p>
+<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>master.local</span></span>
+<span class="line"><span>node01.local</span></span>
+<span class="line"><span>node02.local</span></span></code></pre>
+</div><p>将脚本文件写入 <code>~/.config/fish/functions/ms.fish</code>即可：</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> ms</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> --description </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"MuffinTool-Sync: 同步文件到多个远程节点"</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 配置路径</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    set</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -l</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nodes_file</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ~/.config/nodes</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    set</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -l</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> verbose</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 检查是否是 verbose 模式</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> contains</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --verbose</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $argv; </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">or</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> contains</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -v</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $argv</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> verbose</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        set</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> argv[</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">contains</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -i</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --verbose</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $argv)</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">]</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> 2></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/dev/null</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        set</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> argv[</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">contains</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -i</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -v</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $argv)</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">]</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> 2></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/dev/null</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    end</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 检查配置文件是否存在</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> not</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> test</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -f</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $nodes_file</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "❌ 错误：未找到配置文件 ~/.config/nodes"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "💡 请创建该文件并添加远程节点（每行一个）："</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "   echo </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">user@server1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> >> ~/.config/nodes"</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    end</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 获取当前主机名（用于跳过本地节点）</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    set</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -l</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> current_hostname</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (hostname)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 读取节点列表（排除空行和注释）</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    set</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -l</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nodes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (grep </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">-v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '^#'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $nodes_file </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">|</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> grep</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '^[[:space:]]*$'</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> string</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> trim</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> test</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (count $nodes) -eq 0</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "⚠️ 警告：配置文件中没有有效的远程节点"</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    end</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 解析参数</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    set</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -l</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> src_path</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    set</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -l</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> remote_target</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    set</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -l</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> is_file</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    switch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (count $argv)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        case 0</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> src_path</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (pwd)</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> remote_target</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $src_path</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        case 1</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            if</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> string</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> match</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -q</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "/*"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $argv</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">[1]</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> src_path</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (string </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">trim</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -r</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -c</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '/'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $argv</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">[1]</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            else</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> src_path</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (string </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">trim</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -r</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -c</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '/'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (realpath $argv</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">[1]</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">))</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            end</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> remote_target</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $src_path</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        case 2</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            if</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> string</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> match</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -q</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "/*"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $argv</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">[1]</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> src_path</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (string </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">trim</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -r</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -c</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '/'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $argv</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">[1]</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            else</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> src_path</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (string </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">trim</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -r</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -c</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '/'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (realpath $argv</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">[1]</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">))</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            end</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> remote_target</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (string </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">trim</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -r</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -c</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '/'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $argv</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">[2]</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        case </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'*'</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "❌ 用法错误"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "   msy              # 同步当前目录"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "   msy &#x3C;path>       # 同步指定路径"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "   msy &#x3C;src> &#x3C;dst>  # 同步到远程指定路径"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "   msy -v/--verbose # 显示详细日志"</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    end</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 验证源路径存在</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> not</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> test</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -e</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $src_path</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "❌ 错误：源路径不存在: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$src_path</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    end</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 判断是文件还是目录</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> test</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -f</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $src_path</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> is_file</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    end</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 计算实际需要同步的节点数（排除本地）</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    set</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -l</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> total_nodes</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">in</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $nodes</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        set</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -l</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> node_hostname</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (string </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">split</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '@'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $node)[-1]</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> test</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$node_hostname</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> !=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$current_hostname</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> total_nodes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (math $total_nodes </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        end</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    end</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> test</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $total_nodes </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">-eq</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "⚠️ 没有需要同步的远程节点（全部跳过）"</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    end</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 输出头部</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ""</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "🚀 多节点同步启动"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "   📁 源路径: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$src_path</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "   🎯 远程路径: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$remote_target</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "   🖥️  目标节点: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$total_nodes</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 个"</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> test</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $verbose </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">-eq</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "   📢 详细模式: 开启"</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    end</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ""</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 统计变量</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    set</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -l</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> success_count</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    set</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -l</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> fail_count</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    set</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -l</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> skip_count</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 遍历所有节点执行同步</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">in</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $nodes</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        set</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -l</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> node_hostname</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (string </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">split</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '@'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $node)[-1]</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # 跳过本地节点</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> test</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$node_hostname</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$current_hostname</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> skip_count</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (math $skip_count </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            continue</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        end</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        printf</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "🔄 同步到 %-30s ... "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $node</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> test</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $verbose </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">-eq</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ""</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        end</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # 根据文件类型选择同步策略</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> test</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $is_file </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">-eq</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">            # 文件同步：确保远程父目录存在，直接同步文件</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            set</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -l</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> remote_dir</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (dirname $remote_target)</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            ssh</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $node </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mkdir -p </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$remote_dir</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> 2></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/dev/null</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> test</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $verbose </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">-eq</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                if</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> rsync</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -az</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --delete</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ssh</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $src_path $node</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$remote_target</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "✅ 完成"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                    set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> success_count</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (math $success_count </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                else</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "❌ 失败"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                    set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> fail_count</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (math $fail_count </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                end</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            else</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                if</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> rsync</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -az</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --delete</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --quiet</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ssh</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $src_path $node</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$remote_target </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">2></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/dev/null</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "✅ 完成"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                    set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> success_count</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (math $success_count </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                else</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "❌ 失败"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                    set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> fail_count</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (math $fail_count </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                end</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            end</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        else</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">            # 目录同步：使用增量算法，不删除远程目录，只同步变更</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">            # --delete 会删除远程多余文件，但不会重新传输未变更文件</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">            ssh</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $node </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mkdir -p </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$remote_target</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> 2></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/dev/null</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> test</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $verbose </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">-eq</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                if</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> rsync</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -az</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --delete</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ssh</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $src_path</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $node</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$remote_target</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "✅ 完成"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                    set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> success_count</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (math $success_count </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                else</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "❌ 失败"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                    set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> fail_count</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (math $fail_count </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                end</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            else</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                if</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> rsync</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -az</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --delete</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --quiet</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ssh</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $src_path</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $node</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$remote_target</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> 2></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/dev/null</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "✅ 完成"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                    set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> success_count</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (math $success_count </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                else</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "❌ 失败"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">                    set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> fail_count</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (math $fail_count </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                end</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            end</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        end</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    end</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 输出统计</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ""</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "📊 同步完成: ✅ </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$success_count</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  ❌ </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$fail_count</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  ⏭️ </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$skip_count</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">(本地)"</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ""</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> test</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $fail_count </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">-gt</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    end</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">end</span></span></code></pre>
+</div>]]></content:encoded>
+            <enclosure url="https://cdn.imufeng.cn/mblog/image-20260309161417856.png" length="0" type="image/png"/>
+        </item>
+        <item>
             <title><![CDATA[Linux 磁盘管理 - 记一次分区格式化]]></title>
             <link>https://www.imufeng.cn/training/linux/disk-management.html</link>
-            <guid>https://www.imufeng.cn/training/linux/disk-management.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/disk-management.html</guid>
             <pubDate>Fri, 25 Apr 2025 17:20:00 GMT</pubDate>
             <description><![CDATA[通过一次虚拟化平台服务器新加磁盘的操作，讨论 Linux 平台磁盘管理、分区格式化的操作。]]></description>
             <content:encoded><![CDATA[<h1 id="linux-磁盘管理-记一次分区格式化" tabindex="-1">Linux 磁盘管理 - 记一次分区格式化 <a class="header-anchor" href="#linux-磁盘管理-记一次分区格式化" aria-label="Permalink to &quot;Linux 磁盘管理 - 记一次分区格式化&quot;"></a></h1>
@@ -392,7 +640,7 @@
         <item>
             <title><![CDATA[Linux 企业级运维]]></title>
             <link>https://www.imufeng.cn/training/linux/</link>
-            <guid>https://www.imufeng.cn/training/linux/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/</guid>
             <pubDate>Fri, 25 Apr 2025 09:10:58 GMT</pubDate>
             <description><![CDATA[Linux 企业级运维
  工具部署
@@ -416,7 +664,7 @@ WordPress 容器化部署
         <item>
             <title><![CDATA[Linux 网络传输工具：curl VS wget]]></title>
             <link>https://www.imufeng.cn/training/linux/curl-wget.html</link>
-            <guid>https://www.imufeng.cn/training/linux/curl-wget.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/curl-wget.html</guid>
             <pubDate>Thu, 13 Feb 2025 17:30:00 GMT</pubDate>
             <description><![CDATA[在Linux命令行下载文件时，curl和wget是两个常用的工具。尽管它们在某些功能上相似，但它们在设计和使用场景上有所不同。]]></description>
             <content:encoded><![CDATA[<h1 id="linux-网络传输工具-curl-vs-wget" tabindex="-1">Linux 网络传输工具：curl VS wget <a class="header-anchor" href="#linux-网络传输工具-curl-vs-wget" aria-label="Permalink to &quot;Linux 网络传输工具：curl VS wget&quot;"></a></h1>
@@ -573,16 +821,16 @@ WordPress 容器化部署
         </item>
         <item>
             <link>https://www.imufeng.cn/training/linux/linux-cluster/hbase.html</link>
-            <guid>https://www.imufeng.cn/training/linux/linux-cluster/hbase.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/linux-cluster/hbase.html</guid>
             <pubDate>Sat, 16 Nov 2024 09:54:07 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[第三章 Hadoop集群部署]]></title>
             <link>https://www.imufeng.cn/training/linux/hadoop-cluster/hadoop-install.html</link>
-            <guid>https://www.imufeng.cn/training/linux/hadoop-cluster/hadoop-install.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/hadoop-cluster/hadoop-install.html</guid>
             <pubDate>Mon, 28 Oct 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[本文将介绍 Hadoop 分布式数据库并五台服务器上部署和搭建 Hadoop 集群，包含 HDFS、YARN、MapReduce 的基本配置。]]></description>
-            <content:encoded><![CDATA[<h1 id="hadoop-分布式数据库集群部署" tabindex="-1">Hadoop 分布式数据库集群部署 <a class="header-anchor" href="#hadoop-分布式数据库集群部署" aria-label="Permalink to &quot;Hadoop 分布式数据库集群部署&quot;"></a></h1>
+            <description><![CDATA[本文将介绍 Hadoop 分布式数据库并在三台服务器上部署和搭建 Hadoop 集群，包含 HDFS、YARN、MapReduce 的基本配置。]]></description>
+            <content:encoded><![CDATA[<h1 id="hadoop-分布式大数据集群部署" tabindex="-1">Hadoop 分布式大数据集群部署 <a class="header-anchor" href="#hadoop-分布式大数据集群部署" aria-label="Permalink to &quot;Hadoop 分布式大数据集群部署&quot;"></a></h1>
 <h2 id="一、简介" tabindex="-1">一、简介 <a class="header-anchor" href="#一、简介" aria-label="Permalink to &quot;一、简介&quot;"></a></h2>
 <p>Apache Hadoop 是 Apache 软件基金会下的一个开源数据库框架，以其开发者 <strong>Cutting</strong> 儿子的黄色玩具大象 Hadoop 命名。Hadoop 可以编写和运行分布式应用，处理 GB 到 PB 级别的数据。通常来讲，Hadoop 可以指 Hadoop 数据库框架，也可以指基于 Hadoop 的一系列分布式计算平台，包括 HDFS、Zookeeper、MapReduce、HBASE、Hive等等。</p>
 <p>Hadoop 分布式文件系统（Hadoop Distributed File System (HDFS）是 Hadoop 生态的核心，是 Hadoop 的存储层，区别于传统的运行在磁盘的文件系统，它将数据分布式的存储在多个服务器节点上。并对其进行备份，这保证了数据的高可用性和高容错性。</p>
@@ -592,7 +840,7 @@ WordPress 容器化部署
 <p>Namenode 负责维护文件系统的名字空间，任何对文件系统名字空间或属性的修改都将被 Namenode 记录下来。应用程序可以设置 HDFS 保存的文件的副本数目。文件副本的数目称为文件的副本系数，这个信息也是由 Namenode 保存的。</p>
 <p><img src="https://cdn.imufeng.cn/mblog/202411151428585.gif" alt="HDFS 架构"></p>
 <h2 id="二、环境规划" tabindex="-1">二、环境规划 <a class="header-anchor" href="#二、环境规划" aria-label="Permalink to &quot;二、环境规划&quot;"></a></h2>
-<p>各节点规划如下：其中 Master01 作为 NameNode、ResourceManager ，Master02 用于分担 SecondaryNameNode 的角色，同时它们也作为一个普通节点，运行 DataNode 以及 NodeManager。</p>
+<p>各节点规划如下：其中 Master 作为 NameNode、ResourceManager，同时也作为一个普通节点，运行 DataNode 以及 NodeManager。</p>
 <table tabindex="0">
 <thead>
 <tr>
@@ -602,12 +850,8 @@ WordPress 容器化部署
 </thead>
 <tbody>
 <tr>
-<td>Master01</td>
+<td>Master</td>
 <td>NameNode | ResourceManager | NodeManager | DataNode</td>
-</tr>
-<tr>
-<td>Master02</td>
-<td>SecondaryNameNode | NodeManager | DataNode</td>
 </tr>
 <tr>
 <td>Node01</td>
@@ -615,10 +859,6 @@ WordPress 容器化部署
 </tr>
 <tr>
 <td>Node02</td>
-<td>NodeManager | DataNode</td>
-</tr>
-<tr>
-<td>Node03</td>
 <td>NodeManager | DataNode</td>
 </tr>
 </tbody>
@@ -714,16 +954,14 @@ WordPress 容器化部署
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">configuration</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">property</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>fs.defaultFS&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>hdfs://master01.mufeng.local:9000&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>hdfs://master.local:9000&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">property</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">configuration</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span></code></pre>
 </div><h4 id="workers" tabindex="-1">workers <a class="header-anchor" href="#workers" aria-label="Permalink to &quot;workers&quot;"></a></h4>
 <p>等同于 hadoop 2.x 版本的 slaves，定义集群工作节点列表，通常包含各节点的主机名或 IP 地址。</p>
-<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>master01.mufeng.local</span></span>
-<span class="line"><span>master02.mufeng.local</span></span>
-<span class="line"><span>node01.mufeng.local</span></span>
-<span class="line"><span>node02.mufeng.local</span></span>
-<span class="line"><span>node03.mufeng.local</span></span></code></pre>
+<div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>master.local</span></span>
+<span class="line"><span>node01.local</span></span>
+<span class="line"><span>node02.local</span></span></code></pre>
 </div><h3 id="_3-4-hdfs-配置" tabindex="-1">3.4 HDFS 配置 <a class="header-anchor" href="#_3-4-hdfs-配置" aria-label="Permalink to &quot;3.4 HDFS 配置&quot;"></a></h3>
 <h4 id="hdfs-site-xml" tabindex="-1">hdfs-site.xml <a class="header-anchor" href="#hdfs-site-xml" aria-label="Permalink to &quot;hdfs-site.xml&quot;"></a></h4>
 <p>HDFS 相关配置文件，指定数据块副本数、目录权限、本地存储地址等。</p>
@@ -745,7 +983,7 @@ WordPress 容器化部署
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    &#x3C;!-- 配置 namenode HTTP 访问地址 --></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">property</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>dfs.namenode.http-address&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>master01.mufeng.local:9870&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>master.local:9870&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">property</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    </span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    &#x3C;!-- 配置 namenode 文件存储位置 --></span></span>
@@ -758,12 +996,6 @@ WordPress 容器化部署
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">property</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>dfs.datanode.data.dir&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>file:/data/hadoop/datanode/&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">property</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    </span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    &#x3C;!-- 配置secondary namenode 地址 --></span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">property</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>dfs.namenode.secondary.http-address&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>master02.mufeng.local:50090&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">property</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">configuration</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span></code></pre>
 </div><h3 id="_3-5-yanr-配置" tabindex="-1">3.5 YANR 配置 <a class="header-anchor" href="#_3-5-yanr-配置" aria-label="Permalink to &quot;3.5 YANR 配置&quot;"></a></h3>
@@ -779,7 +1011,7 @@ WordPress 容器化部署
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    &#x3C;!-- resourcemanager 配置 --></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">property</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>yarn.resourcemanager.hostname&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>master01.mufeng.local&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>master.local&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">property</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    </span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    &#x3C;!-- 指定 YARN 服务为 mapreduce --></span></span>
@@ -834,9 +1066,9 @@ WordPress 容器化部署
 <p>在配置好 SSH 免密登录后，可以一键进行 Hadoop 集群的启动，只需在 Master 节点执行一条命令即可：</p>
 <div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">start-all.sh</span></span>
 <span class="line"></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Starting</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> namenodes</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [master.mufeng.local]</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Starting</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> namenodes</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [master.local]</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Starting</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> datanodes</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Starting</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> secondary</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> namenodes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [master.mufeng.local]</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Starting</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> secondary</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> namenodes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [master.local]</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Starting</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> resourcemanager</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Starting</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nodemanagers</span></span></code></pre>
 </div><p>停止集群也只需要一条命令：</p>
@@ -863,10 +1095,10 @@ WordPress 容器化部署
 <div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>[yarn]$ $HADOOP_HOME/bin/yarn --daemon start resourcemanager</span></span>
 <span class="line"><span>[yarn]$ $HADOOP_HOME/bin/yarn --daemon start nodemanager</span></span></code></pre>
 </div><p>不需要多记，只需要 <code>start-all.sh</code> 即可。</p>
-<p>启动完成后，分别在各个节点执行 JPS 命令即可查看进程内容，可以看到，我们五台服务器均按照预期启动进程。</p>
+<p>启动完成后，分别在各个节点执行 JPS 命令即可查看进程内容，可以看到，我们三台服务器均按照预期启动进程。</p>
 <p><img src="https://cdn.imufeng.cn/mblog/202411151428590.png" alt="image-20241114113230328"></p>
 <h3 id="_4-3-访问-web-端" tabindex="-1">4.3 访问 WEB 端 <a class="header-anchor" href="#_4-3-访问-web-端" aria-label="Permalink to &quot;4.3 访问 WEB 端&quot;"></a></h3>
-<p>Hadoop 提供了基础的 WEB-UI 查看集群信息，访问 Master 节点的 9870 端口即可：<a href="https://master01.mufeng.local:9870/" target="_blank" rel="noreferrer">https://master01.mufeng.local:9870/</a></p>
+<p>Hadoop 提供了基础的 WEB-UI 查看集群信息，访问 Master 节点的 9870 端口即可：<a href="https://master.local:9870/" target="_blank" rel="noreferrer">https://master.local:9870/</a></p>
 <p>基本信息：</p>
 <p><img src="https://cdn.imufeng.cn/mblog/202411151428591.png" alt="image-20241114115651119"></p>
 <p>DataNode 总览：</p>
@@ -885,38 +1117,35 @@ WordPress 容器化部署
         <item>
             <title><![CDATA[第二章 分布式环境准备]]></title>
             <link>https://www.imufeng.cn/training/linux/hadoop-cluster/preparations.html</link>
-            <guid>https://www.imufeng.cn/training/linux/hadoop-cluster/preparations.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/hadoop-cluster/preparations.html</guid>
             <pubDate>Fri, 25 Oct 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[
 # 第二章 分布式环境准备
 
 
 
-在这个系列中，我们将使用五台 Vmware 环境下的 `AlmaLinux9.4` 操作系统作为演示环境，搭建一个功能完备的分布式的大数据集群，详细讲解各个组件的安装、配置以及优化。整个过程将从基础环境的准备开始，包括操作系统的网络配置、主机名设置、时间同步等关键步骤，然后逐步搭建和集成分布式系统的核心组件，如 HDFS、YARN、Hive 和 Spark 等。
+在这个系列中，我们将使用三台 Vmware 环境下的 `AlmaLinux 10.1` 操作系统作为演示环境，搭建一个功能完备的分布式的大数据集群，详细讲解各个组件的安装、配置以及优化。整个过程将从基础环境的准备开始，包括操作系统的网络配置、主机名设置、时间同步等关键步骤，然后逐步搭建和集成分布式系统的核心组件，如 HDFS、YARN、Hive 和 Spark 等。
 
 AlmaLinux 是由开源社区维护的 RHEL 发行版，专注于长期稳定版，是 Centos 比较好的替代品，可以完全取代 CentOS 稳定版本，软件方面无须进行任何一行代码的修改，迁移过程相当简单。在 Centos 停止维护之后，我们有很多生产环境都逐步迁移到了 AlmaLinux 并取得了不错的效果，所以我们的操作系统选择 AlmaLinux。
 
-系统
+## 一、系统详细说明
 
-详细说明如下：
-
-- **操作系统：** AlmaLinux9.4 Minimal 安装
-- **虚拟化平台：** Vmware Workstation Pro 17
-- **架构：** 使用五台虚拟机，两台 Master 以及以及三台 Node 节点
+- **操作系统：** AlmaLinux 10.1 Minimal 安装
+- **虚拟化平台：** Vmware Workstation 2024
+- **架构：** 使用三台虚拟机，一台 Master 以及两台 Node 节点
 - **网络通信** 使用 Vmware 提供的 NAT 子网，配置静态 IP
 - **SSH 工具：** Termius（支持同时操作多台服务器）
 
-| 名称       | 核心 | 内存 | 域名                    | IP             | 说明   |
-|]]></description>
+| 名称   | 核心 | 内存 | 域名         | IP             | 说明    |
+| ]]></description>
             <content:encoded><![CDATA[<h1 id="第二章-分布式环境准备" tabindex="-1">第二章 分布式环境准备 <a class="header-anchor" href="#第二章-分布式环境准备" aria-label="Permalink to &quot;第二章 分布式环境准备&quot;"></a></h1>
-<p>在这个系列中，我们将使用五台 Vmware 环境下的 <code>AlmaLinux9.4</code> 操作系统作为演示环境，搭建一个功能完备的分布式的大数据集群，详细讲解各个组件的安装、配置以及优化。整个过程将从基础环境的准备开始，包括操作系统的网络配置、主机名设置、时间同步等关键步骤，然后逐步搭建和集成分布式系统的核心组件，如 HDFS、YARN、Hive 和 Spark 等。</p>
+<p>在这个系列中，我们将使用三台 Vmware 环境下的 <code>AlmaLinux 10.1</code> 操作系统作为演示环境，搭建一个功能完备的分布式的大数据集群，详细讲解各个组件的安装、配置以及优化。整个过程将从基础环境的准备开始，包括操作系统的网络配置、主机名设置、时间同步等关键步骤，然后逐步搭建和集成分布式系统的核心组件，如 HDFS、YARN、Hive 和 Spark 等。</p>
 <p>AlmaLinux 是由开源社区维护的 RHEL 发行版，专注于长期稳定版，是 Centos 比较好的替代品，可以完全取代 CentOS 稳定版本，软件方面无须进行任何一行代码的修改，迁移过程相当简单。在 Centos 停止维护之后，我们有很多生产环境都逐步迁移到了 AlmaLinux 并取得了不错的效果，所以我们的操作系统选择 AlmaLinux。</p>
-<p>系统</p>
-<p>详细说明如下：</p>
+<h2 id="一、系统详细说明" tabindex="-1">一、系统详细说明 <a class="header-anchor" href="#一、系统详细说明" aria-label="Permalink to &quot;一、系统详细说明&quot;"></a></h2>
 <ul>
-<li><strong>操作系统：</strong> AlmaLinux9.4 Minimal 安装</li>
-<li><strong>虚拟化平台：</strong> Vmware Workstation Pro 17</li>
-<li><strong>架构：</strong> 使用五台虚拟机，两台 Master 以及以及三台 Node 节点</li>
+<li><strong>操作系统：</strong> AlmaLinux 10.1 Minimal 安装</li>
+<li><strong>虚拟化平台：</strong> Vmware Workstation 2024</li>
+<li><strong>架构：</strong> 使用三台虚拟机，一台 Master 以及两台 Node 节点</li>
 <li><strong>网络通信</strong> 使用 Vmware 提供的 NAT 子网，配置静态 IP</li>
 <li><strong>SSH 工具：</strong> Termius（支持同时操作多台服务器）</li>
 </ul>
@@ -933,26 +1162,18 @@ AlmaLinux 是由开源社区维护的 RHEL 发行版，专注于长期稳定版�
 </thead>
 <tbody>
 <tr>
-<td>Master01</td>
+<td>Master</td>
 <td>4c</td>
 <td>8G</td>
-<td>master01.mufeng.local</td>
-<td>192.168.88.66</td>
-<td>主节点1</td>
-</tr>
-<tr>
-<td>Master02</td>
-<td>4c</td>
-<td>8G</td>
-<td>master02.mufeng.local</td>
+<td>master.local</td>
 <td>192.168.88.88</td>
-<td>主节点2</td>
+<td>主节点</td>
 </tr>
 <tr>
 <td>Node01</td>
 <td>2c</td>
 <td>4G</td>
-<td>node01.mufeng.local</td>
+<td>node01.local</td>
 <td>192.168.88.101</td>
 <td>从节点1</td>
 </tr>
@@ -960,41 +1181,24 @@ AlmaLinux 是由开源社区维护的 RHEL 发行版，专注于长期稳定版�
 <td>Node02</td>
 <td>2c</td>
 <td>4G</td>
-<td>node02.mufeng.local</td>
+<td>node02.local</td>
 <td>192.168.88.102</td>
 <td>从节点2</td>
 </tr>
-<tr>
-<td>Node03</td>
-<td>2c</td>
-<td>4G</td>
-<td>node03.mufeng.local</td>
-<td>192.168.88.103</td>
-<td>从节点3</td>
-</tr>
 </tbody>
 </table>
-<h2 id="三、环境准备" tabindex="-1">三、环境准备 <a class="header-anchor" href="#三、环境准备" aria-label="Permalink to &quot;三、环境准备&quot;"></a></h2>
-<h3 id="_3-1-系统安装" tabindex="-1">3.1 系统安装 <a class="header-anchor" href="#_3-1-系统安装" aria-label="Permalink to &quot;3.1 系统安装&quot;"></a></h3>
-<p>先创建 Master01，配置完成后使用虚拟机克隆拷贝其他四台虚拟机 Master02、Node01、Node02、Node03。</p>
-<p>开启虚拟机，选择 Install AlmaLinux 9.4，使用最小化安装。</p>
-<p><img src="https://cdn.imufeng.cn/mblog/2b74227a1fbd3799fbf7464a93830d16.png" alt="image-20241022143627620"></p>
-<p>语言使用英文，软件源配置阿里镜像站。软件源配置如下：</p>
-<p>链接地址：<code>https://mirrors.aliyun.com/almalinux/9.4/BaseOS/x86_64/os/</code></p>
-<p><img src="https://cdn.imufeng.cn/mblog/636034294b8b4e682d41c90130907bd1.png" alt="image-20241022144429325"></p>
-<p>配置完成并下载元数据后，选择 Minimal Install.</p>
-<p>分区选择手动分区，此处仅供参考，分配如下：</p>
-<p><img src="https://cdn.imufeng.cn/mblog/09cba637dee9d4f9c2486e72a6400685.png" alt="image-20241022144834200"></p>
-<p>点击开始安装，稍等片刻，即可成功安装，点击重启会自动进入操作系统。</p>
-<p><img src="https://cdn.imufeng.cn/mblog/b415834430090ff746a5a5fd1d50bb85.png" alt="image-20241022145338458"></p>
+<h2 id="二、环境准备" tabindex="-1">二、环境准备 <a class="header-anchor" href="#二、环境准备" aria-label="Permalink to &quot;二、环境准备&quot;"></a></h2>
+<h3 id="_2-1-系统安装" tabindex="-1">2.1 系统安装 <a class="header-anchor" href="#_2-1-系统安装" aria-label="Permalink to &quot;2.1 系统安装&quot;"></a></h3>
+<p>先创建 Master，安装过程中选择最近的镜像源即可，不需要单独配置镜像站地址。</p>
 <h3 id="_3-2-安装基础软件" tabindex="-1">3.2 安装基础软件 <a class="header-anchor" href="#_3-2-安装基础软件" aria-label="Permalink to &quot;3.2 安装基础软件&quot;"></a></h3>
-<p>安装 vim 以及 bash-completion（TAB 命令提示）</p>
+<p>安装 <code>vim</code> 以及 <code>bash-completion</code>（TAB 命令提示）</p>
 <div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">yum</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> vim</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> bash-completion</span></span></code></pre>
 </div><h3 id="_3-3-配置静态-ip" tabindex="-1">3.3 配置静态 IP <a class="header-anchor" href="#_3-3-配置静态-ip" aria-label="Permalink to &quot;3.3 配置静态 IP&quot;"></a></h3>
 <p>Redhat 9 以上使用 NetworkManager 进行网络管理，配置文件位于 <code>/etc/NetworkManager</code> ，推荐使用 <code>nmcli</code> 进行配置。</p>
-<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nmcli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> con</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> down</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ens160</span></span>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 删除原有的ens160连接</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nmcli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> con</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> del</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ens160</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">   </span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 添加名为 mufeng 的连接，并配置 IP 地址</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nmcli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> conection</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  add</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> if-name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ens160</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> con-name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mufeng</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv4.method</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> manual</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv4.address</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 192.168.88.66/24</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv4.dns</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 192.168.88.2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv4.gateway</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 192.168.88.2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv6.method</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> disabled</span></span></code></pre>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nmcli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> con</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  add</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> if-name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ens160</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> con-name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mufeng</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv4.method</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> manual</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv4.address</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 192.168.88.88/24</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv4.dns</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 192.168.88.2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv4.gateway</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 192.168.88.2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv6.method</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> disabled</span></span></code></pre>
 </div><h3 id="_3-4-配置ssh" tabindex="-1">3.4 配置ssh <a class="header-anchor" href="#_3-4-配置ssh" aria-label="Permalink to &quot;3.4 配置ssh&quot;"></a></h3>
 <p>RHEL9 默认不允许 ROOT 用户连接 SSH，我们需要修改 ssh 配置文件 <code>/etc/ssh/sshd_config</code>，允许 ROOT 用户访问。</p>
 <div class="language-ini vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ini</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">PermitRootLogin yes</span></span></code></pre>
@@ -1003,13 +1207,11 @@ AlmaLinux 是由开源社区维护的 RHEL 发行版，专注于长期稳定版�
 </div><p>SSH 连接工具不做限制，本教程使用 Termius。</p>
 <h3 id="_3-5-配置-hosts" tabindex="-1">3.5 配置 hosts <a class="header-anchor" href="#_3-5-配置-hosts" aria-label="Permalink to &quot;3.5 配置 hosts&quot;"></a></h3>
 <div class="language-ini vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ini</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># vim /etc/hosts </span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">192.168.88.66   master01.mufeng.local   master01        master</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">192.168.88.88   master02.mufeng.local   master02</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">192.168.88.101  node01.mufeng.local     node01</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">192.168.88.102  node02.mufeng.local     node02</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">192.168.88.103  node03.mufeng.local     node03</span></span></code></pre>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">192.168.88.88   master.local     master</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">192.168.88.101  node01.local     node01</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">192.168.88.102  node02.local     node02</span></span></code></pre>
 </div><h3 id="_3-6-禁用防火墙" tabindex="-1">3.6 禁用防火墙 <a class="header-anchor" href="#_3-6-禁用防火墙" aria-label="Permalink to &quot;3.6 禁用防火墙&quot;"></a></h3>
-<p>由于Hadoop 大数据集群通常部署在企业内网，其网络安全由外部网关或其他设施进行管理，且若开启防火墙会导致集群之间通讯的管理异常复杂，故一般都不会开启防火墙。 SELINUX 同理。</p>
+<p>由于Hadoop 大数据集群通常部署在企业内网，其网络安全由外部网关或其他设施进行管理，且若开启防火墙会导致集群之间通讯的管理异常复杂，故一般都不会开启防火墙。</p>
 <div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> disable</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> firewalld</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --now</span></span></code></pre>
 </div><h3 id="_3-7-禁用selinux" tabindex="-1">3.7 禁用SELINUX <a class="header-anchor" href="#_3-7-禁用selinux" aria-label="Permalink to &quot;3.7 禁用SELINUX&quot;"></a></h3>
 <p>查看 SELINUX 状态：<code>getenforce </code>，可以看到: <code>enforcing</code></p>
@@ -1019,108 +1221,87 @@ AlmaLinux 是由开源社区维护的 RHEL 发行版，专注于长期稳定版�
 <p>永久禁用 SELINUX：修改配置文件 <code>/etc/selinux/config</code></p>
 <div class="language-shell vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#SELINUX=enforcing</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">SELINUX</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">disabled</span></span></code></pre>
-</div><h3 id="_3-8-克隆虚拟机" tabindex="-1">3.8 克隆虚拟机 <a class="header-anchor" href="#_3-8-克隆虚拟机" aria-label="Permalink to &quot;3.8 克隆虚拟机&quot;"></a></h3>
+</div><h3 id="_3-8-安装其他-服务-可选" tabindex="-1">3.8 安装其他 服务（可选） <a class="header-anchor" href="#_3-8-安装其他-服务-可选" aria-label="Permalink to &quot;3.8 安装其他 服务（可选）&quot;"></a></h3>
+<p>由于使用习惯，我会安装 <code>FishShell</code>，如果需要安装请移步其他教程。后续教程中都是会用到 <code>FishShell</code>。</p>
+<h3 id="_3-8-克隆虚拟机" tabindex="-1">3.8 克隆虚拟机 <a class="header-anchor" href="#_3-8-克隆虚拟机" aria-label="Permalink to &quot;3.8 克隆虚拟机&quot;"></a></h3>
 <blockquote>
 <p>建议关机后创建快照，方便误操作后恢复。</p>
 </blockquote>
-<p>克隆出其他四台虚拟机，并命名为 Master02、Node01、Node02、Node03，注意使用完整克隆。克隆完成后修改网络和 hostname。</p>
+<p>克隆出其他两台 Node 节点，并命名为 Node01、Node02，注意使用完整克隆。克隆完成后修改网络和 hostname。</p>
 <p>配置网络：</p>
-<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">修改</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> Master02</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> IP</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 地址</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nmcli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> con</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mod</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mufeng</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv4.address</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 192.168.88.88/24</span></span>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">修改</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> Node01</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> IP</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 地址</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nmcli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> con</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mod</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mufeng</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ipv4.address</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 192.168.88.101/24</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nmcli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> con</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> down</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mufeng</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nmcli</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> con</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> up</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mufeng</span></span></code></pre>
 </div><p>配置hostname：</p>
 <div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 修改 NODE01 的 hostname</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">hostnamectl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> set-hostname</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> node01.mufeng.local</span></span></code></pre>
-</div><p>克隆完成后的五台机器：</p>
-<p><img src="https://cdn.imufeng.cn/mblog/202411151453448.png" alt="image-20241114215255780"></p>
-<p><img src="https://cdn.imufeng.cn/mblog/202411151453449.png" alt="image-20241114215454179"></p>
-<h3 id="_3-9-配置-ssh-免密登录" tabindex="-1">3.9 配置 ssh 免密登录 <a class="header-anchor" href="#_3-9-配置-ssh-免密登录" aria-label="Permalink to &quot;3.9 配置 ssh 免密登录&quot;"></a></h3>
-<p>在五台虚拟机分别执行：</p>
-<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-keygen</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rsa</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">					# 生成密钥文件，配置均默认，按三次 Enter 即可。</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-copy-id</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> master01.mufeng.local</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">		# 配置免密登录</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-copy-id</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> master02.mufeng.local</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">hostnamectl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> set-hostname</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> node01.local</span></span></code></pre>
+</div><h3 id="_3-9-配置-ssh-免密登录" tabindex="-1">3.9 配置 ssh 免密登录 <a class="header-anchor" href="#_3-9-配置-ssh-免密登录" aria-label="Permalink to &quot;3.9 配置 ssh 免密登录&quot;"></a></h3>
+<p>在三台虚拟机分别执行：</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-keygen</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rsa</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">				   # 生成密钥文件，配置均默认，按三次 Enter 即可。</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-copy-id</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> master.mufeng.local</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">		# 配置免密登录</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-copy-id</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> node01.mufeng.local</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-copy-id</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> node02.mufeng.local</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-copy-id</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> node03.mufeng.local</span></span></code></pre>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-copy-id</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> node02.mufeng.local</span></span></code></pre>
 </div><blockquote>
 <p>注意：此处 ssh-copy-id 自身是必要的操作</p>
 </blockquote>
-<p><img src="https://cdn.imufeng.cn/mblog/3150827bfb08850d640b5d97777dd464.png" alt="image-20241023104706154"></p>
-<p>至此，五台虚拟机集群基础就搭建完成了。</p>
+<p>至此，三台虚拟机集群基础就搭建完成了。</p>
+<p><img src="https://cdn.imufeng.cn/mblog/image-20260309160126443.png" alt="image-20260309160126443"></p>
 <h3 id="_3-10-安装-jdk" tabindex="-1">3.10 安装 JDK <a class="header-anchor" href="#_3-10-安装-jdk" aria-label="Permalink to &quot;3.10 安装 JDK&quot;"></a></h3>
 <blockquote>
-<p>JDK 可以选择 11 或以上版本，但是在安装过程中可能遇到问题，需要单独处理。</p>
+<p>JDK 可以选择 11 或以上版本，但是在安装过程中可能遇到问题，需要单独处理，故不推荐。</p>
 </blockquote>
 <p>Hadoop 使用 JAVA 语言开发，我们需要安装 JDK （Java 开发工具集），这里我们选用 Oracle JDK 1.8，于官网下载，商用请使用 OpenJDK。官网下载地址：<a href="https://www.oracle.com/cn/java/technologies/downloads/" target="_blank" rel="noreferrer">Java Downloads | Oracle 中国</a>。</p>
 <p>选择 X64 的压缩包下载即可，下载后解压到 <code>/usr/local/</code>：</p>
-<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -o</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> jdk8.tar.gz</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://DOWNLOAD-URL</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> #下载地址</span></span>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -oL</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> jdk8.tar.gz</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'https://DOWNLOAD-URL'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> #下载地址</span></span>
 <span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">cd</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /opt/</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">tar</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -zxf</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> jdk8.tar.gz</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -C</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /usr/local/</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> # 解压到指定目录</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">mv</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> jdk1.8.0_431/</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> jdk8</span></span></code></pre>
-</div><p>配置环境变量，直接修改 <code>/etc/profile</code> 文件：</p>
-<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">### Create By Mufeng</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> JAVA_HOME</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/usr/local/jdk8/</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> PATH</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$PATH:$JAVA_HOME/bin/</span></span></code></pre>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">mv</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> jdk1.8.0_431/</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> jdk-8</span></span></code></pre>
+</div><p>FishShell 修改环境变量与 bash 不同，需修改 <code>/root/.config/fish/config.fish</code>，加入如下内容：</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># --------------------------</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Java 环境变量</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># --------------------------</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">set</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -x</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> JAVA_HOME</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /usr/local/jdk-8</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">fish_add_path</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $JAVA_HOME</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/bin</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # fish 会统一管理 path，避免冲突等问题给</span></span></code></pre>
 </div><p>使改动生效</p>
-<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">.</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/profile</span></span></code></pre>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">exec</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> fish</span></span></code></pre>
 </div><p>至此，JDK8 安装完成。</p>
-<p><img src="https://cdn.imufeng.cn/mblog/202411151453450.png" alt="image-20241114220405635"></p>
 <h2 id="四、其他补充" tabindex="-1">四、其他补充 <a class="header-anchor" href="#四、其他补充" aria-label="Permalink to &quot;四、其他补充&quot;"></a></h2>
-<h3 id="_4-1-scpa" tabindex="-1">4.1 scpa <a class="header-anchor" href="#_4-1-scpa" aria-label="Permalink to &quot;4.1 scpa&quot;"></a></h3>
-<p>这是我自己完成的一个脚本，用于将文件从一个节点拷贝到其他节点，节点列表是从 hadoop 配置文件 workers 获取，并忽略源节点。</p>
-<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">cd</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /usr/local/bin</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">vim</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> scpa</span></span></code></pre>
-</div><div class="language-sh vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#!/bin/bash</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 检查是否提供了路径参数</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [ </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">-z</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">$1</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ]; </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">then</span></span>
-<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "Usage: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">$0</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> &#x3C;source_path>"</span></span>
-<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    exit</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">fi</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 将传入路径参数转换为绝对路径</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">SOURCE_PATH</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">realpath</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">$1</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 检查源路径是否存在</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [ </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">!</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$SOURCE_PATH</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ]; </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">then</span></span>
-<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "Error: Source path '</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$SOURCE_PATH</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">' does not exist."</span></span>
-<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    exit</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">fi</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 获取本机的主机名或IP地址</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">LOCAL_HOST</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">hostname</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">LOCAL_IP</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">hostname</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -I</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> awk</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '{print $1}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 获取第一个IP地址</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 获取目标节点列表</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">WORKERS_FILE</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/usr/local/hadoop/etc/hadoop/workers"</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [ </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">!</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> -f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$WORKERS_FILE</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ]; </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">then</span></span>
-<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "Error: Workers file '</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$WORKERS_FILE</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">' does not exist."</span></span>
-<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    exit</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">fi</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 遍历目标节点并执行拷贝</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">while</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> read</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> WORKER</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">; </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">do</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 忽略空行</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [ </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">-z</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$WORKER</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ]; </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">then</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        continue</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    fi</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 忽略本机</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [[ </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$WORKER</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ==</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$LOCAL_HOST</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ||</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$WORKER</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ==</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$LOCAL_IP</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ]]; </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">then</span></span>
-<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "Skipping local machine: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$WORKER</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        continue</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    fi</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    #echo "Processing $WORKER..."</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 删除目标机器上的同名文件或目录</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    ssh</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$WORKER</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "rm -rf '</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$SOURCE_PATH</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> &#x3C;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/dev/null</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/dev/null</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> 2>&#x26;1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> </span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 进行远程拷贝</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [ </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">-d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$SOURCE_PATH</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ]; </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">then</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        scp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -r</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$SOURCE_PATH</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$WORKER</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$SOURCE_PATH</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> &#x3C;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/dev/null</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/dev/null</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> 2>&#x26;1</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    else</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        scp</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$SOURCE_PATH</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$WORKER</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$SOURCE_PATH</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> &#x3C;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/dev/null</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/dev/null</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> 2>&#x26;1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> </span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    fi</span></span>
-<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "Copied </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$SOURCE_PATH</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> to </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$WORKER</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">done</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> &#x3C;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$WORKERS_FILE</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span></span>
-<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "Batch copy completed."</span></span></code></pre>
-</div><p>修改完成后，给他一个权限就可以执行拷贝：</p>
-<div class="language-sh vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">chmod</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +x</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> scpa</span></span></code></pre>
-</div><p>执行示例：</p>
-<p><img src="https://cdn.imufeng.cn/mblog/202411151453451.png" alt="image-20241115094659422"></p>
+<h3 id="_4-1-ms" tabindex="-1">4.1 ms <a class="header-anchor" href="#_4-1-ms" aria-label="Permalink to &quot;4.1 ms&quot;"></a></h3>
+<p>这是我自己完成的一个脚本，用于将文件从一个节点同步拷贝到其他节点。使用方法如下：</p>
+<ol>
+<li>
+<p>安装 async</p>
+<p>为了避免向多个节点拷贝时间较长，所以使用 async 工具。执行如下命令安装：</p>
+<div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dnf</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> async</span></span></code></pre>
+</div></li>
+<li>
+<p>写入脚本内容</p>
+<p>需要在 <code>~/.config/fish/functions</code> 路径下新建一个 <code>ms.fish</code> 文件，并写入脚本内容。</p>
+<p>脚本内容详见: <a href="./../muffin-tools/muffin-sync.html">分布式集群文件批量同步工具</a></p>
+</li>
+<li>
+<p>修改workers配置</p>
+<p>在 <code> ~/.config/</code> 下新建文件 <code>nodes</code>，写入如下内容：</p>
+<div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span>master.local   # 注意，这里要和 hostname 一致 否则会有报错</span></span>
+<span class="line"><span>node01.local</span></span>
+<span class="line"><span>node02.local</span></span></code></pre>
+</div></li>
+<li>
+<p>执行</p>
+<p>该脚本可以接受0-2个参数，可以直接传入文件名：</p>
+<ul>
+<li>不传入参数：直接同步当前路径到所有其他节点，目标节点路径与传入路径的绝对路径一致。。</li>
+<li>一个参数：同步指定参数路径到所有节点，目标节点路径与传入路径的绝对路径一致。</li>
+<li>两个参数：同步第一个参数路径到所有其他节点的第二个参数路径。</li>
+</ul>
+</li>
+<li>
+<p>示例</p>
+<p><img src="https://cdn.imufeng.cn/mblog/image-20260309161417856.png" alt="image-20260309161417856"></p>
+<p><img src="https://cdn.imufeng.cn/mblog/image-20260309161441905.png" alt="image-20260309161441905"></p>
+</li>
+</ol>
 <h2 id="参考内容" tabindex="-1">参考内容 <a class="header-anchor" href="#参考内容" aria-label="Permalink to &quot;参考内容&quot;"></a></h2>
 <ul>
 <li><a href="https://www.atlassian.com/zh/microservices/microservices-architecture/distributed-architecture" target="_blank" rel="noreferrer">什么是分布式系统？ | Atlassian</a></li>
@@ -1128,12 +1309,12 @@ AlmaLinux 是由开源社区维护的 RHEL 发行版，专注于长期稳定版�
 <li><a href="https://www.cnblogs.com/aliware/p/17095384.html" target="_blank" rel="noreferrer">云原生微服务技术趋势解读 - 阿里巴巴中间件 - 博客园</a></li>
 </ul>
 ]]></content:encoded>
-            <enclosure url="https://cdn.imufeng.cn/mblog/2b74227a1fbd3799fbf7464a93830d16.png" length="0" type="image/png"/>
+            <enclosure url="https://cdn.imufeng.cn/mblog/image-20260309160126443.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[第一章 Hadoop 分布式大数据系统概述]]></title>
             <link>https://www.imufeng.cn/training/linux/hadoop-cluster/overview.html</link>
-            <guid>https://www.imufeng.cn/training/linux/hadoop-cluster/overview.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/hadoop-cluster/overview.html</guid>
             <pubDate>Fri, 18 Oct 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[第一章 Hadoop 分布式大数据系统概述
  一、分布式系统架构
@@ -1224,11 +1405,11 @@ ZooKeeper 是一个高性能的分布式协调服务，提供分布式应用所�
         <item>
             <title><![CDATA[【大数据系列】 Hadoop 分布式大数据集群部署]]></title>
             <link>https://www.imufeng.cn/training/linux/hadoop-cluster/</link>
-            <guid>https://www.imufeng.cn/training/linux/hadoop-cluster/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/hadoop-cluster/</guid>
             <pubDate>Tue, 15 Oct 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[我们将使用五台 Vmware 环境下的 AlmaLinux9.4 操作系统作为演示环境，讨论分布式大数据和微服务架构的搭建和部署，包括 Hadoop、Zookeeper、Kubernetes等技术。]]></description>
+            <description><![CDATA[我们将使用三台 Vmware 环境下的 AlmaLinux 10.1 操作系统作为演示环境，讨论分布式大数据和微服务架构的搭建和部署，包括 Hadoop、Zookeeper、Kubernetes等技术。]]></description>
             <content:encoded><![CDATA[<h1 id="hadoop-分布式大数据集群部署" tabindex="-1">Hadoop 分布式大数据集群部署 <a class="header-anchor" href="#hadoop-分布式大数据集群部署" aria-label="Permalink to &quot;Hadoop 分布式大数据集群部署&quot;"></a></h1>
-<p>我们将使用五台 Vmware 环境下的 AlmaLinux9.4 操作系统作为演示环境，讨论分布式大数据和微服务架构的搭建和部署，包括 Hadoop、Zookeeper等。</p>
+<p>我们将使用三台 Vmware 环境下的 AlmaLinux9.4 操作系统作为演示环境，讨论分布式大数据和微服务架构的搭建和部署，包括 Hadoop、Zookeeper等。</p>
 <h3 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h3>
 <ul>
 <li><a href="./overview.html">第一章 分布式大数据及微服务架构概述</a></li>
@@ -1241,7 +1422,7 @@ ZooKeeper 是一个高性能的分布式协调服务，提供分布式应用所�
         <item>
             <title><![CDATA[Java8 新特性详解]]></title>
             <link>https://www.imufeng.cn/full-stack/java/characteristic/functional.html</link>
-            <guid>https://www.imufeng.cn/full-stack/java/characteristic/functional.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/java/characteristic/functional.html</guid>
             <pubDate>Mon, 26 Aug 2024 01:17:57 GMT</pubDate>
             <description><![CDATA[Lambda 表达式、Stream 流、Optional 类操作分享。]]></description>
             <content:encoded><![CDATA[<h1 id="java8-新特性详解" tabindex="-1">Java8 新特性详解 <a class="header-anchor" href="#java8-新特性详解" aria-label="Permalink to &quot;Java8 新特性详解&quot;"></a></h1>
@@ -1393,7 +1574,7 @@ ZooKeeper 是一个高性能的分布式协调服务，提供分布式应用所�
         </item>
         <item>
             <link>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/factory-pattern.html</link>
-            <guid>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/factory-pattern.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/factory-pattern.html</guid>
             <pubDate>Mon, 26 Aug 2024 01:17:57 GMT</pubDate>
             <description><![CDATA[设计模式（Design Patterns），是一套被反复使用、多数人知晓的、经过分类的、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。]]></description>
             <content:encoded><![CDATA[<h1 id="" tabindex="-1"> <a class="header-anchor" href="#" aria-label="Permalink to &quot;&quot;"></a></h1>
@@ -1401,14 +1582,14 @@ ZooKeeper 是一个高性能的分布式协调服务，提供分布式应用所�
         </item>
         <item>
             <link>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/singleton.html</link>
-            <guid>https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/singleton.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/java/design-patterns/creation-mode/singleton.html</guid>
             <pubDate>Mon, 26 Aug 2024 01:17:57 GMT</pubDate>
             <description><![CDATA[在一个较为复杂的继承链中，祖先类更具有一般性，作为派生其他类的基类而不糊将其作为用来构造实例。]]></description>
         </item>
         <item>
             <title><![CDATA[设计模式七大原则]]></title>
             <link>https://www.imufeng.cn/full-stack/java/design-patterns/principle.html</link>
-            <guid>https://www.imufeng.cn/full-stack/java/design-patterns/principle.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/java/design-patterns/principle.html</guid>
             <pubDate>Mon, 26 Aug 2024 01:17:57 GMT</pubDate>
             <description><![CDATA[设计模式有七大原则，它体现的是开发过程中的优雅，是一种艺术。遵循这些原则，就能写出更加优雅、灵活的代码结构。]]></description>
             <content:encoded><![CDATA[<h1 id="设计模式七大原则" tabindex="-1">设计模式七大原则 <a class="header-anchor" href="#设计模式七大原则" aria-label="Permalink to &quot;设计模式七大原则&quot;"></a></h1>
@@ -1805,7 +1986,7 @@ ZooKeeper 是一个高性能的分布式协调服务，提供分布式应用所�
         <item>
             <title><![CDATA[抽象类和抽象方法]]></title>
             <link>https://www.imufeng.cn/full-stack/java/oop/abstract.html</link>
-            <guid>https://www.imufeng.cn/full-stack/java/oop/abstract.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/java/oop/abstract.html</guid>
             <pubDate>Mon, 26 Aug 2024 01:17:57 GMT</pubDate>
             <description><![CDATA[在一个较为复杂的继承链中，祖先类更具有一般性，作为派生其他类的基类而不糊将其作为用来构造实例。]]></description>
             <content:encoded><![CDATA[<h1 id="抽象类和抽象方法" tabindex="-1">抽象类和抽象方法 <a class="header-anchor" href="#抽象类和抽象方法" aria-label="Permalink to &quot;抽象类和抽象方法&quot;"></a></h1>
@@ -1865,7 +2046,7 @@ ZooKeeper 是一个高性能的分布式协调服务，提供分布式应用所�
         <item>
             <title><![CDATA[每日一题 - 202407]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/7.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/7.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/interview/question-by-day/2024/7.html</guid>
             <pubDate>Mon, 26 Aug 2024 01:17:57 GMT</pubDate>
             <description><![CDATA[
 # 每日一题 - 202407
@@ -2561,7 +2742,7 @@ stringJoiner：
         <item>
             <title><![CDATA[10-31]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2023/10.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2023/10.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/interview/question-by-day/2023/10.html</guid>
             <pubDate>Thu, 01 Aug 2024 03:39:39 GMT</pubDate>
             <description><![CDATA[
 
@@ -3376,7 +3557,7 @@ Java中的<code>double</code>和<code>float</code>类型使用IEEE 754标准来�
         <item>
             <title><![CDATA[Redis 缓存中间件编译安装]]></title>
             <link>https://www.imufeng.cn/training/linux/springboot-app-launch/redis.html</link>
-            <guid>https://www.imufeng.cn/training/linux/springboot-app-launch/redis.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/springboot-app-launch/redis.html</guid>
             <pubDate>Tue, 16 Jul 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[Redis 是一个实时数据平台（The Real-time Data Platform.） ，是一个快速、开源、内存中的数据存储结构，在 SpringBoot 项目中，使用最广泛的缓存中间件就是 Redis 了，本文将讨论如何编译安装 Redis 到 Linux 服务器。]]></description>
             <content:encoded><![CDATA[<h1 id="第二步-缓存中间件-redis-编译安装" tabindex="-1">第二步 缓存中间件 Redis 编译安装 <a class="header-anchor" href="#第二步-缓存中间件-redis-编译安装" aria-label="Permalink to &quot;第二步 缓存中间件 Redis 编译安装&quot;"></a></h1>
@@ -3495,7 +3676,7 @@ yes，即后端运行，如果为 no，则会将日志打印到控制台。</p>
         <item>
             <title><![CDATA[每日一题 - 202406]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/6.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/6.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/interview/question-by-day/2024/6.html</guid>
             <pubDate>Wed, 03 Jul 2024 09:01:19 GMT</pubDate>
             <description><![CDATA[每日一题 - 202406
  6-30
@@ -4499,7 +4680,7 @@ JAVA 语言通过字节码的方式在一定程度上解决了传统解释型语
         <item>
             <title><![CDATA[每日一题 - 202404]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/4.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/4.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/interview/question-by-day/2024/4.html</guid>
             <pubDate>Tue, 18 Jun 2024 14:31:57 GMT</pubDate>
             <description><![CDATA[每日一题 - 202404
  4-30
@@ -5043,7 +5224,7 @@ setImmediate
         <item>
             <title><![CDATA[前端笔记]]></title>
             <link>https://www.imufeng.cn/full-stack/front-end/</link>
-            <guid>https://www.imufeng.cn/full-stack/front-end/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/front-end/</guid>
             <pubDate>Mon, 17 Jun 2024 09:04:33 GMT</pubDate>
             <description><![CDATA[前端笔记
  目录
@@ -5066,7 +5247,7 @@ setImmediate
         <item>
             <title><![CDATA[前端 复习笔记]]></title>
             <link>https://www.imufeng.cn/full-stack/front-end/review/</link>
-            <guid>https://www.imufeng.cn/full-stack/front-end/review/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/front-end/review/</guid>
             <pubDate>Mon, 17 Jun 2024 09:04:33 GMT</pubDate>
             <description><![CDATA[前端 复习笔记
  基础复习
@@ -5079,7 +5260,7 @@ CSS 复习]]></description>
         <item>
             <title><![CDATA[CSS 复习]]></title>
             <link>https://www.imufeng.cn/full-stack/front-end/review/css.html</link>
-            <guid>https://www.imufeng.cn/full-stack/front-end/review/css.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/front-end/review/css.html</guid>
             <pubDate>Mon, 17 Jun 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[CSS对于设计者来说是一种非常灵活的工具，它必再把烦杂的样式定义编写在文档中，可以将所有有关文档的样式指定内容全部脱离出来，在行定义、在标题中定义，甚至作为外部样式文件供HTML调用。本文主要是对css在开发过程中较为常用以及易混淆的知识的复习。]]></description>
             <content:encoded><![CDATA[<h1 id="css复习" tabindex="-1">css复习 <a class="header-anchor" href="#css复习" aria-label="Permalink to &quot;css复习&quot;"></a></h1>
@@ -5388,7 +5569,7 @@ CSS 复习]]></description>
         <item>
             <title><![CDATA[LAMP 编译安装三部曲]]></title>
             <link>https://www.imufeng.cn/training/linux/linux-lamp/</link>
-            <guid>https://www.imufeng.cn/training/linux/linux-lamp/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/linux-lamp/</guid>
             <pubDate>Thu, 13 Jun 2024 07:57:11 GMT</pubDate>
             <description><![CDATA[LAMP 是一种常用于搭建网站和应用程序的服务器架构，它由 Linux、Apache、MySQL（或MariaDB）、PHP 四个开源软件组成，也分别代表了操作系统、Web 服务器、数据库以及服务器端]]></description>
             <content:encoded><![CDATA[<h1 id="lamp-编译安装三部曲" tabindex="-1">LAMP 编译安装三部曲 <a class="header-anchor" href="#lamp-编译安装三部曲" aria-label="Permalink to &quot;LAMP 编译安装三部曲&quot;"></a></h1>
@@ -5407,7 +5588,7 @@ CSS 复习]]></description>
         <item>
             <title><![CDATA[膜拜大佬]]></title>
             <link>https://www.imufeng.cn/friend-link-list/</link>
-            <guid>https://www.imufeng.cn/friend-link-list/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/friend-link-list/</guid>
             <pubDate>Thu, 06 Jun 2024 08:04:19 GMT</pubDate>
             <description><![CDATA[::: details 友链申请格式
 - 站点名称： `沐风的小站`
@@ -5440,7 +5621,7 @@ CSS 复习]]></description>
         <item>
             <title><![CDATA[每日一题 - 202405]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/5.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/5.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/interview/question-by-day/2024/5.html</guid>
             <pubDate>Fri, 31 May 2024 08:59:56 GMT</pubDate>
             <description><![CDATA[
 # 每日一题 - 202405
@@ -7315,7 +7496,7 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
         <item>
             <title><![CDATA[Mysql 数据库编译安装]]></title>
             <link>https://www.imufeng.cn/training/linux/springboot-app-launch/mysql.html</link>
-            <guid>https://www.imufeng.cn/training/linux/springboot-app-launch/mysql.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/springboot-app-launch/mysql.html</guid>
             <pubDate>Sun, 05 May 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[MySQL是一款流行的开源关系型数据库管理系统（RDBMS），适用于从小型网站到大型企业级应用的各种场景。它以GNU通用公共许可证发行，实现成本效益。MySQL具备高性能、高可靠性和强大的可伸缩性，支持多线程、跨平台操作，及多种存储引擎，适应不同数据处理需求。其优势在于开源免费、社区活跃、易于学习与使用，且能有效处理大量并发连接，提供丰富的SQL功能及安全性保障，成为Web开发和数据存储领域的首选方案。]]></description>
             <content:encoded><![CDATA[<h1 id="第二步-mysql-数据库编译安装" tabindex="-1">第二步 Mysql 数据库编译安装 <a class="header-anchor" href="#第二步-mysql-数据库编译安装" aria-label="Permalink to &quot;第二步 Mysql 数据库编译安装&quot;"></a></h1>
@@ -7412,7 +7593,7 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
         <item>
             <title><![CDATA[目录]]></title>
             <link>https://www.imufeng.cn/interview/skills/</link>
-            <guid>https://www.imufeng.cn/interview/skills/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/interview/skills/</guid>
             <pubDate>Fri, 26 Apr 2024 09:06:27 GMT</pubDate>
             <description><![CDATA[目录]]></description>
             <content:encoded><![CDATA[<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
@@ -7421,7 +7602,7 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
         <item>
             <title><![CDATA[Nginx 服务器编译安装]]></title>
             <link>https://www.imufeng.cn/training/linux/springboot-app-launch/nginx.html</link>
-            <guid>https://www.imufeng.cn/training/linux/springboot-app-launch/nginx.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/springboot-app-launch/nginx.html</guid>
             <pubDate>Sat, 20 Apr 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[Nginx 作为当下最强大的正向/反向代理服务器，以及应用最广泛的轻量级Web服务器，能够适用于多种场景，本文将描述 Nginx WEB 服务器从源码编译安装的流程。]]></description>
             <content:encoded><![CDATA[<h1 id="第一步-web-服务器-nginx-编译安装" tabindex="-1">第一步 WEB 服务器 Nginx 编译安装 <a class="header-anchor" href="#第一步-web-服务器-nginx-编译安装" aria-label="Permalink to &quot;第一步 WEB 服务器 Nginx 编译安装&quot;"></a></h1>
@@ -7637,7 +7818,7 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
         <item>
             <title><![CDATA[SpringBoot 企业级部署上线流程]]></title>
             <link>https://www.imufeng.cn/training/linux/springboot-app-launch/</link>
-            <guid>https://www.imufeng.cn/training/linux/springboot-app-launch/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/springboot-app-launch/</guid>
             <pubDate>Mon, 15 Apr 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[本系列将从 Linux 企业级运维的角度出发，详细介绍 Linux 操作系统下 Nginx + JAVA + MYSQL + Redis + Minio 的安装部署，主要使用编译安装。]]></description>
             <content:encoded><![CDATA[<h1 id="linux-企业级运维-springboot项目上线五部曲" tabindex="-1">Linux 企业级运维 - SpringBoot项目上线五部曲 <a class="header-anchor" href="#linux-企业级运维-springboot项目上线五部曲" aria-label="Permalink to &quot;Linux 企业级运维 - SpringBoot项目上线五部曲&quot;"></a></h1>
@@ -7712,7 +7893,7 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
         <item>
             <title><![CDATA[Redis 自学笔记]]></title>
             <link>https://www.imufeng.cn/full-stack/other/redis.html</link>
-            <guid>https://www.imufeng.cn/full-stack/other/redis.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/other/redis.html</guid>
             <pubDate>Mon, 08 Apr 2024 09:32:40 GMT</pubDate>
             <description><![CDATA[Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。]]></description>
             <content:encoded><![CDATA[<h1 id="redis-自学笔记" tabindex="-1">Redis 自学笔记 <a class="header-anchor" href="#redis-自学笔记" aria-label="Permalink to &quot;Redis 自学笔记&quot;"></a></h1>
@@ -8325,7 +8506,7 @@ Vue SSR将包含两部分：服务端渲染的首屏，包含交互的SPA</p>
         <item>
             <title><![CDATA[每日一题 - 202401]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/1.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/1.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/interview/question-by-day/2024/1.html</guid>
             <pubDate>Mon, 08 Apr 2024 09:32:40 GMT</pubDate>
             <description><![CDATA[每日一题 - 202401
  1-31
@@ -8621,7 +8802,7 @@ Java 反射机制是在运行状态中，对于任意一个类，都能够知道
         <item>
             <title><![CDATA[每日一题 - 202402]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/2.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/2.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/interview/question-by-day/2024/2.html</guid>
             <pubDate>Mon, 08 Apr 2024 09:32:40 GMT</pubDate>
             <description><![CDATA[每日一题 - 202402
  2-29
@@ -8881,7 +9062,7 @@ ArrayList 具有自动增加底层数组容量的能力，当数组容量不足�
         <item>
             <title><![CDATA[每日一题 - 202403]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/3.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/3.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/interview/question-by-day/2024/3.html</guid>
             <pubDate>Mon, 08 Apr 2024 09:32:40 GMT</pubDate>
             <description><![CDATA[每日一题 - 202403
  3-31
@@ -9320,7 +9501,7 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         <item>
             <title><![CDATA[浅学 Flex 流式布局]]></title>
             <link>https://www.imufeng.cn/full-stack/front-end/flex.html</link>
-            <guid>https://www.imufeng.cn/full-stack/front-end/flex.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/front-end/flex.html</guid>
             <pubDate>Tue, 26 Mar 2024 07:36:51 GMT</pubDate>
             <description><![CDATA[Flex（Flexible Box）弹性布局，用于为盒装模型提供较大的灵活性。能够灵活，充分利用浏览器的空间，减少了多端适配的难度和成本。]]></description>
             <content:encoded><![CDATA[<h1 id="浅学-flex-流式布局" tabindex="-1">浅学 Flex 流式布局 <a class="header-anchor" href="#浅学-flex-流式布局" aria-label="Permalink to &quot;浅学 Flex 流式布局&quot;"></a></h1>
@@ -9545,7 +9726,7 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         <item>
             <title><![CDATA[重学 JAVA 设计模式]]></title>
             <link>https://www.imufeng.cn/full-stack/java/design-patterns/</link>
-            <guid>https://www.imufeng.cn/full-stack/java/design-patterns/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/java/design-patterns/</guid>
             <pubDate>Tue, 26 Mar 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[设计模式（Design Patterns），是一套被反复使用、多数人知晓的、经过分类的、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。]]></description>
             <content:encoded><![CDATA[<h1 id="重学-java-设计模式" tabindex="-1">重学 JAVA 设计模式 <a class="header-anchor" href="#重学-java-设计模式" aria-label="Permalink to &quot;重学 JAVA 设计模式&quot;"></a></h1>
@@ -9578,7 +9759,7 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         <item>
             <title><![CDATA[算法和数据结构]]></title>
             <link>https://www.imufeng.cn/computer-basics/data-structure/</link>
-            <guid>https://www.imufeng.cn/computer-basics/data-structure/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/computer-basics/data-structure/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
             <description><![CDATA[算法和数据结构
  目录]]></description>
@@ -9589,7 +9770,7 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         <item>
             <title><![CDATA[计算机网络]]></title>
             <link>https://www.imufeng.cn/computer-basics/network/</link>
-            <guid>https://www.imufeng.cn/computer-basics/network/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/computer-basics/network/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
             <description><![CDATA[计算机网络
  目录]]></description>
@@ -9600,7 +9781,7 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         <item>
             <title><![CDATA[操作系统]]></title>
             <link>https://www.imufeng.cn/computer-basics/operating-system/</link>
-            <guid>https://www.imufeng.cn/computer-basics/operating-system/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/computer-basics/operating-system/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
             <description><![CDATA[操作系统
  目录]]></description>
@@ -9611,7 +9792,7 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         <item>
             <title><![CDATA[数据库]]></title>
             <link>https://www.imufeng.cn/full-stack/database/</link>
-            <guid>https://www.imufeng.cn/full-stack/database/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/database/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
             <description><![CDATA[数据库
  目录]]></description>
@@ -9622,7 +9803,7 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         <item>
             <title><![CDATA[一、后端技术分享]]></title>
             <link>https://www.imufeng.cn/full-stack/</link>
-            <guid>https://www.imufeng.cn/full-stack/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
             <description><![CDATA[一、后端技术分享
  二、前端技术分享
@@ -9635,7 +9816,7 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         <item>
             <title><![CDATA[Java]]></title>
             <link>https://www.imufeng.cn/full-stack/java/</link>
-            <guid>https://www.imufeng.cn/full-stack/java/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/java/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
             <description><![CDATA[Java
  目录
@@ -9664,7 +9845,7 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         <item>
             <title><![CDATA[其他]]></title>
             <link>https://www.imufeng.cn/full-stack/other/</link>
-            <guid>https://www.imufeng.cn/full-stack/other/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/other/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
             <description><![CDATA[其他
  目录
@@ -9681,7 +9862,7 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         <item>
             <title><![CDATA[Rust]]></title>
             <link>https://www.imufeng.cn/full-stack/rust/</link>
-            <guid>https://www.imufeng.cn/full-stack/rust/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/rust/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
             <description><![CDATA[Rust
  目录]]></description>
@@ -9692,7 +9873,7 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         <item>
             <title><![CDATA[每日一题]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/interview/question-by-day/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
             <description><![CDATA[每天至少一道全栈题目分享，范围不限。]]></description>
             <content:encoded><![CDATA[<h1 id="每日一题" tabindex="-1">每日一题 <a class="header-anchor" href="#每日一题" aria-label="Permalink to &quot;每日一题&quot;"></a></h1>
@@ -9708,7 +9889,7 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         <item>
             <title><![CDATA[生活随笔]]></title>
             <link>https://www.imufeng.cn/notes/life-notes/</link>
-            <guid>https://www.imufeng.cn/notes/life-notes/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/notes/life-notes/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
             <description><![CDATA[生活随笔
  目录]]></description>
@@ -9719,7 +9900,7 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         <item>
             <title><![CDATA[读书笔记]]></title>
             <link>https://www.imufeng.cn/notes/reading-notes/</link>
-            <guid>https://www.imufeng.cn/notes/reading-notes/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/notes/reading-notes/</guid>
             <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
             <description><![CDATA[读书笔记
  目录]]></description>
@@ -9728,20 +9909,9 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[科技周报]]></title>
-            <link>https://www.imufeng.cn/notes/technology-weekly/</link>
-            <guid>https://www.imufeng.cn/notes/technology-weekly/</guid>
-            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
-            <description><![CDATA[科技周报
- 目录]]></description>
-            <content:encoded><![CDATA[<h1 id="科技周报" tabindex="-1">科技周报 <a class="header-anchor" href="#科技周报" aria-label="Permalink to &quot;科技周报&quot;"></a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
-]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[XPATH自学笔记]]></title>
             <link>https://www.imufeng.cn/full-stack/other/xpath.html</link>
-            <guid>https://www.imufeng.cn/full-stack/other/xpath.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/other/xpath.html</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <description><![CDATA[XPath 是一门在 XML 文档中查找信息的语言，用于在 XML 文档中通过元素和属性进行导航。]]></description>
             <content:encoded><![CDATA[<h1 id="xpath自学笔记" tabindex="-1">XPATH自学笔记 <a class="header-anchor" href="#xpath自学笔记" aria-label="Permalink to &quot;XPATH自学笔记&quot;"></a></h1>
@@ -10391,7 +10561,7 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
         <item>
             <title><![CDATA[11-30 ]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2023/11.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2023/11.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/interview/question-by-day/2023/11.html</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <description><![CDATA[## 11-30 
 
@@ -11076,7 +11246,7 @@ ScheduledThreadPoolExecutor。</p>
         <item>
             <title><![CDATA[12-31]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2023/12.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2023/12.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/interview/question-by-day/2023/12.html</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <description><![CDATA[12-31
  Spring Boot 如何配置多个数据源？
@@ -11351,7 +11521,7 @@ SpringBoot 可以通过 `@ConfigurationProperties` 注解来配置多个数据�
         <item>
             <title><![CDATA[9-30]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2023/9.html</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2023/9.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/interview/question-by-day/2023/9.html</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <description><![CDATA[9-30
  Java中的重载和重写有什么区别？
@@ -11434,7 +11604,7 @@ SpringBoot 可以通过 `@ConfigurationProperties` 注解来配置多个数据�
         <item>
             <title><![CDATA[基于DockerCompose的WordPress环境部署（附配置优化）]]></title>
             <link>https://www.imufeng.cn/training/linux/wordpress-by-docker-compose.html</link>
-            <guid>https://www.imufeng.cn/training/linux/wordpress-by-docker-compose.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/wordpress-by-docker-compose.html</guid>
             <pubDate>Mon, 25 Mar 2024 08:19:18 GMT</pubDate>
             <description><![CDATA[本文将带你快速了解 docker compose 安装部署 WordPress。]]></description>
             <content:encoded><![CDATA[<h1 id="基于dockercompose的wordpress环境部署-附配置优化" tabindex="-1">基于DockerCompose的WordPress环境部署（附配置优化） <a class="header-anchor" href="#基于dockercompose的wordpress环境部署-附配置优化" aria-label="Permalink to &quot;基于DockerCompose的WordPress环境部署（附配置优化）&quot;"></a></h1>
@@ -11574,7 +11744,7 @@ SpringBoot 可以通过 `@ConfigurationProperties` 注解来配置多个数据�
         <item>
             <title><![CDATA[每日一题 - 2023]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2023/</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2023/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/interview/question-by-day/2023/</guid>
             <pubDate>Fri, 15 Mar 2024 07:55:15 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限。]]></description>
             <content:encoded><![CDATA[<blockquote>
@@ -11980,7 +12150,7 @@ SpringBoot 可以通过 `@ConfigurationProperties` 注解来配置多个数据�
         <item>
             <title><![CDATA[第一步 编译安装httpd服务器]]></title>
             <link>https://www.imufeng.cn/training/linux/linux-lamp/first.html</link>
-            <guid>https://www.imufeng.cn/training/linux/linux-lamp/first.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/linux-lamp/first.html</guid>
             <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
             <description><![CDATA[第一步 编译安装httpd服务器
  1、安装前准备
@@ -12216,7 +12386,7 @@ SpringBoot 可以通过 `@ConfigurationProperties` 注解来配置多个数据�
         <item>
             <title><![CDATA[第二步 编译安装mariadb数据库环境]]></title>
             <link>https://www.imufeng.cn/training/linux/linux-lamp/second.html</link>
-            <guid>https://www.imufeng.cn/training/linux/linux-lamp/second.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/linux-lamp/second.html</guid>
             <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
             <description><![CDATA[第二步 编译安装mariadb数据库环境
  1、Mariadb数据库概述
@@ -12366,7 +12536,7 @@ Mariadb是开源的关系型数据库服务器软件
         <item>
             <title><![CDATA[第三步 编译安装PHP]]></title>
             <link>https://www.imufeng.cn/training/linux/linux-lamp/third.html</link>
-            <guid>https://www.imufeng.cn/training/linux/linux-lamp/third.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/linux-lamp/third.html</guid>
             <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
             <description><![CDATA[第三步 编译安装PHP
  1、安装前准备
@@ -12475,7 +12645,7 @@ Mariadb是开源的关系型数据库服务器软件
         <item>
             <title><![CDATA[软件工具分享]]></title>
             <link>https://www.imufeng.cn/training/software/</link>
-            <guid>https://www.imufeng.cn/training/software/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/software/</guid>
             <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
             <description><![CDATA[软件工具分享
  目录
@@ -12490,7 +12660,7 @@ Mariadb是开源的关系型数据库服务器软件
         <item>
             <title><![CDATA[Mysql for Windows 安装及初始化]]></title>
             <link>https://www.imufeng.cn/training/software/mysql-for-win-install.html</link>
-            <guid>https://www.imufeng.cn/training/software/mysql-for-win-install.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/software/mysql-for-win-install.html</guid>
             <pubDate>Fri, 15 Mar 2024 07:48:47 GMT</pubDate>
             <description><![CDATA[Mysql for Windows 安装及初始化。]]></description>
             <content:encoded><![CDATA[<h1 id="mysql-for-windows-安装及初始化" tabindex="-1">Mysql for Windows 安装及初始化 <a class="header-anchor" href="#mysql-for-windows-安装及初始化" aria-label="Permalink to &quot;Mysql for Windows 安装及初始化&quot;"></a></h1>
@@ -12596,7 +12766,7 @@ Mariadb是开源的关系型数据库服务器软件
         <item>
             <title><![CDATA[关于本站]]></title>
             <link>https://www.imufeng.cn/about/</link>
-            <guid>https://www.imufeng.cn/about/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/about/</guid>
             <pubDate>Mon, 09 Oct 2023 09:31:50 GMT</pubDate>
             <description><![CDATA[关于本站
 ::: tip 版权声明
@@ -12672,7 +12842,7 @@ Mariadb是开源的关系型数据库服务器软件
         <item>
             <title><![CDATA[每日一题 - 2024]]></title>
             <link>https://www.imufeng.cn/interview/question-by-day/2024/</link>
-            <guid>https://www.imufeng.cn/interview/question-by-day/2024/</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/interview/question-by-day/2024/</guid>
             <pubDate>Wed, 27 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[每天至少一道面试题，范围不限，欢迎留言监督。]]></description>
             <content:encoded><![CDATA[<blockquote>
@@ -13498,7 +13668,7 @@ Mariadb是开源的关系型数据库服务器软件
         <item>
             <title><![CDATA[泛域名证书申请以及部署]]></title>
             <link>https://www.imufeng.cn/training/linux/acme-sh.html</link>
-            <guid>https://www.imufeng.cn/training/linux/acme-sh.html</guid>
+            <guid isPermaLink="false">https://www.imufeng.cn/training/linux/acme-sh.html</guid>
             <pubDate>Fri, 25 Mar 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[使用 acme.sh 部署 Let's Encrypt 泛域名证书。]]></description>
             <content:encoded><![CDATA[<h1 id="泛域名证书申请以及部署" tabindex="-1">泛域名证书申请以及部署 <a class="header-anchor" href="#泛域名证书申请以及部署" aria-label="Permalink to &quot;泛域名证书申请以及部署&quot;"></a></h1>
