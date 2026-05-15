@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn/</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Fri, 15 May 2026 03:55:12 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 15 May 2026 04:00:38 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -18,28 +18,148 @@
             <title><![CDATA[算法和数据结构]]></title>
             <link>https://www.imufeng.cn/computer-basics/data-structure/</link>
             <guid isPermaLink="false">https://www.imufeng.cn/computer-basics/data-structure/</guid>
-            <pubDate>Fri, 15 May 2026 01:09:47 GMT</pubDate>
+            <pubDate>Fri, 15 May 2026 03:59:23 GMT</pubDate>
             <description><![CDATA[算法和数据结构
- 目录]]></description>
+ 目录
+- 红黑树原理与实现
+- B+ 树原理与数据库索引]]></description>
             <content:encoded><![CDATA[<h1 id="算法和数据结构" tabindex="-1">算法和数据结构 <a class="header-anchor" href="#算法和数据结构" aria-label="Permalink to &quot;算法和数据结构&quot;"></a></h1>
 <h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
-<blockquote>
-<p>内容持续更新中，敬请期待...</p>
-</blockquote>
+<ul>
+<li><a href="./2025-05-22-red-black-tree.html">红黑树原理与实现</a></li>
+<li><a href="./2025-11-25-bplus-tree.html">B+ 树原理与数据库索引</a></li>
+</ul>
 ]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[计算机网络]]></title>
             <link>https://www.imufeng.cn/computer-basics/network/</link>
             <guid isPermaLink="false">https://www.imufeng.cn/computer-basics/network/</guid>
-            <pubDate>Fri, 15 May 2026 01:09:47 GMT</pubDate>
+            <pubDate>Fri, 15 May 2026 03:59:23 GMT</pubDate>
             <description><![CDATA[计算机网络
  目录
-- SNMP 协议详解]]></description>
+- SNMP 协议详解
+- HTTP/2 协议详解
+- TCP 三次握手与四次挥手详解]]></description>
             <content:encoded><![CDATA[<h1 id="计算机网络" tabindex="-1">计算机网络 <a class="header-anchor" href="#计算机网络" aria-label="Permalink to &quot;计算机网络&quot;"></a></h1>
 <h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
 <ul>
 <li><a href="./snmp.html">SNMP 协议详解</a></li>
+<li><a href="./2025-03-18-http2-protocol.html">HTTP/2 协议详解</a></li>
+<li><a href="./2025-09-08-tcp-handshake.html">TCP 三次握手与四次挥手详解</a></li>
+</ul>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[操作系统]]></title>
+            <link>https://www.imufeng.cn/computer-basics/operating-system/</link>
+            <guid isPermaLink="false">https://www.imufeng.cn/computer-basics/operating-system/</guid>
+            <pubDate>Fri, 15 May 2026 03:59:23 GMT</pubDate>
+            <description><![CDATA[操作系统
+ 目录
+- 进程调度算法详解]]></description>
+            <content:encoded><![CDATA[<h1 id="操作系统" tabindex="-1">操作系统 <a class="header-anchor" href="#操作系统" aria-label="Permalink to &quot;操作系统&quot;"></a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
+<ul>
+<li><a href="./2025-07-30-process-scheduling.html">进程调度算法详解</a></li>
+</ul>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[数据库]]></title>
+            <link>https://www.imufeng.cn/full-stack/database/</link>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/database/</guid>
+            <pubDate>Fri, 15 May 2026 03:59:23 GMT</pubDate>
+            <description><![CDATA[数据库
+ 目录
+MySQL 索引优化实战指南
+PostgreSQL 入门指南]]></description>
+            <content:encoded><![CDATA[<h1 id="数据库" tabindex="-1">数据库 <a class="header-anchor" href="#数据库" aria-label="Permalink to &quot;数据库&quot;"></a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
+<p><a href="./2025-02-15-mysql-index-optimization.html">MySQL 索引优化实战指南</a></p>
+<p><a href="./2025-10-12-postgresql-introduction.html">PostgreSQL 入门指南</a></p>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[前端笔记]]></title>
+            <link>https://www.imufeng.cn/full-stack/front-end/</link>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/front-end/</guid>
+            <pubDate>Fri, 15 May 2026 03:59:23 GMT</pubDate>
+            <description><![CDATA[前端笔记
+ 目录
+ css布局篇
+- 浅学 Flex 流式布局
+ Vue
+- Vue 3 Composition API 实践指南
+ 前端复习笔记
+- CSS 复习]]></description>
+            <content:encoded><![CDATA[<h1 id="前端笔记" tabindex="-1">前端笔记 <a class="header-anchor" href="#前端笔记" aria-label="Permalink to &quot;前端笔记&quot;"></a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
+<h3 id="css布局篇" tabindex="-1">css布局篇 <a class="header-anchor" href="#css布局篇" aria-label="Permalink to &quot;css布局篇&quot;"></a></h3>
+<ul>
+<li><a href="./flex.html">浅学 Flex 流式布局</a></li>
+</ul>
+<h3 id="vue" tabindex="-1">Vue <a class="header-anchor" href="#vue" aria-label="Permalink to &quot;Vue&quot;"></a></h3>
+<ul>
+<li><a href="./2025-06-20-vue3-composition-api.html">Vue 3 Composition API 实践指南</a></li>
+</ul>
+<h3 id="前端复习笔记" tabindex="-1">前端复习笔记 <a class="header-anchor" href="#前端复习笔记" aria-label="Permalink to &quot;前端复习笔记&quot;"></a></h3>
+<ul>
+<li><a href="./review/">CSS 复习</a></li>
+</ul>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Java]]></title>
+            <link>https://www.imufeng.cn/full-stack/java/</link>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/java/</guid>
+            <pubDate>Fri, 15 May 2026 03:59:23 GMT</pubDate>
+            <description><![CDATA[Java
+ 目录
+ 面向对象
+- 抽象类和抽象方法
+ 重学 JAVA 设计模式
+- 重学 JAVA 设计模式
+ JAVA 特性分享
+- Java8新特性详解
+ Spring Boot
+- Spring]]></description>
+            <content:encoded><![CDATA[<h1 id="java" tabindex="-1">Java <a class="header-anchor" href="#java" aria-label="Permalink to &quot;Java&quot;"></a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
+<h3 id="面向对象" tabindex="-1">面向对象 <a class="header-anchor" href="#面向对象" aria-label="Permalink to &quot;面向对象&quot;"></a></h3>
+<ul>
+<li><a href="./oop/abstract.html">抽象类和抽象方法</a></li>
+</ul>
+<h3 id="重学-java-设计模式" tabindex="-1">重学 JAVA 设计模式 <a class="header-anchor" href="#重学-java-设计模式" aria-label="Permalink to &quot;重学 JAVA 设计模式&quot;"></a></h3>
+<ul>
+<li><a href="./design-patterns/">重学 JAVA 设计模式</a></li>
+</ul>
+<h3 id="java-特性分享" tabindex="-1">JAVA 特性分享 <a class="header-anchor" href="#java-特性分享" aria-label="Permalink to &quot;JAVA 特性分享&quot;"></a></h3>
+<ul>
+<li><a href="./characteristic/functional.html">Java8新特性详解</a></li>
+</ul>
+<h3 id="spring-boot" tabindex="-1">Spring Boot <a class="header-anchor" href="#spring-boot" aria-label="Permalink to &quot;Spring Boot&quot;"></a></h3>
+<ul>
+<li><a href="./2025-04-10-springboot-exception-handling.html">Spring Boot 统一异常处理最佳实践</a></li>
+</ul>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[其他]]></title>
+            <link>https://www.imufeng.cn/full-stack/other/</link>
+            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/other/</guid>
+            <pubDate>Fri, 15 May 2026 03:59:23 GMT</pubDate>
+            <description><![CDATA[其他
+ 目录
+- XPATH 学习笔记
+- Redis 自学笔记
+- Docker Compose 编排实践指南]]></description>
+            <content:encoded><![CDATA[<h1 id="其他" tabindex="-1">其他 <a class="header-anchor" href="#其他" aria-label="Permalink to &quot;其他&quot;"></a></h1>
+<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
+<ul>
+<li><a href="./xpath.html">XPATH 学习笔记</a></li>
+<li><a href="./redis.html">Redis 自学笔记</a></li>
+<li><a href="./2025-08-05-docker-compose-practice.html">Docker Compose 编排实践指南</a></li>
 </ul>
 ]]></content:encoded>
         </item>
@@ -47,20 +167,6 @@
             <link>https://www.imufeng.cn/computer-basics/network/snmp.html</link>
             <guid isPermaLink="false">https://www.imufeng.cn/computer-basics/network/snmp.html</guid>
             <pubDate>Fri, 15 May 2026 01:09:47 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[操作系统]]></title>
-            <link>https://www.imufeng.cn/computer-basics/operating-system/</link>
-            <guid isPermaLink="false">https://www.imufeng.cn/computer-basics/operating-system/</guid>
-            <pubDate>Fri, 15 May 2026 01:09:47 GMT</pubDate>
-            <description><![CDATA[操作系统
- 目录]]></description>
-            <content:encoded><![CDATA[<h1 id="操作系统" tabindex="-1">操作系统 <a class="header-anchor" href="#操作系统" aria-label="Permalink to &quot;操作系统&quot;"></a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
-<blockquote>
-<p>内容持续更新中，敬请期待...</p>
-</blockquote>
-]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[浅学 Flex 流式布局]]></title>
@@ -5579,9 +5685,9 @@ Mariadb是开源的关系型数据库服务器软件
 <h2 id="二、调度算法的评价指标" tabindex="-1">二、调度算法的评价指标 <a class="header-anchor" href="#二、调度算法的评价指标" aria-label="Permalink to &quot;二、调度算法的评价指标&quot;"></a></h2>
 <h3 id="_2-1-cpu-利用率" tabindex="-1">2.1 CPU 利用率 <a class="header-anchor" href="#_2-1-cpu-利用率" aria-label="Permalink to &quot;2.1 CPU 利用率&quot;"></a></h3>
 
-    <span id="mjx-f16c611">
+    <span id="mjx-6c86323">
       <style>
-      #mjx-f16c611{
+      #mjx-6c86323{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -5741,9 +5847,9 @@ g[data-mml-node="xypic"] path {
     </span>
   <h3 id="_2-2-吞吐量" tabindex="-1">2.2 吞吐量 <a class="header-anchor" href="#_2-2-吞吐量" aria-label="Permalink to &quot;2.2 吞吐量&quot;"></a></h3>
 
-    <span id="mjx-f46d649">
+    <span id="mjx-c9d8284">
       <style>
-      #mjx-f46d649{
+      #mjx-c9d8284{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -5904,9 +6010,9 @@ g[data-mml-node="xypic"] path {
   <p>单位时间内完成的进程数量。</p>
 <h3 id="_2-3-周转时间" tabindex="-1">2.3 周转时间 <a class="header-anchor" href="#_2-3-周转时间" aria-label="Permalink to &quot;2.3 周转时间&quot;"></a></h3>
 
-    <span id="mjx-73cd171">
+    <span id="mjx-5873f99">
       <style>
-      #mjx-73cd171{
+      #mjx-5873f99{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -6066,9 +6172,9 @@ g[data-mml-node="xypic"] path {
     </span>
   <p>进程从提交到完成所经历的总时间。</p>
 
-    <span id="mjx-7eb31cd">
+    <span id="mjx-09b9d32">
       <style>
-      #mjx-7eb31cd{
+      #mjx-09b9d32{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -6228,9 +6334,9 @@ g[data-mml-node="xypic"] path {
     </span>
   <h3 id="_2-4-等待时间" tabindex="-1">2.4 等待时间 <a class="header-anchor" href="#_2-4-等待时间" aria-label="Permalink to &quot;2.4 等待时间&quot;"></a></h3>
 
-    <span id="mjx-862e712">
+    <span id="mjx-97f4755">
       <style>
-      #mjx-862e712{
+      #mjx-97f4755{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -6390,9 +6496,9 @@ g[data-mml-node="xypic"] path {
     </span>
   <p>进程在就绪队列中等待的总时间。</p>
 
-    <span id="mjx-455a1c4">
+    <span id="mjx-da5611">
       <style>
-      #mjx-455a1c4{
+      #mjx-da5611{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -6552,9 +6658,9 @@ g[data-mml-node="xypic"] path {
     </span>
   <h3 id="_2-5-响应时间" tabindex="-1">2.5 响应时间 <a class="header-anchor" href="#_2-5-响应时间" aria-label="Permalink to &quot;2.5 响应时间&quot;"></a></h3>
 
-    <span id="mjx-96bfd8">
+    <span id="mjx-0315bb2">
       <style>
-      #mjx-96bfd8{
+      #mjx-0315bb2{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -13509,9 +13615,9 @@ setImmediate
 <p>这道题双重循环很快就可以解决，但是会超时：</p>
 <blockquote>
 <p>时间复杂度：
-    <span id="mjx-ba77729">
+    <span id="mjx-ee534ab">
       <style>
-      #mjx-ba77729{
+      #mjx-ee534ab{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -13671,9 +13777,9 @@ g[data-mml-node="xypic"] path {
     </span>
   </p>
 <p>空间复杂度：
-    <span id="mjx-6aac422">
+    <span id="mjx-f76ebf8">
       <style>
-      #mjx-6aac422{
+      #mjx-f76ebf8{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -13850,9 +13956,9 @@ g[data-mml-node="xypic"] path {
 <p>在看完官方题解的思路之后，我自己写了一遍，如下：</p>
 <blockquote>
 <p>时间复杂度：
-    <span id="mjx-2174ef7">
+    <span id="mjx-c0e82c7">
       <style>
-      #mjx-2174ef7{
+      #mjx-c0e82c7{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -14012,9 +14118,9 @@ g[data-mml-node="xypic"] path {
     </span>
   </p>
 <p>空间复杂度：
-    <span id="mjx-9114b22">
+    <span id="mjx-051a91a">
       <style>
-      #mjx-9114b22{
+      #mjx-051a91a{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -14240,9 +14346,9 @@ g[data-mml-node="xypic"] path {
 <h4 id="题解1-暴力方法" tabindex="-1">题解1 暴力方法 <a class="header-anchor" href="#题解1-暴力方法" aria-label="Permalink to &quot;题解1 暴力方法&quot;"></a></h4>
 <p>由于过于简单，所以不再赘述。</p>
 <p>时间复杂度：
-    <span id="mjx-ab0a9b6">
+    <span id="mjx-68897fe">
       <style>
-      #mjx-ab0a9b6{
+      #mjx-68897fe{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -14401,9 +14507,9 @@ g[data-mml-node="xypic"] path {
       <mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="6.606ex" height="2.452ex" role="img" focusable="false" viewBox="0 -833.9 2919.8 1083.9" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="msup" transform="translate(1152,0)"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g><g data-mml-node="mn" transform="translate(975.3,363) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="mo" transform="translate(2530.8,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container>
     </span>
    其中 
-    <span id="mjx-938816b">
+    <span id="mjx-7c3f7b8">
       <style>
-      #mjx-938816b{
+      #mjx-7c3f7b8{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -14563,9 +14669,9 @@ g[data-mml-node="xypic"] path {
     </span>
    是数组中的元素数量。最坏情况下数组中任意两个数都要被匹配一次。</p>
 <p>空间复杂度：
-    <span id="mjx-e6f7a96">
+    <span id="mjx-e23374b">
       <style>
-      #mjx-e6f7a96{
+      #mjx-e23374b{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -14740,9 +14846,9 @@ g[data-mml-node="xypic"] path {
 </div><h4 id="题解2-哈希表" tabindex="-1">题解2 哈希表 <a class="header-anchor" href="#题解2-哈希表" aria-label="Permalink to &quot;题解2 哈希表&quot;"></a></h4>
 <p>对于哈希表的运用我还是不够熟练，这个题解是看完官方题解思路后完成的。</p>
 <p>时间复杂度：
-    <span id="mjx-4e14db8">
+    <span id="mjx-a8ba3fa">
       <style>
-      #mjx-4e14db8{
+      #mjx-a8ba3fa{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -14901,9 +15007,9 @@ g[data-mml-node="xypic"] path {
       <mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="5.495ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2429 1000" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(1152,0)"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g><g data-mml-node="mo" transform="translate(2040,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container>
     </span>
    。其中 
-    <span id="mjx-e377cbd">
+    <span id="mjx-c523fee">
       <style>
-      #mjx-e377cbd{
+      #mjx-c523fee{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -15063,9 +15169,9 @@ g[data-mml-node="xypic"] path {
     </span>
    是数组中的元素数量。</p>
 <p>空间复杂度：
-    <span id="mjx-9513ac">
+    <span id="mjx-3d2b526">
       <style>
-      #mjx-9513ac{
+      #mjx-3d2b526{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -15224,9 +15330,9 @@ g[data-mml-node="xypic"] path {
       <mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="5.495ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2429 1000" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(1152,0)"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g><g data-mml-node="mo" transform="translate(2040,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container>
     </span>
    。其中 
-    <span id="mjx-c7ed7b">
+    <span id="mjx-62f888">
       <style>
-      #mjx-c7ed7b{
+      #mjx-62f888{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -15500,29 +15606,6 @@ g[data-mml-node="xypic"] path {
 <ul>
 <li>值传递：传递的是实际的值，会创建一个副本，对形参的修改不会影响实参。</li>
 <li>引用传递：传递的是实际的地址，对形参的修改会影响实参。</li>
-</ul>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[前端笔记]]></title>
-            <link>https://www.imufeng.cn/full-stack/front-end/</link>
-            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/front-end/</guid>
-            <pubDate>Mon, 17 Jun 2024 09:04:33 GMT</pubDate>
-            <description><![CDATA[前端笔记
- 目录
- css布局篇
-- 浅学 Flex 流式布局
- 前端复习笔记
-- CSS 复习]]></description>
-            <content:encoded><![CDATA[<h1 id="前端笔记" tabindex="-1">前端笔记 <a class="header-anchor" href="#前端笔记" aria-label="Permalink to &quot;前端笔记&quot;"></a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
-<h3 id="css布局篇" tabindex="-1">css布局篇 <a class="header-anchor" href="#css布局篇" aria-label="Permalink to &quot;css布局篇&quot;"></a></h3>
-<ul>
-<li><a href="./flex.html">浅学 Flex 流式布局</a></li>
-</ul>
-<h3 id="前端复习笔记" tabindex="-1">前端复习笔记 <a class="header-anchor" href="#前端复习笔记" aria-label="Permalink to &quot;前端复习笔记&quot;"></a></h3>
-<ul>
-<li><a href="./review/">CSS 复习</a></li>
 </ul>
 ]]></content:encoded>
         </item>
@@ -19182,17 +19265,6 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
 ]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[数据库]]></title>
-            <link>https://www.imufeng.cn/full-stack/database/</link>
-            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/database/</guid>
-            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
-            <description><![CDATA[数据库
- 目录]]></description>
-            <content:encoded><![CDATA[<h1 id="数据库" tabindex="-1">数据库 <a class="header-anchor" href="#数据库" aria-label="Permalink to &quot;数据库&quot;"></a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
-]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[一、后端技术分享]]></title>
             <link>https://www.imufeng.cn/full-stack/</link>
             <guid isPermaLink="false">https://www.imufeng.cn/full-stack/</guid>
@@ -19203,52 +19275,6 @@ Mybatis 会将查询结果放入到缓存中，当再次查询相同的数据时
             <content:encoded><![CDATA[<h2 id="一、后端技术分享" tabindex="-1">一、后端技术分享 <a class="header-anchor" href="#一、后端技术分享" aria-label="Permalink to &quot;一、后端技术分享&quot;"></a></h2>
 <h2 id="二、前端技术分享" tabindex="-1">二、前端技术分享 <a class="header-anchor" href="#二、前端技术分享" aria-label="Permalink to &quot;二、前端技术分享&quot;"></a></h2>
 <h2 id="三、系统运维交流" tabindex="-1">三、系统运维交流 <a class="header-anchor" href="#三、系统运维交流" aria-label="Permalink to &quot;三、系统运维交流&quot;"></a></h2>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Java]]></title>
-            <link>https://www.imufeng.cn/full-stack/java/</link>
-            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/java/</guid>
-            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
-            <description><![CDATA[Java
- 目录
- 面向对象
-- 抽象类和抽象方法
- 重学 JAVA 设计模式
-- 重学 JAVA 设计模式
- JAVA 特性分享
-- Java8新特性详解]]></description>
-            <content:encoded><![CDATA[<h1 id="java" tabindex="-1">Java <a class="header-anchor" href="#java" aria-label="Permalink to &quot;Java&quot;"></a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
-<h3 id="面向对象" tabindex="-1">面向对象 <a class="header-anchor" href="#面向对象" aria-label="Permalink to &quot;面向对象&quot;"></a></h3>
-<ul>
-<li><a href="./oop/abstract.html">抽象类和抽象方法</a></li>
-</ul>
-<h3 id="重学-java-设计模式" tabindex="-1">重学 JAVA 设计模式 <a class="header-anchor" href="#重学-java-设计模式" aria-label="Permalink to &quot;重学 JAVA 设计模式&quot;"></a></h3>
-<ul>
-<li><a href="./design-patterns/">重学 JAVA 设计模式</a></li>
-</ul>
-<h3 id="java-特性分享" tabindex="-1">JAVA 特性分享 <a class="header-anchor" href="#java-特性分享" aria-label="Permalink to &quot;JAVA 特性分享&quot;"></a></h3>
-<ul>
-<li><a href="./characteristic/functional.html">Java8新特性详解</a></li>
-</ul>
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[其他]]></title>
-            <link>https://www.imufeng.cn/full-stack/other/</link>
-            <guid isPermaLink="false">https://www.imufeng.cn/full-stack/other/</guid>
-            <pubDate>Mon, 25 Mar 2024 08:25:06 GMT</pubDate>
-            <description><![CDATA[其他
- 目录
-- XPATH 学习笔记
-- Redis 自学笔记]]></description>
-            <content:encoded><![CDATA[<h1 id="其他" tabindex="-1">其他 <a class="header-anchor" href="#其他" aria-label="Permalink to &quot;其他&quot;"></a></h1>
-<h2 id="目录" tabindex="-1">目录 <a class="header-anchor" href="#目录" aria-label="Permalink to &quot;目录&quot;"></a></h2>
-<ul>
-<li><a href="./xpath.html">XPATH 学习笔记</a></li>
-<li><a href="./redis.html">Redis 自学笔记</a></li>
-</ul>
 ]]></content:encoded>
         </item>
         <item>
