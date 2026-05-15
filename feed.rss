@@ -4,7 +4,7 @@
         <title>Mblog - 沐风的个人博客</title>
         <link>https://www.imufeng.cn/</link>
         <description>但愿岁月如客，来去皆从容。（后端开发技术交流）</description>
-        <lastBuildDate>Fri, 15 May 2026 02:04:10 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 15 May 2026 03:55:12 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-cn</language>
@@ -5579,9 +5579,9 @@ Mariadb是开源的关系型数据库服务器软件
 <h2 id="二、调度算法的评价指标" tabindex="-1">二、调度算法的评价指标 <a class="header-anchor" href="#二、调度算法的评价指标" aria-label="Permalink to &quot;二、调度算法的评价指标&quot;"></a></h2>
 <h3 id="_2-1-cpu-利用率" tabindex="-1">2.1 CPU 利用率 <a class="header-anchor" href="#_2-1-cpu-利用率" aria-label="Permalink to &quot;2.1 CPU 利用率&quot;"></a></h3>
 
-    <span id="mjx-41fbd3e">
+    <span id="mjx-f16c611">
       <style>
-      #mjx-41fbd3e{
+      #mjx-f16c611{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -5741,9 +5741,9 @@ g[data-mml-node="xypic"] path {
     </span>
   <h3 id="_2-2-吞吐量" tabindex="-1">2.2 吞吐量 <a class="header-anchor" href="#_2-2-吞吐量" aria-label="Permalink to &quot;2.2 吞吐量&quot;"></a></h3>
 
-    <span id="mjx-bad92f3">
+    <span id="mjx-f46d649">
       <style>
-      #mjx-bad92f3{
+      #mjx-f46d649{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -5904,9 +5904,9 @@ g[data-mml-node="xypic"] path {
   <p>单位时间内完成的进程数量。</p>
 <h3 id="_2-3-周转时间" tabindex="-1">2.3 周转时间 <a class="header-anchor" href="#_2-3-周转时间" aria-label="Permalink to &quot;2.3 周转时间&quot;"></a></h3>
 
-    <span id="mjx-866445f">
+    <span id="mjx-73cd171">
       <style>
-      #mjx-866445f{
+      #mjx-73cd171{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -6066,9 +6066,9 @@ g[data-mml-node="xypic"] path {
     </span>
   <p>进程从提交到完成所经历的总时间。</p>
 
-    <span id="mjx-cac68f2">
+    <span id="mjx-7eb31cd">
       <style>
-      #mjx-cac68f2{
+      #mjx-7eb31cd{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -6228,9 +6228,9 @@ g[data-mml-node="xypic"] path {
     </span>
   <h3 id="_2-4-等待时间" tabindex="-1">2.4 等待时间 <a class="header-anchor" href="#_2-4-等待时间" aria-label="Permalink to &quot;2.4 等待时间&quot;"></a></h3>
 
-    <span id="mjx-d08e1ad">
+    <span id="mjx-862e712">
       <style>
-      #mjx-d08e1ad{
+      #mjx-862e712{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -6390,9 +6390,9 @@ g[data-mml-node="xypic"] path {
     </span>
   <p>进程在就绪队列中等待的总时间。</p>
 
-    <span id="mjx-4ddc809">
+    <span id="mjx-455a1c4">
       <style>
-      #mjx-4ddc809{
+      #mjx-455a1c4{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -6552,9 +6552,9 @@ g[data-mml-node="xypic"] path {
     </span>
   <h3 id="_2-5-响应时间" tabindex="-1">2.5 响应时间 <a class="header-anchor" href="#_2-5-响应时间" aria-label="Permalink to &quot;2.5 响应时间&quot;"></a></h3>
 
-    <span id="mjx-b75d077">
+    <span id="mjx-96bfd8">
       <style>
-      #mjx-b75d077{
+      #mjx-96bfd8{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -13509,9 +13509,9 @@ setImmediate
 <p>这道题双重循环很快就可以解决，但是会超时：</p>
 <blockquote>
 <p>时间复杂度：
-    <span id="mjx-b38652e">
+    <span id="mjx-ba77729">
       <style>
-      #mjx-b38652e{
+      #mjx-ba77729{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -13671,9 +13671,9 @@ g[data-mml-node="xypic"] path {
     </span>
   </p>
 <p>空间复杂度：
-    <span id="mjx-dde762a">
+    <span id="mjx-6aac422">
       <style>
-      #mjx-dde762a{
+      #mjx-6aac422{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -13850,9 +13850,9 @@ g[data-mml-node="xypic"] path {
 <p>在看完官方题解的思路之后，我自己写了一遍，如下：</p>
 <blockquote>
 <p>时间复杂度：
-    <span id="mjx-c3853b3">
+    <span id="mjx-2174ef7">
       <style>
-      #mjx-c3853b3{
+      #mjx-2174ef7{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -14012,9 +14012,9 @@ g[data-mml-node="xypic"] path {
     </span>
   </p>
 <p>空间复杂度：
-    <span id="mjx-1506b62">
+    <span id="mjx-9114b22">
       <style>
-      #mjx-1506b62{
+      #mjx-9114b22{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -14240,9 +14240,9 @@ g[data-mml-node="xypic"] path {
 <h4 id="题解1-暴力方法" tabindex="-1">题解1 暴力方法 <a class="header-anchor" href="#题解1-暴力方法" aria-label="Permalink to &quot;题解1 暴力方法&quot;"></a></h4>
 <p>由于过于简单，所以不再赘述。</p>
 <p>时间复杂度：
-    <span id="mjx-228f3ef">
+    <span id="mjx-ab0a9b6">
       <style>
-      #mjx-228f3ef{
+      #mjx-ab0a9b6{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -14401,9 +14401,9 @@ g[data-mml-node="xypic"] path {
       <mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="6.606ex" height="2.452ex" role="img" focusable="false" viewBox="0 -833.9 2919.8 1083.9" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="msup" transform="translate(1152,0)"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g><g data-mml-node="mn" transform="translate(975.3,363) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="mo" transform="translate(2530.8,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container>
     </span>
    其中 
-    <span id="mjx-a1492f8">
+    <span id="mjx-938816b">
       <style>
-      #mjx-a1492f8{
+      #mjx-938816b{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -14563,9 +14563,9 @@ g[data-mml-node="xypic"] path {
     </span>
    是数组中的元素数量。最坏情况下数组中任意两个数都要被匹配一次。</p>
 <p>空间复杂度：
-    <span id="mjx-3523731">
+    <span id="mjx-e6f7a96">
       <style>
-      #mjx-3523731{
+      #mjx-e6f7a96{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -14740,9 +14740,9 @@ g[data-mml-node="xypic"] path {
 </div><h4 id="题解2-哈希表" tabindex="-1">题解2 哈希表 <a class="header-anchor" href="#题解2-哈希表" aria-label="Permalink to &quot;题解2 哈希表&quot;"></a></h4>
 <p>对于哈希表的运用我还是不够熟练，这个题解是看完官方题解思路后完成的。</p>
 <p>时间复杂度：
-    <span id="mjx-45a6f1">
+    <span id="mjx-4e14db8">
       <style>
-      #mjx-45a6f1{
+      #mjx-4e14db8{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -14901,9 +14901,9 @@ g[data-mml-node="xypic"] path {
       <mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="5.495ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2429 1000" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(1152,0)"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g><g data-mml-node="mo" transform="translate(2040,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container>
     </span>
    。其中 
-    <span id="mjx-c01825a">
+    <span id="mjx-e377cbd">
       <style>
-      #mjx-c01825a{
+      #mjx-e377cbd{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -15063,9 +15063,9 @@ g[data-mml-node="xypic"] path {
     </span>
    是数组中的元素数量。</p>
 <p>空间复杂度：
-    <span id="mjx-2ce64f9">
+    <span id="mjx-9513ac">
       <style>
-      #mjx-2ce64f9{
+      #mjx-9513ac{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
@@ -15224,9 +15224,9 @@ g[data-mml-node="xypic"] path {
       <mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="5.495ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2429 1000" aria-hidden="true"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(1152,0)"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g><g data-mml-node="mo" transform="translate(2040,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container>
     </span>
    。其中 
-    <span id="mjx-68c8993">
+    <span id="mjx-c7ed7b">
       <style>
-      #mjx-68c8993{
+      #mjx-c7ed7b{
         display:contents;
         mjx-assistive-mml {
           user-select: text !important;
